@@ -25,7 +25,7 @@
     "href": "lesson_plans/lesson_links.html",
     "title": "R Files for Data Science Lessons",
     "section": "",
-    "text": "Here, you can find R code files for each lesson we have on this website. Each file is in a .zip format. We recommend you download and open the files using Rstudio desktop or posit.cloud."
+    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio)."
   },
   {
     "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
