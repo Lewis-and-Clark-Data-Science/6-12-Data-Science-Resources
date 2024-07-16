@@ -12,7 +12,7 @@ editor: visual
 library(tidyverse)
 library(DT)
 library(knitr)
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
 download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
 #Pulls data that has been loaded into the Olivia-Test github repo. 
 ```
