@@ -4,19 +4,21 @@ title: R Files for Data Science Lessons
 
 Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using [Rstudio desktop](https://posit.co/download/rstudio-desktop/) or [posit.cloud](https://posit.cloud/content/yours?sort=name_asc) (an online version of Rstudio). 
 
+Additionally, check out the tabs under "Lesson Plans" for more information and resources on how to teach these lessons!
+
 ## Middle School Lessons
 
-[Salmon Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
+[Salmon Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
 
-[Air Quality Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
+[Air Quality Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
 
 
 ## High School Lessons
 
-[Air Quality Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
+[Air Quality Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip) (same file as the middle school air quality lesson... wasn't sure where to put it)
 
-[Biodiversity Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
+[Biodiversity Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
 
-[Climate Change Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
+[Climate Change Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
 
-[Sea Levels Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
+[Sea Levels Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)

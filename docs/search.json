@@ -1,17 +1,31 @@
 [
   {
-    "objectID": "tutorials/salmon_lesson.html",
-    "href": "tutorials/salmon_lesson.html",
+    "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
+    "href": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
     "title": "Salmon Crossing Data Tutorial",
-    "section": "",
-    "text": "Hello! Welcome to this tutorial. We’re going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.\nWe’re going to use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!"
+    "section": "Fish Crossings - Introduction",
+    "text": "Fish Crossings - Introduction\nHello! Welcome to this tutorial. We’re going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.\n\n\n\n\n\nFrom https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/\n\n\n\n\n\nToday we’ll get to learn about fish crossings at dams in the Columbia River.\nWe’ll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year."
   },
   {
-    "objectID": "tutorials/salmon_lesson.html#looking-at-data",
-    "href": "tutorials/salmon_lesson.html#looking-at-data",
+    "objectID": "tutorials/salmon_tutorial.html#using-r",
+    "href": "tutorials/salmon_tutorial.html#using-r",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Using R",
+    "text": "Using R\nWe’re going to use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#looking-at-data",
+    "href": "tutorials/salmon_tutorial.html#looking-at-data",
     "title": "Salmon Crossing Data Tutorial",
     "section": "Looking at data",
-    "text": "Looking at data\nOne thing the computer is very useful for is dealing with HUGE amounts of data. Data is a collection of lots of numbers that tell us information about something.\nFor example, if you measured the temperature every single day for 1 month and wrote it down, you would create data.\nAt the Bonneville dam, there is someone who does something similar with fish. They count how many fish cross the Bonneville dam every single day. Then they write down exactly how many fish they see, what time and what kind of fish. All those numbers are called data! Then, someone puts all that data online for anyone to see (like us!).\nIn fact, we’re going to use some of that data. Want to look at it? Click the green play button on the code chunk below.\nBetter view in the callout so maybe delete this part….\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.\nLet’s learn about what some of this data means.\n\nQuestionAnswer\n\n\nMAYBE INSERT A SCREENSHOT HERE\nOn the top of the data table, you’ll see bolded numbers like 1/1, 1/2, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click to the next slide to see the answer.\n\n\nThose numbers are referring to dates! For example, 1/1 is January 1. But, they don’t include the year. Can you spot where the year is in the data?"
+    "text": "Looking at data\nOne thing the computer is very useful for is dealing with HUGE amounts of data. Data is a collection of lots of numbers that tell us information about something.\nFor example, if you measured the temperature every single day for 1 month and wrote it down, you would create data.\nAt the Bonneville dam, there is someone who does something similar with fish. They count how many fish cross the Bonneville dam every single day. Then they write down exactly how many fish they see, what time and what kind of fish. All those numbers are called data! Then, someone puts all that data online for anyone to see (like us!).\nIn fact, we’re going to use some of that data. Want to look at it? Click the green play button on the code chunk below.\nBetter view in the callout so maybe delete this part….\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.\n\nHow to read the data table\nLet’s learn about what some of this data means. First, the table that you see when you click the blue rectangle above is called a data table. It contains a bunch of numbers which tell us how many fish crossed the Bonneville Dam on any given day.\n\nReading Dates\n\nQuestionAnswer\n\n\nMAYBE INSERT A SCREENSHOT HERE\nOn the top of the data table, you’ll see bolded numbers like 1/1, 1/2, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click to the next slide to see the answer.\n\n\nThose numbers are referring to dates! For example, 1/1 is January 1. But, they don’t include the year. Can you spot where the year is in the data?\n\n\n\n\nCheck for understandingHint\n\n\n\nCan you find how many fish crossed the Bonneville Dam on April 1 in 2023?\n\n\n\n\n ✗0\n\n\n ✓49\n\n\n ✗30495\n\n\n\n\n\n\n\nOn the far left side of the data, you should see the year. Find 2023 and then find 4/1 on the top. What number is underneath 4/1 in the 2023 row?\n\n\n\n\n\nFinding the maximum fish crossings in a year\n\nQuestionHint\n\n\nWhat is the maximum number of fish that crossed the Bonneville Dam in one day in 2022?\n\n\nSee if you can find the biggest number in the 2022 row. If it seems too hard, scroll down past this question to learn an easy way to do this with the computer!\n\n\n\nWere you able to figure out the maximum number of fish that crossed the Bonneville Dam in one day in 2022? It was probably pretty annoying to have to look through all the numbers…\nLuckily, the computer can make this task much easier! Try running the code below. It will find the maximum number in 2022. If you want to learn more about how it works, click the “Learn more” tab.\n\nCode editorLearn moreChallengeAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you see the number 33607 pop out after you run the code? That’s the largest number of fish that crossed the Bonneville dam in 2022 in a day!\n\n\nHere’s the code we’re using again:\n\nmax(Bonneville_chinook[2,])\n\nDo you recognize any words in the code?\n\nmax: This is called a “function”. It tells the computer to find the max value.\nBonneville_chinook: This tells the computer to look in our data called Bonneville_chinook\n2: This tells the computer to look specifically at the second row of the the data, which is the 2022 row.\n\n\n\nWant to try using the code yourself? See if you can figure out how to find the maximum value in 2019. Edit the code in the code editor below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHint: The “2” tells the computer which row to look at. How many rows down is 2019?\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nSo the largest number of fish that crossed the Bonneville dam in 2022 in a day is 33607!\n\n\n\nFinding the total number of fish that cross the Bonneville dam each year\nWhat if you wanted to know how many total fish crossed the dam this year, compared to 50 years ago? We can use the computer to answer that question too!\nFirst, let’s make a prediction. Think about what you’ve learned about dams and how they impact fish trying to get past them.\nDo you think there are more fish or less fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions!"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#to-be-finished-will-include-graphs-of-species-crossing-different-dams",
+    "href": "tutorials/salmon_tutorial.html#to-be-finished-will-include-graphs-of-species-crossing-different-dams",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "TO BE FINISHED… will include graphs of species crossing different dams",
+    "text": "TO BE FINISHED… will include graphs of species crossing different dams"
   },
   {
     "objectID": "index.html",
@@ -25,21 +39,63 @@
     "href": "lesson_plans/lesson_links.html",
     "title": "R Files for Data Science Lessons",
     "section": "",
-    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio)."
+    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio).\nAdditionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!"
   },
   {
     "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
     "href": "lesson_plans/lesson_links.html#middle-school-lessons",
     "title": "R Files for Data Science Lessons",
     "section": "Middle School Lessons",
-    "text": "Middle School Lessons\nSalmon Lesson Code\nAir Quality Lesson Code"
+    "text": "Middle School Lessons\nSalmon Lesson Code .zip file\nAir Quality Lesson Code .zip file"
   },
   {
     "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
     "href": "lesson_plans/lesson_links.html#high-school-lessons",
     "title": "R Files for Data Science Lessons",
     "section": "High School Lessons",
-    "text": "High School Lessons\nAir Quality Lesson Code\nBiodiversity Lesson Code\nClimate Change Lesson Code\nSea Levels Lesson Code"
+    "text": "High School Lessons\nAir Quality Lesson Code .zip file (same file as the middle school air quality lesson… wasn’t sure where to put it)\nBiodiversity Lesson Code .zip file\nClimate Change Lesson Code .zip file\nSea Levels Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/AQI_lesson.html",
+    "href": "lesson_plans/AQI_lesson.html",
+    "title": "Air Quality Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/Salmon_lesson.html",
+    "href": "lesson_plans/Salmon_lesson.html",
+    "title": "Salmon School",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/climate_lesson.html",
+    "href": "lesson_plans/climate_lesson.html",
+    "title": "Climate Change Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/Biodiversity_lesson.html",
+    "href": "lesson_plans/Biodiversity_lesson.html",
+    "title": "Biodiversity Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/sea_levels_lesson.html",
+    "href": "lesson_plans/sea_levels_lesson.html",
+    "title": "Sea Levels Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/COR_lesson.html",
+    "href": "lesson_plans/COR_lesson.html",
+    "title": "COR Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on COR?"
   },
   {
     "objectID": "tutorials/climate_change_tutorial.html",

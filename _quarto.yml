@@ -22,9 +22,14 @@ website:
     - text: Lesson Plans 
       menu: 
         - lesson_plans/lesson_links.qmd
+        - lesson_plans/Salmon_lesson.qmd
+        - lesson_plans/AQI_lesson.qmd
+        - lesson_plans/Biodiversity_lesson.qmd
+        - lesson_plans/climate_lesson.qmd
+        - lesson_plans/sea_levels_lesson.qmd
     - text: Online Tutorials
       menu:
-        - tutorials/salmon_lesson.qmd
+        - tutorials/salmon_tutorial.qmd
         - tutorials/climate_change_tutorial.qmd
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
