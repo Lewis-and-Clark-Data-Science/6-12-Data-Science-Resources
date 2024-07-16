@@ -10,10 +10,10 @@ Here, you can find R code files for each lesson we have on this website. Each fi
 
 ## High School Lessons
 
-[Air Quality Lesson Code](files/lesson_code_zips/AQILessonCode.zip)
+[Air Quality Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
 
-[Biodiversity Lesson Code](files/lesson_code_zips/BiodiversityLessonCode.zip)
+[Biodiversity Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
 
-[Climate Change Lesson Code](files/lesson_code_zips/ClimateChangeLessonCode.zip)
+[Climate Change Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
 
-[Sea Levels Lesson Code](files/lesson_code_zips/SeaLevelsLessonCode.zip)
+[Sea Levels Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
