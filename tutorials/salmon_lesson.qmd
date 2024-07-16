@@ -14,7 +14,7 @@ library(DT)
 library(knitr)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
 download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
-#Pulls data that has been loaded into the Olivia-Test github repo. 
+#Pulls data that has been loaded into the 6-12-Data-Sceince_resources github repo. 
 ```
 
 ```{webr-r}
@@ -51,7 +51,7 @@ Bonneville_chinook <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/
 ```
 
 ```{r}
-#| include: false
+##| include: false
 library(tidyverse)
 library(DT)
 url<- "https://lewis-and-clark-data-science.github.io/Olivia-test/brainstorm_612_lessons/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"

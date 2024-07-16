@@ -238,7 +238,7 @@ First, decide which variable you want to learn about. You can choose any variabl
 -   methane
 -   temperature_change_from_co2
 
-Choose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.
+Choose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.
 
 Then click "run code"!
 
