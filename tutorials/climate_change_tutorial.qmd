@@ -17,7 +17,7 @@ library(tidyverse)
 ```{webr-r}
 #| context: setup
 
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/owid_co2_data_2.csv"
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/owid_co2_data_2.csv"
 download.file(url, "co2Data.csv")
 #Pulls data that has been loaded into the Olivia-Test github repo. 
 
