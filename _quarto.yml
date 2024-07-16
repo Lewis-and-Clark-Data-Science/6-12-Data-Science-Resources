@@ -1,0 +1,18 @@
+project:
+  type: website
+  output-dir: docs
+ # resources:
+  
+webr: 
+  packages: ['tidyverse']
+  
+website:
+  title: "6-12 Data Science Resources"
+  navbar: 
+    left: 
+      - Salmon_lesson.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
