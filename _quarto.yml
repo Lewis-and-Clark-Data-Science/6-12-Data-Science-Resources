@@ -2,11 +2,11 @@ project:
   type: website
   output-dir: docs
   resources:
-    - files/zip_lessons_code/AQILessonCode.zip
-    - files/zip_lessons_code/BiodiversityLessonCode.zip
-    - files/zip_lessons_code/ClimateChangeLessonCode.zip
-    - lesson_plans/code_files/SalmonLessonCode.zip
-    - files/zip_lessons_code/SeaLevelsLessonCode.zip
+    - files/lesson_code_zips/AQILessonCode.zip
+    - files/lesson_code_zips/BiodiversityLessonCode.zip
+    - files/lesson_code_zips/ClimateChangeLessonCode.zip
+    - files/lesson_code_zips/SalmonLessonCode.zip
+    - files/lesson_code_zips/SeaLevelsLessonCode.zip
   
 webr: 
   packages: ['tidyverse']
