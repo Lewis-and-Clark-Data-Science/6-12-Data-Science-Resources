@@ -1,7 +1,12 @@
 project:
   type: website
   output-dir: docs
- # resources:
+  resources:
+    - files/zip_lessons_code/AQILessonCode.zip
+    - files/zip_lessons_code/BiodiversityLessonCode.zip
+    - files/zip_lessons_code/ClimateChangeLessonCode.zip
+    - files/zip_lessons_code/SalmonLessonCode.zip
+    - files/zip_lessons_code/SeaLevelsLessonCode.zip
   
 webr: 
   packages: ['tidyverse']
@@ -10,9 +15,18 @@ website:
   title: "6-12 Data Science Resources"
   navbar: 
     left: 
-      - Salmon_lesson.qmd
+    - text: Lesson Plans 
+      menu: 
+        - lesson_plans/lesson_links.qmd
+    - text: Online Tutorials
+      menu:
+        - tutorials/salmon_lesson.qmd
+#    background: "info" https://quarto.org/docs/websites/website-navigation.html
+#    foreground: "light"
+    
 format:
   html:
-    theme: cosmo
+    theme: yeti
+#    theme: lux sandstone yeti
     css: styles.css
     toc: true

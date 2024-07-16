@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "Salmon_lesson.html",
-    "href": "Salmon_lesson.html",
+    "objectID": "tutorials/salmon_lesson.html",
+    "href": "tutorials/salmon_lesson.html",
     "title": "Salmon Lesson",
     "section": "",
     "text": "Hello"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html",
+    "href": "lesson_plans/lesson_links.html",
+    "title": "R Files for Data Science Lessons",
+    "section": "",
+    "text": "Here, you can find R code files for each lesson we have on this website. Each file is in a .zip format. We recommend you download and open the files using Rstudio desktop or posit.cloud.\nSalmon Lesson Code"
   },
   {
     "objectID": "index.html",
