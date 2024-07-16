@@ -5,7 +5,7 @@ project:
     - files/zip_lessons_code/AQILessonCode.zip
     - files/zip_lessons_code/BiodiversityLessonCode.zip
     - files/zip_lessons_code/ClimateChangeLessonCode.zip
-    - files/zip_lessons_code/SalmonLessonCode.zip
+    - lesson_plans/code_files/SalmonLessonCode.zip
     - files/zip_lessons_code/SeaLevelsLessonCode.zip
   
 webr: 

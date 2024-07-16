@@ -4,7 +4,7 @@ title: R Files for Data Science Lessons
 
 Here, you can find R code files for each lesson we have on this website. Each file is in a .zip format. We recommend you download and open the files using [Rstudio desktop](https://posit.co/download/rstudio-desktop/) or [posit.cloud](https://posit.cloud/content/yours?sort=name_asc). 
 
-## Middle School Lessons
+## Middle School Lessons!
 
 [Salmon Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/code_files/SalmonLessonCode.zip)
 
