@@ -11,7 +11,21 @@
     "href": "lesson_plans/lesson_links.html",
     "title": "R Files for Data Science Lessons",
     "section": "",
-    "text": "Here, you can find R code files for each lesson we have on this website. Each file is in a .zip format. We recommend you download and open the files using Rstudio desktop or posit.cloud.\nSalmon Lesson Code"
+    "text": "Here, you can find R code files for each lesson we have on this website. Each file is in a .zip format. We recommend you download and open the files using Rstudio desktop or posit.cloud."
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "href": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "Middle School Lessons",
+    "text": "Middle School Lessons\nSalmon Lesson Code"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
+    "href": "lesson_plans/lesson_links.html#high-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "High School Lessons",
+    "text": "High School Lessons\nAir Quality Lesson Code\nBiodiversity Lesson Code\nClimate Change Lesson Code\nSea Levels Lesson Code"
   },
   {
     "objectID": "index.html",
