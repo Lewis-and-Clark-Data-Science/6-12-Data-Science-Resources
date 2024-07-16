@@ -9,6 +9,7 @@ project:
     - files/lesson_code_zips/SeaLevelsLessonCode.zip
     - files/data/temp_data.csv
     - files/data/owid_co2_data_2.csv
+    - files/Bonneville_Dam_1939_2023_Chinook_CSV.csv
   
 webr: 
   packages: ['tidyverse']

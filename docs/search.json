@@ -2,9 +2,16 @@
   {
     "objectID": "tutorials/salmon_lesson.html",
     "href": "tutorials/salmon_lesson.html",
-    "title": "Salmon Lesson",
+    "title": "Salmon Crossing Data Tutorial",
     "section": "",
-    "text": "Hello"
+    "text": "Hello! Welcome to this tutorial. We’re going to learn about how a computer can use HUGE amounts of data and make cool graphs from it. Today we’ll get to learn about fish crossings at dams in the Columbia River.\n{fig-align=“left”, fig-alt=“A dog jumping towards Chinook salmon in a fish ladder”}\nWe’re going to use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!"
+  },
+  {
+    "objectID": "tutorials/salmon_lesson.html#looking-at-data",
+    "href": "tutorials/salmon_lesson.html#looking-at-data",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Looking at data",
+    "text": "Looking at data\nOne thing the computer is very useful for is dealing with HUGE amounts of data. Data is a collection of lots of numbers that tell us information about something.\nFor example, if you measured the temperature every single day for 1 month and wrote it down, you would create data.\nAt the Bonneville dam, there is someone who does something similar with fish. They count how many fish cross the Bonneville dam every single day. Then they write down exactly how many fish they see, what time and what kind of fish. All those numbers are called data! Then, someone puts all that data online for anyone to see (like us!).\nIn fact, we’re going to use some of that data. Want to look at it? Click the green play button on the code chunk below.\nBetter view in the callout so maybe delete this part….\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.\nLet’s learn about what some of this data means.\n\nQuestionAnswer\n\n\nMAYBE INSERT A SCREENSHOT HERE\nOn the top of the data table, you’ll see bolded numbers like 1/1, 1/2, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click to the next slide to see the answer.\n\n\nThose numbers are referring to dates! For example, 1/1 is January 1. But, they don’t include the year. Can you spot where the year is in the data?"
   },
   {
     "objectID": "index.html",

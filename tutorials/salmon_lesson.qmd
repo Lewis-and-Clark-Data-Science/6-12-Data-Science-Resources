@@ -1,5 +1,209 @@
 ---
-title: Salmon Lesson
-filter: webr
+title: "Salmon Crossing Data Tutorial"
+format: html
+filters:
+  - webr
+  - naquiz
+editor: visual
 ---
-Hello
+
+```{webr-r}
+#| context: setup
+library(tidyverse)
+library(DT)
+library(knitr)
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
+download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+#Pulls data that has been loaded into the Olivia-Test github repo. 
+```
+
+```{webr-r}
+#| context: setup
+Bon_chinook <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+names(Bon_chinook) <- Bon_chinook[1,]
+Bon_chinook <- Bon_chinook[-1,]
+  #Move first row to header and delete the row
+Bon_chinook_t <- t(Bon_chinook)
+  #Transpose
+colnames(Bon_chinook_t) <- Bon_chinook_t[1,]
+Bon_chinook_t <- Bon_chinook_t[-1,]
+  #Move first row to header and delete the row
+
+Bon_chinook_t <- as.data.frame(Bon_chinook_t)
+
+Bon_chinook_t <- Bon_chinook_t %>% replace(is.na(.), 0)
+  #make NA into 0 values
+Bon_chinook_t <- Bon_chinook_t %>% select(1:365)
+  #Delete extra info we don't want 
+str(Bon_chinook_t)
+  #Check what kind of data we have... Oh no! It's character data not numeric data
+Bon_chinook_num <-Bon_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+  #Change character to numeric data
+Bon_chinook_sum <-  Bon_chinook_num %>% mutate(sum_of_rows = rowSums(Bon_chinook_num))
+  #Add a new column summing the rows
+
+Bon_chinook_sum$year <- 2023:1938
+  #Add a year column with just the year
+
+options(scipen = 999) 
+  #Don't use standard notation
+Bonneville_chinook <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+```
+
+```{r}
+#| include: false
+library(tidyverse)
+library(DT)
+url<- "https://lewis-and-clark-data-science.github.io/Olivia-test/brainstorm_612_lessons/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
+download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+#Pulls data that has been loaded into the Olivia-Test github repo. 
+Bon_chinook <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+names(Bon_chinook) <- Bon_chinook[1,]
+Bon_chinook <- Bon_chinook[-1,]
+  #Move first row to header and delete the row
+Bon_chinook_t <- t(Bon_chinook)
+  #Transpose
+colnames(Bon_chinook_t) <- Bon_chinook_t[1,]
+Bon_chinook_t <- Bon_chinook_t[-1,]
+  #Move first row to header and delete the row
+
+Bon_chinook_t <- as.data.frame(Bon_chinook_t)
+
+Bon_chinook_t <- Bon_chinook_t %>% replace(is.na(.), 0)
+  #make NA into 0 values
+Bon_chinook_t <- Bon_chinook_t %>% select(1:365)
+  #Delete extra info we don't want 
+#str(Bon_chinook_t)
+  #Check what kind of data we have... Oh no! It's character data not numeric data
+Bon_chinook_num <-Bon_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+  #Change character to numeric data
+Bon_chinook_sum <-  Bon_chinook_num %>% mutate(sum_of_rows = rowSums(Bon_chinook_num))
+  #Add a new column summing the rows
+
+Bon_chinook_sum$year <- 2023:1938
+  #Add a year column with just the year
+
+options(scipen = 999) 
+  #Don't use standard notation
+Bonneville_chinook <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+```
+
+Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it. Today we'll get to learn about fish crossings at dams in the Columbia River.
+
+![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](brainstorm_612_lessons/Images/salmon_dog.jpg){fig-align="left", fig-alt="A dog jumping towards Chinook salmon in a fish ladder"}
+
+We're going to use a coding language called "R". Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
+
+For example one command the computer knows is multiplication! Try typing `5*3` in the box right below this. Then click the green play button that says "run code"
+
+```{webr-r}
+# Type your code here!
+
+
+```
+
+What happened? Did you see the number 15 pop out?
+
+The computer can also do very complicated things, like create graphs. We'll learn more about that later in this tutorial.
+
+The box above where you typed `5*3` is called a **code chunk**. You can type commands into any similar box and it will tell the computer to do various things.
+
+Here's another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There's a few different tabs you can click on to learn how to do cool things!
+
+::: panel-tabset
+## Code editor
+
+Want to try out your own code? Maybe another math problem? Here's a place to do that. Otherwise click on the tabs to learn something new!
+
+```{webr}
+#Type your code here
+
+
+
+```
+
+## Say hello
+
+Would you like the computer to say hello to you?
+
+First, type your name where the blank \_\_\_\_\_\_\_ is, in the second code chunk. Don't delete the quotation marks.
+
+Here's an example:
+
+```{webr}
+#| read-only: true
+name = "Olivia"
+```
+
+Now your turn. Type your name instead of the blank \_\_\_\_\_ and then click play:
+
+```{webr}
+name = "_____"
+
+cat("Hello", name, "How are you today?")
+
+## Find the largest number
+
+We can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don't delete anything else! 
+
+Here's an example: 
+#| read-only:true
+numbers = c(41, 55, 98, 104, 2, 8)
+```
+
+Now you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.
+
+```{webr-r}
+numbers = c(_,_,_,_,_,_,)
+```
+
+Now let's run a function that will tell us which number is the biggest. Click the play button on this code chunk too.
+
+```{webr-r}
+max(numbers)
+```
+:::
+
+## Looking at data
+
+One thing the computer is very useful for is dealing with HUGE amounts of data. **Data** is a collection of lots of numbers that tell us information about something.
+
+For example, if you measured the temperature every single day for 1 month and wrote it down, you would create data.
+
+At the Bonneville dam, there is someone who does something similar with fish. They count how many fish cross the Bonneville dam every single day. Then they write down exactly how many fish they see, what time and what kind of fish. All those numbers are called **data**! Then, someone puts all that data online for anyone to see (like us!).
+
+In fact, we're going to use some of that data. Want to look at it? Click the green play button on the code chunk below.
+
+*Better view in the callout so maybe delete this part....*
+
+```{webr-r}
+
+kable(Bonneville_chinook)
+```
+
+::: {.callout-note collapse="true"}
+## Click this to see our data!
+
+```{r}
+#| echo: false
+#| output: true
+library(DT)
+datatable(Bonneville_chinook)
+```
+:::
+
+Wow that's a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.
+
+Let's learn about what some of this data means.
+
+::: panel-tabset
+## Question
+
+MAYBE INSERT A SCREENSHOT HERE
+
+On the top of the data table, you'll see bolded numbers like **1/1**, **1/2**, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click to the next slide to see the answer.
+
+## Answer
+
+Those numbers are referring to dates! For example, *1/1* is January 1. But, they don't include the year. Can you spot where the year is in the data?
+:::
