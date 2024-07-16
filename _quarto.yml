@@ -7,6 +7,8 @@ project:
     - files/lesson_code_zips/ClimateChangeLessonCode.zip
     - files/lesson_code_zips/SalmonLessonCode.zip
     - files/lesson_code_zips/SeaLevelsLessonCode.zip
+    - files/data/temp_data.csv
+    - files/data/owid_co2_data_2.csv
   
 webr: 
   packages: ['tidyverse']
@@ -21,6 +23,7 @@ website:
     - text: Online Tutorials
       menu:
         - tutorials/salmon_lesson.qmd
+        - tutorials/climate_change_tutorial.qmd
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
     

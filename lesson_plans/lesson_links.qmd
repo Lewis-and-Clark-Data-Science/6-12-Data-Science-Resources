@@ -8,6 +8,9 @@ Here, you can find R code files for each lesson we have on this website. Each fi
 
 [Salmon Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
 
+[Air Quality Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
+
+
 ## High School Lessons
 
 [Air Quality Lesson Code](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)

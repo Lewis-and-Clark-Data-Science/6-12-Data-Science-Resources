@@ -1,0 +1,323 @@
+---
+title: "Climate Change Data Tutorial"
+format: html
+filters:
+  - webr
+editor: visual
+author: Written by Finn, edited for web version by Olivia 
+---
+
+# Climate Change Data Visualization
+
+```{webr-r}
+#| context: setup
+library(tidyverse)
+```
+
+```{webr-r}
+#| context: setup
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/owid_co2_data_2.csv"
+download.file(url, "co2Data.csv")
+#Pulls data that has been loaded into the Olivia-Test github repo. 
+
+co2Data<- read_csv("co2Data.csv")
+
+co2Data<-co2Data%>%
+  filter(country=="World")
+#Filter out individual countries, just have world data
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/temp_data.csv"
+download.file(url, "data.csv")
+#Pulls data that has been loaded into the Olivia-Test github repo. 
+
+tempData<- read_csv("data.csv")
+```
+
+Welcome to this data science tutorial! We'll be using R to look at climate change data.
+
+R is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!
+
+Want to try using R?
+
+In the code box right below this, type in `6+3` and press the green play button:
+
+```{webr-r}
+#Type your code here! 
+
+
+```
+
+Do you see the answer `9` that popped out right under your code? Pretty cool!
+
+The gray and white box with the green arrow and "run code" button is called a code chunk. You can type in "R commands" into that box and it will output the answer underneath the code chunk.
+
+## Our Data
+
+Today we'll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.
+
+We've preloaded a dataset into this tutorial. This was found
+
+### Where??
+
+Let's start by taking a look at the data set. Click the green play button below and see what happens!
+
+```{webr-r}
+co2Data
+```
+
+You should see 10 rows of data and a lot of random words. We won't go into what all of it means, but here's a quick overview:
+
+-   The words on the top (country, year, iso_code, population, etc) are the different **variables** in our data set
+
+-   Underneath those words are the **type of variable**, which we'll ignore right now.
+
+-   Below that, you'll see some numbers and NA values. Those are different values for each variable.
+
+Our data is called `co2Data`. If you type `co2Data` into any code chunk, you'll be able to see our data.
+
+## Our First Graph
+
+We can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won't be able to cover all the details of how to make a graph, but there's lots of resources online you can find to learn more. We use something called `ggplot` to make graphs in this tutorial.
+
+First, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!
+
+```{webr-r}
+ggplot(data=co2Data, mapping=aes(x=year, y=co2))+
+  geom_line(color="#a20000")+
+  theme_light()+
+  guides(color=F)+
+  labs(title="CO2 Emission (World) Over Time", x="Year", 
+       y="CO2 Emissions (Million Tons)")
+```
+
+## Temperature Data
+
+What if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how *different* the temperature each year is from the average in 1900.
+
+In the code chunk below type `tempData` and click "run code" to see the new data set.
+
+```{webr-r}
+
+
+```
+
+You should see 2 columns: one called `Year` and one called `Anomaly`. The Anomaly column tells us how *different* the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.
+
+Lets graph this! Click "run code" and see what happens!
+
+```{webr-r}
+ggplot(data=tempData, mapping=aes(x=Year, y=Anomaly))+
+  geom_line(color="purple")+
+  theme_light()+
+  labs(title="Temp. Change Over Time", x="Year", 
+       y="Temperature Difference from 1900 Average (Celcius)")
+```
+
+Now, what if we combine our co2 data and our temperature data?
+
+Lets put these two data sets together matching up the years. Then, we can make a graph of temperature anomaly and co2 levels. Click "run code".
+
+```{webr-r}
+#| auto-run: TRUE
+tempData<-tempData%>%rename(year=Year)
+joinedData<-co2Data%>%full_join(tempData)
+
+ggplot(data=joinedData, mapping=aes(x=Anomaly, y=co2))+
+  geom_line(color="purple")+
+  theme_light()+
+  labs(title="Temperature and co2 Emissions", x="Temperature Difference from 1900 Average (Celcius)", 
+       y="Co2 Emissions (Million Tons)")
+```
+
+## CO2 Sources
+
+Now what if we ask where most of that CO2 we're emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we've edited some of our data in the background to make it easier to graph with. Our new edited data is called `co2DataFiltered`.
+
+```{webr-r}
+#| context: setup
+
+#This uses the data to make new columns that adds to get the entire energy production of the world, then another column that subtracts that number from total co2
+
+#Don't worry about what this does
+co2DataBar<-co2Data%>%
+  group_by(year)%>%
+  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%>%
+  mutate(co2_no_energy=co2-co2_from_energy)
+
+#Filter data to get just the columns we need and make it graphable, we don't need to understand what this does either
+co2DataFiltered<-co2DataBar%>%select(year, co2_no_energy, co2_from_energy)%>%
+  filter(year>=2019)%>%
+  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%>%
+  mutate(year_chr=as.character(year))
+co2DataFiltered
+
+```
+
+Let's see what a graph looks like! Click "run code".
+
+```{webr-r}
+ggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+
+  geom_col(position="dodge")+
+  labs(title="CO2 Production from Energy Vs. Other Sources", x="Year", y="CO2 In Tons")+
+  scale_fill_discrete(name="CO2 Source", labels=c("CO2 from Energy (coal, gas, and oil)", "All Other Sources of CO2"))+
+  theme_light()
+```
+
+::: {.callout-caution collapse="true" icon="false"}
+## Optional: Open this if you want to learn more about how the code works
+
+GGPlot is an awesome tool you can use to create plots! There's lots of tutorials online that I recommend checking out. But for now, here's a brief explanation of how our code works. Below, I've copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a `#` (called a comment) and are gray. See if you can find out which line creates the title of the graph!
+
+```{r}
+#| eval: false
+#Tell R what data to use and what the x and y values are
+ggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+
+  
+  #Select what kind of graph we're making
+  geom_col(position="dodge") +
+  
+  #Label the graph to make it easy to read
+  labs(title="CO2 Production from Energy Vs. Other Sources", x="Year", y="CO2 In Tons") +
+  
+  #add a legend to show what each color means 
+  scale_fill_discrete(name="CO2 Source", labels=c("CO2 from Energy", "All Other Sources of CO2")) +
+  
+  #make it pretty :)
+  theme_light() 
+```
+
+Were you able to tell which line created the title??
+
+If you want even more code to look at, keep reading! You can also feel free to skip to the next section called **Scatter Plot Generator**
+
+Below, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the `co2Data` and edits it to make it easier to graph with.
+
+```{r}
+#| eval: false
+
+#Creates new columns called "co2_from_energy" that includes co2 data from coal, gas, oil. 
+#Then creates a column called "co2_no_energy" that is the rest of the co2 production
+co2DataBar<-co2Data%>%
+  group_by(year)%>%
+  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%>%
+  mutate(co2_no_energy=co2-co2_from_energy)
+
+#Filter data to get just the columns we need and make it graphable
+#Tells R to only use "year", "co2_no_energy" and "co2_from_energy" in the graph. 
+co2DataFiltered<-co2DataBar%>%select(year, co2_no_energy, co2_from_energy)%>%
+  
+  #Chooses only years above 2019
+  filter(year>=2019)%>%
+  
+  #A few final adjustments to make the graph easier to use
+  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%>%
+  mutate(year_chr=as.character(year))
+
+```
+:::
+
+## Scatter Plot Generator!
+
+Now you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven't been answered by the infographics and graphs you've already seen, take a look at the data and see what you can ask to try and learn more.
+
+First, decide which variable you want to learn about. You can choose any variable from `co2Data`. Here are some options:
+
+-   population
+-   year
+-   cement_co2
+-   co2
+-   consumption_co2
+-   cumulative_co2
+-   energy_per_gdp
+-   land_use_change_co2
+-   gas_co2
+-   coal_co2
+-   cement_co2
+-   land_use_change_co2
+-   methane
+-   temperature_change_from_co2
+
+Choose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.
+
+Then click "run code"!
+
+::: panel-tabset
+## Code editor
+
+```{webr-r}
+XVar<-"_____"
+YVar<-"_____"
+
+```
+
+## Example
+
+```{webr-r}
+XVar<-"population"
+YVar<-"co2"
+
+```
+:::
+
+Now, let's add titles and labels to your graph! Again, type your title between the quotation marks. Then click "run code"!
+
+::: panel-tabset
+## Code editor
+
+```{webr-r}
+Title<-"_________"
+XLabel<-"_________"
+YLabel<-"_________"
+```
+
+## Example
+
+```{webr-r}
+Title<-"Population Vs. CO2"
+XLabel<-"population"
+YLabel<-"CO2 Emissions"
+```
+:::
+
+Finally, run this to see your scatter plot! Click "run code" and if something doesn't look right, click through the "troubleshooting" tabs to see how to fix it.
+
+::: panel-tabset
+## Code editor
+
+```{webr-r}
+ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
+  geom_point(color="aquamarine4")+
+  labs(x=XLabel, y=YLabel, title=Title)+
+  theme_light()
+ 
+```
+
+## Troubleshooting - points clustered at the bottom
+
+If your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn't much change until much more recently. So try running this code instead. It will display your graph from 2000 to 2020.
+
+```{webr-r}
+ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
+  geom_point(color="aquamarine4")+
+  labs(x=XLabel, y=YLabel, title=Title)
+  theme_light()+
+  lims(x=c(2000,2020))
+```
+
+## Troubleshooting: error message
+
+Did you get an error message in red?
+
+-   If the graph also displayed and looks right, don't worry about the error message!
+
+-   If the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.
+
+    -   Did you put everything in quotes when you defined the variables and labels?
+
+-   You don't need to edit this code at all, just the code where you define variables and labels
+
+-   If it still isn't working or if you accidentally deleted something, you can refresh the page to restart.
+:::
+
+Nice work! Hopefully you enjoyed making your own graph with this data!
