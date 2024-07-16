@@ -90,7 +90,7 @@ Bonneville_chinook <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/
 
 Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it. Today we'll get to learn about fish crossings at dams in the Columbia River.
 
-![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](brainstorm_612_lessons/Images/salmon_dog.jpg){fig-align="left", fig-alt="A dog jumping towards Chinook salmon in a fish ladder"}
+![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](6-12-Data-Science-Resources/files/figures/salmon_dog.jpg){fig-align="left", fig-alt="A dog jumping towards Chinook salmon in a fish ladder"}
 
 We're going to use a coding language called "R". Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
 
