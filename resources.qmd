@@ -1,0 +1,21 @@
+---
+title: Other Resources
+---
+
+If you'd like to learn more about R coding and data science, here are some more resources you can refer to! 
+
+### Tutorial websites
+
+[Biology Tutorials used in Lewis & Clark College intro to biology courses](https://lewis-and-clark-data-science.github.io/BIO-110-Web-Tutorials/)
+
+### Tutorials that can be downloaded 
+
+Thinking we could include data in the wild resources here?? as a .zip file?? 
+
+### Other websites to learn more about R coding
+
+maybe some posit.cloud links?? 
+
+### Other resources
+
+maybe some resources from the workshop?? 
