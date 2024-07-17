@@ -43,7 +43,7 @@ Bon_chinook_t <- Bon_chinook_t %>% replace(is.na(.), 0)
   #make NA into 0 values
 Bon_chinook_t <- Bon_chinook_t %>% select(1:365)
   #Delete extra info we don't want 
-str(Bon_chinook_t)
+#str(Bon_chinook_t)
   #Check what kind of data we have... Oh no! It's character data not numeric data
 Bonneville_chinook<- Bon_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
   #Change character to numeric data
@@ -66,6 +66,13 @@ library(tidyverse)
 library(DT)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
 download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Chinook_Dalles_1957_2023.csv"
+download.file(url, "Chinook_Dalles_1957_2023.csv")
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Steelhead_1939_2023_BonnevilleDamCSV.csv"
+download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
+
 #Pulls data that has been loaded into the Olivia-Test github repo. 
 Bon_chinook <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
 names(Bon_chinook) <- Bon_chinook[1,]
@@ -406,7 +413,7 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph without connecting line
 
 ```{webr-r}
-Dalles_chinook <- read_csv("Chinook_Dalles_1957_2023.csv")
+Dalles_chinook <- read.csv("Chinook_Dalles_1957_2023.csv")
 
 names(Dalles_chinook) <- Dalles_chinook[1,]
 Dalles_chinook <- Dalles_chinook[-1,]
@@ -423,7 +430,7 @@ Dalles_chinook_t <- Dalles_chinook_t %>% replace(is.na(.), 0)
 #make NA into 0 values
 Dalles_chinook_t <- Dalles_chinook_t %>% select(1:365)
 #Delete extra info we don't want 
-str(Dalles_chinook_t)
+#str(Dalles_chinook_t)
 #Check what kind of data we have... Oh no! It's character data not numeric data
 Dalles_chinook_t <-Dalles_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
 #Change character to numeric data
@@ -452,7 +459,7 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph with connecting line 
 
 ```{webr-r}
-Dalles_chinook <- read_csv("Chinook_Dalles_1957_2023.csv")
+Dalles_chinook <- read.csv("Chinook_Dalles_1957_2023.csv")
 
 names(Dalles_chinook) <- Dalles_chinook[1,]
 Dalles_chinook <- Dalles_chinook[-1,]
@@ -469,7 +476,7 @@ Dalles_chinook_t <- Dalles_chinook_t %>% replace(is.na(.), 0)
 #make NA into 0 values
 Dalles_chinook_t <- Dalles_chinook_t %>% select(1:365)
 #Delete extra info we don't want 
-str(Dalles_chinook_t)
+#str(Dalles_chinook_t)
 #Check what kind of data we have... Oh no! It's character data not numeric data
 Dalles_chinook_t <-Dalles_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
 #Change character to numeric data
@@ -505,7 +512,7 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph without connecting line
 
 ```{webr-r}
-Bon_steel <- read_csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
+Bon_steel <- read.csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 names(Bon_steel) <- Bon_steel[1,]
 Bon_steel <- Bon_steel[-1,]
@@ -522,7 +529,7 @@ Bon_steel_t <- Bon_steel_t %>% replace(is.na(.), 0)
 #make NA into 0 values
 Bon_steel_t <- Bon_steel_t %>% select(1:365)
 #Delete extra info we don't want 
-str(Bon_steel_t)
+#str(Bon_steel_t)
 #Check what kind of data we have... Oh no! It's character data not numeric data
 Bon_steel_t <-Bon_steel_t %>% mutate_all(function(x) as.numeric(as.character(x)))
 #Change character to numeric data
@@ -554,7 +561,7 @@ ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path=
 ## Graph with connecting line
 
 ```{webr-r}
-Bon_steel <- read_csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
+Bon_steel <- read.csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 names(Bon_steel) <- Bon_steel[1,]
 Bon_steel <- Bon_steel[-1,]
@@ -571,7 +578,7 @@ Bon_steel_t <- Bon_steel_t %>% replace(is.na(.), 0)
 #make NA into 0 values
 Bon_steel_t <- Bon_steel_t %>% select(1:365)
 #Delete extra info we don't want 
-str(Bon_steel_t)
+#str(Bon_steel_t)
 #Check what kind of data we have... Oh no! It's character data not numeric data
 Bon_steel_t <-Bon_steel_t %>% mutate_all(function(x) as.numeric(as.character(x)))
 #Change character to numeric data
