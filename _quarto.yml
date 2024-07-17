@@ -11,6 +11,7 @@ project:
     - files/data/owid_co2_data_2.csv
     - files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv
     - files/figures/salmon_dog.jpg
+    - files/data/Biodiversity_Index.csv
   
 #webr: 
 #  packages: ['tidyverse']
