@@ -358,7 +358,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-1","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"##| context: setup\nlibrary(tidyverse)\n\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv\"\ndownload.file(url, \"Biodiversity_Index.csv\")\n\nBiodiversity_Index_spelling <- read_csv(\"Biodiversity_Index.csv\")\n\n#Fix spelling errors in the dataset\nBiodiversity_Index <- Biodiversity_Index_spelling |> \n  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', \n                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), \n         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', \n                     'Terrestial Plant' = 'Terrestrial Plants',\n                     'Terrestial Plants' = 'Terrestrial Plants'))"},{"id":2,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-2","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"4+3"},{"id":3,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-3","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"4+3"},{"id":4,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-4","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"view(Biodiversity_Index)"},{"id":5,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-5","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"print(Biodiversity_Index[,c(\"index\",\"numspecies\")])"},{"id":6,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-6","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"unique(Biodiversity_Index$Biome)"},{"id":7,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-7","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"unique(Biodiversity_Index$\"Insert Column Name here\"\n)"},{"id":8,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-8","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"print(Biodiversity_Index[,c(\"YEAR\",\"index\",\"numspecies\",\"Biome\",\"Taxa\")])"},{"id":9,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-9","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y=\"numspecies or index\")) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"id":10,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-10","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") "},{"id":11,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-11","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"filter(Biome==\"Savannah Desert\", Taxa==\"Mammals\") "},{"id":12,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-12","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"ggplot(aes(x= YEAR, y=\"numspecies or index\"))"},{"id":13,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-13","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"geom_col(fill= \"salmon3\", color=\"grey37\")"},{"id":14,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-14","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"labs(title = \"Insert Title Name\", subtitle = \"Insert Subtititle\", x= \"Year\", y= \"Number of species or Biodiversity index\")"},{"id":15,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-15","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y= \"numspecies or index\" )) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"}];
+globalThis.qwebrCellDetails = [{"options":{"autorun":"true","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-1","editor-max-height":"","warning":"false","out-width":"700px","context":"setup","out-height":"","classes":""},"id":1,"code":"library(tidyverse)\nlibrary(knitr)\n\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv\"\ndownload.file(url, \"Biodiversity_Index.csv\")\n\nBiodiversity_Index <- read_csv(\"Biodiversity_Index.csv\")\n\n#Fix spelling errors in the dataset\nBiodiversity_Index <- Biodiversity_Index |> \n  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', \n                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), \n         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', \n                     'Terrestial Plant' = 'Terrestrial Plants',\n                     'Terrestial Plants' = 'Terrestrial Plants'))\n\nBiodiversity_Index <- Biodiversity_Index[-c(2)]\n\nnames(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-2","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":2,"code":"4+3"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-3","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":3,"code":"4+3"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","df-print":"kable","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-4","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":4,"code":"df-print(Biodiversity_Index)"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-5","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":5,"code":"print(Biodiversity_Index[,c(\"index\",\"numspecies\")])"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-6","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":6,"code":"unique(Biodiversity_Index$Biome)"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-7","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":7,"code":"unique(Biodiversity_Index$\"Insert Column Name here\"\n)"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-8","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":8,"code":"print(Biodiversity_Index[,c(\"YEAR\",\"index\",\"numspecies\",\"Biome\",\"Taxa\")])"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"true","editor-font-scale":"1","label":"unnamed-chunk-9","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":9,"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y=\"numspecies or index\")) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-10","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":10,"code":"filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-11","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":11,"code":"filter(Biome==\"Savannah Desert\", Taxa==\"Mammals\") "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-12","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":12,"code":"ggplot(aes(x= YEAR, y=numspecies or index))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-13","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":13,"code":"ggplot(aes(x= YEAR, y=numspecies))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-14","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":14,"code":"geom_col(fill= \"Insert Color Name Here\", color=\"grey37\")"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-15","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":15,"code":"geom_col(fill= \"salmon3\", color=\"grey37\")"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-16","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":16,"code":"labs(title = \"Insert Title Name\", subtitle = \"Insert Subtititle\", x= \"Year\", y= \"Number of species or Biodiversity index\")"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-17","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":17,"code":"labs(title = \"Number of Terrestrial Invertebrate Species\", \n       subtitle = \"In Temperate Coniferous Forest \",\n       x= \"Year\", y= \"Number of Species\")"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-18","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":18,"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y= \"numspecies or index\" )) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-19","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":19,"code":"Biodiversity_Index|>\n  filter(Biome==\"Temperate Coniferous Forest\", Taxa==\"Terrestrial Plants\")|>\nggplot(aes(x=YEAR,y= numspecies)) + geom_col(fill= \"darkseagreen\", color= \"grey37\")+\n  labs(title = \"Number of Terrestrial Plant Species\", \n       subtitle = \"In Temperate Coniferous Forest\", \n       x= \"Year\", y= \"Number of species\") + theme_linedraw() + \n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5)) "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-20","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":20,"code":"Biodiversity_Index|>\n  filter(Biome==\"Temperate Coniferous Forest\", Taxa==\"Terrestrial Invertebrates\")|>\n  ggplot(aes(x=YEAR, y= numspecies)) +geom_col(fill= \"salmon3\", color= \"grey37\") +\n  labs(title = \"Number of Terrestrial Invertebrate Species\", \n       subtitle = \"In Temperate Coniferous Forest \",\n       x= \"Year\", y= \"Number of Species\") +theme_linedraw() +\n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5)) "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-21","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":21,"code":"Biodiversity_Index|>\n  filter(Biome==\"Temperate Coniferous Forest\", Taxa== \"Terrestrial Plants\")|>\n  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= \"darkseagreen\", color=\"grey37\") + \n  labs(title = \"Biodiversity Index of Terrestrial Plants\", \n       subtitle = \"In Temperate Coniferous Forest\",\n       x= \"Year\", y= \"Biodiversity Index\") +\n  theme_linedraw()+\n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5)) "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-22","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":22,"code":"Biodiversity_Index|>\n  filter(Biome==\"Temperate Coniferous Forest\", Taxa==\"Terrestrial Invertebrates\")|>\n  ggplot(aes(x=YEAR, y= index)) +geom_col(fill= \"salmon3\", color= \"grey37\") +\n  labs(title = \"Biodiversity Index of Terrestrial Invertebrates\", \n       subtitle = \"In Temperate Coniferous Forest\", \n       x= \"Year\", y= \"Biodiversity Index\") + theme_linedraw() +\n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-23","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":23,"code":"Biodiversity_Index|>\n  filter(Biome==\"Tropical Forest\", Taxa==\"Terrestrial Plants\")|>\n  ggplot(aes(x=YEAR,y= numspecies)) +geom_col(fill= \"seagreen\", color= \"grey37\")+\n  labs(title = \"Number of Terrestrial Plant Species\",\n       subtitle = \"In Tropical Forest\", \n       x= \"Year\", y= \"Number of species\") + theme_linedraw() + \n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-24","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":24,"code":"Biodiversity_Index|>\n  filter(Biome==\"Tropical Forest\", Taxa==\"Terrestrial Invertebrates\")|>\n  ggplot(aes(x=YEAR,y= numspecies)) +geom_col(fill= \"brown\", color= \"grey37\")+\n  labs(title = \"Number of Terrestrial Invertebrate Species\",\n       subtitle = \"In Tropical Forest\", \n       x= \"Year\", y= \"Number of species\") + theme_linedraw() + \n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5)) "},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-25","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":25,"code":"Biodiversity_Index|>\n  filter(Biome==\"Tropical Forest\", Taxa== \"Terrestrial Plants\")|>\n  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= \"seagreen\", color=\"grey37\") + \n  labs(title = \"Biodiversity Index of Terrestrial Plants\", \n       subtitle = \"In Tropical Forest\", \n       x= \"Year\", y= \"Biodiversity Index\" ) +\n  theme_linedraw()+\n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"options":{"autorun":"false","message":"true","fig-width":7,"fig-cap":"","fig-height":5,"editor-quick-suggestions":"false","comment":"","results":"markup","output":"true","dpi":72,"editor-word-wrap":"true","read-only":"false","editor-font-scale":"1","label":"unnamed-chunk-26","editor-max-height":"","warning":"true","out-width":"700px","context":"interactive","out-height":"","classes":""},"id":26,"code":"Biodiversity_Index|>\n  filter(Biome==\"Tropical Forest\", Taxa==\"Terrestrial Invertebrates\")|>\n  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= \"brown\", color=\"grey37\") + \n  labs(title = \"Biodiversity Index of Terrestrial Invertebrates\", \n       subtitle = \"In Tropical Forest\", \n       x= \"Year\", y= \"Biodiversity Index\" ) +\n  theme_linedraw()+\n  theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"}];
 
 </script>
 <script type="module">
@@ -1652,8 +1652,11 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#you-can-use-r" id="toc-you-can-use-r" class="nav-link" data-scroll-target="#you-can-use-r">You can use R!</a></li>
   </ul></li>
   <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">Data Set</a></li>
-  <li><a href="#which-columns-are-we-going-to-use" id="toc-which-columns-are-we-going-to-use" class="nav-link" data-scroll-target="#which-columns-are-we-going-to-use">Which columns are we going to use</a></li>
-  <li><a href="#re-creating-your-groups-graph" id="toc-re-creating-your-groups-graph" class="nav-link" data-scroll-target="#re-creating-your-groups-graph">Re-Creating Your Group’s Graph</a>
+  <li><a href="#which-columns-are-we-going-to-use" id="toc-which-columns-are-we-going-to-use" class="nav-link" data-scroll-target="#which-columns-are-we-going-to-use">Which columns are we going to use</a>
+  <ul class="collapse">
+  <li><a href="#narrowing-down-the-data" id="toc-narrowing-down-the-data" class="nav-link" data-scroll-target="#narrowing-down-the-data">Narrowing down the data</a></li>
+  </ul></li>
+  <li><a href="#creating-your-groups-graph" id="toc-creating-your-groups-graph" class="nav-link" data-scroll-target="#creating-your-groups-graph">Creating Your Group’s Graph</a>
   <ul class="collapse">
   <li><a href="#step-1-selecting-a-data-set-to-graph" id="toc-step-1-selecting-a-data-set-to-graph" class="nav-link" data-scroll-target="#step-1-selecting-a-data-set-to-graph">Step 1: Selecting a data set to graph</a></li>
   <li><a href="#step-2-identifying-which-biome-and-which-taxa" id="toc-step-2-identifying-which-biome-and-which-taxa" class="nav-link" data-scroll-target="#step-2-identifying-which-biome-and-which-taxa">Step 2: Identifying which <code>Biome</code> and which <code>Taxa</code></a></li>
@@ -2012,14 +2015,14 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </ul>
 <p>Lets look at it!</p>
 <ul>
-<li>The <code>view()</code> function opens the data set so you can look at it.</li>
+<li>The <code>kable()</code> function opens the data set so you can look at it.</li>
 </ul>
 <p><strong>Press</strong> Green play button to run the code</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><strong>Stop and Think:</strong></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Question</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Hint</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="question">
@@ -2028,13 +2031,13 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>148 columns and 12 rows</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>148 columns and 11 rows</p><p></p>
 </div>
 <div class="choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>12 columns and 10 rows</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>11 columns and 10 rows</p><p></p>
 </div>
 <div class="choice correct-choice">
-<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>12 columns and 148 rows</p><p></p>
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>11 columns and 148 rows</p><p></p>
 </div>
 <div class="choice">
 <p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span>52 columns and 14 rows</p><p></p>
@@ -2044,23 +2047,56 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 </div>
 </div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>At the top you’ll see the names of all the columns. Each column is separated by a vertical line | . Try scrolling all the way to the bottom of the data to see how many rows there are.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="which-columns-are-we-going-to-use" class="level1">
-<h1>Which columns are we going to use</h1>
-<p>We to make graphs that represent biodiversity, so we want to look at biodiversity Index and the number of different species.</p>
+<section id="which-columns-are-we-going-to-use" class="level2">
+<h2 class="anchored" data-anchor-id="which-columns-are-we-going-to-use">Which columns are we going to use</h2>
+<p>We are going to make graphs that represent biodiversity, so we want to look at <strong>biodiversity Index</strong> and the <strong>number of different species</strong>.</p>
 <p><strong>Stop and Think:</strong></p>
-<p><em>Which Columns do you think represent these two things?</em></p>
-<p>(Go back to the Biodiversity_Index data set tab to look at the columns again!)</p>
-<p><u>Answer:</u> The <code>index</code> and <code>numspecies</code> columns!</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Question</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Hint</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="question">
+<p><strong>Which Columns do you think represent these two things?</strong></p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span><code>Taxa</code> and <code>total</code></p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span><code>Biome</code> and <code>total</code></p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no3"> <span id="no3" x-show="answer == $el.id" class="badge">✗</span><code>entry</code> and <code>YEAR</code></p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span><code>index</code> and <code>numspecies</code></p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Go back to the Biodiversity_Index data set code chunk to look at the columns again! At the top you’ll see the names of all the columns. Each column is separated by a vertical line | .</p>
+</div>
+</div>
+</div>
+<section id="narrowing-down-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="narrowing-down-the-data">Narrowing down the data</h3>
 <ul>
 <li><p>The <code>index</code> column represents the biodiversity index per year.</p></li>
 <li><p>The <code>numspecies</code> column represents the different number of species observed per year.</p></li>
 </ul>
 <p>Now lets look at these columns</p>
 <ul>
-<li><p>The <code>print()</code> is used to show certain values of a data set</p></li>
+<li><p>The <code>print()</code> function is used to show certain values of a data set.</p></li>
 <li><p>We are specifying which columns we want in the part: <code>c("index", "numspecies")</code></p>
 <p><strong>Press</strong> Green play button to run the code</p></li>
 </ul>
@@ -2069,33 +2105,55 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <p>Now we want to look at the biodiversity Index ( <code>index</code> ) and total number of species ( <code>numspecies</code>) for each biome and each taxa that the data set has</p>
 <p><strong>Stop and Think</strong></p>
 <p><em>How many different biomes does the data set have?</em></p>
-<p>(Go back to the Biodiversity_Index data set tab to try to find the answer)</p>
+<p>(Go back to look at the Biodiversity_Index data set to try to find the answer)</p>
 <ul>
 <li><p>notice this is hard to find by just looking at the data set, especially if the data set is huge.</p></li>
 <li><p>The <code>unique()</code> function list unique values within a column, so it shows us all the different values.</p></li>
 </ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p><strong>Press</strong> Green play button to run the code</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><u>Answer</u>: There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.</p>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<p>There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.</p>
+</div>
+</div>
+</div>
 <p><strong>Stop and Think</strong></p>
 <p><em>How many different taxa does the data set have?</em></p>
 <ul>
-<li><p>Now you know what code to use to find unique values within columns, you should be able to find the unique values for the <code>Taxa</code> column.</p>
-<p>HINT:look at the previous code chunk, if it looks like <code>unique(Biodiveristy_Index$Biome)</code> to find unique values of the <code>Biome</code> Column, what should you add to the next code chunk to find the unique values of the <code>Taxa</code> column</p></li>
+<li>Now you know what code to use to find unique values within columns, you should be able to find the unique values for the <code>Taxa</code> column.</li>
 </ul>
-<p><strong>Press</strong> Green play button to run the code chunk once you added the right column name.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Hint</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false">Answer</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><strong>Edit</strong> this code to find the unique values for the <code>Taxa</code> column.</p>
+<p><strong>Press</strong> Green play button to run the code chunk once you edit the code.</p>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><u>Answer:</u>There are two different taxa in this data set; Terrestrial Plants and Terrestrial Invertebrates.</p>
-<p>Now lets combine all the columns we just looked at: the <code>index</code>,<code>total</code>,<code>Biome</code>, and <code>Taxa</code> columns. Lets also add the <code>YEAR</code> column, since it’s the independent variable we will be using in our graphs.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Look at the previous code chunk that says <code>unique(Biodiveristy_Index$Biome)</code>. If that code finds unique values of the <code>Biome</code> Column, how can you change it to find the unique values of the <code>Taxa</code> column?</p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>There are two different taxa in this data set: Terrestrial Plants and Terrestrial Invertebrates.</p>
+</div>
+</div>
+</div>
+<p>Now let’s combine all the columns we just looked at: the <code>index</code>,<code>total</code>,<code>Biome</code>, and <code>Taxa</code> columns. Let’s also add the <code>YEAR</code> column, since it’s the independent variable we will be using in our graphs.</p>
 <p><strong>Press</strong> Green play button to run the code chunk</p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Now that you have extracted the columns you need, lets graph!</p>
+<p>Now that you have extracted the columns you need, let’s graph!</p>
 </section>
-<section id="re-creating-your-groups-graph" class="level1">
-<h1>Re-Creating Your Group’s Graph</h1>
+</section>
+<section id="creating-your-groups-graph" class="level2">
+<h2 class="anchored" data-anchor-id="creating-your-groups-graph">Creating Your Group’s Graph</h2>
 <p><strong>Stop and Think:</strong></p>
 <p><em>What is your assigned graph? what group are you in?</em></p>
 <p><strong>List of Groups:</strong></p>
@@ -2105,17 +2163,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li><p>Group3:Tropical Forest number of species (both invertebrate &amp; Plants)</p></li>
 <li><p>Group4:Tropical Forest Species diversity Index (both invertebrate &amp; Plants)</p></li>
 </ul>
-<p>You will need to change the following code chunk based on your assigned graph</p>
+<p>You will eventually to change the following code chunk based on your assigned graph. Here’s a preview of the final code. We will walk through step by step how to edit it for your groups’ graph.</p>
 <p>DO NOT <strong>Press</strong> the green play button, the code chunk will not run!</p>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Lets review step by step what changes you need to make so that they code chunk can run and produce your graph :)</p>
-<p>(You will be changing mostly everything in Green)</p>
+<p>Lets review step by step what changes you need to make so that the code chunk can run and produce your graph :)</p>
+<p>(You will be changing mostly everything in Red)</p>
 <section id="step-1-selecting-a-data-set-to-graph" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-selecting-a-data-set-to-graph">Step 1: Selecting a data set to graph</h3>
 <p>Lets look at line 1 : <code>Biodiversity_Index |&gt;</code></p>
 <ul>
-<li><p>This line is stating the data set we want to create a graph from</p></li>
+<li><p>This line is telling the computer which data set we want to create a graph from</p></li>
 <li><p>You do not need to make any changes to this line.</p></li>
 </ul>
 </section>
@@ -2128,14 +2186,35 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li><p>Since there are multiple biomes and taxa within the data set we need to specify which ones we want to graph</p></li>
 </ul>
 <p><strong>You Try:</strong></p>
-<p>based on your assigned graph insert the corresponding <code>Biome</code> and <code>Taxa</code> in the code chunk below</p>
+<p>Based on your assigned graph insert the corresponding <code>Biome</code> and <code>Taxa</code> in the code chunk below.</p>
+<p>Be sure you spell the Biome and Taxa exactly as it is spelled in the dataset with proper capitalizations. Here are the options:</p>
+<ul>
+<li>Biome:
+<ul>
+<li>“Temperate Coniferous Forest”</li>
+<li>“Tropical Forest”</li>
+</ul></li>
+<li>Taxa:
+<ul>
+<li>“Terrestrial Invertebrates”</li>
+<li>“Terrestrial Plants”</li>
+</ul></li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
 <p>DO NOT <strong>Press</strong> play!</p>
 <div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Make sure to keep your answers in the quotations<code>""</code>!</p>
-<p><u>Example:</u></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 </section>
 <section id="step-3-choose-your-x-and-y-variables" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-choose-your-x-and-y-variables">Step 3: Choose your X and Y variables</h3>
@@ -2149,30 +2228,38 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <ul>
 <li><p>Based on your assigned graph insert the corresponding <code>y</code> value in the code chunk below</p></li>
 <li><p>This should be either <code>numspecies</code> if your graph is looking at the number of species or <code>index</code> if your graph is looking at Biodiversity Index</p>
-<p><strong>NOTE:</strong> In this part it important to NOT include quotations <code>""</code>.</p>
-<ul>
-<li><p><u>Example:</u> <code>y=variable</code> or <code>ggplot(aes(x= YEAR, y=numspecies))</code></p>
-<p>DO NOT <strong>Press</strong> Green play button</p></li>
-</ul></li>
+<p><strong>NOTE:</strong> In this part it important to NOT include quotations <code>""</code>. Example: <code>y=numspecies</code> or <code>y=index</code></p></li>
 </ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p>DO NOT <strong>Press</strong> Green play button</p>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<div id="qwebr-insertion-location-13"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 </section>
 <section id="step-4-assigning-corresponding-color-to-the-bars" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-assigning-corresponding-color-to-the-bars">Step 4: Assigning corresponding color to the bars</h3>
-<p>looking at line 5: <code>geom_col(fill= "Insert Color Name Here", color="grey37")</code></p>
+<p>Looking at line 5: <code>geom_col(fill= "Insert Color Name Here", color="grey37")</code></p>
 <ul>
 <li><p>The <code>geom_col</code> function is used to tell R that we want to graph a Bar graph</p></li>
 <li><p>All eight of the graphs are bar graphs!</p></li>
 <li><p>Bar Graphs are used to display and compare the values of different categories and color can help distinguish the different categories.</p></li>
-<li><p>within the <code>geom_col()</code> function we can specify the color of the bars using the code <code>fill="Name of Color"</code></p></li>
+<li><p>Within the <code>geom_col()</code> function we can specify the color of the bars using the code <code>fill="Name of Color"</code></p></li>
 <li><p>Ignore <code>color="grey37"</code> that is specifying the color for the border of the bars. <strong>DO NOT</strong> change that.</p></li>
 </ul>
 <p><strong>Here are the color names based on corresponding biome and taxa:</strong></p>
 <ul>
 <li><p>Biome:Temperate Forest, Taxa:Plants then the color is <code>"darkseagreen"</code></p></li>
-<li><p>Biome:Temperate Forest, Taxa:invertebrates then the the color is <code>"salmon3"</code></p></li>
-<li><p>Biome:Tropical Forest, Taxa:Plants then then color is <code>"seagreen"</code></p></li>
+<li><p>Biome:Temperate Forest, Taxa:invertebrates then the color is <code>"salmon3"</code></p></li>
+<li><p>Biome:Tropical Forest, Taxa:Plants then the color is <code>"seagreen"</code></p></li>
 <li><p>Biome:Tropical Forest, Taxa:Invertebrates then the color is <code>"brown"</code></p></li>
 </ul>
 <p><strong>Your Turn:</strong></p>
@@ -2180,14 +2267,24 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <ul>
 <li>If you wrote the color right, the name should be highlighted with the selected color.</li>
 </ul>
-<p><strong>NOTE:</strong> It is important to keep the parenthesis <code>""</code></p>
-<p><u>Example</u>: <code>fill="Pink"</code></p>
-<div id="qwebr-insertion-location-13"></div>
+<p><strong>NOTE:</strong> It is important to keep the quotations <code>""</code></p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 </section>
 <section id="step-5" class="level3">
 <h3 class="anchored" data-anchor-id="step-5">Step 5:</h3>
-<p>looking at lines 5,6, and 7 : <code>labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")</code></p>
+<p>Looking at lines 5,6,and 7 : <code>labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")</code></p>
 <ul>
 <li><p>The <code>labs()</code> function is used to specify labels on the graph (Title, Subtitle, Axis labels, Captions, and more)</p></li>
 <li><p>A good graph should always have at least a Title and Axis labels (X-Axis, Y-axis)</p></li>
@@ -2198,22 +2295,84 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <li><p>Insert the subtitle of your graph where it says <code>"Insert Subtitle"</code></p></li>
 <li><p>Keep the X-axis labeled <code>"Year"</code> DO NOT Change this code.</p></li>
 <li><p>Pick <code>"Number of species"</code> or <code>"Biodiversity index"</code> as your Y-Axis label based on your corresponding graph.</p>
-<p><strong>NOTE</strong>: keep parenthesis <code>""</code> around name. Example : <code>x="year"</code></p>
-<p>DO NOT <strong>Press</strong> Green Play button</p></li>
+<p><strong>NOTE</strong>: keep quotations <code>""</code> around name. Example : <code>x="year"</code></p></li>
 </ol>
-<div id="qwebr-insertion-location-14"></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<p>DO NOT <strong>Press</strong> Green Play button</p>
+<div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
 </section>
 <section id="step-6-putting-all-the-lines-together" class="level3">
 <h3 class="anchored" data-anchor-id="step-6-putting-all-the-lines-together">Step 6: Putting all the lines together!</h3>
 <p>Now that you have edited all the necessary code lines, lets put them together to create our graphs</p>
 <p><strong>Your Turn:</strong></p>
 <ul>
-<li>Change the code chunk below, based on the changes you’ve made to lines 2-7 from your previous work</li>
+<li>Look back at your work in steps 1-5. Edit the following code based on your work in those steps.</li>
 </ul>
-<div id="qwebr-insertion-location-15"></div>
+<div id="qwebr-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>NOTE:</strong> To check your answers open the Mystery.R file</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Click this to see the answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">Group 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">Group 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-3" role="tab" aria-controls="tabset-9-3" aria-selected="false">Group 3</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-4" role="tab" aria-controls="tabset-9-4" aria-selected="false">Group 4</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<p><strong>Number of Species Temperate Plants</strong></p>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Number of Species Temperate Invertebrates</strong></p>
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<p><strong>Diversity Index Temperate Plants</strong></p>
+<div id="qwebr-insertion-location-21"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Diversity Index Temperate Invertebrates</strong></p>
+<div id="qwebr-insertion-location-22"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-9-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-3-tab">
+<p><strong>Number of Species Tropical Plants</strong></p>
+<div id="qwebr-insertion-location-23"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Number of Species Tropical Invertebrates</strong></p>
+<div id="qwebr-insertion-location-24"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-9-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-4-tab">
+<p><strong>Diversity Index Tropical Plants</strong></p>
+<div id="qwebr-insertion-location-25"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Diversity Index Tropical Invertebrates</strong></p>
+<div id="qwebr-insertion-location-26"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p><strong>Congratulations!</strong></p>
 <p><strong>You have created a data visualization from a big data set!</strong></p>
 <p><strong>Stop and Think</strong>:</p>

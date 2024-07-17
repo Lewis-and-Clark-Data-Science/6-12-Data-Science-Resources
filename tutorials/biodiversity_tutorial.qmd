@@ -4,24 +4,31 @@ author: Grace, edited for web version by Olivia
 filters: 
   - webr
   - naquiz
+df-print: kable
 ---
 
 ```{webr-r}
-##| context: setup
+#| context: setup
+#| warning: false
 library(tidyverse)
+library(knitr)
 
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv"
 download.file(url, "Biodiversity_Index.csv")
 
-Biodiversity_Index_spelling <- read_csv("Biodiversity_Index.csv")
+Biodiversity_Index <- read_csv("Biodiversity_Index.csv")
 
 #Fix spelling errors in the dataset
-Biodiversity_Index <- Biodiversity_Index_spelling |> 
+Biodiversity_Index <- Biodiversity_Index |> 
   mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', 
                      'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), 
          Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', 
                      'Terrestial Plant' = 'Terrestrial Plants',
                      'Terrestial Plants' = 'Terrestrial Plants'))
+
+Biodiversity_Index <- Biodiversity_Index[-c(2)]
+
+names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
 
 ```
 
@@ -67,12 +74,13 @@ We've pre-loaded a data set from the biotime data into this tutorial
 
 Lets look at it!
 
--   The `view()` function opens the data set so you can look at it.
+-   The `kable()` function opens the data set so you can look at it.
 
 **Press** Green play button to run the code
 
 ```{webr-r}
-view(Biodiversity_Index)
+#| df-print: kable
+df-print(Biodiversity_Index)
 ```
 
 **Stop and Think:**
@@ -88,16 +96,16 @@ view(Biodiversity_Index)
 ::: choices
 
 ::: choice
-148 columns and 12 rows
+148 columns and 11 rows
 
 :::
 
 ::: choice
-12 columns and 10 rows
+11 columns and 10 rows
 :::
 
 ::: {.choice .correct-choice}
-12 columns and 148 rows
+11 columns and 148 rows
 
 :::
 ::: choice
@@ -106,19 +114,56 @@ view(Biodiversity_Index)
 :::
 :::
 :::
+
+## Hint
+
+At the top you'll see the names of all the columns. Each column is separated by a vertical line | . Try scrolling all the way to the bottom of the data to see how many rows there are. 
+
 :::
 
-# Which columns are we going to use
+## Which columns are we going to use
 
-We to make graphs that represent biodiversity, so we want to look at biodiversity Index and the number of different species.
+We are going to make graphs that represent biodiversity, so we want to look at **biodiversity Index** and the **number of different species**.
 
 **Stop and Think:**
 
-*Which Columns do you think represent these two things?*
+::: panel-tabset
 
-(Go back to the Biodiversity_Index data set tab to look at the columns again!)
+## Question
 
-[Answer:]{.underline} The `index` and `numspecies` columns!
+::: question
+
+**Which Columns do you think represent these two things?**
+
+::: choices
+
+::: choice
+`Taxa` and `total`
+
+:::
+
+::: choice
+`Biome` and `total`
+:::
+
+::: choice
+`entry` and `YEAR`
+
+:::
+::: {.choice .correct-choice}
+
+`index` and `numspecies`
+:::
+:::
+:::
+
+## Hint
+
+Go back to the Biodiversity_Index data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line | .
+
+:::
+
+### Narrowing down the data
 
 -   The `index` column represents the biodiversity index per year.
 
@@ -126,7 +171,7 @@ We to make graphs that represent biodiversity, so we want to look at biodiversit
 
 Now lets look at these columns
 
--   The `print()` is used to show certain values of a data set
+-   The `print()` function is used to show certain values of a data set.
 
 -   We are specifying which columns we want in the part: `c("index", "numspecies")`
 
@@ -138,15 +183,20 @@ print(Biodiversity_Index[,c("index","numspecies")])
 
 Now we want to look at the biodiversity Index ( `index` ) and total number of species ( `numspecies`) for each biome and each taxa that the data set has
 
+
 **Stop and Think**
 
 *How many different biomes does the data set have?*
 
-(Go back to the Biodiversity_Index data set tab to try to find the answer)
+(Go back to look at the Biodiversity_Index data set to try to find the answer)
 
 -   notice this is hard to find by just looking at the data set, especially if the data set is huge.
 
 -   The `unique()` function list unique values within a column, so it shows us all the different values.
+
+::: panel-tabset
+
+## Code editor
 
 **Press** Green play button to run the code
 
@@ -154,7 +204,11 @@ Now we want to look at the biodiversity Index ( `index` ) and total number of sp
 unique(Biodiversity_Index$Biome)
 ```
 
-[Answer]{.underline}: There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.
+## Answer
+
+There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.
+
+:::
 
 **Stop and Think**
 
@@ -162,18 +216,30 @@ unique(Biodiversity_Index$Biome)
 
 -   Now you know what code to use to find unique values within columns, you should be able to find the unique values for the `Taxa` column.
 
-    HINT:look at the previous code chunk, if it looks like `unique(Biodiveristy_Index$Biome)` to find unique values of the `Biome` Column, what should you add to the next code chunk to find the unique values of the `Taxa` column
+::: panel-tabset 
 
-**Press** Green play button to run the code chunk once you added the right column name.
+## Code editor
+
+**Edit** this code to find the unique values for the `Taxa` column. 
+
+**Press** Green play button to run the code chunk once you edit the code.
 
 ```{webr-r}
 unique(Biodiversity_Index$"Insert Column Name here"
 )
 ```
 
-[Answer:]{.underline}There are two different taxa in this data set; Terrestrial Plants and Terrestrial Invertebrates.
+## Hint
 
-Now lets combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Lets also add the `YEAR` column, since it's the independent variable we will be using in our graphs.
+Look at the previous code chunk that says `unique(Biodiveristy_Index$Biome)`. If that code finds unique values of the `Biome` Column, how can you change it to find the unique values of the `Taxa` column?
+
+## Answer
+
+There are two different taxa in this data set: Terrestrial Plants and Terrestrial Invertebrates.
+
+:::
+
+Now let's combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Let's also add the `YEAR` column, since it's the independent variable we will be using in our graphs.
 
 **Press** Green play button to run the code chunk
 
@@ -181,9 +247,9 @@ Now lets combine all the columns we just looked at: the `index`,`total`,`Biome`,
 print(Biodiversity_Index[,c("YEAR","index","numspecies","Biome","Taxa")])
 ```
 
-Now that you have extracted the columns you need, lets graph!
+Now that you have extracted the columns you need, let's graph!
 
-# Re-Creating Your Group's Graph
+## Creating Your Group's Graph
 
 **Stop and Think:**
 
@@ -199,11 +265,12 @@ Now that you have extracted the columns you need, lets graph!
 
 -   Group4:Tropical Forest Species diversity Index (both invertebrate & Plants)
 
-You will need to change the following code chunk based on your assigned graph
+You will eventually to change the following code chunk based on your assigned graph. Here's a preview of the final code. We will walk through step by step how to edit it for your groups' graph.
 
 DO NOT **Press** the green play button, the code chunk will not run!
 
 ```{webr-r}
+#| read-only:true
 Biodiversity_Index|>
   filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") |>
   ggplot(aes(x= YEAR, y="numspecies or index")) + 
@@ -214,15 +281,15 @@ Biodiversity_Index|>
   theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
-Lets review step by step what changes you need to make so that they code chunk can run and produce your graph :)
+Lets review step by step what changes you need to make so that the code chunk can run and produce your graph :)
 
-(You will be changing mostly everything in Green)
+(You will be changing mostly everything in Red)
 
 ### Step 1: Selecting a data set to graph
 
 Lets look at line 1 : `Biodiversity_Index |>`
 
--   This line is stating the data set we want to create a graph from
+-   This line is telling the computer which data set we want to create a graph from
 
 -   You do not need to make any changes to this line.
 
@@ -238,7 +305,20 @@ Looking at Line 2 : `filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa 
 
 **You Try:**
 
-based on your assigned graph insert the corresponding `Biome` and `Taxa` in the code chunk below
+Based on your assigned graph insert the corresponding `Biome` and `Taxa` in the code chunk below. 
+
+Be sure you spell the Biome and Taxa exactly as it is spelled in the dataset with proper capitalizations. Here are the options: 
+
+-   Biome: 
+    -   "Temperate Coniferous Forest"
+    -   "Tropical Forest"
+-   Taxa: 
+    -   "Terrestrial Invertebrates" 
+    -   "Terrestrial Plants"
+    
+::: panel-tabset
+
+## Code editor
 
 DO NOT **Press** play!
 
@@ -248,11 +328,15 @@ filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here")
 
 Make sure to keep your answers in the quotations`""`!
 
-[Example:]{.underline}
+## Example
+
 
 ```{webr-r}
 filter(Biome=="Savannah Desert", Taxa=="Mammals") 
 ```
+
+:::
+
 
 ### Step 3: Choose your X and Y variables
 
@@ -270,19 +354,31 @@ Looking at Line 3: `ggplot(aes(x= YEAR, y="numspecies or index"))`
 
 -   This should be either `numspecies` if your graph is looking at the number of species or `index` if your graph is looking at Biodiversity Index
 
-    **NOTE:** In this part it important to NOT include quotations `""`.
+    **NOTE:** In this part it important to NOT include quotations `""`. 
+    Example: `y=numspecies` or `y=index`
+    
+::: panel-tabset
 
-    -   [Example:]{.underline} `y=variable` or `ggplot(aes(x= YEAR, y=numspecies))`
+## Code editor
 
-        DO NOT **Press** Green play button
+DO NOT **Press** Green play button
 
 ```{webr-r}
-ggplot(aes(x= YEAR, y="numspecies or index"))
+ggplot(aes(x= YEAR, y=numspecies or index))
 ```
+
+## Example
+
+```{webr-r}
+ggplot(aes(x= YEAR, y=numspecies))
+
+```
+
+:::
 
 ### Step 4: Assigning corresponding color to the bars
 
-looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
+Looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
 
 -   The `geom_col` function is used to tell R that we want to graph a Bar graph
 
@@ -290,7 +386,7 @@ looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
 
 -   Bar Graphs are used to display and compare the values of different categories and color can help distinguish the different categories.
 
--   within the `geom_col()` function we can specify the color of the bars using the code `fill="Name of Color"`
+-   Within the `geom_col()` function we can specify the color of the bars using the code `fill="Name of Color"`
 
 -   Ignore `color="grey37"` that is specifying the color for the border of the bars. **DO NOT** change that.
 
@@ -298,9 +394,9 @@ looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
 
 -   Biome:Temperate Forest, Taxa:Plants then the color is `"darkseagreen"`
 
--   Biome:Temperate Forest, Taxa:invertebrates then the the color is `"salmon3"`
+-   Biome:Temperate Forest, Taxa:invertebrates then the color is `"salmon3"`
 
--   Biome:Tropical Forest, Taxa:Plants then then color is `"seagreen"`
+-   Biome:Tropical Forest, Taxa:Plants then the color is `"seagreen"`
 
 -   Biome:Tropical Forest, Taxa:Invertebrates then the color is `"brown"`
 
@@ -310,18 +406,28 @@ Once you've identified which color you need to use, insert the color where it sa
 
 -   If you wrote the color right, the name should be highlighted with the selected color.
 
-**NOTE:** It is important to keep the parenthesis `""`
+**NOTE:** It is important to keep the quotations `""`
 
-[Example]{.underline}: `fill="Pink"`
+::: panel-tabset
 
+## Code editor
+
+```{webr-r}
+geom_col(fill= "Insert Color Name Here", color="grey37")
+
+```
+
+## Example
 ```{webr-r}
 geom_col(fill= "salmon3", color="grey37")
 
 ```
 
+:::
+
 ### Step 5:
 
-looking at lines 5,6, and 7 : `labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")`
+Looking at lines 5,6,and 7 : `labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")`
 
 -   The `labs()` function is used to specify labels on the graph (Title, Subtitle, Axis labels, Captions, and more)
 
@@ -337,13 +443,26 @@ looking at lines 5,6, and 7 : `labs(title = "Insert Title Name", subtitle = "Ins
 
 4.  Pick `"Number of species"` or `"Biodiversity index"` as your Y-Axis label based on your corresponding graph.
 
-    **NOTE**: keep parenthesis `""` around name. Example : `x="year"`
+    **NOTE**: keep quotations `""` around name. Example : `x="year"`
+    
+::: panel-tabset
 
-    DO NOT **Press** Green Play button
+## Code editor
+
+DO NOT **Press** Green Play button
 
 ```{webr-r}
 labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")
 ```
+
+## Example
+```{webr-r}
+labs(title = "Number of Terrestrial Invertebrate Species", 
+       subtitle = "In Temperate Coniferous Forest ",
+       x= "Year", y= "Number of Species")
+```
+
+:::
 
 ### Step 6: Putting all the lines together!
 
@@ -351,7 +470,7 @@ Now that you have edited all the necessary code lines, lets put them together to
 
 **Your Turn:**
 
--   Change the code chunk below, based on the changes you've made to lines 2-7 from your previous work
+-   Look back at your work in steps 1-5. Edit the following code based on your work in those steps. 
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -364,7 +483,119 @@ Biodiversity_Index|>
   theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
-**NOTE:** To check your answers open the Mystery.R file
+::: {.callout-note collapse="true"}
+## Click this to see the answers
+
+::: panel-tabset
+
+## Group 1
+
+**Number of Species Temperate Plants**
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Temperate Coniferous Forest", Taxa=="Terrestrial Plants")|>
+ggplot(aes(x=YEAR,y= numspecies)) + geom_col(fill= "darkseagreen", color= "grey37")+
+  labs(title = "Number of Terrestrial Plant Species", 
+       subtitle = "In Temperate Coniferous Forest", 
+       x= "Year", y= "Number of species") + theme_linedraw() + 
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
+```
+
+**Number of Species Temperate Invertebrates**
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Temperate Coniferous Forest", Taxa=="Terrestrial Invertebrates")|>
+  ggplot(aes(x=YEAR, y= numspecies)) +geom_col(fill= "salmon3", color= "grey37") +
+  labs(title = "Number of Terrestrial Invertebrate Species", 
+       subtitle = "In Temperate Coniferous Forest ",
+       x= "Year", y= "Number of Species") +theme_linedraw() +
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
+```
+
+## Group 2
+
+**Diversity Index Temperate Plants**
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Temperate Coniferous Forest", Taxa== "Terrestrial Plants")|>
+  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= "darkseagreen", color="grey37") + 
+  labs(title = "Biodiversity Index of Terrestrial Plants", 
+       subtitle = "In Temperate Coniferous Forest",
+       x= "Year", y= "Biodiversity Index") +
+  theme_linedraw()+
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
+```
+
+**Diversity Index Temperate Invertebrates**
+
+```{webr-r}
+
+Biodiversity_Index|>
+  filter(Biome=="Temperate Coniferous Forest", Taxa=="Terrestrial Invertebrates")|>
+  ggplot(aes(x=YEAR, y= index)) +geom_col(fill= "salmon3", color= "grey37") +
+  labs(title = "Biodiversity Index of Terrestrial Invertebrates", 
+       subtitle = "In Temperate Coniferous Forest", 
+       x= "Year", y= "Biodiversity Index") + theme_linedraw() +
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+## Group 3
+
+**Number of Species Tropical Plants**
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Tropical Forest", Taxa=="Terrestrial Plants")|>
+  ggplot(aes(x=YEAR,y= numspecies)) +geom_col(fill= "seagreen", color= "grey37")+
+  labs(title = "Number of Terrestrial Plant Species",
+       subtitle = "In Tropical Forest", 
+       x= "Year", y= "Number of species") + theme_linedraw() + 
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+**Number of Species Tropical Invertebrates**
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Tropical Forest", Taxa=="Terrestrial Invertebrates")|>
+  ggplot(aes(x=YEAR,y= numspecies)) +geom_col(fill= "brown", color= "grey37")+
+  labs(title = "Number of Terrestrial Invertebrate Species",
+       subtitle = "In Tropical Forest", 
+       x= "Year", y= "Number of species") + theme_linedraw() + 
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
+```
+
+## Group 4
+
+**Diversity Index Tropical Plants**
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Tropical Forest", Taxa== "Terrestrial Plants")|>
+  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= "seagreen", color="grey37") + 
+  labs(title = "Biodiversity Index of Terrestrial Plants", 
+       subtitle = "In Tropical Forest", 
+       x= "Year", y= "Biodiversity Index" ) +
+  theme_linedraw()+
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+**Diversity Index Tropical Invertebrates**
+
+```{webr-r}
+
+Biodiversity_Index|>
+  filter(Biome=="Tropical Forest", Taxa=="Terrestrial Invertebrates")|>
+  ggplot(aes(x= YEAR, y= index)) + geom_col(fill= "brown", color="grey37") + 
+  labs(title = "Biodiversity Index of Terrestrial Invertebrates", 
+       subtitle = "In Tropical Forest", 
+       x= "Year", y= "Biodiversity Index" ) +
+  theme_linedraw()+
+  theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+:::
+:::
 
 **Congratulations!**
 
