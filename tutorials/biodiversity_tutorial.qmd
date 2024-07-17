@@ -1,0 +1,353 @@
+---
+title: "Biodiversity tutorial"
+author: Grace, edited for web version by Olivia
+filters: 
+  - webr
+---
+
+```{webr-r}
+##| context: setup
+library(tidyverse)
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv"
+download.file(url, "Biodiversity_Index.csv")
+
+Biodiversity_Index_spelling <- read_csv("Biodiversity_Index.csv")
+
+#Fix spelling errors in the dataset
+Biodiversity_Index <- Biodiversity_Index_spelling |> 
+  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', 
+                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), 
+         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', 
+                     'Terrestial Plant' = 'Terrestrial Plants',
+                     'Terrestial Plants' = 'Terrestrial Plants'))
+
+```
+
+# What is Posit Cloud
+
+Posit Cloud is a cloud-based solution that allows anyone to do share, teach,and learn data science online.Posit Cloud allows you to use multiple programming languages.
+
+-   The programming language we are going to be using is called R
+
+# What can R do?
+
+-   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
+
+-   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
+
+[Fun Fact:]{.underline} Posit Cloud is like a fancy calculator
+
+**Press** the Green Play button on the top right of the code chunk.
+
+(the code chunk is the grey rectangular box below)
+
+```{webr-r}
+4+3
+```
+
+**You Try:** Replace `4+3` with any math equation
+
+**Press** Green Play Button when done
+
+```{webr-r}
+4+3
+```
+
+# Data Set
+
+We are going to be using data from BioTIME (<https://biotime.st-andrews.ac.uk>)
+
+-   We are specifically looking at data on the Biodiversity of Terrestrial Plants and Invertebrates in the Temperate Coniferous Forest and in Tropical Forest.
+
+We've pre-loaded a data set from the biotime data into this tutorial
+
+\* `Biodiversity_Index` is the name of the Data set \*
+
+Lets look at it!
+
+-   The `view()` function opens the data set so you can look at it.
+
+**Press** Green play button to run the code
+
+```{webr-r}
+view(Biodiversity_Index)
+```
+
+**Stop and Think:**
+
+How many columns does this table have? How many rows?
+
+[Answer:]{.underline} 12 columns and 148 Rows
+
+# Which columns are we going to use
+
+We to make graphs that represent biodiversity, so we want to look at biodiversity Index and the number of different species.
+
+**Stop and Think:**
+
+*Which Columns do you think represent these two things?*
+
+(Go back to the Biodiversity_Index data set tab to look at the columns again!)
+
+[Answer:]{.underline} The `index` and `numspecies` columns!
+
+-   The `index` column represents the biodiversity index per year.
+
+-   The `numspecies` column represents the different number of species observed per year.
+
+Now lets look at these columns
+
+-   The `print()` is used to show certain values of a data set
+
+-   We are specifying which columns we want in the part: `c("index", "numspecies")`
+
+    **Press** Green play button to run the code
+
+```{webr-r}
+print(Biodiversity_Index[,c("index","numspecies")])
+```
+
+Now we want to look at the biodiversity Index ( `index` ) and total number of species ( `numspecies`) for each biome and each taxa that the data set has
+
+**Stop and Think**
+
+*How many different biomes does the data set have?*
+
+(Go back to the Biodiversity_Index data set tab to try to find the answer)
+
+-   notice this is hard to find by just looking at the data set, especially if the data set is huge.
+
+-   The `unique()` function list unique values within a column, so it shows us all the different values.
+
+**Press** Green play button to run the code
+
+```{webr-r}
+unique(Biodiversity_Index$Biome)
+```
+
+[Answer]{.underline}: There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.
+
+**Stop and Think**
+
+*How many different taxa does the data set have?*
+
+-   Now you know what code to use to find unique values within columns, you should be able to find the unique values for the `Taxa` column.
+
+    HINT:look at the previous code chunk, if it looks like `unique(Biodiveristy_Index$Biome)` to find unique values of the `Biome` Column, what should you add to the next code chunk to find the unique values of the `Taxa` column
+
+**Press** Green play button to run the code chunk once you added the right column name.
+
+```{webr-r}
+unique(Biodiversity_Index$"Insert Column Name here"
+)
+```
+
+[Answer:]{.underline}There are two different taxa in this data set; Terrestrial Plants and Terrestrial Invertebrates.
+
+Now lets combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Lets also add the `YEAR` column, since it's the independent variable we will be using in our graphs.
+
+**Press** Green play button to run the code chunk
+
+```{webr-r}
+print(Biodiversity_Index[,c("YEAR","index","numspecies","Biome","Taxa")])
+```
+
+Now that you have extracted the columns you need, lets graph!
+
+# Re-Creating Your Group's Graph
+
+**Stop and Think:**
+
+*What is your assigned graph? what group are you in?*
+
+**List of Groups:**
+
+-   Group1:Temperate Forest number of species (both invertebrate & Plants)
+
+-   Group2:Temperate Forest Species diversity Index (both invertebrate & Plants)
+
+-   Group3:Tropical Forest number of species (both invertebrate & Plants)
+
+-   Group4:Tropical Forest Species diversity Index (both invertebrate & Plants)
+
+You will need to change the following code chunk based on your assigned graph
+
+DO NOT **Press** the green play button, the code chunk will not run!
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") |>
+  ggplot(aes(x= YEAR, y="numspecies or index")) + 
+  geom_col(fill= "Insert Color Name Here", color="grey37") + 
+  labs(title = "Insert Title Name", 
+       subtitle = "Insert Subtititle", 
+       x= "Year", y= "Number of species or Biodiversity index") +
+  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+Lets review step by step what changes you need to make so that they code chunk can run and produce your graph :)
+
+(You will be changing mostly everything in Green)
+
+### Step 1: Selecting a data set to graph
+
+Lets look at line 1 : `Biodiversity_Index |>`
+
+-   This line is stating the data set we want to create a graph from
+
+-   You do not need to make any changes to this line.
+
+### Step 2: Identifying which `Biome` and which `Taxa`
+
+Looking at Line 2 : `filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here")`
+
+-   This is line is telling R which specific rows you want displayed in your graph based on the categories you tell it.
+
+-   The `filter()` function picks rows you want to keep based on the instructions you give it
+
+-   Since there are multiple biomes and taxa within the data set we need to specify which ones we want to graph
+
+**You Try:**
+
+based on your assigned graph insert the corresponding `Biome` and `Taxa` in the code chunk below
+
+DO NOT **Press** play!
+
+```{webr-r}
+filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") 
+```
+
+Make sure to keep your answers in the quotations`""`!
+
+[Example:]{.underline}
+
+```{webr-r}
+filter(Biome=="Savannah Desert", Taxa=="Mammals") 
+```
+
+### Step 3: Choose your X and Y variables
+
+Looking at Line 3: `ggplot(aes(x= YEAR, y="numspecies or index"))`
+
+-   The `ggplot()` function is used to create a wide variety of data visualizations, including scatter plots,bar graphs, line graphs, and many others.
+
+-   Within the `ggplot()` function we use the `aes()` function to assign the features of the graphs ( X and Y Values)
+
+-   The X value (`x=YEAR`) will be the same for all eight graphs, so **DO NOT** change that part
+
+**You Try:**
+
+-   Based on your assigned graph insert the corresponding `y` value in the code chunk below
+
+-   This should be either `numspecies` if your graph is looking at the number of species or `index` if your graph is looking at Biodiversity Index
+
+    **NOTE:** In this part it important to NOT include quotations `""`.
+
+    -   [Example:]{.underline} `y=variable` or `ggplot(aes(x= YEAR, y=numspecies))`
+
+        DO NOT **Press** Green play button
+
+```{webr-r}
+ggplot(aes(x= YEAR, y="numspecies or index"))
+```
+
+### Step 4: Assigning corresponding color to the bars
+
+looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
+
+-   The `geom_col` function is used to tell R that we want to graph a Bar graph
+
+-   All eight of the graphs are bar graphs!
+
+-   Bar Graphs are used to display and compare the values of different categories and color can help distinguish the different categories.
+
+-   within the `geom_col()` function we can specify the color of the bars using the code `fill="Name of Color"`
+
+-   Ignore `color="grey37"` that is specifying the color for the border of the bars. **DO NOT** change that.
+
+**Here are the color names based on corresponding biome and taxa:**
+
+-   Biome:Temperate Forest, Taxa:Plants then the color is `"darkseagreen"`
+
+-   Biome:Temperate Forest, Taxa:invertebrates then the the color is `"salmon3"`
+
+-   Biome:Tropical Forest, Taxa:Plants then then color is `"seagreen"`
+
+-   Biome:Tropical Forest, Taxa:Invertebrates then the color is `"brown"`
+
+**Your Turn:**
+
+Once you've identified which color you need to use, insert the color where it says `"Insert Color Name Here"`.
+
+-   If you wrote the color right, the name should be highlighted with the selected color.
+
+**NOTE:** It is important to keep the parenthesis `""`
+
+[Example]{.underline}: `fill="Pink"`
+
+```{webr-r}
+geom_col(fill= "salmon3", color="grey37")
+
+```
+
+### Step 5:
+
+looking at lines 5,6, and 7 : `labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")`
+
+-   The `labs()` function is used to specify labels on the graph (Title, Subtitle, Axis labels, Captions, and more)
+
+-   A good graph should always have at least a Title and Axis labels (X-Axis, Y-axis)
+
+**Your Turn:**
+
+1.  Insert the Title of your graph where it says `"Insert Title Name"`
+
+2.  Insert the subtitle of your graph where it says `"Insert Subtitle"`
+
+3.  Keep the X-axis labeled `"Year"` DO NOT Change this code.
+
+4.  Pick `"Number of species"` or `"Biodiversity index"` as your Y-Axis label based on your corresponding graph.
+
+    **NOTE**: keep parenthesis `""` around name. Example : `x="year"`
+
+    DO NOT **Press** Green Play button
+
+```{webr-r}
+labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")
+```
+
+### Step 6: Putting all the lines together!
+
+Now that you have edited all the necessary code lines, lets put them together to create our graphs
+
+**Your Turn:**
+
+-   Change the code chunk below, based on the changes you've made to lines 2-7 from your previous work
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") |>
+  ggplot(aes(x= YEAR, y= "numspecies or index" )) + 
+  geom_col(fill= "Insert Color Name Here", color="grey37") + 
+  labs(title = "Insert Title Name", 
+       subtitle = "Insert Subtititle", 
+       x= "Year", y= "Number of species or Biodiversity index") +
+  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+**NOTE:** To check your answers open the Mystery.R file
+
+**Congratulations!**
+
+**You have created a data visualization from a big data set!**
+
+**Stop and Think**:
+
+1.  *What were some challenges?*
+
+2.  *What have you learned about Data Science?*
+
+3.  *What kinda of data would you want to look at in Posit Cloud?*
+
+4.  *What kind of graphs do you want to make or see more of?*
