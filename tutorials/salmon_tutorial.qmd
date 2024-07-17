@@ -57,7 +57,7 @@ Bon_chinook_sum$year <- 2023:1938
 
 options(scipen = 999) 
   #Don't use standard notation
-Bonneville_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+Bon_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
 ```
 
 ```{r}
@@ -97,7 +97,7 @@ Bon_chinook_sum$year <- 2023:1938
 
 options(scipen = 999) 
   #Don't use standard notation
-Bonneville_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+Bon_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
 ```
 
 ## Fish Crossings - Introduction
@@ -406,7 +406,7 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph without connecting line
 
 ```{webr-r}
-Dalles_chinook <- read_csv("Data/Chinook_Dalles_1957_2023.csv")
+Dalles_chinook <- read_csv("Chinook_Dalles_1957_2023.csv")
 
 names(Dalles_chinook) <- Dalles_chinook[1,]
 Dalles_chinook <- Dalles_chinook[-1,]
@@ -452,7 +452,7 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph with connecting line 
 
 ```{webr-r}
-Dalles_chinook <- read_csv("Data/Chinook_Dalles_1957_2023.csv")
+Dalles_chinook <- read_csv("Chinook_Dalles_1957_2023.csv")
 
 names(Dalles_chinook) <- Dalles_chinook[1,]
 Dalles_chinook <- Dalles_chinook[-1,]
@@ -505,7 +505,7 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ## Graph without connecting line
 
 ```{webr-r}
-Bon_steel <- read_csv("Data/Steelhead_1939_2023_BonnevilleDamCSV.csv")
+Bon_steel <- read_csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 names(Bon_steel) <- Bon_steel[1,]
 Bon_steel <- Bon_steel[-1,]
@@ -554,7 +554,7 @@ ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path=
 ## Graph with connecting line
 
 ```{webr-r}
-Bon_steel <- read_csv("Data/Steelhead_1939_2023_BonnevilleDamCSV.csv")
+Bon_steel <- read_csv("Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 names(Bon_steel) <- Bon_steel[1,]
 Bon_steel <- Bon_steel[-1,]
