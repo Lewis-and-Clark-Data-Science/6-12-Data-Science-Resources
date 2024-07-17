@@ -12,6 +12,8 @@ project:
     - files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv
     - files/figures/salmon_dog.jpg
     - files/data/Biodiversity_Index.csv
+    - files/data/Steelhead_1939_2023_BonnevilleDamCSV.csv
+    - files/data/Chinook_Dalles_1957_2023.csv
   
 #webr: 
 #  packages: ['tidyverse']

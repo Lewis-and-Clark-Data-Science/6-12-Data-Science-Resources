@@ -15,6 +15,14 @@ library(knitr)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv"
 download.file(url, "Bonneville_Dam_1939_2023_Chinook_CSV.csv")
 #Pulls data that has been loaded into the 6-12-Data-Sceince_resources github repo. 
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Chinook_Dalles_1957_2023.csv"
+download.file(url, "Chinook_Dalles_1957_2023.csv")
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Steelhead_1939_2023_BonnevilleDamCSV.csv"
+download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
+
+
 ```
 
 ```{webr-r}
@@ -352,3 +360,247 @@ First, let's make a prediction. Think about what you've learned about dams and h
 Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions! 
 
 ## TO BE FINISHED... will include graphs of species crossing different dams
+
+Here's the graphs in the meantime before I finish the tutorial 
+
+### Bonneville Chinook
+
+::: panel-tabset
+
+## Graph without connecting line
+
+```{webr-r}
+y_max <- max(Bon_chinook_sum$sum_of_rows_100)
+
+ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  labs(title = "Number of Chinook Crossings per Year at Bonneville Dam from 1938-2023",
+       x = "Year",
+       y = "Number of Chinook Crossing (in 1000s)") + 
+      scale_x_continuous(breaks = seq(1938,2023,5)) +
+      #scale_x_continuous(breaks = scales::pretty_breaks(n=10)) + 
+      scale_y_continuous(breaks = seq(0,y_max,100))
+```
+
+## Graph with Connecting Line
+
+```{webr-r}
+y_max <- max(Bon_chinook_sum$sum_of_rows_100)
+
+ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  geom_line(color = "salmon") +
+  labs(title = "Number of Chinook Crossings per Year at Bonneville Dam from 1938-2023",
+       x = "Year",
+       y = "Number of Chinook Crossing (in 1000s)") + 
+      scale_x_continuous(breaks = seq(1938,2023,5)) +
+      #scale_x_continuous(breaks = scales::pretty_breaks(n=10)) + 
+      scale_y_continuous(breaks = seq(0,y_max,100))
+```
+:::
+
+### Chinook Crossings at the Dalles 
+
+::: panel-tabset 
+
+## Graph without connecting line
+
+```{webr-r}
+Dalles_chinook <- read_csv("Data/Chinook_Dalles_1957_2023.csv")
+
+names(Dalles_chinook) <- Dalles_chinook[1,]
+Dalles_chinook <- Dalles_chinook[-1,]
+#Move first row to header and delete the row
+Dalles_chinook_t <- t(Dalles_chinook)
+#Transpose
+colnames(Dalles_chinook_t) <- Dalles_chinook_t[1,]
+Dalles_chinook_t <- Dalles_chinook_t[-1,]
+#Move first row to header and delete the row
+
+Dalles_chinook_t <- as.data.frame(Dalles_chinook_t)
+
+Dalles_chinook_t <- Dalles_chinook_t %>% replace(is.na(.), 0)
+#make NA into 0 values
+Dalles_chinook_t <- Dalles_chinook_t %>% select(1:365)
+#Delete extra info we don't want 
+str(Dalles_chinook_t)
+#Check what kind of data we have... Oh no! It's character data not numeric data
+Dalles_chinook_t <-Dalles_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+#Change character to numeric data
+Dalles_chinook_sum <- Dalles_chinook_t %>%
+  mutate(sum_of_rows = rowSums(Dalles_chinook_t)) 
+#Add a new column summing the rows
+
+Dalles_chinook_sum$year <- 2023:1957
+#Add a year column with just the year 
+
+
+Dalles_chinook_sum <- Dalles_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+x_min <- min(Dalles_chinook_sum$year)
+y_max <- max(Dalles_chinook_sum$sum_of_rows_100)
+ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  #geom_line(color = "darkgreen") +
+  labs(title = "Number of Chinook Crossings per Year at the Dalles 1957-2023",
+       x = "Year",
+       y = "Number of Chinook Crossings (in 1000s)", 
+       theme_classic()) + 
+  scale_x_continuous(breaks = seq(x_min,2023,5)) + 
+  scale_y_continuous(breaks = seq(0,1100,100))
+```
+
+## Graph with connecting line 
+
+```{webr-r}
+Dalles_chinook <- read_csv("Data/Chinook_Dalles_1957_2023.csv")
+
+names(Dalles_chinook) <- Dalles_chinook[1,]
+Dalles_chinook <- Dalles_chinook[-1,]
+#Move first row to header and delete the row
+Dalles_chinook_t <- t(Dalles_chinook)
+#Transpose
+colnames(Dalles_chinook_t) <- Dalles_chinook_t[1,]
+Dalles_chinook_t <- Dalles_chinook_t[-1,]
+#Move first row to header and delete the row
+
+Dalles_chinook_t <- as.data.frame(Dalles_chinook_t)
+
+Dalles_chinook_t <- Dalles_chinook_t %>% replace(is.na(.), 0)
+#make NA into 0 values
+Dalles_chinook_t <- Dalles_chinook_t %>% select(1:365)
+#Delete extra info we don't want 
+str(Dalles_chinook_t)
+#Check what kind of data we have... Oh no! It's character data not numeric data
+Dalles_chinook_t <-Dalles_chinook_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+#Change character to numeric data
+Dalles_chinook_sum <- Dalles_chinook_t %>%
+  mutate(sum_of_rows = rowSums(Dalles_chinook_t)) 
+#Add a new column summing the rows
+
+Dalles_chinook_sum$year <- 2023:1957
+#Add a year column with just the year 
+
+
+Dalles_chinook_sum <- Dalles_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+x_min <- min(Dalles_chinook_sum$year)
+y_max <- max(Dalles_chinook_sum$sum_of_rows_100)
+ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  geom_line(color = "darkgreen") +
+  labs(title = "Number of Chinook Crossings per Year at the Dalles 1957-2023",
+       x = "Year",
+       y = "Number of Chinook Crossings (in 1000s)", 
+       theme_classic()) + 
+  scale_x_continuous(breaks = seq(x_min,2023,5)) + 
+  scale_y_continuous(breaks = seq(0,1100,100))
+
+```
+
+:::
+
+### Steelhead Crossings at the Bonneville Dam
+
+::: panel-tabset
+
+## Graph without connecting line
+
+```{webr-r}
+Bon_steel <- read_csv("Data/Steelhead_1939_2023_BonnevilleDamCSV.csv")
+
+names(Bon_steel) <- Bon_steel[1,]
+Bon_steel <- Bon_steel[-1,]
+#Move first row to header and delete the row
+Bon_steel_t <- t(Bon_steel)
+#Transpose
+colnames(Bon_steel_t) <- Bon_steel_t[1,]
+Bon_steel_t <- Bon_steel_t[-1,]
+#Move first row to header and delete the row
+
+Bon_steel_t <- as.data.frame(Bon_steel_t)
+
+Bon_steel_t <- Bon_steel_t %>% replace(is.na(.), 0)
+#make NA into 0 values
+Bon_steel_t <- Bon_steel_t %>% select(1:365)
+#Delete extra info we don't want 
+str(Bon_steel_t)
+#Check what kind of data we have... Oh no! It's character data not numeric data
+Bon_steel_t <-Bon_steel_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+#Change character to numeric data
+Bon_steel_sum <-  Bon_steel_t %>%
+  mutate(sum_of_rows = rowSums(Bon_steel_t)) 
+#Add a new column summing the rows
+Bon_steel_sum <- Bon_steel_sum[-(22:86),]
+ #Delete extra rows that have all NA values
+
+
+Bon_steel_sum$year <- 2023:2003
+#Add a year column with just the year 
+
+
+Bon_steel_sum <- Bon_steel_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+x_min <- min(Bon_steel_sum$year)
+y_max <- max(Bon_steel_sum$sum_of_rows_100)
+ggplot(data = Bon_steel_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  labs(title = "Number of Steelhead Crossings per Year at Bonneville Dam 2003-2023",
+       x = "Year",
+       y = "Number of Steelhead Crossings (in 1000s)", 
+       color = "darkgreen") +
+     scale_x_continuous(breaks = seq(x_min,2023,2))  +
+     scale_y_continuous(breaks = seq(0,175,25))
+ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path="output", width=2500, height=1200, units="px")
+```
+
+## Graph with connecting line
+
+```{webr-r}
+Bon_steel <- read_csv("Data/Steelhead_1939_2023_BonnevilleDamCSV.csv")
+
+names(Bon_steel) <- Bon_steel[1,]
+Bon_steel <- Bon_steel[-1,]
+#Move first row to header and delete the row
+Bon_steel_t <- t(Bon_steel)
+#Transpose
+colnames(Bon_steel_t) <- Bon_steel_t[1,]
+Bon_steel_t <- Bon_steel_t[-1,]
+#Move first row to header and delete the row
+
+Bon_steel_t <- as.data.frame(Bon_steel_t)
+
+Bon_steel_t <- Bon_steel_t %>% replace(is.na(.), 0)
+#make NA into 0 values
+Bon_steel_t <- Bon_steel_t %>% select(1:365)
+#Delete extra info we don't want 
+str(Bon_steel_t)
+#Check what kind of data we have... Oh no! It's character data not numeric data
+Bon_steel_t <-Bon_steel_t %>% mutate_all(function(x) as.numeric(as.character(x)))
+#Change character to numeric data
+Bon_steel_sum <-  Bon_steel_t %>%
+  mutate(sum_of_rows = rowSums(Bon_steel_t)) 
+#Add a new column summing the rows
+Bon_steel_sum <- Bon_steel_sum[-(22:86),]
+ #Delete extra rows that have all NA values
+
+
+Bon_steel_sum$year <- 2023:2003
+#Add a year column with just the year 
+
+
+Bon_steel_sum <- Bon_steel_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
+x_min <- min(Bon_steel_sum$year)
+y_max <- max(Bon_steel_sum$sum_of_rows_100)
+ggplot(data = Bon_steel_sum, aes(x = year, y = sum_of_rows_100)) +
+  geom_point() +
+  geom_line(color = "orange") +
+  labs(title = "Number of Steelhead Crossings per Year at Bonneville Dam 2003-2023",
+       x = "Year",
+       y = "Number of Steelhead Crossings (in 1000s)", 
+       color = "darkgreen") +
+     scale_x_continuous(breaks = seq(x_min,2023,2))  +
+     scale_y_continuous(breaks = seq(0,175,25))
+ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path="output", width=2500, height=1200, units="px")
+```
+
+:::
+
+
