@@ -80,7 +80,7 @@ Lets look at it!
 
 ```{webr-r}
 #| df-print: kable
-df-print(Biodiversity_Index)
+kable(Biodiversity_Index)
 ```
 
 **Stop and Think:**
@@ -121,7 +121,7 @@ At the top you'll see the names of all the columns. Each column is separated by 
 
 :::
 
-## Which columns are we going to use
+## Choosing our columns
 
 We are going to make graphs that represent biodiversity, so we want to look at **biodiversity Index** and the **number of different species**.
 
@@ -159,7 +159,7 @@ We are going to make graphs that represent biodiversity, so we want to look at *
 
 ## Hint
 
-Go back to the Biodiversity_Index data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line | .
+Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line | .
 
 :::
 
@@ -181,6 +181,8 @@ Now lets look at these columns
 print(Biodiversity_Index[,c("index","numspecies")])
 ```
 
+### Choosing the biome and taxa 
+
 Now we want to look at the biodiversity Index ( `index` ) and total number of species ( `numspecies`) for each biome and each taxa that the data set has
 
 
@@ -188,7 +190,7 @@ Now we want to look at the biodiversity Index ( `index` ) and total number of sp
 
 *How many different biomes does the data set have?*
 
-(Go back to look at the Biodiversity_Index data set to try to find the answer)
+(Go back to look at the `Biodiversity_Index` data set to try to find the answer)
 
 -   notice this is hard to find by just looking at the data set, especially if the data set is huge.
 
@@ -206,7 +208,7 @@ unique(Biodiversity_Index$Biome)
 
 ## Answer
 
-There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical Forest.
+There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropical Forest`.
 
 :::
 
@@ -214,7 +216,7 @@ There are two Biomes in this Data Set; Temperate Coniferous Forest and Tropical 
 
 *How many different taxa does the data set have?*
 
--   Now you know what code to use to find unique values within columns, you should be able to find the unique values for the `Taxa` column.
+-   Now you know what code to use to find unique values within a column. See if you can reuse the code to find the unique values for the `Taxa` column.
 
 ::: panel-tabset 
 
@@ -233,9 +235,11 @@ unique(Biodiversity_Index$"Insert Column Name here"
 
 Look at the previous code chunk that says `unique(Biodiveristy_Index$Biome)`. If that code finds unique values of the `Biome` Column, how can you change it to find the unique values of the `Taxa` column?
 
+Try editing the part of the code that says "Biome". 
+
 ## Answer
 
-There are two different taxa in this data set: Terrestrial Plants and Terrestrial Invertebrates.
+There are two different taxa in this data set: `Terrestrial Plants` and `Terrestrial Invertebrates`.
 
 :::
 
@@ -257,17 +261,17 @@ Now that you have extracted the columns you need, let's graph!
 
 **List of Groups:**
 
--   Group1:Temperate Forest number of species (both invertebrate & Plants)
+-   Group1: Temperate Forest, number of species (both invertebrate & Plants)
 
--   Group2:Temperate Forest Species diversity Index (both invertebrate & Plants)
+-   Group2: Temperate Forest, Species diversity Index (both invertebrate & Plants)
 
--   Group3:Tropical Forest number of species (both invertebrate & Plants)
+-   Group3: Tropical Forest, number of species (both invertebrate & Plants)
 
--   Group4:Tropical Forest Species diversity Index (both invertebrate & Plants)
+-   Group4: Tropical Forest, Species diversity Index (both invertebrate & Plants)
 
-You will eventually to change the following code chunk based on your assigned graph. Here's a preview of the final code. We will walk through step by step how to edit it for your groups' graph.
+Look at the code chunk right below this. You will eventually change this code based on your assigned graph. Here's a preview of the final code. We will walk through step by step how to edit it for your groups' graph.
 
-DO NOT **Press** the green play button, the code chunk will not run!
+DO NOT **Press** the green play button yet, the code chunk will not run!
 
 ```{webr-r}
 #| read-only:true
@@ -597,7 +601,7 @@ Biodiversity_Index|>
 :::
 :::
 
-**Congratulations!**
+## Congratulations!**
 
 **You have created a data visualization from a big data set!**
 
