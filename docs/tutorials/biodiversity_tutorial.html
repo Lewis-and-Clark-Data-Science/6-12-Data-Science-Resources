@@ -40,6 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -357,7 +358,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-1","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"##| context: setup\nlibrary(tidyverse)\n\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv\"\ndownload.file(url, \"Biodiversity_Index.csv\")\n\nBiodiversity_Index_spelling <- read_csv(\"Biodiversity_Index.csv\")\n\n#Fix spelling errors in the dataset\nBiodiversity_Index <- Biodiversity_Index_spelling |> \n  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', \n                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), \n         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', \n                     'Terrestial Plant' = 'Terrestrial Plants',\n                     'Terrestial Plants' = 'Terrestrial Plants'))"},{"id":2,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-2","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"4+3"},{"id":3,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-3","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"4+3"},{"id":4,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-4","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"view(Biodiversity_Index)"},{"id":5,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-5","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"print(Biodiversity_Index[,c(\"index\",\"numspecies\")])"},{"id":6,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-6","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"unique(Biodiversity_Index$Biome)"},{"id":7,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-7","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"unique(Biodiversity_Index$\"Insert Column Name here\"\n)"},{"id":8,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-8","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"print(Biodiversity_Index[,c(\"YEAR\",\"index\",\"numspecies\",\"Biome\",\"Taxa\")])"},{"id":9,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-9","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y=\"numspecies or index\")) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"id":10,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-10","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") "},{"id":11,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-11","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"filter(Biome==\"Savannah Desert\", Taxa==\"Mammals\") "},{"id":12,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-12","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"ggplot(aes(x= YEAR, y=\"numspecies or index\"))"},{"id":13,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-13","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"geom_col(fill= \"salmon3\", color=\"grey37\")"},{"id":14,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-14","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"labs(title = \"Insert Title Name\", subtitle = \"Insert Subtititle\", x= \"Year\", y= \"Number of species or Biodiversity index\")"},{"id":15,"options":{"message":"true","comment":"","editor-font-scale":"1","label":"unnamed-chunk-15","fig-width":7,"autorun":"false","out-height":"","output":"true","context":"interactive","results":"markup","warning":"true","classes":"","editor-max-height":"","fig-height":5,"fig-cap":"","read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","dpi":72},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y= \"numspecies or index\" )) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"}];
+globalThis.qwebrCellDetails = [{"id":1,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-1","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"##| context: setup\nlibrary(tidyverse)\n\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv\"\ndownload.file(url, \"Biodiversity_Index.csv\")\n\nBiodiversity_Index_spelling <- read_csv(\"Biodiversity_Index.csv\")\n\n#Fix spelling errors in the dataset\nBiodiversity_Index <- Biodiversity_Index_spelling |> \n  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', \n                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), \n         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', \n                     'Terrestial Plant' = 'Terrestrial Plants',\n                     'Terrestial Plants' = 'Terrestrial Plants'))"},{"id":2,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-2","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"4+3"},{"id":3,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-3","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"4+3"},{"id":4,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-4","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"view(Biodiversity_Index)"},{"id":5,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-5","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"print(Biodiversity_Index[,c(\"index\",\"numspecies\")])"},{"id":6,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-6","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"unique(Biodiversity_Index$Biome)"},{"id":7,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-7","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"unique(Biodiversity_Index$\"Insert Column Name here\"\n)"},{"id":8,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-8","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"print(Biodiversity_Index[,c(\"YEAR\",\"index\",\"numspecies\",\"Biome\",\"Taxa\")])"},{"id":9,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-9","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y=\"numspecies or index\")) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"},{"id":10,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-10","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") "},{"id":11,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-11","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"filter(Biome==\"Savannah Desert\", Taxa==\"Mammals\") "},{"id":12,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-12","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"ggplot(aes(x= YEAR, y=\"numspecies or index\"))"},{"id":13,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-13","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"geom_col(fill= \"salmon3\", color=\"grey37\")"},{"id":14,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-14","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"labs(title = \"Insert Title Name\", subtitle = \"Insert Subtititle\", x= \"Year\", y= \"Number of species or Biodiversity index\")"},{"id":15,"options":{"output":"true","results":"markup","editor-max-height":"","editor-font-scale":"1","out-height":"","comment":"","dpi":72,"message":"true","fig-cap":"","warning":"true","classes":"","read-only":"false","autorun":"false","label":"unnamed-chunk-15","editor-quick-suggestions":"false","fig-height":5,"fig-width":7,"context":"interactive","editor-word-wrap":"true","out-width":"700px"},"code":"Biodiversity_Index|>\n  filter(Biome==\"Insert Biome Name Here\", Taxa==\"Insert Taxa Name Here\") |>\n  ggplot(aes(x= YEAR, y= \"numspecies or index\" )) + \n  geom_col(fill= \"Insert Color Name Here\", color=\"grey37\") + \n  labs(title = \"Insert Title Name\", \n       subtitle = \"Insert Subtititle\", \n       x= \"Year\", y= \"Number of species or Biodiversity index\") +\n  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = \"bold\"), plot.subtitle = element_text(hjust = .5))"}];
 
 </script>
 <script type="module">
@@ -1646,8 +1647,10 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-posit-cloud" id="toc-what-is-posit-cloud" class="nav-link active" data-scroll-target="#what-is-posit-cloud">What is Posit Cloud</a></li>
-  <li><a href="#what-can-r-do" id="toc-what-can-r-do" class="nav-link" data-scroll-target="#what-can-r-do">What can R do?</a></li>
+  <li><a href="#what-is-r-and-what-can-it-do" id="toc-what-is-r-and-what-can-it-do" class="nav-link active" data-scroll-target="#what-is-r-and-what-can-it-do">What is R and what can it do?</a>
+  <ul class="collapse">
+  <li><a href="#you-can-use-r" id="toc-you-can-use-r" class="nav-link" data-scroll-target="#you-can-use-r">You can use R!</a></li>
+  </ul></li>
   <li><a href="#data-set" id="toc-data-set" class="nav-link" data-scroll-target="#data-set">Data Set</a></li>
   <li><a href="#which-columns-are-we-going-to-use" id="toc-which-columns-are-we-going-to-use" class="nav-link" data-scroll-target="#which-columns-are-we-going-to-use">Which columns are we going to use</a></li>
   <li><a href="#re-creating-your-groups-graph" id="toc-re-creating-your-groups-graph" class="nav-link" data-scroll-target="#re-creating-your-groups-graph">Re-Creating Your Group’s Graph</a>
@@ -1976,20 +1979,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<section id="what-is-posit-cloud" class="level1">
-<h1>What is Posit Cloud</h1>
-<p>Posit Cloud is a cloud-based solution that allows anyone to do share, teach,and learn data science online.Posit Cloud allows you to use multiple programming languages.</p>
-<ul>
-<li>The programming language we are going to be using is called R</li>
-</ul>
-</section>
-<section id="what-can-r-do" class="level1">
-<h1>What can R do?</h1>
+<section id="what-is-r-and-what-can-it-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-r-and-what-can-it-do">What is R and what can it do?</h2>
+<p>R is a programming language that helps us work with large amounts of data.</p>
 <ul>
 <li><p>You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations</p></li>
 <li><p>We are going to be utilizing the data visualization aspect by creating graphs from a big data set</p></li>
+<li><p><u>Fun Fact:</u> R is like a fancy calculator</p></li>
 </ul>
-<p><u>Fun Fact:</u> Posit Cloud is like a fancy calculator</p>
+<section id="you-can-use-r" class="level3">
+<h3 class="anchored" data-anchor-id="you-can-use-r">You can use R!</h3>
+<p>This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green “run code” button. These are called code chunks. You can type commands into these boxes and it will tell the computer to do things! Let’s try it out.</p>
 <p><strong>Press</strong> the Green Play button on the top right of the code chunk.</p>
 <p>(the code chunk is the grey rectangular box below)</p>
 <div id="qwebr-insertion-location-2"></div>
@@ -1999,14 +1999,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="data-set" class="level1">
-<h1>Data Set</h1>
+</section>
+<section id="data-set" class="level2">
+<h2 class="anchored" data-anchor-id="data-set">Data Set</h2>
 <p>We are going to be using data from BioTIME (<a href="https://biotime.st-andrews.ac.uk" class="uri">https://biotime.st-andrews.ac.uk</a>)</p>
 <ul>
 <li>We are specifically looking at data on the Biodiversity of Terrestrial Plants and Invertebrates in the Temperate Coniferous Forest and in Tropical Forest.</li>
 </ul>
 <p>We’ve pre-loaded a data set from the biotime data into this tutorial</p>
-<p>* <code>Biodiversity_Index</code> is the name of the Data set *</p>
+<ul>
+<li><code>Biodiversity_Index</code> is the name of the Data set.</li>
+</ul>
 <p>Lets look at it!</p>
 <ul>
 <li>The <code>view()</code> function opens the data set so you can look at it.</li>
@@ -2015,8 +2018,34 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><strong>Stop and Think:</strong></p>
-<p>How many columns does this table have? How many rows?</p>
-<p><u>Answer:</u> 12 columns and 148 Rows</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Question</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="question">
+<p><strong>How many columns does this table have? How many rows?</strong></p>
+<div class="choices">
+<div x-data="{ answer: '' , clear() { this.answer = '' }}">
+
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no1"> <span id="no1" x-show="answer == $el.id" class="badge">✗</span>148 columns and 12 rows</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no2"> <span id="no2" x-show="answer == $el.id" class="badge">✗</span>12 columns and 10 rows</p><p></p>
+</div>
+<div class="choice correct-choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="correct"> <span id="correct" x-show="answer == $el.id" class="badge">✓</span>12 columns and 148 rows</p><p></p>
+</div>
+<div class="choice">
+<p></p><p><input class="form-check-input" type="radio" x-model="answer" value="no4"> <span id="no4" x-show="answer == $el.id" class="badge">✗</span>52 columns and 14 rows</p><p></p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="which-columns-are-we-going-to-use" class="level1">
 <h1>Which columns are we going to use</h1>
@@ -2730,4 +2759,5 @@ qwebrInstance.then(
 
 
 
+<script src="../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

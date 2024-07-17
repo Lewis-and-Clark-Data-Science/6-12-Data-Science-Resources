@@ -3,6 +3,7 @@ title: "Biodiversity tutorial"
 author: Grace, edited for web version by Olivia
 filters: 
   - webr
+  - naquiz
 ---
 
 ```{webr-r}
@@ -24,19 +25,19 @@ Biodiversity_Index <- Biodiversity_Index_spelling |>
 
 ```
 
-# What is Posit Cloud
+## What is R and what can it do?
 
-Posit Cloud is a cloud-based solution that allows anyone to do share, teach,and learn data science online.Posit Cloud allows you to use multiple programming languages.
-
--   The programming language we are going to be using is called R
-
-# What can R do?
+R is a programming language that helps us work with large amounts of data. 
 
 -   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
 
 -   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
 
-[Fun Fact:]{.underline} Posit Cloud is like a fancy calculator
+-   [Fun Fact:]{.underline} R is like a fancy calculator
+
+### You can use R! 
+
+This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green "run code" button. These are called code chunks. You can type commands into these boxes and it will tell the computer to do things! Let's try it out.  
 
 **Press** the Green Play button on the top right of the code chunk.
 
@@ -54,7 +55,7 @@ Posit Cloud is a cloud-based solution that allows anyone to do share, teach,and 
 4+3
 ```
 
-# Data Set
+## Data Set
 
 We are going to be using data from BioTIME (<https://biotime.st-andrews.ac.uk>)
 
@@ -62,7 +63,7 @@ We are going to be using data from BioTIME (<https://biotime.st-andrews.ac.uk>)
 
 We've pre-loaded a data set from the biotime data into this tutorial
 
-\* `Biodiversity_Index` is the name of the Data set \*
+-   `Biodiversity_Index` is the name of the Data set.
 
 Lets look at it!
 
@@ -76,9 +77,36 @@ view(Biodiversity_Index)
 
 **Stop and Think:**
 
-How many columns does this table have? How many rows?
+::: panel-tabset
 
-[Answer:]{.underline} 12 columns and 148 Rows
+## Question
+
+::: question
+
+**How many columns does this table have? How many rows?**
+
+::: choices
+
+::: choice
+148 columns and 12 rows
+
+:::
+
+::: choice
+12 columns and 10 rows
+:::
+
+::: {.choice .correct-choice}
+12 columns and 148 rows
+
+:::
+::: choice
+
+52 columns and 14 rows
+:::
+:::
+:::
+:::
 
 # Which columns are we going to use
 
