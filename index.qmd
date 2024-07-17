@@ -4,7 +4,7 @@ title: 6-12 Data Science Resources
 
 Welcome! This site includes lots of resources for using data science in your middle or high school classroom. 
 
-Under **Lesson Plans**, you'll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in Rstudio Desktop or Posit.cloud. 
+Under **Lesson Plans**, you'll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in [Rstudio desktop](https://posit.co/download/rstudio-desktop/) or [posit.cloud](https://posit.cloud/content/yours?sort=name_asc) (an online version of Rstudio). 
 
 Under **Online Tutorials**, you'll find tutorials that can be done directly on this website which can be used to teach and learn about data science. These correspond with the lesson plans and can often be used *instead of* downloading the code files under "Lesson Plans" (if you prefer not to use Rstudio). They generally require minimal to no experience in R coding. 
 
