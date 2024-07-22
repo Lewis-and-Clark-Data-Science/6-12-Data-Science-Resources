@@ -81,7 +81,7 @@
     "href": "resources/resources.html",
     "title": "Other Resources",
     "section": "",
-    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!\n\nResources for learning about data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\nNASA Interactive Graphs - Vital Signs of the Planet\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP\n\n\nTutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\n\n\nTutorials that can be downloaded\nThinking we could include data in the wild resources here?? as a .zip file??\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
+    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!\n\nResources for learning about data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\nNASA Interactive Graphs - Vital Signs of the Planet\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP\n\n\nTutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet containing Basic R commands\n\n\nTutorials that can be downloaded\nThinking we could include data in the wild resources here?? as a .zip file??\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
   },
   {
     "objectID": "lesson_plans/COR_lesson.html",
@@ -151,7 +151,7 @@
     "href": "lesson_plans/lesson_links.html#sec-DITW",
     "title": "R Files for Data Science Lessons",
     "section": "Other downloadable tutorials",
-    "text": "Other downloadable tutorials\nTo use the in depth R tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
+    "text": "Other downloadable tutorials\nBelow are R tutorials developed for Lewis & Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.\nTo use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
   },
   {
     "objectID": "resources/cheatsheet.html",

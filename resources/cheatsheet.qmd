@@ -8,7 +8,7 @@ filters:
 
 The following cheatsheet is based on commands used in a course developed for Lewis & Clark College, called "Data in the Wild". It covers basic R commands (including basic arithmetic, importing data), cleaning and mutating data, plotting using ggplot and inferential statistics. 
 
-For more information and to download the tutorials used in conjunction with this cheatsheet, refer to the [R files page](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/lesson_links.qmd#sec-DITW).
+For more information and to download the tutorials used in conjunction with this cheatsheet, refer to the [R files page](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/lesson_links.html#sec-DITW).
 
 
 ## Basic R Commands

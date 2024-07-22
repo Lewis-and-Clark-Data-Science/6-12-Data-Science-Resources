@@ -22,6 +22,8 @@ If you'd like to learn more about R coding and data science, here are some more 
 
 [Biology Tutorials used in Lewis & Clark College intro to biology courses](https://lewis-and-clark-data-science.github.io/BIO-110-Web-Tutorials/) 
 
+[Cheatsheet containing Basic R commands](cheatsheet.qmd)
+
 ### Tutorials that can be downloaded 
 
 Thinking we could include data in the wild resources here?? as a .zip file?? 

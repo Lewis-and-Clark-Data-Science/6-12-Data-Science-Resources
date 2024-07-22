@@ -26,7 +26,9 @@ Additionally, check out the tabs under "Lesson Plans" for more information and r
 
 ## Other downloadable tutorials {#sec-DITW}
 
-To use the in depth R tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework. 
+Below are R tutorials developed for Lewis & Clark College's Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics. 
+
+To use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework. 
 
 We recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice. 
 
