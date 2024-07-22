@@ -24,7 +24,7 @@ Additionally, check out the tabs under "Lesson Plans" for more information and r
 
 [Sea Levels Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
 
-## Other downloadable tutorials {#sec-DITW}
+## Other downloadable tutorials{#sec-DITW}
 
 Below are R tutorials developed for Lewis & Clark College's Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics. 
 
