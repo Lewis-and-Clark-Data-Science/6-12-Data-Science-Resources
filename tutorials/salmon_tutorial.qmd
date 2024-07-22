@@ -111,27 +111,21 @@ Bon_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/100
 
 **Note this is unfinished**
 
-Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it. 
+Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.
 
 ::: columns
-
 ::: {.column width="35%"}
-
-![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/salmon_dog.jpg){fig-align="left" fig-alt="A dog jumping towards Chinook salmon in a fish ladder" height=2.5in}
+![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/salmon_dog.jpg){fig-align="left" fig-alt="A dog jumping towards Chinook salmon in a fish ladder" height="2.5in"}
 :::
 
 ::: {.column width="5%"}
-
 <br>
-
 :::
 
 ::: {.column width="60%"}
-
 Today we'll get to learn about fish crossings at dams in the Columbia River.
 
-We'll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year. 
-
+We'll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year.
 :::
 :::
 
@@ -189,12 +183,12 @@ cat("Hello", name, "How are you today?")
 
 ```
 
-
 ## Find the largest number
 
-We can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don't delete anything else! 
+We can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (\_\_\_\_\_\_). Separate your numbers with a comma. Don't delete anything else!
 
 Here's an example:
+
 ```{webr-r}
 #| read-only:true
 numbers = c(41, 55, 98, 104, 2, 8)
@@ -243,10 +237,9 @@ datatable(Bonneville_chinook)
 
 Wow that's a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.
 
-
 ### How to read the data table
 
-Let's learn about what some of this data means. First, the table that you see when you click the blue rectangle above is called a **data table**. It contains a bunch of numbers which tell us how many fish crossed the Bonneville Dam on any given day. 
+Let's learn about what some of this data means. First, the table that you see when you click the blue rectangle above is called a **data table**. It contains a bunch of numbers which tell us how many fish crossed the Bonneville Dam on any given day.
 
 #### Reading Dates
 
@@ -263,11 +256,9 @@ Those numbers are referring to dates! For example, *1/1* is January 1. But, they
 :::
 
 ::: panel-tabset
-
 ## Check for understanding
 
 ::: question
-
 **Can you find how many fish crossed the Bonneville Dam on April 1 in 2023?**
 
 ::: choices
@@ -281,99 +272,91 @@ Those numbers are referring to dates! For example, *1/1* is January 1. But, they
 
 ::: choice
 30495
-::: 
+:::
 :::
 :::
 
 ## Hint
 
-On the far left side of the data, you should see the year. Find 2023 and then find **4/1** on the top. What number is underneath **4/1** in the 2023 row? 
-
+On the far left side of the data, you should see the year. Find 2023 and then find **4/1** on the top. What number is underneath **4/1** in the 2023 row?
 :::
 
 #### Finding the maximum fish crossings in a year
 
 ::: panel-tabset
-
 ## Question
 
-What is the **maximum** number of fish that crossed the Bonneville Dam in **one** day in 2022? 
+What is the **maximum** number of fish that crossed the Bonneville Dam in **one** day in 2022?
 
 ## Hint
 
-See if you can find the **biggest** number in the 2022 row. If it seems too hard, scroll down past this question to learn an easy way to do this with the computer! 
-
+See if you can find the **biggest** number in the 2022 row. If it seems too hard, scroll down past this question to learn an easy way to do this with the computer!
 :::
 
-Were you able to figure out the maximum number of fish that crossed the Bonneville Dam in one day in 2022? It was probably pretty annoying to have to look through all the numbers... 
+Were you able to figure out the maximum number of fish that crossed the Bonneville Dam in one day in 2022? It was probably pretty annoying to have to look through all the numbers...
 
-Luckily, the computer can make this task much easier! Try running the code below. It will find the maximum number in 2022. If you want to learn more about how it works, click the "Learn more" tab. 
+Luckily, the computer can make this task much easier! Try running the code below. It will find the maximum number in 2022. If you want to learn more about how it works, click the "Learn more" tab.
 
 ::: panel-tabset
-
 ## Code editor
 
 ```{webr-r}
 max(Bonneville_chinook[2,])
 ```
 
-
-
 Do you see the number 33607 pop out after you run the code? That’s the largest number of fish that crossed the Bonneville dam in 2022 in a day!
-
 
 ## Learn more
 
-Here's the code we're using again: 
+Here's the code we're using again:
+
 ```{r}
 #| eval: false
 max(Bonneville_chinook[2,])
 ```
 
-Do you recognize any words in the code? 
+Do you recognize any words in the code?
 
 -   [max]{style="color:#4758AB"}: This is called a "function". It tells the computer to find the max value.
 
 -   [Bonneville_chinook]{style="color:darkblue"}: This tells the computer to look in our data called `Bonneville_chinook`
 
--   [2]{style="color:red"}: This tells the computer to look specifically at the **second** row of the the data, which is the 2022 row. 
+-   [2]{style="color:red"}: This tells the computer to look specifically at the **second** row of the the data, which is the 2022 row.
 
 ## Challenge
 
-Want to try using the code yourself? See if you can figure out how to find the maximum value in 2019. Edit the code in the code editor below: 
+Want to try using the code yourself? See if you can figure out how to find the maximum value in 2019. Edit the code in the code editor below:
 
 ```{webr-r}
 max(Bonneville_chinook[2,])
 ```
 
-Hint: The "2" tells the computer which row to look at. How many rows down is 2019? 
+Hint: The "2" tells the computer which row to look at. How many rows down is 2019?
 
 ## Answer
 
 ```{webr-r}
 max(Bonneville_chinook[5,])
 ```
-
 :::
 
-So the largest number of fish that crossed the Bonneville dam in 2022 in a day is 33607! 
+So the largest number of fish that crossed the Bonneville dam in 2022 in a day is 33607!
 
 ### Finding the total number of fish that cross the Bonneville dam each year
 
-What if you wanted to know how many **total** fish crossed the dam this year, compared to 50 years ago? We can use the computer to answer that question too! 
+What if you wanted to know how many **total** fish crossed the dam this year, compared to 50 years ago? We can use the computer to answer that question too!
 
-First, let's make a prediction. Think about what you've learned about dams and how they impact fish trying to get past them. 
+First, let's make a prediction. Think about what you've learned about dams and how they impact fish trying to get past them.
 
-Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions! 
+Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions!
 
 ## TO BE FINISHED... will include graphs of species crossing different dams
 
-Here's the graphs in the meantime before I finish the tutorial 
+Here's the graphs in the meantime before I finish the tutorial
 
 ### Bonneville Chinook
 
 ::: panel-tabset
-
 ## Graph without connecting line
 
 ```{webr-r}
@@ -406,10 +389,9 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 ```
 :::
 
-### Chinook Crossings at the Dalles 
+### Chinook Crossings at the Dalles
 
-::: panel-tabset 
-
+::: panel-tabset
 ## Graph without connecting line
 
 ```{webr-r}
@@ -456,7 +438,7 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
   scale_y_continuous(breaks = seq(0,1100,100))
 ```
 
-## Graph with connecting line 
+## Graph with connecting line
 
 ```{webr-r}
 Dalles_chinook <- read.csv("Chinook_Dalles_1957_2023.csv")
@@ -502,13 +484,11 @@ ggplot(data = Dalles_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
   scale_y_continuous(breaks = seq(0,1100,100))
 
 ```
-
 :::
 
 ### Steelhead Crossings at the Bonneville Dam
 
 ::: panel-tabset
-
 ## Graph without connecting line
 
 ```{webr-r}
@@ -607,7 +587,4 @@ ggplot(data = Bon_steel_sum, aes(x = year, y = sum_of_rows_100)) +
      scale_y_continuous(breaks = seq(0,175,25))
 ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path="output", width=2500, height=1200, units="px")
 ```
-
 :::
-
-
