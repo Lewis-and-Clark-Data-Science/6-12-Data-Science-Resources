@@ -1,0 +1,262 @@
+---
+title: "Cheatsheet for Data in the Wild Tutorials"
+format: html
+editor: visual
+filters: 
+  - webr
+---
+
+The following cheatsheet is based on commands used in a course developed for Lewis & Clark College, called "Data in the Wild". It covers basic R commands (including basic arithmetic, importing data), cleaning and mutating data, plotting using ggplot and inferential statistics. 
+
+For more information and to download the tutorials used in conjunction with this cheatsheet, refer to the [R files page](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/lesson_links.qmd#sec-DITW).
+
+
+## Basic R Commands
+
+-   Basic arithmetic
+
+    -   Examples: `5*6`, `sqrt(9)`, `abs(-3)`
+
+    -   Type `help(command)` to find information about any command
+
+-   Create variables: Use `<-` or `=` to assign values to a variable.
+
+    -   Example: `x <- 7`
+
+-   Create a vector:
+
+    ```{r}
+    #| output: true
+    vector <- c(1,3,7)
+    vector
+    ```
+
+-   Create a data frame: `data.frame(____)`
+
+    ```{r}
+    df <- data.frame(var_1 = c(1,2,3) , var_2 = c("cat", "dog", "fish"))
+    df
+    ```
+
+### Basic Statistics
+
+-   `mean(vector)` : Calculates the mean of a given set of values.
+
+-   `median(vector)` : Calculates the median of a given set of values.
+
+-   `sd(vector)` : Calculates the standard deviation of a given set of values.
+
+-   `nrow(data)`: Calculates the total number of rows in a dataset
+
+-   `na.rm = TRUE` : Remove `NA` values. Add this as an argument to any of the statistics calculations. E.g. `mean(vector, na.rm=TRUE)`
+
+## Working with a data set in the tidyverse
+
+We use the `tidyverse` to analyze data in this cheatsheet. To install run the following code:
+
+```{r}
+#| eval: false
+install.packages("tidyverse")
+```
+
+After installing, to load the tidyverse run:
+
+```{r}
+#| eval: false
+library(tidyverse)
+```
+
+### Uploading and viewing a data set
+
+-   `dataFrame <- read_csv("myCSV.csv")` : Creates a data frame from a file called `myCSV.csv`
+
+-   `write_csv(dataFrame, "myCSV.csv")`: Creates a csv from a data frame
+
+-   `view(dataFrame)`: Enter view-mode to see the entire data frame
+
+-   `str(dataFrame)`: Gives the structure of data frame
+
+-   `glimpse(dataFrame)`: Take a quick look at a data frame
+
+-   `summary(dataFrame)`: Returns min, max, mean, meadian, 1st/3rd quartiles for all vectors in dataFrame
+
+-   `dataFrame$columnName`: Calls up specific column from a data frame
+
+-   `unique(vector)`: Find the number of unique values in a column/vector
+
+-   `length()`: Counts the number of entries in a column/vector
+
+### Rearranging & Summarizing data
+
+-   Use logical operators to combine conditions: `&` (and), `|` (or), `!` (not)
+
+-   Use comparison operators to describe conditions: `<`, `>`, `==`, `!=`, `<=`, `>=`
+
+-   `group_by(.data, column)`: Takes a dataset and groups it by a column/variable
+
+-   `summarize(.data, summaryStat = statistic formula)`: Takes a dataset and outputs summary statistics that you define.
+
+    -   `n()`: Calculates current group size. Can be used in `summarize` and `group_by`
+
+    -   Combine `group_by` and `summarize` using the pipe (`|>`) to see summary statistics for specific groups/variables.
+
+    -   **The pipe:** Use `|>` OR `%>%` to string functions and data together. Read as "AND THEN".
+
+    Example:
+
+    ```{r}
+    #| eval: false
+      dataFrame |> 
+        group_by(firstColumn)|> 
+        summarize(mean_of_secondColumn = mean(secondColumn), 
+                  standard_deviation_of_secondColumn = sd(secondColumn),
+                  number_in_each_group = n(), 
+                  percent = n()/nrow(dataFrame)*100)
+    ```
+
+-   `filter(.data=myDataFrame, column=="some value")`: Subsets dataframe, lets us pick **rows** of data based on "some value", including a specific value, mean, median, etc.
+
+-   `select(.data, column(s))`: Choose columns from a dataframe.
+
+    -   `column1 , column2` : choose column1 and column2
+    -   `column1:column5` : choose all columns between column1 and column5
+    -   `-column1`: choose all columns except column1
+
+-   `mutate(data, newColumn = yourFormula)`: Creates a new column in a dataset defined by a calculation you input.
+
+-   `arrange(data, column)`: Rearrange data into numerical order by a specific column
+
+## Plotting with GGPlot
+
+### Resources:
+
+-   [GGPlot Cheatsheet pdf](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
+
+-   [Posit.cloud ggplot cheatsheet, website version](https://rstudio.github.io/cheatsheets/html/data-visualization.html)
+
+### GGPlot Basics:
+
+-   **Basic structure:**
+
+    ```{r}
+    #| eval: false
+    ggplot(data, mapping=aes()) +
+          geom_function()
+    ```
+
+-   Connect different properties using a `+`
+
+-   **Basic Components:**
+
+    -   Data: `data=dataSet`: Define your data set
+
+    -   Aesthetics: `mapping = aes(variables)`: Define the variables. Can also specify color/fill for your graph and geometries.
+
+    -   Geometry: `geom_GeometricObject()`: Define the type of plot
+
+### Geometries
+
+-   `geom_histogram()`: Creates a histogram
+
+    -   Syntax: `geom_histogram(bins=X)` Specify number of bins
+
+-   `geom_point()`: Creates points (scatterplot) for each data point
+
+    -   Can specify `color = ___` and `shape = ____`
+
+-   `geom_bar()` : Creates a bar graph
+
+    -   Syntax:
+        -   `geom_bar()`: Aggregates data for you
+        -   `geom_bar(stat = "identity")`: Creates a bar graph with pre-aggregated data that you input
+        -   `geom_bar(position="___")` Can choose "stack" (bars on top of each other), "dodge" (bars side by side) or "fill" (bars stacked, scaled to 100%).
+        -   Add error bars: `geom_errorbar(mapping=aes(ymin, ymax), width)`
+
+-   `geom_boxplot()`: Creates a boxplot
+
+    -   Add error bars: `stat_boxplot(geom="errorbar")`
+
+-   `geom_density()`: Creates a density graph
+
+    -   Syntax: `geom_density(adjust=X)` X is a ratio, how smooth the graph is
+
+-   `geom_smooth(method="lm", se=FALSE)`: Creates a line of best fit
+
+-   `labs()` : Add a title and axes labels to your graph
+
+-   `facet_wrap(~ variable)`: Create separate plots for each aspect of a given variable
+
+-   And more!
+
+### Other useful GGPlot functions:
+
+-   `install.packages("ggplot2")` and `library(ggplot2)`: Install and load GGplot package. Note: `ggplot2` is included in the `tidyverse` so you do NOT need to load both packages.
+
+-   `ggsave("yourTitleHere.jpg", currentPlotName)`: Saves "currentPlotName" as a jpg file called "yourTitleHere.jpg".
+
+## Examples: Using GGPlot with other tidyverse functions
+
+Use the pipe to string together functions and create tidy data *before* plotting.
+
+The following examples use data from the `palmerpenguins` package which has been preloaded into this document. Click the green play button to see them run. Feel free to edit the code as well if you want to try out other functions!
+
+```{webr-r}
+#| context: setup 
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+Here's a preview of the penguin data, and here is [a link](https://cran.r-project.org/web/packages/palmerpenguins/readme/README.html) to more information about the data.
+
+```{webr-r}
+penguins
+```
+
+Basic bar graph of median flipper length on each island:
+
+```{webr-r}
+penguins |> 
+  group_by(island) |> 
+  summarize(medianFlipperLength = median(flipper_length_mm, na.rm=TRUE))|> 
+  
+  ggplot(mapping=aes(x=island, y=medianFlipperLength, fill=island))+
+    geom_bar(stat="identity")+
+    labs(title="Median Flipper Length on each Island", x="Island", y="Flipper Length (mm)")
+```
+
+Boxplot of Adelie penguin flipper length, by sex:
+
+```{webr-r}
+AdelieData <- penguins |> 
+  filter(species == "Adelie")
+
+ggplot(data=AdelieData, mapping = aes(x = sex, y = flipper_length_mm, fill=sex))+
+  stat_boxplot(geom="errorbar")+
+  geom_boxplot()+
+  labs(title="Boxplot of Adelie penguin flipper length, by sex", x="Sex",y="Flipper Length (mm)")
+```
+
+## Inferential Statistics
+
+### Basic statistical tests
+
+-   `t.test(data, dependentVariable ~ independentVariable)`: 2 sample t-test - compare 2 groups on a numerical measure
+
+    -   Requires: 2 samples of quantitative data
+
+-   `aov(data, dependentVariable ~ independentVariable)`: ANOVA (analysis of variance) test - compare means among groups
+
+    -   Requires: Independent variable - categorical; dependent variable - numerical
+
+-   `TukeyHSD(data)`: Tukey's HSD - Post Hoc test which tells you which *specific* means differ from each other
+
+### Linear regression
+
+-   `cor(data$independentVariable, data$dependentVariable)`: Correlation coefficient - outputs a number between -1 and 1 which tells strength and direction of the relationship between 2 numeric variables
+
+    -   Requires 2 numeric variables
+
+-   `lm(data, dependentVariable ~ independentVariable)`: Fit a linear model
+
+    -   `summary(yourLinearModel)`: View more details about a linear model including regression coefficients, p value for linear model coefficients, quartiles, residual standard error, F-statistic.

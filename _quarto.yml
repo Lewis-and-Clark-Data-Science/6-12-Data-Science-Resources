@@ -36,7 +36,10 @@ website:
         - tutorials/salmon_tutorial.qmd
         - tutorials/climate_change_tutorial.qmd
         - tutorials/biodiversity_tutorial.qmd
-    - resources.qmd
+    - text: Resources
+      menu:
+        - resources/resources.qmd
+        - resources/cheatsheet.qmd
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
     

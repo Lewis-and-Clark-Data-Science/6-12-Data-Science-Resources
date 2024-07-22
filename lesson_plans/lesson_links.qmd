@@ -12,6 +12,7 @@ Additionally, check out the tabs under "Lesson Plans" for more information and r
 
 [Air Quality Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
 
+[COR Lesson code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)
 
 ## High School Lessons
 
@@ -23,4 +24,16 @@ Additionally, check out the tabs under "Lesson Plans" for more information and r
 
 [Sea Levels Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
 
-[COR Lesson code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)
+## Other downloadable tutorials {#sec-DITW}
+
+To use the in depth R tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework. 
+
+We recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice. 
+
+[Module 1 - Basic data wrangling .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Module1.zip)
+
+[Module 2 - Plotting with ggplot .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Module2.zip)
+
+[Module 3 - Inferential Statistics .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Inferential_stats.zip)
+
+
