@@ -22,3 +22,5 @@ Additionally, check out the tabs under "Lesson Plans" for more information and r
 [Climate Change Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
 
 [Sea Levels Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
+
+[COR Lesson code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)

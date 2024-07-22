@@ -7,6 +7,7 @@ project:
     - files/lesson_code_zips/ClimateChangeLessonCode.zip
     - files/lesson_code_zips/SalmonLessonCode.zip
     - files/lesson_code_zips/SeaLevelsLessonCode.zip
+    - files
     - files/data/temp_data.csv
     - files/data/owid_co2_data_2.csv
     - files/data/Bonneville_Dam_1939_2023_Chinook_CSV.csv
