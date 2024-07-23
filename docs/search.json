@@ -81,7 +81,21 @@
     "href": "resources/resources.html",
     "title": "Other Resources",
     "section": "",
-    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!\n\nResources for learning about data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\nNASA Interactive Graphs - Vital Signs of the Planet\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP\n\n\nTutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet containing Basic R commands\n\n\nTutorials that can be downloaded\nThinking we could include data in the wild resources here?? as a .zip file??\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
+    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!"
+  },
+  {
+    "objectID": "resources/resources.html#visualizations-and-interactive-graphs",
+    "href": "resources/resources.html#visualizations-and-interactive-graphs",
+    "title": "Other Resources",
+    "section": "Visualizations and Interactive Graphs",
+    "text": "Visualizations and Interactive Graphs\n\nEducational resources for teaching data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\n\n\nVisualization Examples\nNASA Interactive Graphs - Vital Signs of the Planet\nVisual stories\nCarbon and Climate infographics\nData is Beautiful: 10 of the best data visualization examples from history and today\nTableu - Viz of the day\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP"
+  },
+  {
+    "objectID": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "href": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "title": "Other Resources",
+    "section": "Coding with R (a data science coding language)",
+    "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
   },
   {
     "objectID": "lesson_plans/COR_lesson.html",

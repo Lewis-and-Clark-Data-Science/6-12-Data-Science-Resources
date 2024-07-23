@@ -9,6 +9,7 @@ project:
   
 website:
   title: "6-12 Data Science Resources"
+  favicon: files/figures/data-science-icon.png
   navbar: 
     left: 
     - text: Lesson Plans 
