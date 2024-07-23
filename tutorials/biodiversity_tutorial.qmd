@@ -19,12 +19,12 @@ download.file(url, "Biodiversity_Index.csv")
 Biodiversity_Index <- read_csv("Biodiversity_Index.csv")
 
 #Fix spelling errors in the dataset
-Biodiversity_Index <- Biodiversity_Index |> 
-  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous Forest', 
-                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical Forest'), 
-         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', 
-                     'Terrestial Plant' = 'Terrestrial Plants',
-                     'Terrestial Plants' = 'Terrestrial Plants'))
+#Biodiversity_Index <- Biodiversity_Index |> 
+#  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous #Forest', 
+#                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical #Forest'), 
+#         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', 
+#                     'Terrestial Plant' = 'Terrestrial Plants',
+#                     'Terrestial Plants' = 'Terrestrial Plants'))
 
 Biodiversity_Index <- Biodiversity_Index[-c(2)]
 
