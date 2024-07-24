@@ -5,6 +5,12 @@ filters:
   - webr
   - naquiz
 editor: visual
+
+output: 
+  rtutor::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
 ---
 
 ```{webr-r}

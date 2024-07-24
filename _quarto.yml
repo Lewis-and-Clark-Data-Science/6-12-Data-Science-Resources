@@ -31,10 +31,17 @@ website:
         - resources/cheatsheet.qmd
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
-    
+  
+
+
 format:
   html:
     theme: yeti
 #    theme: lux sandstone yeti
     css: styles.css
     toc: true
+    toc-depth: 3
+    knitr: 
+      opts_chunk: 
+        dev: "ragg_png"
+        dpi: 300

@@ -5,7 +5,32 @@ filters:
   - webr
   - naquiz
 df-print: kable
+
+format:
+  html: 
+    toc: false
+    section-divs: true
+    include-after-body: 
+      - text: |
+          <script src="js/progressive-reveal.js"></script>
+          <script src="js/bootstrapify.js"></script>
 ---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.height = 6 * 0.618,
+  fig.retina = 3,
+  dev = "ragg_png",
+  fig.align = "center",
+  out.width = "70%"
+)
+
+library(tidyverse)
+#library(checkdown)
+
+source(here::here("R", "helpers.R"))
+```
 
 ```{webr-r}
 #| context: setup
@@ -32,9 +57,25 @@ names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
 
 ```
 
+```{r}
+#| include: false
+library(tidyverse)
+library(knitr)
+
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Biodiversity_Index.csv"
+download.file(url, "Biodiversity_Index.csv")
+
+Biodiversity_Index <- read_csv("Biodiversity_Index.csv")
+
+Biodiversity_Index <- Biodiversity_Index[-c(2)]
+
+names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
+
+```
+
 ## What is R and what can it do?
 
-R is a programming language that helps us work with large amounts of data. 
+R is a programming language that helps us work with large amounts of data.
 
 -   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
 
@@ -42,9 +83,9 @@ R is a programming language that helps us work with large amounts of data.
 
 -   [Fun Fact:]{.underline} R is like a fancy calculator
 
-### You can use R! 
+### You can use R!
 
-This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green "run code" button. These are called code chunks. You can type commands into these boxes and it will tell the computer to do things! Let's try it out.  
+This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green "run code" button. These are called code chunks. You can type commands into these boxes and it will tell the computer to do things! Let's try it out.
 
 **Press** the Green Play button on the top right of the code chunk.
 
@@ -74,7 +115,28 @@ We've pre-loaded a data set from the biotime data into this tutorial
 
 Lets look at it!
 
--   The `kable()` function opens the data set so you can look at it.
+::: {.callout-note collapse="true"}
+## Click this to see our data!
+
+::: panel-tabset
+## Datatable
+
+```{r}
+#| echo: false
+#| output: true
+library(DT)
+options(DT.options = list(
+#  bPaginate = FALSE, 
+  pageLength = 148, 
+  lengthMenu=c(10,50,100,148)
+))
+datatable(Biodiversity_Index)
+#kable(Biodiversity_Index)
+```
+
+## Code to create table (optional)
+
+The `kable()` function opens a data set so you can look at it.
 
 **Press** Green play button to run the code
 
@@ -82,22 +144,20 @@ Lets look at it!
 #| df-print: kable
 kable(Biodiversity_Index)
 ```
+:::
+:::
 
 **Stop and Think:**
 
 ::: panel-tabset
-
 ## Question
 
 ::: question
-
 **How many columns does this table have? How many rows?**
 
 ::: choices
-
 ::: choice
 148 columns and 11 rows
-
 :::
 
 ::: choice
@@ -106,10 +166,9 @@ kable(Biodiversity_Index)
 
 ::: {.choice .correct-choice}
 11 columns and 148 rows
-
 :::
-::: choice
 
+::: choice
 52 columns and 14 rows
 :::
 :::
@@ -117,8 +176,7 @@ kable(Biodiversity_Index)
 
 ## Hint
 
-At the top you'll see the names of all the columns. Each column is separated by a vertical line | . Try scrolling all the way to the bottom of the data to see how many rows there are. 
-
+At the top you'll see the names of all the columns. Each column is separated by a vertical line \| . Try scrolling all the way to the bottom of the data to see how many rows there are.
 :::
 
 ## Choosing our columns
@@ -128,18 +186,14 @@ We are going to make graphs that represent biodiversity, so we want to look at *
 **Stop and Think:**
 
 ::: panel-tabset
-
 ## Question
 
 ::: question
-
 **Which Columns do you think represent these two things?**
 
 ::: choices
-
 ::: choice
 `Taxa` and `total`
-
 :::
 
 ::: choice
@@ -148,10 +202,9 @@ We are going to make graphs that represent biodiversity, so we want to look at *
 
 ::: choice
 `entry` and `YEAR`
-
 :::
-::: {.choice .correct-choice}
 
+::: {.choice .correct-choice}
 `index` and `numspecies`
 :::
 :::
@@ -159,8 +212,7 @@ We are going to make graphs that represent biodiversity, so we want to look at *
 
 ## Hint
 
-Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line | .
-
+Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line \| .
 :::
 
 ### Narrowing down the data
@@ -181,10 +233,9 @@ Now lets look at these columns
 print(Biodiversity_Index[,c("index","numspecies")])
 ```
 
-### Choosing the biome and taxa 
+### Choosing the biome and taxa
 
 Now we want to look at the biodiversity Index ( `index` ) and total number of species ( `numspecies`) for each biome and each taxa that the data set has
-
 
 **Stop and Think**
 
@@ -197,7 +248,6 @@ Now we want to look at the biodiversity Index ( `index` ) and total number of sp
 -   The `unique()` function list unique values within a column, so it shows us all the different values.
 
 ::: panel-tabset
-
 ## Code editor
 
 **Press** Green play button to run the code
@@ -209,7 +259,6 @@ unique(Biodiversity_Index$Biome)
 ## Answer
 
 There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropical Forest`.
-
 :::
 
 **Stop and Think**
@@ -218,11 +267,10 @@ There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropic
 
 -   Now you know what code to use to find unique values within a column. See if you can reuse the code to find the unique values for the `Taxa` column.
 
-::: panel-tabset 
-
+::: panel-tabset
 ## Code editor
 
-**Edit** this code to find the unique values for the `Taxa` column. 
+**Edit** this code to find the unique values for the `Taxa` column.
 
 **Press** Green play button to run the code chunk once you edit the code.
 
@@ -235,12 +283,11 @@ unique(Biodiversity_Index$"Insert Column Name here"
 
 Look at the previous code chunk that says `unique(Biodiveristy_Index$Biome)`. If that code finds unique values of the `Biome` Column, how can you change it to find the unique values of the `Taxa` column?
 
-Try editing the part of the code that says "Biome". 
+Try editing the part of the code that says "Biome".
 
 ## Answer
 
 There are two different taxa in this data set: `Terrestrial Plants` and `Terrestrial Invertebrates`.
-
 :::
 
 Now let's combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Let's also add the `YEAR` column, since it's the independent variable we will be using in our graphs.
@@ -289,6 +336,8 @@ Lets review step by step what changes you need to make so that the code chunk ca
 
 (You will be changing mostly everything in Red)
 
+## Editing Data
+
 ### Step 1: Selecting a data set to graph
 
 Lets look at line 1 : `Biodiversity_Index |>`
@@ -309,19 +358,18 @@ Looking at Line 2 : `filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa 
 
 **You Try:**
 
-Based on your assigned graph insert the corresponding `Biome` and `Taxa` in the code chunk below. 
+Based on your assigned graph insert the corresponding `Biome` and `Taxa` in the code chunk below.
 
-Be sure you spell the Biome and Taxa exactly as it is spelled in the dataset with proper capitalizations. Here are the options: 
+Be sure you spell the Biome and Taxa exactly as it is spelled in the dataset with proper capitalizations. Here are the options:
 
--   Biome: 
+-   Biome:
     -   "Temperate Coniferous Forest"
     -   "Tropical Forest"
--   Taxa: 
-    -   "Terrestrial Invertebrates" 
+-   Taxa:
+    -   "Terrestrial Invertebrates"
     -   "Terrestrial Plants"
-    
-::: panel-tabset
 
+::: panel-tabset
 ## Code editor
 
 DO NOT **Press** play!
@@ -334,13 +382,10 @@ Make sure to keep your answers in the quotations`""`!
 
 ## Example
 
-
 ```{webr-r}
 filter(Biome=="Savannah Desert", Taxa=="Mammals") 
 ```
-
 :::
-
 
 ### Step 3: Choose your X and Y variables
 
@@ -358,11 +403,9 @@ Looking at Line 3: `ggplot(aes(x= YEAR, y="numspecies or index"))`
 
 -   This should be either `numspecies` if your graph is looking at the number of species or `index` if your graph is looking at Biodiversity Index
 
-    **NOTE:** In this part it important to NOT include quotations `""`. 
-    Example: `y=numspecies` or `y=index`
-    
-::: panel-tabset
+    **NOTE:** In this part it important to NOT include quotations `""`. Example: `y=numspecies` or `y=index`
 
+::: panel-tabset
 ## Code editor
 
 DO NOT **Press** Green play button
@@ -377,7 +420,6 @@ ggplot(aes(x= YEAR, y=numspecies or index))
 ggplot(aes(x= YEAR, y=numspecies))
 
 ```
-
 :::
 
 ### Step 4: Assigning corresponding color to the bars
@@ -413,7 +455,6 @@ Once you've identified which color you need to use, insert the color where it sa
 **NOTE:** It is important to keep the quotations `""`
 
 ::: panel-tabset
-
 ## Code editor
 
 ```{webr-r}
@@ -422,11 +463,11 @@ geom_col(fill= "Insert Color Name Here", color="grey37")
 ```
 
 ## Example
+
 ```{webr-r}
 geom_col(fill= "salmon3", color="grey37")
 
 ```
-
 :::
 
 ### Step 5:
@@ -448,9 +489,8 @@ Looking at lines 5,6,and 7 : `labs(title = "Insert Title Name", subtitle = "Inse
 4.  Pick `"Number of species"` or `"Biodiversity index"` as your Y-Axis label based on your corresponding graph.
 
     **NOTE**: keep quotations `""` around name. Example : `x="year"`
-    
-::: panel-tabset
 
+::: panel-tabset
 ## Code editor
 
 DO NOT **Press** Green Play button
@@ -460,12 +500,12 @@ labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= 
 ```
 
 ## Example
+
 ```{webr-r}
 labs(title = "Number of Terrestrial Invertebrate Species", 
        subtitle = "In Temperate Coniferous Forest ",
        x= "Year", y= "Number of Species")
 ```
-
 :::
 
 ### Step 6: Putting all the lines together!
@@ -474,7 +514,7 @@ Now that you have edited all the necessary code lines, lets put them together to
 
 **Your Turn:**
 
--   Look back at your work in steps 1-5. Edit the following code based on your work in those steps. 
+-   Look back at your work in steps 1-5. Edit the following code based on your work in those steps.
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -491,7 +531,6 @@ Biodiversity_Index|>
 ## Click this to see the answers
 
 ::: panel-tabset
-
 ## Group 1
 
 **Number of Species Temperate Plants**
@@ -521,6 +560,7 @@ Biodiversity_Index|>
 ## Group 2
 
 **Diversity Index Temperate Plants**
+
 ```{webr-r}
 Biodiversity_Index|>
   filter(Biome=="Temperate Coniferous Forest", Taxa== "Terrestrial Plants")|>
@@ -560,6 +600,7 @@ Biodiversity_Index|>
 ```
 
 **Number of Species Tropical Invertebrates**
+
 ```{webr-r}
 Biodiversity_Index|>
   filter(Biome=="Tropical Forest", Taxa=="Terrestrial Invertebrates")|>
@@ -573,6 +614,7 @@ Biodiversity_Index|>
 ## Group 4
 
 **Diversity Index Tropical Plants**
+
 ```{webr-r}
 Biodiversity_Index|>
   filter(Biome=="Tropical Forest", Taxa== "Terrestrial Plants")|>
@@ -597,11 +639,10 @@ Biodiversity_Index|>
   theme_linedraw()+
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
-
 :::
 :::
 
-## Congratulations!**
+## Congratulations!\*\*
 
 **You have created a data visualization from a big data set!**
 
@@ -614,3 +655,26 @@ Biodiversity_Index|>
 3.  *What kinda of data would you want to look at in Posit Cloud?*
 
 4.  *What kind of graphs do you want to make or see more of?*
+
+
+
+```{r}
+#| echo: false
+#| results: asis
+create_buttons <- function(next_topic = "#") {
+  if (is.null(next_topic)) {
+    next_button <- ""
+  } else {
+    next_button <- glue::glue('<a id="nextTopicButton" class="btn btn-danger disabled" href="{next_topic}" role="button">Next topic</a>')
+  }
+  button_section <- glue::glue('
+<section id="buttons">
+<button id="continueButton" class="btn btn-primary float-start me-2">Continue</button>
+{next_button}
+<button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
+</section>')
+  
+  cat(button_section)
+}
+create_buttons("https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html")
+```
