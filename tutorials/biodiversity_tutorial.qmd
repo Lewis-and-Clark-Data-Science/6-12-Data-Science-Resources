@@ -6,31 +6,45 @@ filters:
   - naquiz
 df-print: kable
 
-format:
+format: 
   html: 
-    toc: false
-    section-divs: true
-    include-after-body: 
-      - text: |
-          <script src="js/progressive-reveal.js"></script>
-          <script src="js/bootstrapify.js"></script>
+    toc: true
+    self-contained: false
 ---
 
-```{r include=FALSE}
-knitr::opts_chunk$set(
-  fig.width = 6,
-  fig.height = 6 * 0.618,
-  fig.retina = 3,
-  dev = "ragg_png",
-  fig.align = "center",
-  out.width = "70%"
-)
+<script>
+console.log("Script loaded");
+console.log("Button clicked");
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
 
-library(tidyverse)
-#library(checkdown)
+ // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
 
-source(here::here("R", "helpers.R"))
-```
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";}});
+    
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                parts[currentPartIndex].style.display= "block";
+                 // Jump to the id anchor for the current section
+            window.location.hash = parts[currentPartIndex].id;
+             // Adjust scroll position to account for the height of the navbar
+               window.scrollBy(0, 1000);
+                } else {
+                alert("End of tutorial");}});});});
+</script>
+
 
 ```{webr-r}
 #| context: setup
@@ -73,6 +87,12 @@ names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
 
 ```
 
+## Introduction
+
+Today we'll be looking at biodiversity!
+
+<div class="tutorial-part" style="display: block;">
+
 ## What is R and what can it do?
 
 R is a programming language that helps us work with large amounts of data.
@@ -82,6 +102,7 @@ R is a programming language that helps us work with large amounts of data.
 -   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
 
 -   [Fun Fact:]{.underline} R is like a fancy calculator
+
 
 ### You can use R!
 
@@ -102,6 +123,12 @@ This tutorial lets you use R to work with data. Throughout the tutorial, there a
 ```{webr-r}
 4+3
 ```
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 
 ## Data Set
 
@@ -176,8 +203,13 @@ kable(Biodiversity_Index)
 
 ## Hint
 
-At the top you'll see the names of all the columns. Each column is separated by a vertical line \| . Try scrolling all the way to the bottom of the data to see how many rows there are.
+At the top you'll see the names of all the columns. Try scrolling all the way to the bottom of the data to see how many rows there are.
 :::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 ## Choosing our columns
 
@@ -215,7 +247,14 @@ We are going to make graphs that represent biodiversity, so we want to look at *
 Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line \| .
 :::
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ### Narrowing down the data
+
+We've determined that we want to work with the `index` and `numspecies` columns. 
 
 -   The `index` column represents the biodiversity index per year.
 
@@ -233,9 +272,14 @@ Now lets look at these columns
 print(Biodiversity_Index[,c("index","numspecies")])
 ```
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ### Choosing the biome and taxa
 
-Now we want to look at the biodiversity Index ( `index` ) and total number of species ( `numspecies`) for each biome and each taxa that the data set has
+Now we want to look closer at each biome and taxa that the data set has. 
 
 **Stop and Think**
 
@@ -260,6 +304,13 @@ unique(Biodiversity_Index$Biome)
 
 There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropical Forest`.
 :::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Unique Taxa
 
 **Stop and Think**
 
@@ -300,57 +351,80 @@ print(Biodiversity_Index[,c("YEAR","index","numspecies","Biome","Taxa")])
 
 Now that you have extracted the columns you need, let's graph!
 
-## Creating Your Group's Graph
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
 
-We want to create separate graphs for each biome and species. 
+<div class="tutorial-part" style="display: none;">
 
-**Stop and Think:**
+## Creating a Graph
 
-*What are the options for biome and species?*
+Our goal is to create a graph that tracks the biodiversity of a specific location over time. We have two methods of measuring biodiversity: the **number of species** and the **biodiversity index**. We will also narrow down our data by choosing a specific **biome** and **taxa**. 
+
+### Choosing a Biome and Taxa
+
+First, choose a biome and taxa. 
+
+Here are your options again: 
+
+::: columns
+::: {.column width="50%"}
+
+**Biomes**
+
+-   Temperate Coniferous Forest
+
+-   Tropical Forest
+
+:::
+
+
+::: {.column width="50%"}
+
+**Taxa**
+
+-   Terrestrial Plants
+
+-   Terrestrial Invertebrates
+
+:::
+:::
+
+Now, you'll need to tell the computer what you chose. In the code chunk below, type in the name of your Biome and Taxa. Replace the red line ______ and make sure you leave the quotes "". Make sure you spell everything correct and use the exact capitalization in the dataset! 
 
 ::: panel-tabset
-## Question
 
-::: question
-**Which Columns do you think represent these two things?**
+## Code editor 
 
-::: choices
-::: choice
-`Taxa` and `total`
+```{webr-r}
+myBiome = "____________"
+
+myTaxa = "____________"
+
+```
+
+## Example
+```{webr-r}
+myBiome = "Temperate Coniferous Forest"
+
+myTaxa = "Terrestrial Plants"
+
+```
+
+## Check your work
+
+Run this code. If it outputs the Biome and Taxa you chose spelled and capitalized EXACTLY as they are spelled in the data, then you can continue!
+
+```{webr-r}
+myBiome
+myTaxa
+```
+
 :::
 
-::: choice
-`Biome` and `total`
-:::
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
 
-::: choice
-`entry` and `YEAR`
-:::
-
-::: {.choice .correct-choice}
-`index` and `numspecies`
-:::
-:::
-:::
-
-## Hint
-
-Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line \| .
-:::
-
-**List of Groups:**
-
--   Group1: Temperate Forest, number of species (both invertebrate & Plants)
-
--   Group2: Temperate Forest, Species diversity Index (both invertebrate & Plants)
-
--   Group3: Tropical Forest, number of species (both invertebrate & Plants)
-
--   Group4: Tropical Forest, Species diversity Index (both invertebrate & Plants)
-
-Look at the code chunk right below this. You will eventually change this code based on your assigned graph. Here's a preview of the final code. We will walk through step by step how to edit it for your groups' graph.
-
-DO NOT **Press** the green play button yet, the code chunk will not run!
+<div class="tutorial-part" style="display: none;">
 
 ```{webr-r}
 #| read-only:true
@@ -367,6 +441,12 @@ Biodiversity_Index|>
 Lets review step by step what changes you need to make so that the code chunk can run and produce your graph :)
 
 (You will be changing mostly everything in Red)
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 
 ## Editing Data
 

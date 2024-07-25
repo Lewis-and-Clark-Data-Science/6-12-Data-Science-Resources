@@ -214,53 +214,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<script>
+
+var key = 'currentSection' + window.location.pathname;
+var currentSection = localStorage.getItem(key) ? parseInt(localStorage.getItem(key)) : -1;
+var sections = Array.from(document.getElementsByClassName('level6'))
+    .filter(section => !section.classList.contains('no-hide'));
+
+// Hide all sections initially
+sections.forEach(function (section) {
+  section.classList.add('hidden');
+});
+
+function revealSection(sectionIndex) {
+  sections[sectionIndex].classList.remove('hidden');
+}
+
+var continueButton = document.getElementById('continueButton');
+var nextTopicButton = document.getElementById('nextTopicButton');
+
+// Disable continue button if there are no sections
+if (sections.length === 0) {
+    continueButton.disabled = true;
+    nextTopicButton.classList.remove('disabled');
+
+// Otherwise progressively reveal sections
+} else {
+    continueButton.addEventListener('click', function () {
+        currentSection++;
+        if (currentSection < sections.length) {
+            revealSection(currentSection);
+            localStorage.setItem(key, currentSection);
+            // Jump to the id anchor for the current section
+            window.location.hash = sections[currentSection].id;
+            // Adjust scroll position to account for the height of the navbar
+            window.scrollBy(0, 70);
+        }
+
+        if (currentSection >= sections.length - 1) {
+            continueButton.disabled = true;
+            nextTopicButton.classList.remove('disabled');
+        }
+    });
+}
+
+// On page load, reveal up to the current section
+window.onload = function () {
+  for (var i = 0; i <= currentSection; i++) {
+    revealSection(i);
+  }
+};
+
+function clearProgress() {
+  localStorage.removeItem(key);
+  window.location.hash = '#';  // Remove the anchor from the URL
+}
+
+document.getElementById('resetButton').addEventListener('click', function () {
+  clearProgress();
+  // Reload the page to reflect the reset progress
+  location.reload();
+});
+
+</script>
 <section id="step-1" class="level3">
 <h3 class="anchored" data-anchor-id="step-1">Step 1</h3>
 <p>This is the introduction to your tutorial.</p>
-<button id="step1-button">
-Continue
-</button>
-<div id="step1-content" style="display: none;">
-
-</div></section>
+</section>
 <section id="step-2-next-part" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-next-part">Step 2: Next Part</h3>
 <p>This is the next part of your tutorial.</p>
-<button id="step2-button">
-Continue
-</button>
 </section>
-<div id="step2-content" style="display: none;">
 <section id="step-3-final-part" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-final-part">Step 3: Final Part</h3>
 <p>This is the final part of your tutorial.</p>
+<section id="buttons">
+<button id="continueButton" class="btn btn-primary float-start me-2">
+Continue
+</button>
+<a id="nextTopicButton" class="btn btn-danger disabled" href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html" role="button">Next topic</a> <button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
 </section>
-</div>
-<pre class="{js}"><code>document.getElementById('step1-button').addEventListener('click', function() {
-  document.getElementById('step1-content').style.display = 'block';
-});
-
-document.getElementById('step2-button').addEventListener('click', function() {
-  document.getElementById('step2-content').style.display = 'block';
-});</code></pre>
-<pre class="{js}"><code>// JavaScript code to handle button clicks
-document.addEventListener("DOMContentLoaded", function() {
-    let continueButton = document.getElementById("continue-button");
-    let tutorialParts = document.querySelectorAll(".tutorial-part");
-
-    let currentPartIndex = 0;
-
-    continueButton.addEventListener("click", function() {
-        if (currentPartIndex &lt; tutorialParts.length) {
-            tutorialParts[currentPartIndex].style.display = "block";
-            currentPartIndex++;
-        } else {
-            alert("End of tutorial");
-        }
-    });
-});</code></pre>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
