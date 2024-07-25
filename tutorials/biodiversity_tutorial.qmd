@@ -174,6 +174,10 @@ kable(Biodiversity_Index)
 :::
 :::
 
+This is A LOT of data!! It can be hard to understand by just looking at it. But luckily we can use R/the computer to better understand the data. That's what we'll do in the next sections. 
+
+First, though, let's see what we can observe just by looking at the data. 
+
 **Stop and Think:**
 
 ::: panel-tabset
@@ -260,18 +264,6 @@ We've determined that we want to work with the `index` and `numspecies` columns.
 
 -   The `numspecies` column represents the different number of species observed per year.
 
-Now lets look at these columns
-
--   The `print()` function is used to show certain values of a data set.
-
--   We are specifying which columns we want in the part: `c("index", "numspecies")`
-
-    **Press** Green play button to run the code
-
-```{webr-r}
-print(Biodiversity_Index[,c("index","numspecies")])
-```
-
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
@@ -279,7 +271,7 @@ print(Biodiversity_Index[,c("index","numspecies")])
 
 ### Choosing the biome and taxa
 
-Now we want to look closer at each biome and taxa that the data set has. 
+Now we want to look closer at each biome and taxa that the data set has. In order to make a better graph, we want to narrow down the data we're looking at. We'll need to choose a biome and taxa to focus on. 
 
 **Stop and Think**
 
@@ -287,9 +279,9 @@ Now we want to look closer at each biome and taxa that the data set has.
 
 (Go back to look at the `Biodiversity_Index` data set to try to find the answer)
 
--   notice this is hard to find by just looking at the data set, especially if the data set is huge.
+-   notice this is HARD to find by just looking at the data set, especially if the data set is huge.
 
--   The `unique()` function list unique values within a column, so it shows us all the different values.
+Let's use R to solve this question instead! The `unique()` function list unique values within a column, so it shows us all the different values.
 
 ::: panel-tabset
 ## Code editor
@@ -321,35 +313,32 @@ There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropic
 ::: panel-tabset
 ## Code editor
 
-**Edit** this code to find the unique values for the `Taxa` column.
+**Edit** this code to find the unique values for the `Taxa` column. Replace the red line ______ with the column name we're looking at. 
 
 **Press** Green play button to run the code chunk once you edit the code.
 
 ```{webr-r}
-unique(Biodiversity_Index$"Insert Column Name here"
-)
+unique(Biodiversity_Index$"________")
 ```
 
 ## Hint
 
-Look at the previous code chunk that says `unique(Biodiveristy_Index$Biome)`. If that code finds unique values of the `Biome` Column, how can you change it to find the unique values of the `Taxa` column?
-
-Try editing the part of the code that says "Biome".
+The code should look like `unique(Biodiversity_Index$"Taxa")`
 
 ## Answer
 
 There are two different taxa in this data set: `Terrestrial Plants` and `Terrestrial Invertebrates`.
 :::
 
-Now let's combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Let's also add the `YEAR` column, since it's the independent variable we will be using in our graphs.
+Now let's combine all the columns we just looked at: the `index`,`total`,`Biome`, and `Taxa` columns. Let's also add the `YEAR` column, since it's the independent variable we will be using in our graphs. Below, we'll look at just the columns we want to graph:
 
 **Press** Green play button to run the code chunk
 
 ```{webr-r}
-print(Biodiversity_Index[,c("YEAR","index","numspecies","Biome","Taxa")])
+print(Biodiversity_Index[,c("YEAR","index","numspecies","Biome","Taxa")], n=148)
 ```
 
-Now that you have extracted the columns you need, let's graph!
+Now that you have extracted the columns you need, let's graph! 
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -358,7 +347,11 @@ Now that you have extracted the columns you need, let's graph!
 
 ## Creating a Graph
 
+We have A LOT of data. It would be really hard to graph by hand. Luckily, we can use the computer (R) to graph it.
+
 Our goal is to create a graph that tracks the biodiversity of a specific location over time. We have two methods of measuring biodiversity: the **number of species** and the **biodiversity index**. We will also narrow down our data by choosing a specific **biome** and **taxa**. 
+
+Go through the following steps to create your graph. 
 
 ### Step 1: Choosing a Biome and Taxa
 
