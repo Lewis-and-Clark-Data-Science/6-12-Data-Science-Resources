@@ -302,9 +302,41 @@ Now that you have extracted the columns you need, let's graph!
 
 ## Creating Your Group's Graph
 
+We want to create separate graphs for each biome and species. 
+
 **Stop and Think:**
 
-*What is your assigned graph? what group are you in?*
+*What are the options for biome and species?*
+
+::: panel-tabset
+## Question
+
+::: question
+**Which Columns do you think represent these two things?**
+
+::: choices
+::: choice
+`Taxa` and `total`
+:::
+
+::: choice
+`Biome` and `total`
+:::
+
+::: choice
+`entry` and `YEAR`
+:::
+
+::: {.choice .correct-choice}
+`index` and `numspecies`
+:::
+:::
+:::
+
+## Hint
+
+Go back to the `Biodiversity_Index` data set code chunk to look at the columns again! At the top you'll see the names of all the columns. Each column is separated by a vertical line \| .
+:::
 
 **List of Groups:**
 

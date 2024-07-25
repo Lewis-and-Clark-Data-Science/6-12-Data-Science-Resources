@@ -25,6 +25,8 @@ website:
         - tutorials/salmon_tutorial.qmd
         - tutorials/climate_change_tutorial.qmd
         - tutorials/biodiversity_tutorial.qmd
+        - tutorials/AQI_tutorial.qmd
+        - tutorials/sealevel_tutorial.qmd
     - text: Resources
       menu:
         - resources/resources.qmd

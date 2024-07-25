@@ -1,0 +1,104 @@
+---
+title: "Sea Level tutorial"
+author: _____
+filters: 
+  - webr
+  - naquiz
+
+format: 
+  html: 
+    toc: true
+    self-contained: false
+#    include-after-body: 
+#      - text: |
+#          <script src="js/js3.js"></script>
+#          <script src="js/bootstrapify.js"></script>
+---
+
+
+<script>
+console.log("Script loaded");
+console.log("Button clicked");
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
+
+ // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
+
+
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";
+        }
+    });
+    
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                parts[currentPartIndex].style.display= "block";
+                } else {
+                alert("End of tutorial");
+            }
+        });
+    });
+});
+
+
+</script>
+
+
+<!-- Include your JavaScript file -->
+
+<script src="6-12-Data-Science-Resources/js/js3.js"></script>
+
+
+
+
+
+# Interactive Tutorial
+
+        
+<div class="tutorial-part" style="display: block;">
+    
+    
+
+
+## Part 1: Introduction to Topic
+
+
+no 
+
+<button id="continue-button">Continue</button>
+</div>
+
+
+<div class="tutorial-part" style="display: none;">
+
+
+## Part 2: Explanation of Concept
+
+right
+      
+<button id="continue-button-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+
+
+## Part 3: Practical Examples
+
+hello
+
+       
+</div>
+
+

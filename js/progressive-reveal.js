@@ -1,6 +1,6 @@
 var key = 'currentSection' + window.location.pathname;
 var currentSection = localStorage.getItem(key) ? parseInt(localStorage.getItem(key)) : -1;
-var sections = Array.from(document.getElementsByClassName('level4'))
+var sections = Array.from(document.getElementsByClassName('level6'))
     .filter(section => !section.classList.contains('no-hide'));
 
 // Hide all sections initially

@@ -1,0 +1,65 @@
+---
+title: "AQI tutorial"
+author: _____
+filters: 
+  - webr
+  - naquiz
+
+output: 
+  html: 
+    toc: true
+    self-contained: false
+---
+
+### Step 1
+
+This is the introduction to your tutorial.
+
+<button id="step1-button">Continue</button>
+
+<div id="step1-content" style="display: none;">
+
+### Step 2: Next Part
+
+This is the next part of your tutorial.
+
+<button id="step2-button">Continue</button>
+
+<div id="step2-content" style="display: none;">
+
+### Step 3: Final Part
+
+This is the final part of your tutorial.
+
+</div>
+
+
+```{js}
+document.getElementById('step1-button').addEventListener('click', function() {
+  document.getElementById('step1-content').style.display = 'block';
+});
+
+document.getElementById('step2-button').addEventListener('click', function() {
+  document.getElementById('step2-content').style.display = 'block';
+});
+```
+
+```{js}
+// JavaScript code to handle button clicks
+document.addEventListener("DOMContentLoaded", function() {
+    let continueButton = document.getElementById("continue-button");
+    let tutorialParts = document.querySelectorAll(".tutorial-part");
+
+    let currentPartIndex = 0;
+
+    continueButton.addEventListener("click", function() {
+        if (currentPartIndex < tutorialParts.length) {
+            tutorialParts[currentPartIndex].style.display = "block";
+            currentPartIndex++;
+        } else {
+            alert("End of tutorial");
+        }
+    });
+});
+```
+
