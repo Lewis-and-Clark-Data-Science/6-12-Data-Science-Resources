@@ -293,7 +293,6 @@ ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
  
 ```
 
-
 ## Troubleshooting: error message
 
 Did you get an error message in red?
@@ -308,10 +307,9 @@ Did you get an error message in red?
 
 -   If it still isn't working or if you accidentally deleted something, you can refresh the page to restart.
 
-
 ## Troubleshooting - points clustered at the bottom
 
-If your x variable is `year` and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn't much change until much more recently. 
+If your x variable is `year` and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn't much change until much more recently.
 
 So try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is `year`.
 
@@ -322,8 +320,6 @@ ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
   theme_light()+
   lims(x=c(2000,2020))
 ```
-
-
 :::
 
 Nice work! Hopefully you enjoyed making your own graph with this data!

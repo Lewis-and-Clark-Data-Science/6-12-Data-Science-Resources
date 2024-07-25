@@ -360,7 +360,7 @@ Now that you have extracted the columns you need, let's graph!
 
 Our goal is to create a graph that tracks the biodiversity of a specific location over time. We have two methods of measuring biodiversity: the **number of species** and the **biodiversity index**. We will also narrow down our data by choosing a specific **biome** and **taxa**. 
 
-### Choosing a Biome and Taxa
+### Step 1: Choosing a Biome and Taxa
 
 First, choose a biome and taxa. 
 
@@ -389,7 +389,7 @@ Here are your options again:
 :::
 :::
 
-Now, you'll need to tell the computer what you chose. In the code chunk below, type in the name of your Biome and Taxa. Replace the red line ______ and make sure you leave the quotes "". Make sure you spell everything correct and use the exact capitalization in the dataset! 
+Now, you'll need to tell the computer what you chose. In the code chunk below, type in the name of your Biome and Taxa. Replace the red line ______ and make sure you leave the quotes "". Make sure you spell everything correct and use the exact capitalization in the dataset! Then click "run code".
 
 ::: panel-tabset
 
@@ -426,21 +426,83 @@ myTaxa
 
 <div class="tutorial-part" style="display: none;">
 
+### Step 2: Choosing Your X and Y variabless
+
+In the previous step, you narrowed down **what specific** data you want to look at. 
+
+Now, you'll need to choose what **variables** you want to plot on the graph. Recall our goal is to plot the **biodiversity index OR number of species** over **time**.
+
+**Stop and Think** 
+
+::: panel-tabset
+
+## Question
+
+::: question
+
+*What is the X variable? What is the Y variable?*
+
+::: choices
+::: {.choice .correct-choice}
+X variable: time; Y variable: biodiversity index/number of species
+:::
+::: choice
+X variable: biodiversity index/number of species; Y variable: time
+:::
+:::
+:::
+
+## Hint
+
+Remember: 
+   -   The **x variable** is the independent variable. It is NOT affected by the other variable. It's sort of like the "cause" variable.
+   -   The **y variable** is the dependent variable. It IS affected by the other variable. It is sort of like the "effect" variable.
+   
+## Reasoning
+
+The x variable is **time** because it is independent - it will change and progress no matter what! 
+
+The y variable is **biodiversity index or number of species** (whichever you choose) because it is dependent on time. As time moves forward, the biodiversity index will also change. 
+
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+#### You Choose your Variable
+
+Now, you get to input which y variable you want to graph - either **biodiversity index** or **number of species**.
+
+Recall the column names for each of these variables: `index` and `numspecies`. Type in the name of your y variable below. Replace the red line _____ with its name. Be sure to spell it exactly as it is spelled in the data! Then click "run code".
+
+::: panel-tabset
+## Code editor
+
 ```{webr-r}
-#| read-only:true
-Biodiversity_Index|>
-  filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") |>
-  ggplot(aes(x= YEAR, y="numspecies or index")) + 
-  geom_col(fill= "Insert Color Name Here", color="grey37") + 
-  labs(title = "Insert Title Name", 
-       subtitle = "Insert Subtititle", 
-       x= "Year", y= "Number of species or Biodiversity index") +
-  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+yvar="___________"
 ```
 
-Lets review step by step what changes you need to make so that the code chunk can run and produce your graph :)
+## Example
 
-(You will be changing mostly everything in Red)
+```{webr-r}
+yvar="numspecies"
+```
+:::
+
+Everyone's x variable will be **year** so you don't need to change that. 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 3: Choosing the type of graph
+
+In this tutorial, we're going to make a **bar graph**. A bar graph allows us to see how biodiversity changes over time in a simple format. Bar Graphs are used to display and compare the values of different categories and color can help distinguish the different categories.
+
+If you want to try making a different kind of graph, refer to the [**Challenge coding** section](#sec-codechallenge). 
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -448,7 +510,153 @@ Lets review step by step what changes you need to make so that the code chunk ca
 <div class="tutorial-part" style="display: none;">
 
 
-## Editing Data
+### Step 4: Assigning Color to Bar Graph
+
+You can now choose a custom color for your bar graph. Here are some color options:
+
+-   `"darkseagreen"`
+
+-   `"salmon3"`
+
+-   `"seagreen"`
+
+-   `"brown"`
+
+-   `"blue"`
+
+-   `"yellow"`
+
+-   `"purple"`
+
+Now, type the color name in place of the red line ______. Be sure to keep it inside the quotes `""`.Then click "run code".
+
+
+::: panel-tabset
+## Code editor
+
+```{webr-r}
+graphColor = "_______"
+
+```
+
+## Example
+
+```{webr-r}
+graphColor = "salmon3"
+
+```
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 5: Adding a Title and Axis Labels
+
+Now, you can add a title and axis labels to your graph.
+
+-   A good graph should always have at least a Title and Axis labels (X-Axis, Y-axis)
+
+In the code chunk below, add a Title, Subtitle, x-axis label, and y-axis label. Then click "run code". 
+
+Be sure to keep quotations `""` around name. Example : `xLabel="year"`
+
+::: panel-tabset
+## Code editor
+
+```{webr-r}
+titleName = "________"
+
+subtitleName = "________"
+
+xLabel = "_______"
+
+yLabel = "_______"
+```
+
+## Example
+
+```{webr-r}
+titleName = "Number of Terrestrial Invertebrate Species"
+
+subtitleName = "In Temperate Coniferous Forest "
+
+xLabel= "Year"
+
+yLabel = "Number of Species"
+```
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+## Step 6: Create the graph!
+
+Now, you can create your graph! Click "run" on the code chunk below
+
+::: panel-tabset
+
+## Code editor 
+
+```{webr-r}
+Biodiversity_Index|>
+  filter(Biome==myBiome, Taxa==myTaxa) |>
+  ggplot(aes_string(x="YEAR", y= yvar )) + 
+  geom_col(fill=graphColor, color="grey37") + 
+  labs(title = titleName, 
+       subtitle = subtitleName, 
+       x= xLabel, y= yLabel) +
+  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
+## Troubleshooting: error message
+
+Did you get an error message in red?
+
+-   If the graph also displayed and looks right, don't worry about the error message!
+
+-   If the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.
+
+    -   Did you put everything in quotes when you defined the variables and labels?
+
+-   You don't need to edit this code at all, just the code where you define variables and labels
+
+-   If it still isn't working or if you accidentally deleted something, you can refresh the page to restart.
+
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+## Congratulations!
+
+**You have created a data visualization from a big data set!**
+
+**Stop and Think**:
+
+1.  *What were some challenges?*
+
+2.  *What have you learned about Data Science?*
+
+3.  *What kinda of data would you want to look at in Posit Cloud?*
+
+4.  *What kind of graphs do you want to make or see more of?*
+
+If you want to learn more about the code we used to create the graph, you can click "continue" to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+## Code challenge {#sec-codechallenge}
+
+In this code challenge, we'll have you directly edit the entire code chunk used to create your graph. Previously, you inputted your variables and we then put them into the graph code. So this time, you get to put your variables directly into the graph code and learn about what each command does! 
 
 ### Step 1: Selecting a data set to graph
 
@@ -534,13 +742,34 @@ ggplot(aes(x= YEAR, y=numspecies))
 ```
 :::
 
-### Step 4: Assigning corresponding color to the bars
+### Step 4: Choosing the type of graph
+
+Looking at line 5, this is where we choose the type of graph we want to use. Currently it says `geom_col(________)` with some random words in the parenthesis that you can ignore for now. 
+
+You can change the part where it says `col` to adjust the type of plot. For example, you can create a scatter plot by replacing `col` with `point`. Here's how that would look: 
+
+::: panel-tabset
+## Scatterplot
+
+```{webr-r}
+geom_point(color= "Insert Color Name Here")
+
+```
+
+## Bar plot
+
+```{webr-r}
+geom_col(fill= "Insert Color Name Here", color="grey37")
+
+```
+:::
+
+
+### Step 5: Assigning corresponding color to the bars
 
 Looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
 
 -   The `geom_col` function is used to tell R that we want to graph a Bar graph
-
--   All eight of the graphs are bar graphs!
 
 -   Bar Graphs are used to display and compare the values of different categories and color can help distinguish the different categories.
 
@@ -548,21 +777,25 @@ Looking at line 5: `geom_col(fill= "Insert Color Name Here", color="grey37")`
 
 -   Ignore `color="grey37"` that is specifying the color for the border of the bars. **DO NOT** change that.
 
-**Here are the color names based on corresponding biome and taxa:**
+You can now choose a custom color for your bar graph. Here are some color options:
 
--   Biome:Temperate Forest, Taxa:Plants then the color is `"darkseagreen"`
+-   `"darkseagreen"`
 
--   Biome:Temperate Forest, Taxa:invertebrates then the color is `"salmon3"`
+-   `"salmon3"`
 
--   Biome:Tropical Forest, Taxa:Plants then the color is `"seagreen"`
+-   `"seagreen"`
 
--   Biome:Tropical Forest, Taxa:Invertebrates then the color is `"brown"`
+-   `"brown"`
+
+-   `"blue"`
+
+-   `"yellow"`
+
+-   `"purple"`
 
 **Your Turn:**
 
 Once you've identified which color you need to use, insert the color where it says `"Insert Color Name Here"`.
-
--   If you wrote the color right, the name should be highlighted with the selected color.
 
 **NOTE:** It is important to keep the quotations `""`
 
@@ -639,13 +872,19 @@ Biodiversity_Index|>
   theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
+
+If you're having trouble with the code, click continue to see the answers and edit your code accordingly. 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ::: {.callout-note collapse="true"}
 ## Click this to see the answers
 
 ::: panel-tabset
-## Group 1
-
-**Number of Species Temperate Plants**
+## Number of Species Temperate Plants
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -657,7 +896,7 @@ ggplot(aes(x=YEAR,y= numspecies)) + geom_col(fill= "darkseagreen", color= "grey3
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
 ```
 
-**Number of Species Temperate Invertebrates**
+## Number of Species Temperate Invertebrates
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -669,9 +908,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
 ```
 
-## Group 2
-
-**Diversity Index Temperate Plants**
+## Diversity Index Temperate Plants
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -684,7 +921,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
 ```
 
-**Diversity Index Temperate Invertebrates**
+## Diversity Index Temperate Invertebrates
 
 ```{webr-r}
 
@@ -697,9 +934,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
-## Group 3
-
-**Number of Species Tropical Plants**
+## Number of Species Tropical Plants
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -711,7 +946,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
-**Number of Species Tropical Invertebrates**
+## Number of Species Tropical Invertebrates
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -723,9 +958,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5)) 
 ```
 
-## Group 4
-
-**Diversity Index Tropical Plants**
+## Diversity Index Tropical Plants
 
 ```{webr-r}
 Biodiversity_Index|>
@@ -738,7 +971,7 @@ Biodiversity_Index|>
   theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
 ```
 
-**Diversity Index Tropical Invertebrates**
+## Diversity Index Tropical Invertebrates
 
 ```{webr-r}
 
@@ -757,17 +990,6 @@ Biodiversity_Index|>
 ## Congratulations!\*\*
 
 **You have created a data visualization from a big data set!**
-
-**Stop and Think**:
-
-1.  *What were some challenges?*
-
-2.  *What have you learned about Data Science?*
-
-3.  *What kinda of data would you want to look at in Posit Cloud?*
-
-4.  *What kind of graphs do you want to make or see more of?*
-
 
 
 ```{r}
