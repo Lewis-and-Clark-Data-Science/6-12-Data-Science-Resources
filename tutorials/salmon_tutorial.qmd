@@ -11,7 +11,6 @@ format:
     self-contained: false
 ---
 
-
 <script>
 console.log("Script loaded");
 console.log("Button clicked");
@@ -20,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const parts = document.querySelectorAll(".tutorial-part");
     const buttons = document.querySelectorAll("button[id^='continue-button']");
     const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+    const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
 
  // Log the selected elements
     console.log('Tutorial parts:', parts);
@@ -56,6 +56,15 @@ document.addEventListener("DOMContentLoaded", function() {
               //   window.scrollBy(0, 10000);
                 } else {
                 alert("End of tutorial");}});});});
+                
+          // Add click event listeners to sidebar links
+            sidebarLinks.forEach((link, index) => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    showPart(index);
+                    scrollToElement(parts[index]);
+                });
+            });
 </script>
 
 
@@ -713,25 +722,21 @@ You learned how you can use the computer to look at large amounts of numbers and
 
 **Brainstorm**
 
--   What questions do you have after looking at this data? 
+    -   What questions do you have after looking at this data? 
+    -   How could you find the answer to those questions?
+    -   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? 
+          -   How would you do that? 
+          -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology
+    -   What does the data/numbers **not** tell us? 
 
--   How could you find the answer to those questions?
-
--   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? 
-
-    -   How would you do that? 
-    -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology
-    
--   What does the data/numbers **not** tell us? 
-
+### The end 
 
 That's the end of the tutorial! 
 
--   Click the continue button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
+    -   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
+    -   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!
 
--   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!
-
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+<button id="continue-button" class="btn btn-primary float-start me-2">More Graphs!</button>
 </div>
 
 <div class="tutorial-part" style="display: none;">
