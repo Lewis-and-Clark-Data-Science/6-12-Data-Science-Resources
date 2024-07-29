@@ -67,9 +67,9 @@ download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
 ```{webr-r}
 #| context: setup
 #add 2023 data: 
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/2023_chinook_Bonneville.csv"
-download.file(url, "2023_chinook_Bonneville.csv")
-Bon_chinook_2023 <- read.csv("2023_chinook_Bonneville.csv")
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bon_chinook_2023.csv"
+download.file(url, "Bon_chinook_2023.csv")
+Bon_chinook_2023 <- read.csv("Bon_chinook_2023.csv")
 
 #Pulls data that has been loaded into the Olivia-Test github repo. 
 Bon_chinook1 <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
@@ -131,9 +131,9 @@ url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resource
 download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 #add 2023 data: 
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/2023_chinook_Bonneville.csv"
-download.file(url, "2023_chinook_Bonneville.csv")
-Bon_chinook_2023 <- read.csv("2023_chinook_Bonneville.csv")
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bon_chinook_2023.csv"
+download.file(url, "Bon_chinook_2023.csv")
+Bon_chinook_2023 <- read.csv("Bon_chinook_2023.csv")
 
 #Pulls data that has been loaded into the Olivia-Test github repo. 
 Bon_chinook1 <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
@@ -482,7 +482,26 @@ First, let's make a prediction. Think about what you've learned about dams and h
 
 Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions!
 
-## TO BE FINISHED... will include graphs of species crossing different dams
+When you're ready to check your answer, run the code below. It will find the **sum** of the row with 2022 data and 1972 data
+
+::: panel-tabset
+
+## Code editor 
+
+```{webr-r}
+rowSums(Bonneville_chinook[2,])
+
+rowSums(Bonneville_chinook[52,])
+```
+
+:::
+
+## Graphing 
+
+Another way we can look at this data is by graphing it. The computer can help us a lot with this too. 
+
+We're going to make a graph of the **total number of Chinook** that cross the Bonneville **each year**. 
+
 
 Here's the graphs in the meantime before I finish the tutorial
 
