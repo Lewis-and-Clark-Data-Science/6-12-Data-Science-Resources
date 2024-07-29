@@ -437,10 +437,10 @@ Now, you'll need to choose what **variables** you want to plot on the graph. Rec
 
 ::: choices
 ::: {.choice .correct-choice}
-X variable: time; Y variable: biodiversity index/number of species
+**X variable:** time; **Y variable:** biodiversity index/number of species
 :::
 ::: choice
-X variable: biodiversity index/number of species; Y variable: time
+**X variable:** biodiversity index/number of species; **Y variable:** time
 :::
 :::
 :::
@@ -448,7 +448,9 @@ X variable: biodiversity index/number of species; Y variable: time
 ## Hint
 
 Remember: 
+
    -   The **x variable** is the independent variable. It is NOT affected by the other variable. It's sort of like the "cause" variable.
+   
    -   The **y variable** is the dependent variable. It IS affected by the other variable. It is sort of like the "effect" variable.
    
 ## Reasoning
@@ -595,6 +597,7 @@ Now, you can create your graph! Click "run" on the code chunk below
 ## Code editor 
 
 ```{webr-r}
+#| read-only: true
 Biodiversity_Index|>
   filter(Biome==myBiome, Taxa==myTaxa) |>
   ggplot(aes_string(x="YEAR", y= yvar )) + 

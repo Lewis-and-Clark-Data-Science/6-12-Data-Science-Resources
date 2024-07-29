@@ -13,6 +13,39 @@ output:
 runtime: shiny_prerendered
 ---
 
+<script>
+console.log("Script loaded");
+console.log("Button clicked");
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
+
+ // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
+
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";}});
+    
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                parts[currentPartIndex].style.display= "block";
+                 // Jump to the id anchor for the current section
+            window.location.hash = parts[currentPartIndex].id;
+             // Adjust scroll position to account for the height of the navbar
+               window.scrollBy(0, 1000);
+                } else {
+                alert("End of tutorial");}});});});
+</script>
+
 ```{webr-r}
 #| context: setup
 library(tidyverse)
@@ -115,8 +148,6 @@ Bon_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/100
 
 ## Fish Crossings - Introduction
 
-**Note this is unfinished**
-
 Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.
 
 ::: columns
@@ -134,6 +165,75 @@ Today we'll get to learn about fish crossings at dams in the Columbia River.
 We'll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year.
 :::
 :::
+
+## What is the Bonneville Dam?
+
+::: columns
+::: {.column width="35%"}
+![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" height="2.5in"}
+:::
+
+::: {.column width="5%"}
+<br>
+:::
+
+::: {.column width="60%"}
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_map.jpg){fig-align="right" fig-alt="Bonneville Dam map" height="2.5in"}
+:::
+:::
+
+The Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.
+
+**Brainstorm:**
+
+*What are some positive and negative impacts you think the dam might have?*
+
+Talk with your classmates about how some impacts the dam might have on the surronding areas. Here are some ideas you can consider:
+
+-   Hydropower
+-   Native American communities
+-   Salmon populations
+-   Salmon are important spiritually and culturally to Native Americans
+-   Sea lions
+-   Other animals who live where the dam was created
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+In this tutorial, we're going to learn about how the dam impacts Salmon **returning** to the Columbia river to spawn.
+
+First, how are fishing swimming through the Bonneville Dam? 
+
+It is way to large for them to swim over, so they use a **fish ladder** to swim through the dam. Someone built the fish ladder when they were building the dam to help the fish get through! Watch this video to see how they can swim through the fish ladder.
+
+::: columns
+::: {.column width="100%"}
+
+{{< video https://www.youtube.com/watch?v=sabk7Khq0kQ&t=59s aspect-ratio="4x3" body-width="800">}}
+
+:::
+:::
+
+As salmon come through the fish ladder, they need to be counted to see how many salmon come through and learn how many make it through the dam and return upstream to spawn. Some days, thousands of fish come through the dam! How do you think they are counted? 
+
+Watch this video to see!
+
+::: columns
+::: {.column width="100%"}
+
+{{< video https://www.youtube.com/watch?v=zoHpE5scs2I width="400" height="300" body-width="800">}}
+
+:::
+:::
+
+Cool!
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 ## Using R
 
@@ -310,7 +410,7 @@ Luckily, the computer can make this task much easier! Try running the code below
 max(Bonneville_chinook[2,])
 ```
 
-Do you see the number 33607 pop out after you run the code? That’s the largest number of fish that crossed the Bonneville dam in 2022 in a day!
+Do you see the number 33607 pop out after you run the code? That's the largest number of fish that crossed the Bonneville dam in 2022 in a day!
 
 ## Learn more
 

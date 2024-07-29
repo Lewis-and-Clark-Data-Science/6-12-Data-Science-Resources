@@ -40,7 +40,7 @@ R is a coding language that is often used to look at LARGE amounts of data. It c
 
 Want to try using R?
 
-In the code box right below this, type in `6+3` and press the green play button:
+In the code box right below this, type in `6+3` and **press** the green play button:
 
 ```{webr-r}
 #Type your code here! 
@@ -60,7 +60,7 @@ We've preloaded a dataset into this tutorial. This was found
 
 ### Where??
 
-Let's start by taking a look at the data set. Click the green play button below and see what happens!
+Let's start by taking a look at the data set. **Press** the green play button below and see what happens!
 
 ```{webr-r}
 co2Data
@@ -81,6 +81,8 @@ Our data is called `co2Data`. If you type `co2Data` into any code chunk, you'll 
 We can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won't be able to cover all the details of how to make a graph, but there's lots of resources online you can find to learn more. We use something called `ggplot` to make graphs in this tutorial.
 
 First, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!
+
+**Press** Run Code on the code chunk below!
 
 ```{webr-r}
 ggplot(data=co2Data, mapping=aes(x=year, y=co2))+
@@ -104,7 +106,7 @@ In the code chunk below type `tempData` and click "run code" to see the new data
 
 You should see 2 columns: one called `Year` and one called `Anomaly`. The Anomaly column tells us how *different* the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.
 
-Lets graph this! Click "run code" and see what happens!
+Let's graph this! **Press** "run code" and see what happens!
 
 ```{webr-r}
 ggplot(data=tempData, mapping=aes(x=Year, y=Anomaly))+
