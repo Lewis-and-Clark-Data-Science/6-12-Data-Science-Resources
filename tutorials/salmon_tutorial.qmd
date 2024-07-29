@@ -66,10 +66,28 @@ download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 ```{webr-r}
 #| context: setup
-Bon_chinook <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
-names(Bon_chinook) <- Bon_chinook[1,]
-Bon_chinook <- Bon_chinook[-1,]
+#add 2023 data: 
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/2023_chinook_Bonneville.csv"
+download.file(url, "2023_chinook_Bonneville.csv")
+Bon_chinook_2023 <- read.csv("2023_chinook_Bonneville.csv")
+
+#Pulls data that has been loaded into the Olivia-Test github repo. 
+Bon_chinook1 <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+
+names(Bon_chinook1) <- Bon_chinook1[1,]
+Bon_chinook1 <- Bon_chinook1[-1,]
   #Move first row to header and delete the row
+
+#Add in the 2023 data
+Bon_chinook_2023 <- Bon_chinook_2023[-c(374:387),]
+  #Delete extra rows 
+Bon_chinook1<- mutate(Bon_chinook1, `2023:BON:Chin (fish/day)` = Bon_chinook_2023$Chin)
+  #Replace 2023 column which is half empty with new 2023 data
+
+
+Bon_chinook <- Bon_chinook1
+Bon_chinook <- Bon_chinook[-1,]
+  #Delete 2023 row because it
 Bon_chinook_t <- t(Bon_chinook)
   #Transpose
 colnames(Bon_chinook_t) <- Bon_chinook_t[1,]
@@ -112,11 +130,28 @@ download.file(url, "Chinook_Dalles_1957_2023.csv")
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Steelhead_1939_2023_BonnevilleDamCSV.csv"
 download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
+#add 2023 data: 
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/2023_chinook_Bonneville.csv"
+download.file(url, "2023_chinook_Bonneville.csv")
+Bon_chinook_2023 <- read.csv("2023_chinook_Bonneville.csv")
+
 #Pulls data that has been loaded into the Olivia-Test github repo. 
-Bon_chinook <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
-names(Bon_chinook) <- Bon_chinook[1,]
-Bon_chinook <- Bon_chinook[-1,]
+Bon_chinook1 <- read.csv("Bonneville_Dam_1939_2023_Chinook_CSV.csv")
+
+names(Bon_chinook1) <- Bon_chinook1[1,]
+Bon_chinook1 <- Bon_chinook1[-1,]
   #Move first row to header and delete the row
+
+#Add in the 2023 data
+Bon_chinook_2023 <- Bon_chinook_2023[-c(374:387),]
+  #Delete extra rows 
+Bon_chinook1<- mutate(Bon_chinook1, `2023:BON:Chin (fish/day)` = Bon_chinook_2023$Chin)
+  #Replace 2023 column which is half empty with new 2023 data
+
+
+Bon_chinook <- Bon_chinook1
+Bon_chinook <- Bon_chinook[-1,]
+  #Delete 2023 row because it
 Bon_chinook_t <- t(Bon_chinook)
   #Transpose
 colnames(Bon_chinook_t) <- Bon_chinook_t[1,]
@@ -173,12 +208,9 @@ We'll start by looking at the Bonneville Dam and learn how many salmon and steel
 ![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" height="2.5in"}
 :::
 
-::: {.column width="5%"}
-<br>
-:::
 
-::: {.column width="60%"}
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_map.jpg){fig-align="right" fig-alt="Bonneville Dam map" height="2.5in"}
+::: {.column width="65%"}
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_map.jpg){fig-align="right" fig-alt="Bonneville Dam map" height="3in"}
 :::
 :::
 
@@ -197,10 +229,6 @@ Talk with your classmates about how some impacts the dam might have on the surro
 -   Sea lions
 -   Other animals who live where the dam was created
 
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
-</div>
-
-<div class="tutorial-part" style="display: none;">
 
 In this tutorial, we're going to learn about how the dam impacts Salmon **returning** to the Columbia river to spawn.
 
@@ -208,36 +236,40 @@ First, how are fishing swimming through the Bonneville Dam?
 
 It is way to large for them to swim over, so they use a **fish ladder** to swim through the dam. Someone built the fish ladder when they were building the dam to help the fish get through! Watch this video to see how they can swim through the fish ladder.
 
-::: columns
-::: {.column width="100%"}
-
-{{< video https://www.youtube.com/watch?v=sabk7Khq0kQ&t=59s aspect-ratio="4x3" body-width="800">}}
-
-:::
-:::
+{{< video https://www.youtube.com/watch?v=sabk7Khq0kQ&t=59s >}}
 
 As salmon come through the fish ladder, they need to be counted to see how many salmon come through and learn how many make it through the dam and return upstream to spawn. Some days, thousands of fish come through the dam! How do you think they are counted? 
 
 Watch this video to see!
 
-::: columns
-::: {.column width="100%"}
+{{< video https://www.youtube.com/watch?v=zoHpE5scs2I >}}
 
-{{< video https://www.youtube.com/watch?v=zoHpE5scs2I width="400" height="300" body-width="800">}}
+As you saw in the video, someone counts each fish that goes by. They write down exactly how many fish they see, what time and what kind of fish. All those numbers get added together and become **data**. Then, someone puts all that data [online](https://www.cbr.washington.edu/dart/query/adult_daily) for anyone to see (like us!).
 
+There is A LOT of data (numbers of fish) that they collect. It would be pretty pretty hard to understand just by looking at it. In fact, if you click the blue box right below this, you can see all the data. It should look pretty confusing! Keep reading to learn how we can use the computer to better understand all those numbers.
+
+::: {.callout-note collapse="true"}
+## Click this to see the data that someone collected at the fish ladder!
+
+```{r}
+#| echo: false
+#| output: true
+library(DT)
+library(knitr)
+datatable(Bon_chinook1)
+kable(Bon_chinook1)
+```
 :::
-:::
 
-Cool!
+Note: the data is from [Columbia Basin Research](https://www.cbr.washington.edu/dart/query/adult_daily)
 
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
-</div>
+## Analyzing HUGE data with the computer
 
-<div class="tutorial-part" style="display: none;">
+We're going to analyze all the numbers that are collected at the Bonneville Dam using the computer. 
 
-## Using R
+### Using R
 
-We're going to use a coding language called "R". Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
+We will use a coding language called "R". Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
 
 For example one command the computer knows is multiplication! Try typing `5*3` in the box right below this. Then click the green play button that says "run code"
 
@@ -313,22 +345,12 @@ max(numbers)
 ```
 :::
 
+
 ## Looking at data
 
 One thing the computer is very useful for is dealing with HUGE amounts of data. **Data** is a collection of lots of numbers that tell us information about something.
 
-For example, if you measured the temperature every single day for 1 month and wrote it down, you would create data.
-
-At the Bonneville dam, there is someone who does something similar with fish. They count how many fish cross the Bonneville dam every single day. Then they write down exactly how many fish they see, what time and what kind of fish. All those numbers are called **data**! Then, someone puts all that data online for anyone to see (like us!).
-
-In fact, we're going to use some of that data. Want to look at it? Click the green play button on the code chunk below.
-
-*Better view in the callout so maybe delete this part....*
-
-```{webr-r}
-
-kable(Bonneville_chinook)
-```
+Let's return to the data that is collected at the Bonneville Dam. I've used coding in the background of this tutorial to make it a little more condensed than the data you saw before. Want to look at it? Click the blue box below.
 
 ::: {.callout-note collapse="true"}
 ## Click this to see our data!
@@ -337,7 +359,9 @@ kable(Bonneville_chinook)
 #| echo: false
 #| output: true
 library(DT)
+library(knitr)
 datatable(Bonneville_chinook)
+kable(Bonneville_chinook)
 ```
 :::
 
@@ -352,9 +376,9 @@ Let's learn about what some of this data means. First, the table that you see wh
 ::: panel-tabset
 ## Question
 
-MAYBE INSERT A SCREENSHOT HERE
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/data_screenshot.png)
 
-On the top of the data table, you'll see bolded numbers like **1/1**, **1/2**, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click to the next slide to see the answer.
+On the top of the data table, you'll see bolded numbers like **1/1**, **1/2**, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click the tab above to see the answer.
 
 ## Answer
 
@@ -405,6 +429,8 @@ Luckily, the computer can make this task much easier! Try running the code below
 
 ::: panel-tabset
 ## Code editor
+
+**Press** the green play button.
 
 ```{webr-r}
 max(Bonneville_chinook[2,])
