@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentPartIndex = 0;
     const parts = document.querySelectorAll(".tutorial-part");
     const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
 
  // Log the selected elements
     console.log('Tutorial parts:', parts);
@@ -29,6 +30,16 @@ document.addEventListener("DOMContentLoaded", function() {
         if (index !== 0) {
             part.style.display = "none";}});
     
+    // Function to scroll to the top of the element, accounting for a fixed header
+      function scrollToElement(element) {
+          const elementTop = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+              top: elementTop - headerHeight,
+             behavior: "smooth"
+         });
+     }
+
+    
     // Add click event listeners to each button
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
@@ -38,9 +49,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentPartIndex++;
                 parts[currentPartIndex].style.display= "block";
                  // Jump to the id anchor for the current section
-            window.location.hash = parts[currentPartIndex].id;
+         //   window.location.hash = parts[currentPartIndex].id;
+        // Scroll to the top of the current section
+                scrollToElement(parts[currentPartIndex]);
              // Adjust scroll position to account for the height of the navbar
-               window.scrollBy(0, 1000);
+              //   window.scrollBy(0, 10000);
                 } else {
                 alert("End of tutorial");}});});});
 </script>
@@ -871,10 +884,6 @@ Biodiversity_Index|>
 
 If you're having trouble with the code, click continue to see the answers and edit your code accordingly. 
 
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
-</div>
-
-<div class="tutorial-part" style="display: none;">
 
 ::: {.callout-note collapse="true"}
 ## Click this to see the answers
@@ -987,10 +996,18 @@ Biodiversity_Index|>
 
 **You have created a data visualization from a big data set!**
 
+<button id="continue-button" class="btn btn-primary float-start me-2">The End</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+Nice work!
+
 
 ```{r}
 #| echo: false
 #| results: asis
+#| output: false
 create_buttons <- function(next_topic = "#") {
   if (is.null(next_topic)) {
     next_button <- ""
