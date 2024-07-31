@@ -80,9 +80,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ```{r}
 #| include: false
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000_2023.csv"
+#| eval: false
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000-2023.csv"
 download.file(url, "Portland_2.5_2000_2023.csv")
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000_2023.csv"
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/LosAngeles_2.5_2000-2023.csv"
 download.file(url, "LosAngeles_2.5_2000_2023.csv")
 portlandAQI<- read_csv("Portland_2.5_2000_2023.csv")
 laAQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
