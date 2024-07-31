@@ -690,6 +690,20 @@ If you want to learn more about the code we used to create the graph, you can cl
 
 In this code challenge, we'll have you directly edit the entire code chunk used to create your graph. Previously, you inputted your variables and we then put them into the graph code. So this time, you get to put your variables directly into the graph code and learn about what each command does! 
 
+Here's the code we used to create your graph. We'll go over it in detail below.
+
+```{webr-r}
+#| read-only:true
+Biodiversity_Index|>
+  filter(Biome=="Insert Biome Name Here", Taxa=="Insert Taxa Name Here") |>
+  ggplot(aes(x= YEAR, y= "numspecies or index" )) + 
+  geom_col(fill= "Insert Color Name Here", color="grey37") + 
+  labs(title = "Insert Title Name", 
+       subtitle = "Insert Subtititle", 
+       x= "Year", y= "Number of species or Biodiversity index") +
+  theme_linedraw()+theme(plot.title = element_text( hjust= .5, face = "bold"), plot.subtitle = element_text(hjust = .5))
+```
+
 ### Step 1: Selecting a data set to graph
 
 Lets look at line 1 : `Biodiversity_Index |>`

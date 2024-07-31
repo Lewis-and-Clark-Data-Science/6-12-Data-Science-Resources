@@ -9,103 +9,29 @@ output:
   html: 
     toc: true
     self-contained: false
+    include-in-header: 
+      - text: 
+          < script src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/js/js3.js"><script>
 ---
 
-<script>
-
-var key = 'currentSection' + window.location.pathname;
-var currentSection = localStorage.getItem(key) ? parseInt(localStorage.getItem(key)) : -1;
-var sections = Array.from(document.getElementsByClassName('level6'))
-    .filter(section => !section.classList.contains('no-hide'));
-
-// Hide all sections initially
-sections.forEach(function (section) {
-  section.classList.add('hidden');
-});
-
-function revealSection(sectionIndex) {
-  sections[sectionIndex].classList.remove('hidden');
-}
-
-var continueButton = document.getElementById('continueButton');
-var nextTopicButton = document.getElementById('nextTopicButton');
-
-// Disable continue button if there are no sections
-if (sections.length === 0) {
-    continueButton.disabled = true;
-    nextTopicButton.classList.remove('disabled');
-
-// Otherwise progressively reveal sections
-} else {
-    continueButton.addEventListener('click', function () {
-        currentSection++;
-        if (currentSection < sections.length) {
-            revealSection(currentSection);
-            localStorage.setItem(key, currentSection);
-            // Jump to the id anchor for the current section
-            window.location.hash = sections[currentSection].id;
-            // Adjust scroll position to account for the height of the navbar
-            window.scrollBy(0, 70);
-        }
-
-        if (currentSection >= sections.length - 1) {
-            continueButton.disabled = true;
-            nextTopicButton.classList.remove('disabled');
-        }
-    });
-}
-
-// On page load, reveal up to the current section
-window.onload = function () {
-  for (var i = 0; i <= currentSection; i++) {
-    revealSection(i);
-  }
-};
-
-function clearProgress() {
-  localStorage.removeItem(key);
-  window.location.hash = '#';  // Remove the anchor from the URL
-}
-
-document.getElementById('resetButton').addEventListener('click', function () {
-  clearProgress();
-  // Reload the page to reflect the reset progress
-  location.reload();
-});
-
-</script>
 
 
 ### Step 1
 
 This is the introduction to your tutorial.
 
+<div class="tutorial-part" style="display: block;">
+
 ### Step 2: Next Part
 
 This is the next part of your tutorial.
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 
 ### Step 3: Final Part
 
 This is the final part of your tutorial.
-
-```{r}
-#| echo: false
-#| results: asis
-create_buttons <- function(next_topic = "#") {
-  if (is.null(next_topic)) {
-    next_button <- ""
-  } else {
-    next_button <- glue::glue('<a id="nextTopicButton" class="btn btn-danger disabled" href="{next_topic}" role="button">Next topic</a>')
-  }
-  button_section <- glue::glue('
-<section id="buttons">
-<button id="continueButton" class="btn btn-primary float-start me-2">Continue</button>
-{next_button}
-<button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
-</section>')
-  
-  cat(button_section)
-}
-create_buttons("https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html")
-```
