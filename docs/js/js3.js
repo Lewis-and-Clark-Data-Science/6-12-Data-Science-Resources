@@ -1,4 +1,4 @@
-<script>
+
 console.log("Script loaded");
 console.log("Button clicked");
 document.addEventListener("DOMContentLoaded", function() {
@@ -52,4 +52,3 @@ document.addEventListener("DOMContentLoaded", function() {
                     scrollToElement(parts[index]);
                 });
             });
-</script>
