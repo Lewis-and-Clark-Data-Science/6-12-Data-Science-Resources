@@ -1,17 +1,10 @@
 [
   {
-    "objectID": "tutorials/AQI_tutorial.html",
-    "href": "tutorials/AQI_tutorial.html",
-    "title": "AQI tutorial",
-    "section": "",
-    "text": "Welcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
-  },
-  {
     "objectID": "tutorials/AQI_tutorial.html#introduction",
     "href": "tutorials/AQI_tutorial.html#introduction",
     "title": "AQI tutorial",
-    "section": "",
-    "text": "Welcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#data-science",
@@ -32,7 +25,14 @@
     "href": "tutorials/AQI_tutorial.html#our-data",
     "title": "AQI tutorial",
     "section": "Our data",
-    "text": "Our data\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). Click the blue box below to view the data. WHERE IS THE RAW DATA FROM"
+    "text": "Our data\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). Click the blue box below to view the data. WHERE IS THE RAW DATA FROM\n\n\n\n\n\n\nAir quality raw data Portland\n\n\n\n\n\n\n\nWarning in instance$preRenderHook(instance): It seems your data is too big for\nclient-side DataTables. You may consider server-side processing:\nhttps://rstudio.github.io/DT/server.html\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality raw data Los Angelos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of data! It’s pretty hard to get any meaningful information from just that table of information. Luckily, we can use R to better understand it and make graphs!\nBefore we use R, though, let’s try to understand a bit of what’s going on.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names that are collected when measuring air quality.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\nStop and think\n\nQuestion\n\n\n\nHow many data entries are there in the Los Angeles data?\n\n\n\n\n ✓8,594 data entries\n\n\n ✗8,744 data entries\n\n\n ✗10 data entries\n\n\n ✗100 data entries\n\n\n\n\n\n\n\n\n\nData location\nLet’s find out where the air quality data was recorded. If you look at the data table, are you able to find all the locations (sites) in Portland where they recorded the air quality?\n\nThis is a pretty hard task, as it requires you to look through all the data and find all the different site names. Luckily, we can use the computer to quickly check how many locations there are.\nThe R command unique() outputs all the unique data entries in one column. In other words, it will tell us all the different entries the Site Name column.\n\nPress run code below. If you want to learn more about the code, click “Learn more”!\n\nCode editorLearn moreChallengeChallenge Answer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThe command we used is\n\nunique(portland_AQI$Site.Name)\n\n\nportland_AQI specifies the data we’re looking at. In this case, portland_AQI is the name of our data frame - it contains all the data in the Portland table you saw above.\n\nThe name for the Los Angeles data is la_AQI. It contains all the data in the Los Angeles table you saw above.\n\nThe $ tells R to find a column name.\nSite.Name is the name of the column we want to look at, as it contains the locations\n\n\n\nCan you figure out the names of the Los Angeles locations where they measured air quality data?\nEdit the code below so that it outputs Los Angeles site names.\nHint: You’ll need to change the part of the code that says portland_AQI. What’s the name of the Los Angeles data set?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nDo you recognize any of the site names? Are any close to where you live?"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html#graphing-our-data",
+    "href": "tutorials/AQI_tutorial.html#graphing-our-data",
+    "title": "AQI tutorial",
+    "section": "Graphing our data",
+    "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means."
   },
   {
     "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",

@@ -9,6 +9,7 @@ output:
     toc: true
     self-contained: false
 ---
+
 <script>
 console.log("Script loaded");
 console.log("Button clicked");
@@ -80,13 +81,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ```{r}
 #| include: false
-#| eval: false
+library(tidyverse)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000-2023.csv"
 download.file(url, "Portland_2.5_2000_2023.csv")
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/LosAngeles_2.5_2000-2023.csv"
 download.file(url, "LosAngeles_2.5_2000_2023.csv")
-portlandAQI<- read_csv("Portland_2.5_2000_2023.csv")
-laAQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
+portland_AQI<- read_csv("Portland_2.5_2000_2023.csv")
+la_AQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
+
+```
+
+```{webr-r}
+#| context: setup
+library(tidyverse)
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000-2023.csv"
+download.file(url, "Portland_2.5_2000_2023.csv")
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/LosAngeles_2.5_2000-2023.csv"
+download.file(url, "LosAngeles_2.5_2000_2023.csv")
+portland_AQI<- read.csv("Portland_2.5_2000_2023.csv")
+la_AQI<- read.csv("LosAngeles_2.5_2000_2023.csv")
 
 ```
 
@@ -266,4 +279,128 @@ The programming language R can also do very complicated things, like work wiht l
 ## Our data
 
 Today, we'll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). Click the blue box below to view the data. **WHERE IS THE RAW DATA FROM**
+
+::: {.callout-note collapse="true"}
+## Air quality raw data Portland
+
+```{r}
+#| echo: false
+#| output: true
+library(knitr)
+library(DT)
+datatable(portland_AQI)
+#kable(portland_AQI)
+
+```
+:::
+
+::: {.callout-note collapse="true"}
+## Air quality raw data Los Angelos
+
+```{r}
+#| echo: false
+#| output: true
+library(DT)
+datatable(la_AQI)
+```
+:::
+
+Wow that's a lot of data! It's pretty hard to get any meaningful information from just that table of information. Luckily, we can use R to better understand it and make graphs! 
+
+Before we use R, though, let's try to understand a bit of what's going on. 
+
+-   At the top of the table, there are bolded words. These are column titles and refer to the **variable names** that are collected when measuring air quality. 
+
+-   Underneath the variable names, you'll see individual **entries** for the data. 
+
+-   At the very bottom of the data table, you can click to different pages of data and see how many total entries there are.
+
+**Stop and think**
+
+::: panel-tabset
+
+## Question
+
+::: question 
+
+*How many data entries are there in the Los Angeles data?* 
+
+::: choices
+::: {.choice .correct-choice}
+8,594 data entries
+:::
+::: choice
+8,744 data entries
+:::
+::: choice
+10 data entries
+:::
+::: choice
+100 data entries
+:::
+:::
+:::
+:::
+
+### Data location
+
+Let's find out where the air quality data was recorded. If you look at the data table, are you able to find all the **locations (sites) in Portland** where they recorded the air quality? 
+
+-   This is a pretty hard task, as it requires you to look through all the data and find all the different site names. Luckily, we can use the computer to quickly check how many locations there are. 
+
+-   The R command `unique()` outputs all the unique data entries in one column. In other words, it will tell us all the **different** entries the Site Name column. 
+
+**Press** run code below. If you want to learn more about the code, click "Learn more"!
+
+::: panel-tabset
+
+## Code editor
+
+```{webr-r}
+unique(portland_AQI$Site.Name)
+```
+
+## Learn more
+
+The command we used is 
+```{r} 
+#| eval: false
+unique(portland_AQI$Site.Name)
+```
+
+-   `portland_AQI` specifies the data we're looking at. In this case, `portland_AQI` is the name of our data frame - it contains all the data in the Portland table you saw above.
+      
+      -   The name for the Los Angeles data is `la_AQI`. It contains all the data in the Los Angeles table you saw above.
+
+-   The `$` tells R to find a column name. 
+
+-   `Site.Name` is the name of the column we want to look at, as it contains the locations
+
+## Challenge
+
+Can you figure out the names of the Los Angeles locations where they measured air quality data? 
+
+**Edit** the code below so that it outputs Los Angeles site names. 
+
+*Hint:* You'll need to change the part of the code that says `portland_AQI`. What's the name of the Los Angeles data set? 
+
+```{webr-r}
+unique(portland_AQI$Site.Name)
+
+```
+
+## Challenge Answer
+
+```{webr-r}
+unique(la_AQI$Site.Name)
+
+```
+:::
+
+Do you recognize any of the site names? Are any close to where you live?
+
+## Graphing our data
+
+Now that we understand **what** the data table contains, let's try to graph it and better understand what it **means**. 
+
 
