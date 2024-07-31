@@ -381,11 +381,26 @@ We will use a coding language called "R". Basically, "R" is a collection of comm
 
 For example one command the computer knows is multiplication! Try typing `5*3` in the box right below this. Then click the green play button that says "run code"
 
+::: panel-tabset
+
+## Code editor
+
 ```{webr-r}
 # Type your code here!
 
 
 ```
+
+## Answer
+
+**Press** run code
+
+```{webr-r}
+# Type your code here!
+5*3
+
+```
+:::
 
 What happened? Did you see the number 15 pop out?
 

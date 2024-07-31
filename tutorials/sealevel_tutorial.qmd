@@ -9,10 +9,9 @@ format:
   html: 
     toc: true
     self-contained: false
-#    include-after-body: 
-#      - text: |
-#          <script src="js/js3.js"></script>
-#          <script src="js/bootstrapify.js"></script>
+    include-in-header: 
+      - text: 
+          < script src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/js/js3.js"><script>
 ---
 
 

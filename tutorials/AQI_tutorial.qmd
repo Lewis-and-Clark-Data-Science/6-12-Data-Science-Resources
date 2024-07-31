@@ -1,6 +1,5 @@
 ---
 title: "AQI tutorial"
-author: _____
 filters: 
   - webr
   - naquiz
@@ -9,34 +8,261 @@ output:
   html: 
     toc: true
     self-contained: false
-    include-in-header: 
-      - text: 
-          < script src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/js/js3.js"><script>
 ---
+<script>
+console.log("Script loaded");
+console.log("Button clicked");
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+    const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
+
+ // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
+
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";}});
+    
+    // Function to scroll to the top of the element, accounting for a fixed header
+      function scrollToElement(element) {
+          const elementTop = element.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+              top: elementTop - headerHeight,
+             behavior: "smooth"
+         });
+     }
+
+    
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                parts[currentPartIndex].style.display= "block";
+                 // Jump to the id anchor for the current section
+         //   window.location.hash = parts[currentPartIndex].id;
+        // Scroll to the top of the current section
+                scrollToElement(parts[currentPartIndex]);
+             // Adjust scroll position to account for the height of the navbar
+              //   window.scrollBy(0, 10000);
+                } else {
+                alert("End of tutorial");}});});});
+
+
+  // Add click event listeners to sidebar links
+  
+ //    sidebarLinks.forEach((link, index) => {
+//           link.addEventListener("click", function(event) {
+//               event.preventDefault(); // Prevent default anchor behavior
+
+            // Hide current part and button
+            //parts[currentPartIndex].style.display = "none";
+           // buttons[currentPartIndex].style.display = "none";
+
+            // Move to the part corresponding to the sidebar link
+ //           currentPartIndex = index;
+ //           parts[currentPartIndex].style.display = "block";
+
+            // Scroll to the current part
+//            scrollToElement(parts[currentPartIndex]);
+//        });
+//      });
+//    });
+
+</script>
+
+```{r}
+#| include: false
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000_2023.csv"
+download.file(url, "Portland_2.5_2000_2023.csv")
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000_2023.csv"
+download.file(url, "LosAngeles_2.5_2000_2023.csv")
+portlandAQI<- read_csv("Portland_2.5_2000_2023.csv")
+laAQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
+
+```
+
+
+## Introduction
+
+Welcome to this lesson on air quality! We'll be using **data science** to learn about **air quality**. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue "Continue" buttons. By the end of the tutorial, you will be able to create your own graph of air quality! 
 
 <div class="tutorial-part" style="display: block;">
 
+First, let's learn about air quality. Check out this video to learn more about how air quality affects us. 
 
-### Step 1
+{{< video https://www.youtube.com/watch?v=zj4rd77EAt4 >}}
 
-This is the introduction to your tutorial.
-
-
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
-</div>
-
-<div class="tutorial-part" style="display: none;">
-
-### Step 2: Next Part
-
-This is the next part of your tutorial.
+Click "Continue" to move to the next section. 
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
 <div class="tutorial-part" style="display: none;">
 
+## Data Science
 
-### Step 3: Final Part
+What is data? 
 
-This is the final part of your tutorial.
+-   Data is large amounts of information that you collect. Often, it looks like a lot of numbers that are collected to describe some phenomenon. 
+
+-   For example, if you measure the temperature every day in one location for one year, you would have created **data**. You can then use **data science** to analyze that data. 
+
+What is data science? 
+
+-   Data science is the ability to synthesize **data** and derive meaningful information. Often, graphs, maps, models, and charts are used to help understand data and display information. 
+
+**Stop and think** 
+
+::: panel-tabset
+## Question
+
+::: question
+**What is an example of data?**
+
+::: choices
+::: {.choice .correct-choice}
+The age and grade of everyone in your school
+:::
+
+::: {.choice .correct-choice}
+The favorite restaurant of everyone who walks down your street
+:::
+
+::: {.choice .correct-choice}
+The pm2.5 data for every day in 2023 in Portland
+:::
+
+::: {.choice .correct-choice}
+All of the above
+:::
+:::
+:::
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+
+## Using the computer to do data science 
+
+In this tutorial, we're going to use coding to analyze large amounts of data. We'll be able to create graphs by writing code. 
+
+We're going to use a coding language called **R**. Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
+
+### Introduction to R
+
+This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green "run code" button. These are called code chunks. You can type commands into these boxes and it will output answers. Let's try it out.
+
+One command the computer knows is multiplication! Try typing `5*3` in the box right below this. Then **press** the green play button that says "run code".
+
+::: panel-tabset
+
+## Code editor
+
+```{webr-r}
+# Type your code here!
+
+
+```
+
+## Answer
+
+**Press** run code
+
+```{webr-r}
+# Type your code here!
+5*3
+
+```
+:::
+
+Did you see the number 15 pop out?
+
+Here's another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There's a few different tabs you can click on to learn how to do cool things!
+
+::: panel-tabset
+## Code editor
+
+Want to try out your own code? Maybe another math problem? Here's a place to do that. Otherwise click on the tabs to learn something new!
+
+```{webr}
+#Type your code here
+
+
+
+```
+
+## Say hello
+
+Would you like the computer to say hello to you?
+
+First, type your name where the blank \_\_\_\_\_\_\_ is, in the second code chunk. Don't delete the quotation marks.
+
+Here's an example:
+
+```{webr}
+#| read-only: true
+name = "Olivia"
+```
+
+Now your turn. Type your name instead of the blank \_\_\_\_\_ and then click play:
+
+```{webr}
+name = "_____"
+
+cat("Hello", name, "How are you today?")
+
+```
+
+## Find the largest number
+
+We can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (\_\_\_\_\_\_). Separate your numbers with a comma. Don't delete anything else!
+
+Here's an example:
+
+```{webr-r}
+#| read-only:true
+numbers = c(41, 55, 98, 104, 2, 8)
+```
+
+Now you try. **Type** your numbers after the first parenthesis and separate them with a comma. Then **click** run code.
+
+```{webr-r}
+numbers = c(_,_,_,_,_,_,)
+```
+
+Now let's run a function that will tell us which number is the biggest. **Click** the play button on this code chunk too.
+
+```{webr-r}
+max(numbers)
+```
+:::
+
+### Analyzing data with R
+
+The programming language R can also do very complicated things, like work wiht large amounts of data and create graphs. 
+
+-   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
+
+-   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+
+## Our data
+
+Today, we'll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). Click the blue box below to view the data. **WHERE IS THE RAW DATA FROM**
+

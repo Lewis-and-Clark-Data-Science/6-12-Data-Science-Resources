@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "tutorials/AQI_tutorial.html",
-    "href": "tutorials/AQI_tutorial.html",
-    "title": "AQI tutorial",
-    "section": "",
-    "text": "Step 1\nThis is the introduction to your tutorial.\n\nContinue\n\n\n\nStep 2: Next Part\nThis is the next part of your tutorial.\n\nContinue\n\n\n\n\n\n\nStep 3: Final Part\nThis is the final part of your tutorial."
-  },
-  {
     "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
     "href": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
     "title": "Salmon Crossing Data Tutorial",
@@ -25,7 +18,7 @@
     "href": "tutorials/salmon_tutorial.html#analyzing-huge-data-with-the-computer",
     "title": "Salmon Crossing Data Tutorial",
     "section": "Analyzing HUGE data with the computer",
-    "text": "Analyzing HUGE data with the computer\nWe’re going to analyze all the numbers that are collected at the Bonneville Dam using the computer.\n\nUsing R\nWe will use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue"
+    "text": "Analyzing HUGE data with the computer\nWe’re going to analyze all the numbers that are collected at the Bonneville Dam using the computer.\n\nUsing R\nWe will use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue"
   },
   {
     "objectID": "tutorials/salmon_tutorial.html#looking-at-data",
@@ -58,23 +51,23 @@
   {
     "objectID": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
     "href": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "no\n\nContinue"
+    "title": "6-12 Data Science Resources",
+    "section": "Part 1: Introduction to Topic",
+    "text": "Part 1: Introduction to Topic\nno\n\nContinue"
   },
   {
     "objectID": "tutorials/sealevel_tutorial.html#part-2-explanation-of-concept",
     "href": "tutorials/sealevel_tutorial.html#part-2-explanation-of-concept",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "right\n\nContinue"
+    "title": "6-12 Data Science Resources",
+    "section": "Part 2: Explanation of Concept",
+    "text": "Part 2: Explanation of Concept\nright\n\nContinue"
   },
   {
     "objectID": "tutorials/sealevel_tutorial.html#part-3-practical-examples",
     "href": "tutorials/sealevel_tutorial.html#part-3-practical-examples",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "hello"
+    "title": "6-12 Data Science Resources",
+    "section": "Part 3: Practical Examples",
+    "text": "Part 3: Practical Examples\nhello"
   },
   {
     "objectID": "resources/resources.html",
@@ -320,5 +313,40 @@
     "title": "Biodiversity tutorial",
     "section": "Congratulations!**",
     "text": "Congratulations!**\nYou have created a data visualization from a big data set!\n\nThe End"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html",
+    "href": "tutorials/AQI_tutorial.html",
+    "title": "AQI tutorial",
+    "section": "",
+    "text": "Welcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html#introduction",
+    "href": "tutorials/AQI_tutorial.html#introduction",
+    "title": "AQI tutorial",
+    "section": "",
+    "text": "Welcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html#data-science",
+    "href": "tutorials/AQI_tutorial.html#data-science",
+    "title": "AQI tutorial",
+    "section": "Data Science",
+    "text": "Data Science\nWhat is data?\n\nData is large amounts of information that you collect. Often, it looks like a lot of numbers that are collected to describe some phenomenon.\nFor example, if you measure the temperature every day in one location for one year, you would have created data. You can then use data science to analyze that data.\n\nWhat is data science?\n\nData science is the ability to synthesize data and derive meaningful information. Often, graphs, maps, models, and charts are used to help understand data and display information.\n\nStop and think\n\nQuestion\n\n\n\nWhat is an example of data?\n\n\n\n\n ✓The age and grade of everyone in your school\n\n\n ✓The favorite restaurant of everyone who walks down your street\n\n\n ✓The pm2.5 data for every day in 2023 in Portland\n\n\n ✓All of the above\n\n\n\n\n\n\n\n\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html#using-the-computer-to-do-data-science",
+    "href": "tutorials/AQI_tutorial.html#using-the-computer-to-do-data-science",
+    "title": "AQI tutorial",
+    "section": "Using the computer to do data science",
+    "text": "Using the computer to do data science\nIn this tutorial, we’re going to use coding to analyze large amounts of data. We’ll be able to create graphs by writing code.\nWe’re going to use a coding language called R. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\n\nIntroduction to R\nThis tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green “run code” button. These are called code chunks. You can type commands into these boxes and it will output answers. Let’s try it out.\nOne command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then press the green play button that says “run code”.\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nDid you see the number 15 pop out?\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow your turn. Type your name instead of the blank _____ and then click play:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nAnalyzing data with R\nThe programming language R can also do very complicated things, like work wiht large amounts of data and create graphs.\n\nYou can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations\nWe are going to be utilizing the data visualization aspect by creating graphs from a big data set\n\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial.html#our-data",
+    "href": "tutorials/AQI_tutorial.html#our-data",
+    "title": "AQI tutorial",
+    "section": "Our data",
+    "text": "Our data\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years. Click the blue box below to view the data. WHERE IS THE RAW DATA FROM"
   }
 ]

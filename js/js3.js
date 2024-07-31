@@ -43,12 +43,4 @@ document.addEventListener("DOMContentLoaded", function() {
               //   window.scrollBy(0, 10000);
                 } else {
                 alert("End of tutorial");}});});});
-                
-          // Add click event listeners to sidebar links
-            sidebarLinks.forEach((link, index) => {
-                link.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    showPart(index);
-                    scrollToElement(parts[index]);
-                });
-            });
+
