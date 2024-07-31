@@ -10,6 +10,13 @@ output:
     self-contained: false
 ---
 
+Note to self, here's some options for downloading other cities data: 
+
+r package https://cran.r-project.org/web/packages/RAQSAPI/vignettes/RAQSAPIvignette.html
+
+This explains how to get json data and i did make an account https://aqs.epa.gov/aqsweb/documents/data_api.html#daily
+
+
 <script>
 console.log("Script loaded");
 console.log("Button clicked");
@@ -403,4 +410,54 @@ Do you recognize any of the site names? Are any close to where you live?
 
 Now that we understand **what** the data table contains, let's try to graph it and better understand what it **means**. 
 
+to fix color situation, go to https://stackoverflow.com/questions/6919025/how-to-assign-colors-to-categorical-variables-in-ggplot2-that-have-stable-mappin
 
+
+```{webr-r}
+colnames(portland_AQI)[2] <- 'AQIVal'
+colnames(la_AQI)[2] <- 'AQIVal'
+colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')
+colScale <- scale_colour_manual(name = "colLabels",values = c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130'))
+
+portland_AQI |> 
+  mutate(Date=mdy(Date))|>
+  mutate(Year=year(Date),
+          Month = month(Date),
+         DOY = yday(Date))|> 
+  mutate(AQI_Category = case_when(AQIVal >= 250.5 ~ 'Hazardous',
+                                  AQIVal >= 150.5 ~ 'Very Unhealthy',
+                                  AQIVal >= 55.5 ~ 'Unhealthy',
+                                  AQIVal >= 35.5 ~ 'Unhealthy for Sensitive Groups',
+                                  AQIVal >= 12.1 ~ 'Moderate',
+                                  TRUE ~ 'Good'))|>
+  mutate(AQI_Category = factor(AQI_Category, levels= colLabels)) |>
+  
+  ggplot(aes(x = DOY, y = Year, fill = AQI_Category))+
+  geom_tile()+
+  scale_y_reverse()+
+  scale_discrete_manual('fill', values = c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130'))
+
+
+
+la_AQI |> 
+  mutate(Date=mdy(Date))|>
+  mutate(Year=year(Date),
+          Month = month(Date),
+         DOY = yday(Date))|> 
+  mutate(AQI_Category = case_when(AQIVal >= 250.5 ~ 'Hazardous',
+                                  AQIVal >= 150.5 ~ 'Very Unhealthy',
+                                  AQIVal >= 55.5 ~ 'Unhealthy',
+                                  AQIVal >= 35.5 ~ 'Unhealthy for Sensitive Groups',
+                                  AQIVal >= 12.1 ~ 'Moderate',
+                                  TRUE ~ 'Good'))|>
+  mutate(AQI_Category = factor(AQI_Category, levels= colLabels)) |>
+  
+  ggplot(aes(x = DOY, y = Year, fill = AQI_Category))+
+  geom_tile()+
+  scale_y_reverse()+
+  colScale
+
+
+
+
+```

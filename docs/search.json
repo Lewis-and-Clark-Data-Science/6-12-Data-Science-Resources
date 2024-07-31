@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "tutorials/AQI_tutorial.html",
+    "href": "tutorials/AQI_tutorial.html",
+    "title": "AQI tutorial",
+    "section": "",
+    "text": "Note to self, here’s some options for downloading other cities data:\nr package https://cran.r-project.org/web/packages/RAQSAPI/vignettes/RAQSAPIvignette.html\nThis explains how to get json data and i did make an account https://aqs.epa.gov/aqsweb/documents/data_api.html#daily"
+  },
+  {
     "objectID": "tutorials/AQI_tutorial.html#introduction",
     "href": "tutorials/AQI_tutorial.html#introduction",
     "title": "AQI tutorial",
@@ -32,7 +39,7 @@
     "href": "tutorials/AQI_tutorial.html#graphing-our-data",
     "title": "AQI tutorial",
     "section": "Graphing our data",
-    "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means."
+    "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means.\nto fix color situation, go to https://stackoverflow.com/questions/6919025/how-to-assign-colors-to-categorical-variables-in-ggplot2-that-have-stable-mappin\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
