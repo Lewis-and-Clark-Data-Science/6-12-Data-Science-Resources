@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ```{r}
 #| include: false
+
 library(tidyverse)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Portland_2.5_2000-2023.csv"
 download.file(url, "Portland_2.5_2000_2023.csv")
@@ -96,16 +97,6 @@ download.file(url, "LosAngeles_2.5_2000_2023.csv")
 portland_AQI<- read_csv("Portland_2.5_2000_2023.csv")
 la_AQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
 
-for (i in 2000:2023){
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/daily_aqi/"
-
-
-
-download.file(url, "daily_aqi")
-
-world_aqi <- list.files(path="daily_aqi", full.names = TRUE)|>
-  lapply(read_csv)|>
-  bind_rows()
 
 ```
 
@@ -213,6 +204,14 @@ aqi_myCounty |>
   #scale_y_reverse()+
   scale_fill_manual(values=aqi_colors, drop=FALSE)
 
+url<-"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
+
+download.file(url, "aqi_usa_2000_2023.csv.zip")
+unzip("aqi_usa_2000_2023.csv.zip")
+
+world_aqi <- list.files(path="daily_aqi", full.names = TRUE)|>
+  lapply(read_csv)|>
+  bind_rows()
 
 
 ```
@@ -605,6 +604,7 @@ Here are your options, organized by state. Click through them and find the count
 
 ```{r}
 #| output: true
+#| eval: false
 library(DT)
 world_aqi|>
   select('State Name','county Name')|>
