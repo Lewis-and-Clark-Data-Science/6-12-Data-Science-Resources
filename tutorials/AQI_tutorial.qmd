@@ -96,7 +96,116 @@ download.file(url, "LosAngeles_2.5_2000_2023.csv")
 portland_AQI<- read_csv("Portland_2.5_2000_2023.csv")
 la_AQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
 
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/daily_aqi"
+download.file(url, "daily_aqi")
+
+world_aqi <- list.files(path="daily_aqi", full.names = TRUE)|>
+  lapply(read_csv)|>
+  bind_rows()
+
 ```
+
+```{r}
+#| output: false
+#| echo: false
+#| eval: false
+# This is for me to experiment in r, not for use in the tutorial
+library(tidyverse)
+portland_AQI_2000 <- read_csv("portland_AQI_2000.csv")
+
+colnames(portland_AQI_2000)[2] <- 'AQIVal'
+
+colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')
+
+myColors <- c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130')
+
+aqi_colors<- setNames(object=myColors, nm=colLabels)
+
+#Prior labels
+portland_AQI_2000 |> 
+  mutate(Date=mdy(Date))|>
+  mutate(Year=year(Date),
+          Month = month(Date),
+         DOY = yday(Date), 
+         Day = weekdays(Date))|> 
+  mutate(AQI_Category = case_when(AQIVal >= 250.5 ~ 'Hazardous',
+                                  AQIVal >= 150.5 ~ 'Very Unhealthy',
+                                  AQIVal >= 55.5 ~ 'Unhealthy',
+                                  AQIVal >= 35.5 ~ 'Unhealthy for Sensitive Groups',
+                                  AQIVal >= 12.1 ~ 'Moderate',
+                                  TRUE ~ 'Good'))|>
+  mutate(AQI_Category = factor(AQI_Category, levels= colLabels)) |>
+  
+  ggplot(aes(x = DOY, y = Day, fill = AQI_Category))+
+  geom_tile()+
+  #scale_y_reverse()+
+  scale_fill_manual(values=aqi_colors, drop=FALSE)
+
+
+#Proper labels (I think)
+portland_AQI |> 
+  mutate(Date=mdy(Date))|>
+  mutate(Year=year(Date),
+          Month = month(Date),
+         DOY = yday(Date))|> 
+  mutate(AQI_Category = case_when(AQIVal >= 301 ~ 'Hazardous',
+                                  AQIVal >= 201 ~ 'Very Unhealthy',
+                                  AQIVal >= 151~ 'Unhealthy',
+                                  AQIVal >= 101 ~ 'Unhealthy for Sensitive Groups',
+                                  AQIVal >= 51 ~ 'Moderate',
+                                  TRUE ~ 'Good'))|>
+  mutate(AQI_Category = factor(AQI_Category, levels= colLabels)) |>
+  
+  ggplot(aes(x = DOY, y = Year, fill = AQI_Category))+
+  geom_tile()+
+  scale_y_reverse()+
+  scale_fill_manual(values=aqi_colors, drop=FALSE)
+
+
+#Try with world data
+aqi_world<- read.csv("daily_aqi_by_county_2023.csv")
+aqi_clackmult<- aqi_world|>
+  filter(county.Name=="Clackamas"|county.Name=="Multnomah")
+
+library(tidyverse)
+world_aqi <- list.files(path="daily_aqi", full.names = TRUE)|>
+  lapply(read_csv)|>
+  bind_rows() 
+  
+glimpse(world_aqi)
+aqi_myCounty<- world_aqi|>
+  filter(`county Name`=="Clackamas"|`county Name`=="Multnomah")
+
+colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')
+
+myColors <- c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130')
+
+aqi_colors<- setNames(object=myColors, nm=colLabels)
+
+aqi_myCounty |> 
+  mutate(Year=format(as.Date(Date), "%Y"),
+        Month = month(Date),
+         DOY = yday(Date), 
+         Day = weekdays(Date))|> 
+  #mutate(AQI_Category = case_when(AQIVal >= 250.5 ~ 'Hazardous',
+  #                                AQIVal >= 150.5 ~ 'Very Unhealthy',
+  #                                AQIVal >= 55.5 ~ 'Unhealthy',
+  #                                AQIVal >= 35.5 ~ 'Unhealthy for Sensitive Groups',
+  #                                AQIVal >= 12.1 ~ 'Moderate',
+  #                                TRUE ~ 'Good'))|>
+  mutate(Category = factor(Category, levels= colLabels)) |>
+  
+  ggplot(aes(x = DOY, y = Year, fill = Category))+
+  geom_tile()+
+  #scale_y_reverse()+
+  scale_fill_manual(values=aqi_colors, drop=FALSE)
+
+
+
+```
+
+
+
 
 ```{webr-r}
 #| context: setup
@@ -351,7 +460,7 @@ Before we use R, though, let's try to understand a bit of what's going on.
 
 ### Data location
 
-Let's find out where the air quality data was recorded. If you look at the data table, are you able to find all the **locations (sites) in Portland** where they recorded the air quality? 
+Let's find out exactly where the air quality data was recorded. If you look at the data table, are you able to find all the **locations (sites) in Portland** where they recorded the air quality? 
 
 -   This is a pretty hard task, as it requires you to look through all the data and find all the different site names. Luckily, we can use the computer to quickly check how many locations there are. 
 
@@ -410,14 +519,24 @@ Do you recognize any of the site names? Are any close to where you live?
 
 Now that we understand **what** the data table contains, let's try to graph it and better understand what it **means**. 
 
-to fix color situation, go to https://stackoverflow.com/questions/6919025/how-to-assign-colors-to-categorical-variables-in-ggplot2-that-have-stable-mappin
+Our goal is to make a graph of the overall air quality in Portland and Los Angeles by describing how **healthy** or **unhealthy** the air is. 
+
+
+
+
+
+Our data is taken from the EPA. The EPA can create graphs for us on their website. Here's what their graphs look like. 
 
 
 ```{webr-r}
 colnames(portland_AQI)[2] <- 'AQIVal'
 colnames(la_AQI)[2] <- 'AQIVal'
+
 colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')
-colScale <- scale_colour_manual(name = "colLabels",values = c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130'))
+
+myColors <- c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130')
+
+aqi_colors<- setNames(object=myColors, nm=colLabels)
 
 portland_AQI |> 
   mutate(Date=mdy(Date))|>
@@ -435,7 +554,8 @@ portland_AQI |>
   ggplot(aes(x = DOY, y = Year, fill = AQI_Category))+
   geom_tile()+
   scale_y_reverse()+
-  scale_discrete_manual('fill', values = c('#238B44','#FFFF00', '#FFA500', '#E31A1C','#8F3F97', '#861130'))
+  scale_fill_manual(values=aqi_colors, drop=FALSE)
+
 
 
 
@@ -455,9 +575,27 @@ la_AQI |>
   ggplot(aes(x = DOY, y = Year, fill = AQI_Category))+
   geom_tile()+
   scale_y_reverse()+
-  colScale
-
-
-
+  scale_fill_manual(values=aqi_colors, drop=FALSE)
 
 ```
+
+
+## Make your own graph of any county! 
+
+What if you wanted to look at the air quality data for another place? You'll be able to do that below. 
+
+### Choose a county
+
+First, you'll need to choose a county that you want to learn about. 
+
+Here are your options, organized by state. Click through them and find the county you'd like to graph. You'll need to remember the exact spelling AND capitalization. 
+
+```{r}
+#| output: true
+library(DT)
+world_aqi|>
+  select('State Name','county Name')|>
+  unique()|>
+  datatable()
+```
+
