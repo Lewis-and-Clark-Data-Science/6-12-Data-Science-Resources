@@ -96,7 +96,11 @@ download.file(url, "LosAngeles_2.5_2000_2023.csv")
 portland_AQI<- read_csv("Portland_2.5_2000_2023.csv")
 la_AQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
 
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/daily_aqi"
+for (i in 2000:2023){
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/daily_aqi/"
+
+
+
 download.file(url, "daily_aqi")
 
 world_aqi <- list.files(path="daily_aqi", full.names = TRUE)|>
@@ -163,6 +167,15 @@ portland_AQI |>
 
 
 #Try with world data
+
+#First, try with github path
+library(httr)
+req <- GET("https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/daily_aqi")
+stop_for_status(req)
+filelist <- unlist(lapply(content(req)$tree, "[", "path"), use.names = F)
+grep("daily_aqi", filelist, value = TRUE, fixed = TRUE)
+
+
 aqi_world<- read.csv("daily_aqi_by_county_2023.csv")
 aqi_clackmult<- aqi_world|>
   filter(county.Name=="Clackamas"|county.Name=="Multnomah")
