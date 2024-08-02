@@ -440,11 +440,11 @@ max(numbers)
 
 ### Analyzing data with R
 
-The programming language R can also do very complicated things, like work wiht large amounts of data and create graphs. 
+The programming language R can also do very complicated things, like work with large amounts of data and create graphs. 
 
--   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
+-   You can import data from various sources, clean and process it, perform statistical analyses and generate reports or visualizations
 
--   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
+-   We are going to be utilizing the data visualization aspect and create graphs from a big data set
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -454,9 +454,21 @@ The programming language R can also do very complicated things, like work wiht l
 
 ## Our data
 
+::: columns
+::: {.column width="70%"}
+
 Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot). It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
 
-Click the blue box below to view the data. 
+:::
+:::{.column width="30%"}
+
+![from.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="right" fig-alt="aqi index" height=".5in"}
+:::
+:::
+
+![from.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/portlandla.png){fig-align="right" fig-alt="Portland LA map" height="3in"}
+
+We're focusing on Portland and Los Angeles air quality data. Click the blue box below to view the data. 
 
 ::: {.callout-note collapse="true"}
 ## Air quality raw data Portland
@@ -688,7 +700,7 @@ la_AQI |>
 
 ## Troubleshooting
 
--   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="webr ready image" height="0.5in"} 
 
 -   Error message: Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
 
@@ -817,7 +829,7 @@ myCountyData<- usa_aqi_data|>
 
 ## Troubleshooting
 
--   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="webr ready image" height="0.5in"} 
 
 -   Error message: 
 
@@ -997,7 +1009,7 @@ myScatterplotData |>
 
 ## Troubleshooting
 
--   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="webr ready image" height="0.5in"} 
 
 -   Error message: 
 
@@ -1065,9 +1077,13 @@ Type in names for your labels below. Replace the red lines and keep the quotes `
 
 The `xlabel` is the label for the bottom axis. 
 
-The `ylabel` is the label for the left axis. 
+The `ylabel` is the label for the left axis. This will be year for all plots.
 
 The `title` goes on the top of the graph. 
+
+::: panel-tabset
+
+## Code editor
 
 **Type** your labels below. 
 
@@ -1076,12 +1092,22 @@ The `title` goes on the top of the graph.
 ```{webr-r}
 xlabel = "_____"
 
-ylabel = "_____"
+ylabel = "Year"
 
 title = "_____"
 
 ```
 
+## Example
+```{webr-r}
+xlabel = "Month"
+
+ylabel = "Year"
+
+title = "AQI Levels for Multnomah County"
+
+```
+:::
 
 ### Step 4: Choose your category levels
 
@@ -1127,7 +1153,7 @@ I'll get to this :)
 
 ## Troubleshooting
 
--   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running.   ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="Bonneville Dam arial view" height="0.5in"} 
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running.   ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="webr ready image" height="0.5in"} 
 
 -   Error message: 
 
