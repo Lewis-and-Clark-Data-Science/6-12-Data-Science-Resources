@@ -97,13 +97,6 @@ download.file(url, "LosAngeles_2.5_2000_2023.csv")
 portland_AQI<- read_csv("Portland_2.5_2000_2023.csv")
 la_AQI<- read_csv("LosAngeles_2.5_2000_2023.csv")
 
-library(downloader)
-url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
-download(url, dest="dataset.zip", mode="wb") 
-usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
-  read.csv()
-
-
 ```
 
 ```{r}
@@ -239,6 +232,21 @@ url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resource
 download(url, dest="dataset.zip", mode="wb") 
 usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
   read.csv()
+
+
+
+myCountyData<- usa_aqi_data|>
+    filter(county.Name=="Clackamas") |>
+    mutate(Year=format(as.Date(Date), "%Y"),
+           Month = month(Date),
+           DOY = yday(Date))|> 
+    mutate(Category = factor(Category, levels= colLabels))
+
+ggplot(myCountyData, aes_string(x = "DOY", y = "Year", fill = "Category"))+
+    geom_tile()+
+    scale_fill_manual(values=aqi_colors, drop=FALSE)+
+    labs(x="xlabel", y="Year", title="AQI levels for")+
+    scale_y_continuous(limits=c(2010,2020))
 ```
 
 
@@ -261,6 +269,13 @@ usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
 glimpse(usa_aqi_data)
 
 #Note: in the future you could probably just use the link right from this website instead of going through github https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2023.zip
+
+
+colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')
+
+myColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')
+
+aqi_colors<- setNames(object=myColors, nm=colLabels)
 
 ```
 
@@ -505,6 +520,32 @@ Before we use R, though, let's try to understand a bit of what's going on.
 :::
 :::
 
+
+::: panel-tabset
+
+## Question
+
+::: question 
+
+*What was the* ***PM2.5 AQI Value*** *in Portland on* ***01/01/2000***? 
+
+::: choices
+::: choice
+158
+:::
+::: choice
+62
+:::
+::: {.choice .correct-choice}
+49
+:::
+::: choice
+100
+:::
+:::
+:::
+:::
+
 ### Data location
 
 Let's find out exactly where the air quality data was recorded. If you look at the data table, are you able to find all the **locations (sites) in Portland** where they recorded the air quality? 
@@ -571,16 +612,19 @@ Our goal is to make a graph of the overall air quality in Portland and Los Angel
 The EPA defines the following categories based on the air quality index (AQI): 
 
 ![From https://www.airnow.gov/aqi/aqi-basics/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqilevels.png){fig-align="left" fig-alt="AQI color, description, index values" height="2in"}
+We've inputted these values and colors into our code for the graph. 
 
-We've inputted these values and colors into our code for the graph. If you want to learn how to change the values and colors, head to the Challenge Coding Section at the end of this tutorial! 
+You may have noticed that if you go to the [EPA website](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot), they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!
 
-Let's see what the air quality graph looks like for Portland and Los Angeles.
+### AQI Tile Plot
+
+We'll start by making a *tile plot* for the air quality index (AQI) from 2000-2023. Let's see what the graph looks like for Portland and Los Angeles. Later on, you'll have options to create other types of graphs for more locations.
 
 **Press** run code below. 
 
-:::
+::: panel-tabset
 
-## Portland AQI graph
+## Portland AQI Tile Graph
 
 ```{webr-r}
 colnames(portland_AQI)[2] <- 'AQIVal'
@@ -612,7 +656,7 @@ portland_AQI |>
 
 ```
 
-## Los Angeles AQI Graph 
+## Los Angeles AQI Tile Graph 
 
 ```{webr-r}
 colnames(la_AQI)[2] <- 'AQIVal'
@@ -641,6 +685,13 @@ la_AQI |>
   labs(x="Day of year", y="Year", title="AQI levels for LA")
 
 ```
+
+## Troubleshooting
+
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+
+-   Error message: Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
+
 :::
 
 **Stop and think**
@@ -657,15 +708,18 @@ Talk with your neighbor about the graphs!
         
 -   What else would you like to know? 
 
+## Customize your own graphs! 
 
-## Make your own graph of any county! 
+In the next section section, you'll have the options to make more air quality graphs with lots of customizations. You'll be able to make [another tile plot and choose your own location](#sec-tilemylocation) or [make a scatterplot of AQI over time](#sec-scatterplot). 
+
+## Make a tile plot of any county! {#sec-tilemylocation}
 
 What if you wanted to look at the air quality data for another place? You'll be able to do that below.
 
 This data is also [from the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI), but it has all the counties in the US!
 
 
-### Choose a county
+### Choose a county {#sec-choosecounty}
 
 First, you'll need to choose a county that you want to graph. 
 
@@ -676,7 +730,15 @@ Here are your options, organized by state. Click through them and find the count
 
 ```{r}
 #| output: true
-#| #| echo: false
+#| echo: false
+#| eval: false
+
+library(downloader)
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
+download(url, dest="dataset.zip", mode="wb") 
+usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
+  read.csv()
+
 library(DT)
 library(knitr)
 usa_aqi_data|>
@@ -692,17 +754,20 @@ usa_aqi_data|>
 ```
 :::
 
-### Create a graph
+### Create a tile plot
 
-Now, you'll tell the computer which county you'd like to graph. 
+Now, you'll tell the computer which county you chose.
 
 **Important** make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well. 
 
-**Type** the county name in the code chunk below. Replace the red line with the county but DON'T delete the quotes `""`. 
 
 ::: panel-tabset 
 
 ## Code editor
+
+**Type** your county name in the code chunk below. Replace the red line with the county but DON'T delete the quotes `""`. 
+
+**Press** Run Code
 
 ```{webr-r}
 myCounty = "__________"
@@ -736,29 +801,217 @@ myColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')
 aqi_colors<- setNames(object=myColors, nm=colLabels)
 
 
-usa_aqi_data|>
+myCountyData<- usa_aqi_data|>
   filter(county.Name==myCounty) |>
   mutate(Year=format(as.Date(Date), "%Y"),
-        Month = month(Date),
-         DOY = yday(Date), 
-         Day = weekdays(Date))|> 
-  mutate(Category = factor(Category, levels= colLabels)) |>
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels)) 
   
-  ggplot(aes(x = DOY, y = Year, fill = Category))+
+  ggplot(myCountyData, aes(x = DOY, y = Year, fill = Category))+
   geom_tile()+
-  scale_y_reverse()+
+#  scale_y_reverse()+
   scale_fill_manual(values=aqi_colors, drop=FALSE)+
-  labs(x="Day of Year", y="Year", title=paste0("AQI levels for", myCounty)
+  labs(x="Day of Year", y="Year", title=paste0("AQI levels for ", myCounty))
+```
+
+## Troubleshooting
+
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+
+-   Error message: 
+
+    -   Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
+    -   Did you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the "Run code" button.
+    -   Did you spell and capitalize the County name correctly, exactly as it was found in the table of ["States and County Names"?](#sec-choosecounty)
+
+:::
+
+## Create a scatter plot of AQI over time {#sec-scatterplot}
+
+Next, we're going to graph the number of **days per year** when the AQI was above a certain threshold. 
+
+In other words, we'll graph the number of days when the AQI was red or orange or green or whatever level you choose. Then, we'll see how this **data changes over time**, from 2020 to 2023.
+
+To do this, we'll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value. 
+
+**Stop and Think**
+
+Before we start, what do you think the graph might look like? Discuss these questions with your neighbor: 
+
+-   In Portland, do you think the air quality is getting **better** or **worse** since 2000? 
+
+-   If we only look at **Unhealthy** AQI levels (red) in Portland, do you think there will be **more** or **less** total days of unhealthy air quality since 2000?
+
+### Step 1: Choose your county {#sec-scatterplotstep1}
+
+**Important** make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well. 
+
+
+::: panel-tabset 
+
+## Code editor
+
+**Type** your county name in the code chunk below. Replace the red line with the county but DON'T delete the quotes `""`. 
+
+**Press** Run Code
+
+```{webr-r}
+myCounty = "__________"
+
+```
+
+## Example
+
+```{webr-r}
+myCounty = "Multnomah"
+
+```
+:::
+
+### Step 2: Choose which AQI level you want to graph
+
+Now, you can choose which air quality level you'd like to graph. You can focus on any of the following: 
+
+-   "Good"
+-   "Moderate"
+-   "Unhealthy for Sensitive Groups"
+-   "Unhealthy"
+-   "Very Unhealthy"
+-   "Hazardous"
+
+::: panel-tabset
+
+## Code editor
+
+**Type** the level you choose in the code chunk. Replace the red line and be sure to keep the quotes. 
+
+**Press** Run code
+
+```{webr-r}
+myLevel = "_______"
+```
+
+## Example
+
+```{webr-r}
+myLevel = "Unhealthy"
 ```
 
 :::
 
+### Step 3: Choose a color
+
+Now you can choose a color for your points. Here are a few options. Otherwise go to [this link](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) for more options.
+
+-   "red"
+-   "green"
+-   "blue"
+-   "orange"
+-   "pink"
+-   "purple"
+-   "yellow"
+
+::: panel-tabset
+
+## Code editor
+
+**Type** your color name in the code chunk. Replace the red line. Do not use any capitalization and be sure to keep the quotes `""`.
+
+**Press** run code
+
+```{webr-r}
+myColor = "_____"
+
+```
+
+## Example
+
+```{webr-r}
+myColor = "red"
+
+```
+
+:::
+
+### Step 4: Create the graph!
+
+Now you can create your graph! 
+
+::: panel-tabset
+
+## Code editor
+
+**Press** run code
+
+```{webr-r}
+myScatterplotData<- usa_aqi_data|>
+  filter(county.Name==myCounty) |>
+  mutate(Year=format(as.Date(Date), "%Y"),
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels)) |>
+  filter(Category == myLevel)
+
+myScatterplotData |>
+  group_by(Year) |>
+  count() |>
+  
+  ggplot(aes(x=Year, y=n, color=myColor))+
+  geom_point() +
+  labs(title = paste0("Number of days with AQI value ", myLevel, " 2000-2023"),
+       x = "Year",
+       y = paste0("Number of days with AQI value ", myLevel))+
+  scale_x_discrete(breaks = scales::pretty_breaks(n = 10))
+
+```
+
+## Add a line of best fit
+
+Want to add a line of best fit? 
+
+**Press** run code.
+
+```{webr-r}
+myScatterplotData<- usa_aqi_data|>
+  filter(county.Name==myCounty) |>
+  mutate(Year=as.integer(format(as.Date(Date), "%Y")),
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels)) |>
+  filter(Category == myLevel)
+
+myScatterplotData |>
+  group_by(Year) |>
+  count() |>
+  
+  ggplot(aes(x=Year, y=n))+
+  geom_point(color=myColor) +
+  geom_smooth(method='lm', color=myColor)+
+  labs(title = paste0("Number of days with AQI value ", myLevel, " 2000-2023"),
+       x = "Year",
+       y = paste0("Number of days with AQI value ", myLevel))+
+  scale_x_discrete(breaks = scales::pretty_breaks(n = 10))
+
+```
+
+## Troubleshooting
+
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running. 
+
+-   Error message: 
+
+    -   Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
+    -   Did you run all the previous code chunks in this section? Return to [Step 1](#sec-scatterplotstep1) and make sure you pressed "Run code" in every step. 
+    -   Did you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press "run code" in that step. 
+
+:::
 
 ## Code Challenge
 
 Want to change your graph up? Follow the steps below to edit your graph even more!
 
-### Step 1: Choose your location
+### Step 1: Choose your location {#sec-challengestep1}
 
 First, you'll tell the computer which county you'd like to graph. 
 
@@ -804,6 +1057,32 @@ xvar = 'DOY'
 
 :::
 
+### Step 3: Add labels
+
+Now let's add labels to your tile plot. 
+
+Type in names for your labels below. Replace the red lines and keep the quotes `""`. 
+
+The `xlabel` is the label for the bottom axis. 
+
+The `ylabel` is the label for the left axis. 
+
+The `title` goes on the top of the graph. 
+
+**Type** your labels below. 
+
+**Press** run code.
+
+```{webr-r}
+xlabel = "_____"
+
+ylabel = "_____"
+
+title = "_____"
+
+```
+
+
 ### Step 4: Choose your category levels
 
 The EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the "good" category to be smaller. Here, you have the option to define those categories. 
@@ -829,26 +1108,132 @@ myColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')
 aqi_colors<- setNames(object=myColors, nm=colLabels)
 
 
-usa_aqi_data|>
+myCountyData<- usa_aqi_data|>
   filter(county.Name==myCounty) |>
   mutate(Year=format(as.Date(Date), "%Y"),
-        Month = month(Date),
-         DOY = yday(Date), 
-         Day = weekdays(Date))|> 
-  mutate(Category = factor(Category, levels= colLabels)) |>
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels))
   
-  ggplot(aes_string(x = xvar, y = "Year", fill = "Category"))+
+  ggplot(myCountyData, aes_string(x = xvar, y = "Year", fill = "Category"))+
   geom_tile()+
-  scale_y_reverse()+
   scale_fill_manual(values=aqi_colors, drop=FALSE)+
-  labs(x=xlabel, y="Year", title=paste0("AQI levels for", myCounty)
+  labs(x=xlabel, y="Year", title=paste0("AQI levels for ", myCounty))
 ```
 
 ## Learn more
 
 I'll get to this :) 
 
+## Troubleshooting
+
+-   Run Code button not working: Make sure you wait until the green circle at the very top of this page says "Ready!" We have some code running in the background and the green circle indicates it has finished running.   ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png){fig-align="right" fig-alt="Bonneville Dam arial view" height="0.5in"} 
+
+-   Error message: 
+
+    -   Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
+    -   Did you run all the previous code chunks in this section? Return to [Step 1](#sec-challengestep1) and make sure you pressed "Run code" in every step. 
+    -   Did you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press "run code" in that step. 
+
 :::
 
+## Other options to learn more
 
+After graphing, you may have some more questions! In the tabs below, there is some code you can run to learn more about your data and hopefully answer some of those questions. 
+
+::: panel-tabset
+
+## Look at your raw data
+
+::: {.callout-note collapse="true"}
+
+## Open this blue box first!
+
+**Press** run code to see your raw data! 
+
+It might be very large, so you can click the blue rectangle again to close the data. 
+
+```{webr-r}
+myCountyData
+```
+
+:::
+
+## View multiple counties at once
+
+Want to combine county data? 
+
+**Replace** the red lines with your county names! Make sure you enclose them with quotes `""` and spell their names properly (refer back to [this table](#sec-choosecounty)).
+
+**Press** run code
+
+```{webr-r}
+myCounty = "Clackamas" 
+myCounty2 = "Multnomah"
+
+```
+
+Now, let's make the graph again:
+
+```{webr-r}
+
+myCountyData<- usa_aqi_data|>
+  filter(county.Name==myCounty | county.Name==myCounty2) |>
+  mutate(Year=format(as.Date(Date), "%Y"),
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels))
+  
+  ggplot(myCountyData, aes_string(x = xvar, y = "Year", fill = "Category"))+
+  geom_tile()+
+  scale_fill_manual(values=aqi_colors, drop=FALSE)+
+  labs(x=xlabel, y="Year", title=paste0("AQI levels for ", myCounty, " and ", myCounty2))
+```
+
+## Choose year limits
+
+THIS DOESN"T WORK YET... MAYBE WILL NEED TO JUST DELETE
+
+Would you like to focus on a specific set of years? To do this, we'll add limits for the year.
+
+**Type** a year below. Replace the red line. 
+
+**Press** Run code
+
+```{webr-r}
+lowerLimit = "________"
+
+upperLimit = "______"
+
+```
+
+Example: 
+
+```{webr-r}
+lowerLimit = "2015"
+
+upperLimit = "2023"
+
+```
+
+Now, we can run the graph code again: 
+
+**Press** run code
+
+```{webr-r}
+
+myCountyData<- usa_aqi_data|>
+  filter(county.Name==myCounty) |>
+  mutate(Year=format(as.Date(Date), "%Y"),
+        Month = factor(month(Date)),
+         DOY = yday(Date))|> 
+  mutate(Category = factor(Category, levels= colLabels))
+  
+  ggplot(myCountyData, aes_string(x = xvar, y = "Year", fill = "Category"))+
+  geom_tile()+
+  scale_fill_manual(values=aqi_colors, drop=FALSE)+
+  labs(x=xlabel, y="Year", title=paste0("AQI levels for ", myCounty))
+```
+
+:::
 

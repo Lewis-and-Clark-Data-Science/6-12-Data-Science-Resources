@@ -50,3 +50,7 @@ rsconnect/
 project.Rproj
 
 6-12-Data-Science-Resources.Rproj
+
+.R_files_NOT_github/
+
+R_files_NOT_github
