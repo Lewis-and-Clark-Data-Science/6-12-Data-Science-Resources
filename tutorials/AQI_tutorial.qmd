@@ -454,21 +454,34 @@ The programming language R can also do very complicated things, like work with l
 
 ## Our data
 
-::: columns
-::: {.column width="70%"}
+::: {layout="[15,-2,10,10]"}
 
 Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot). It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
 
-:::
-:::{.column width="30%"}
+![from.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="right" fig-alt="aqi index" height="1.5in" fig-cap-location="margin"}
 
-![from.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="right" fig-alt="aqi index" height=".5in"}
-:::
+![from.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/portlandla.png){fig-align="left" fig-alt="Portland LA map" height="3in"}
 :::
 
-![from.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/portlandla.png){fig-align="right" fig-alt="Portland LA map" height="3in"}
+::: columns
+::: {.column width="50%"}
 
-We're focusing on Portland and Los Angeles air quality data. Click the blue box below to view the data. 
+Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot). It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
+
+We're focusing on Portland and Los Angeles air quality data. 
+
+:::
+:::{.column width="50%"}
+
+![from.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="right" fig-alt="aqi index" height="1.5in" fig-cap-location="margin"}
+
+![from.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/portlandla.png){fig-align="left" fig-alt="Portland LA map" height="3in"}
+
+:::
+:::
+
+
+Click the blue box below to view the data. 
 
 ::: {.callout-note collapse="true"}
 ## Air quality raw data Portland
