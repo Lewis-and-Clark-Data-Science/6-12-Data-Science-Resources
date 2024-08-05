@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function scrollToElement(element) {
         const elementTop = element.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-            top: elementTop - headerHeight,
+            top: elementTop,
             behavior: "smooth"
         });
     }
@@ -160,9 +160,19 @@ Part 2 will build off of the graphs created in Part 1 and allow you to customize
 
 ### Our data set
 
+::: columns
+::: {.column width="60%"}
+
 This tutorial uses air quality data from [the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a [link to the data](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) and here is a [link to more information](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards) about the data. 
 
 The data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial. 
+
+:::
+::: {.column width="40%"}
+
+![From.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/airqualityimage.png){fig-align="center" fig-alt="air quality images of 6 cities" height="3in" fig-cap-location="margin"}
+:::
+:::
 
 <div class="tutorial-part" style="display: block;">
 
