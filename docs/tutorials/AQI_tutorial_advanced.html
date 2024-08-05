@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Written by Finn, edited for web version by Olivia">
 
-<title>6-12 Data Science Resources - Climate Change Data Tutorial</title>
+<title>6-12 Data Science Resources - AQI Part 2 - Customize Graphs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,6 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -392,7 +392,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-1","classes":"","fig-width":7,"autorun":"true","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"setup"},"code":"library(tidyverse)"},{"id":2,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-2","classes":"","fig-width":7,"autorun":"true","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"setup"},"code":"url<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/owid_co2_data_2.csv\"\ndownload.file(url, \"co2Data.csv\")\n#Pulls data that has been loaded into the github repo. \n\nco2Data<- read_csv(\"co2Data.csv\")\n\nco2Data<-co2Data%>%\n  filter(country==\"World\")\n#Filter out individual countries, just have world data\n\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/temp_data.csv\"\ndownload.file(url, \"data.csv\")\n#Pulls data that has been loaded into the Olivia-Test github repo. \n\ntempData<- read_csv(\"data.csv\")"},{"id":3,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-3","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"#Type your code here! \n"},{"id":4,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-4","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"co2Data"},{"id":5,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-5","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"ggplot(data=co2Data, mapping=aes(x=year, y=co2))+\n  geom_line(color=\"#a20000\")+\n  theme_light()+\n  guides(color=F)+\n  labs(title=\"CO2 Emission (World) Over Time\", x=\"Year\", \n       y=\"CO2 Emissions (Million Tons)\")"},{"id":6,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-6","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":""},{"id":7,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-7","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"ggplot(data=tempData, mapping=aes(x=Year, y=Anomaly))+\n  geom_line(color=\"purple\")+\n  theme_light()+\n  labs(title=\"Temp. Change Over Time\", x=\"Year\", \n       y=\"Temperature Difference from 1900 Average (Celcius)\")"},{"id":8,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"auto-run":"TRUE","out-height":"","label":"unnamed-chunk-8","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"tempData<-tempData%>%rename(year=Year)\njoinedData<-co2Data%>%full_join(tempData)\n\nggplot(data=joinedData, mapping=aes(x=Anomaly, y=co2))+\n  geom_line(color=\"purple\")+\n  theme_light()+\n  labs(title=\"Temperature and co2 Emissions\", x=\"Temperature Difference from 1900 Average (Celcius)\", \n       y=\"Co2 Emissions (Million Tons)\")"},{"id":9,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-9","classes":"","fig-width":7,"autorun":"true","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"setup"},"code":"#This uses the data to make new columns that adds to get the entire energy production of the world, then another column that subtracts that number from total co2\n\n#Don't worry about what this does\nco2DataBar<-co2Data%>%\n  group_by(year)%>%\n  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%>%\n  mutate(co2_no_energy=co2-co2_from_energy)\n\n#Filter data to get just the columns we need and make it graphable, we don't need to understand what this does either\nco2DataFiltered<-co2DataBar%>%select(year, co2_no_energy, co2_from_energy)%>%\n  filter(year>=2019)%>%\n  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%>%\n  mutate(year_chr=as.character(year))\nco2DataFiltered"},{"id":10,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-10","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"ggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+\n  geom_col(position=\"dodge\")+\n  labs(title=\"CO2 Production from Energy Vs. Other Sources\", x=\"Year\", y=\"CO2 In Tons\")+\n  scale_fill_discrete(name=\"CO2 Source\", labels=c(\"CO2 from Energy (coal, gas, and oil)\", \"All Other Sources of CO2\"))+\n  theme_light()"},{"id":11,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-11","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"XVar<-\"_____\"\nYVar<-\"_____\""},{"id":12,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-12","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"XVar<-\"population\"\nYVar<-\"co2\""},{"id":13,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-13","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"Title<-\"_________\"\nXLabel<-\"_________\"\nYLabel<-\"_________\""},{"id":14,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-14","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"Title<-\"Population Vs. CO2\"\nXLabel<-\"population\"\nYLabel<-\"CO2 Emissions\""},{"id":15,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-15","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+\n  geom_point(color=\"aquamarine4\")+\n  labs(x=XLabel, y=YLabel, title=Title)+\n  theme_light()\n "},{"id":16,"options":{"warning":"true","output":"true","out-width":"700px","editor-font-scale":"1","message":"true","editor-max-height":"","read-only":"false","comment":"","fig-height":5,"out-height":"","label":"unnamed-chunk-16","classes":"","fig-width":7,"autorun":"false","editor-word-wrap":"true","results":"markup","editor-quick-suggestions":"false","fig-cap":"","dpi":72,"context":"interactive"},"code":"ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+\n  geom_point(color=\"aquamarine4\")+\n  labs(x=XLabel, y=YLabel, title=Title)+\n  theme_light()+\n  lims(x=c(2000,2020))"}];
+globalThis.qwebrCellDetails = [{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-1","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"##| context: setup\nlibrary(tidyverse)\n\n#Download USA AQI data from 2000 to 2023 from a file stored in github\nurl<- \"https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip\"\ndownload.file(url, dest=\"dataset.zip\", mode=\"wb\") \nusa_aqi_data<- unzip(\"dataset.zip\", exdir = \"./\")|>\n  read.csv()\n#Note: in the future you could probably just use the link right from this website instead of going through github https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2023.zi\n\n#Create global color labels for each category\ncolLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')\n\nmyColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')\n\naqi_colors<- setNames(object=myColors, nm=colLabels)","id":1},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-2","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"__________\"","id":2},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-3","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"Multnomah\"","id":3},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-4","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCountyData<- usa_aqi_data|>\n  filter(county.Name==myCounty)|>\n  mutate(Year=as.double(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels)) \n  \n  ggplot(myCountyData, aes(x = DOY, y = Year, fill = Category))+\n  geom_tile()+\n  scale_y_reverse()+\n  scale_fill_manual(values=aqi_colors, drop=FALSE)+\n  labs(x=\"Day of Year\", y=\"Year\", title=paste0(\"AQI levels for \", myCounty))","id":4},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-5","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"______\" \nmyCounty2 = \"______\"","id":5},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-6","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCountyData<- usa_aqi_data|>\n  filter(county.Name==myCounty | county.Name==myCounty2) |>\n  mutate(Year=as.double(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels))\n  \nggplot(myCountyData, aes(x = DOY, y = Year, fill = Category))+\n  geom_tile()+\n  scale_y_reverse()+\n  scale_fill_manual(values=aqi_colors, drop=FALSE)+\n  labs(x=xlabel, y=\"Year\", title=paste0(\"AQI levels for \", myCounty, \" and \", myCounty2))","id":6},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-7","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"__________\"","id":7},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-8","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"Multnomah\"","id":8},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-9","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myLevel = \"_______\"","id":9},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-10","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myLevel = \"Unhealthy\"","id":10},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-11","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myColor = \"_____\"","id":11},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-12","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myColor = \"red\"","id":12},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-13","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myScatterplotData<- usa_aqi_data|>\n  filter(county.Name==myCounty) |>\n  mutate(Year=as.integer(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels)) |>\n  filter(Category == myLevel)\n\nmyScatterplotData |>\n  group_by(Year) |>\n  count() |>\n  \n  ggplot(aes(x=Year, y=n, color=myColor))+\n  geom_point() +\n  labs(title = paste0(\"Number of days with AQI value \", myLevel, \" 2000-2023\"),\n       x = \"Year\",\n       y = paste0(\"Number of days with AQI value \", myLevel))+\n  scale_x_continuous(breaks = seq(2000,2023, by=2))","id":13},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-14","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myScatterplotData<- usa_aqi_data|>\n  filter(county.Name==myCounty) |>\n  mutate(Year=as.integer(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels)) |>\n  filter(Category == myLevel)\n\nmyScatterplotData |>\n  group_by(Year) |>\n  count() |>\n  \n  ggplot(aes(x=Year, y=n))+\n  geom_point(color=myColor) +\n  geom_smooth(method='lm', color=myColor)+\n  labs(title = paste0(\"Number of days with AQI value \", myLevel, \" 2000-2023\"),\n       x = \"Year\",\n       y = paste0(\"Number of days with AQI value \", myLevel))+\n  scale_x_continuous(breaks = seq(2000,2023, by=2))","id":14},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-15","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"______\" \nmyCounty2 = \"______\"","id":15},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-16","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myScatterplotData<- usa_aqi_data|>\n  filter(county.Name==myCounty | county.Name==myCounty2) |>\n  mutate(Year=as.integer(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels)) |>\n  filter(Category == myLevel)\n\nmyScatterplotData |>\n  group_by(Year, county.Name) |>\n  count() |>\n  \n  ggplot(aes(x=Year, y=n, color=county.Name))+\n  geom_point() +\n  geom_smooth(method='lm')+\n  labs(title = paste0(\"Days with AQI value \", myLevel, \" 2000-2023 in \", myCounty, \" and \", myCounty2),\n       x = \"Year\",\n       y = paste0(\"Number of days with AQI value \", myLevel))+\n  scale_x_continuous(breaks = seq(2000,2023, by=2))","id":16},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-17","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"__________\"\n\nmyCountyData<- usa_aqi_data|>\n  filter(county.Name==myCounty)","id":17},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-18","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"Multnomah\"\n\nmyCountyData<- usa_aqi_data|>\n  filter(county.Name==myCounty)","id":18},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-19","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCountyData","id":19},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-20","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"__________\"","id":20},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-21","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"myCounty = \"Multnomah\"","id":21},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-22","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"xvar = 'Month'","id":22},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-23","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"xvar = 'DOY'","id":23},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-24","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"xlabel = \"_____\"\n\nylabel = \"Year\"\n\ntitle = \"_____\"","id":24},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-25","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"xlabel = \"Month\"\n\nylabel = \"Year\"\n\ntitle = \"AQI Levels for Multnomah County\"","id":25},{"options":{"context":"interactive","warning":"true","out-width":"700px","output":"true","autorun":"false","editor-quick-suggestions":"false","fig-width":7,"dpi":72,"editor-word-wrap":"true","read-only":"false","label":"unnamed-chunk-26","results":"markup","classes":"","fig-cap":"","comment":"","editor-max-height":"","message":"true","fig-height":5,"out-height":"","editor-font-scale":"1"},"code":"colLabels <- c('Good', 'Moderate', 'Unhealthy','Unhealthy for Sensitive Groups', 'Very Unhealthy', 'Hazardous')\n\nmyColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')\n\naqi_colors<- setNames(object=myColors, nm=colLabels)\n\n\nmyCountyData<- usa_aqi_data|>\n  filter(county.Name==myCounty) |>\n  mutate(Year=as.double(format(as.Date(Date), \"%Y\")),\n        Month = factor(month(Date)),\n         DOY = yday(Date))|> \n  mutate(Category = factor(Category, levels= colLabels))\n  \n  ggplot(myCountyData, aes_string(x = xvar, y = \"Year\", fill = \"Category\"))+\n  geom_tile()+\n  scale_y_reverse()+\n  scale_fill_manual(values=aqi_colors, drop=FALSE)+\n  labs(x=xlabel, y=\"Year\", title=paste0(\"AQI levels for \", myCounty))","id":26}];
 
 </script>
 <script type="module">
@@ -1594,7 +1594,7 @@ globalThis.qwebrExecuteCode = async function (
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -1690,26 +1690,78 @@ globalThis.qwebrExecuteCode = async function (
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/AQI_tutorial.html">AQI tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/AQI_tutorial_advanced.html">AQI Part 2 - Customize Graphs</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../tutorials/AQI_tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AQI tutorials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/AQI_tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AQI Part 1 - Introduction to Data Science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../tutorials/AQI_tutorial_advanced.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">AQI Part 2 - Customize Graphs</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#climate-change-data-visualization" id="toc-climate-change-data-visualization" class="nav-link active" data-scroll-target="#climate-change-data-visualization">Climate Change Data Visualization</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#our-data" id="toc-our-data" class="nav-link" data-scroll-target="#our-data">Our Data</a>
-  <ul class="collapse">
-  <li><a href="#where" id="toc-where" class="nav-link" data-scroll-target="#where">Where??</a></li>
+  <li><a href="#our-data-set" id="toc-our-data-set" class="nav-link" data-scroll-target="#our-data-set">Our data set</a></li>
   </ul></li>
-  <li><a href="#our-first-graph" id="toc-our-first-graph" class="nav-link" data-scroll-target="#our-first-graph">Our First Graph</a></li>
-  <li><a href="#temperature-data" id="toc-temperature-data" class="nav-link" data-scroll-target="#temperature-data">Temperature Data</a></li>
-  <li><a href="#co2-sources" id="toc-co2-sources" class="nav-link" data-scroll-target="#co2-sources">CO2 Sources</a></li>
-  <li><a href="#scatter-plot-generator" id="toc-scatter-plot-generator" class="nav-link" data-scroll-target="#scatter-plot-generator">Scatter Plot Generator!</a></li>
+  <li><a href="#customizing-your-graphs" id="toc-customizing-your-graphs" class="nav-link" data-scroll-target="#customizing-your-graphs">Customizing your graphs!</a></li>
+  <li><a href="#sec-tilemylocation" id="toc-sec-tilemylocation" class="nav-link" data-scroll-target="#sec-tilemylocation">Make a tile plot of any county!</a>
+  <ul class="collapse">
+  <li><a href="#sec-choosecounty" id="toc-sec-choosecounty" class="nav-link" data-scroll-target="#sec-choosecounty">Choose a county</a></li>
+  <li><a href="#create-a-tile-plot" id="toc-create-a-tile-plot" class="nav-link" data-scroll-target="#create-a-tile-plot">Create a tile plot</a></li>
+  </ul></li>
+  <li><a href="#sec-scatterplot" id="toc-sec-scatterplot" class="nav-link" data-scroll-target="#sec-scatterplot">Create a scatter plot of AQI over time</a></li>
+  <li><a href="#sec-rawdata" id="toc-sec-rawdata" class="nav-link" data-scroll-target="#sec-rawdata">View raw data</a>
+  <ul class="collapse">
+  <li><a href="#choose-a-county" id="toc-choose-a-county" class="nav-link" data-scroll-target="#choose-a-county">Choose a county</a></li>
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data">Raw data</a></li>
+  </ul></li>
+  <li><a href="#code-challenge" id="toc-code-challenge" class="nav-link" data-scroll-target="#code-challenge">Code Challenge</a>
+  <ul class="collapse">
+  <li><a href="#sec-challengestep1" id="toc-sec-challengestep1" class="nav-link" data-scroll-target="#sec-challengestep1">Step 1: Choose your location</a></li>
+  <li><a href="#step-2-choose-your-variables" id="toc-step-2-choose-your-variables" class="nav-link" data-scroll-target="#step-2-choose-your-variables">Step 2: Choose your variables</a></li>
+  <li><a href="#step-3-add-labels" id="toc-step-3-add-labels" class="nav-link" data-scroll-target="#step-3-add-labels">Step 3: Add labels</a></li>
+  <li><a href="#step-4-choose-your-category-levels" id="toc-step-4-choose-your-category-levels" class="nav-link" data-scroll-target="#step-4-choose-your-category-levels">Step 4: Choose your category levels</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -2001,21 +2053,15 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorials/AQI_tutorial.html">AQI tutorials</a></li><li class="breadcrumb-item"><a href="../tutorials/AQI_tutorial_advanced.html">AQI Part 2 - Customize Graphs</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Climate Change Data Tutorial</h1>
+<h1 class="title">AQI Part 2 - Customize Graphs</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Written by Finn, edited for web version by Olivia </p>
-          </div>
-  </div>
     
   
     
@@ -2026,206 +2072,514 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="climate-change-data-visualization" class="level1">
-<h1>Climate Change Data Visualization</h1>
+<script>
+console.log("Script loaded");
+
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const nextButton = document.getElementById("next-button");
+    const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+    const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
+
+    // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
+
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";
+        }
+    });
+
+    // Function to scroll to the top of the element, accounting for a fixed header
+    function scrollToElement(element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: elementTop - headerHeight,
+            behavior: "smooth"
+        });
+    }
+
+    // Function to show a specific part
+    function showPart(index) {
+        if (index >= 0 && index < parts.length) {
+            parts.forEach((part, idx) => {
+                part.style.display = (idx === index) ? "block" : "none";
+            });
+            scrollToElement(parts[index]);
+            currentPartIndex = index;
+        }
+    }
+    
+     // Function to show all parts up to a specific index
+    function showPartsUpTo(index) {
+        parts.forEach((part, idx) => {
+            if (idx <= index) {
+                part.style.display = "block";
+            }
+        });
+        scrollToElement(parts[index]);
+        currentPartIndex = index;
+    }
+
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                showPartsUpTo(currentPartIndex);
+            } else {
+                alert("End of tutorial");
+            }
+        });
+    });
+
+    // Listen for hash changes to navigate to the correct section
+    window.addEventListener("hashchange", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetPart = document.querySelector(hash);
+            if (targetPart) {
+                const targetIndex = Array.prototype.indexOf.call(parts, targetPart);
+                showPartsUpTo(targetIndex);
+                buttons.forEach((button, idx) => {
+                  if (idx < targetIndex) {
+                  button.style.display="none";}});
+            }
+        }
+    });
+
+    // Check the URL hash on page load
+    const initialHash = window.location.hash;
+    if (initialHash) {
+        const initialTarget = document.querySelector(initialHash);
+        if (initialTarget) {
+          const intialIndex=Array.prototype.indexOf.call(parts, initialTarget);
+            showPartsUpTo(initalIndex);
+            buttons.forEach((button, idx) => {
+                if (idx < initialIndex) {
+                    button.style.display = "none";
+                }
+            });
+        }
+    }
+    // Add click event listener to the new next button
+    if (nextButton) {
+        nextButton.addEventListener("click", function() {
+            window.location.href = "https://www.example.com"; 
+        });
+    }
+});
+
+</script>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Welcome to this data science tutorial! We’ll be using R to look at climate change data.</p>
-<p>R is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!</p>
-<p>Want to try using R?</p>
-<p>In the code box right below this, type in <code>6+3</code> and <strong>press</strong> the green play button:</p>
-<div id="qwebr-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Do you see the answer <code>9</code> that popped out right under your code? Pretty cool!</p>
-<p>The gray and white box with the green arrow and “run code” button is called a code chunk. You can type in “R commands” into that box and it will output the answer underneath the code chunk.</p>
-<section id="our-data" class="level2">
-<h2 class="anchored" data-anchor-id="our-data">Our Data</h2>
-<p>Today we’ll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.</p>
-<p>We’ve preloaded a dataset into this tutorial. This was found</p>
-<section id="where" class="level3">
-<h3 class="anchored" data-anchor-id="where">Where??</h3>
-<p>Let’s start by taking a look at the data set. <strong>Press</strong> the green play button below and see what happens!</p>
-<div id="qwebr-insertion-location-4"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You should see 10 rows of data and a lot of random words. We won’t go into what all of it means, but here’s a quick overview:</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Welcome to <strong>Part 2 of the Air Quality Data Science Tutorials</strong>! If you have not done Part 1 yet, <a href="../tutorials/AQI_tutorial.html">click here</a> to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.</p>
+<p>Part 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.</p>
+<section id="our-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="our-data-set">Our data set</h3>
+<p>This tutorial uses air quality data from <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">the EPA</a> ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">link to the data</a> and here is a <a href="https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards">link to more information</a> about the data.</p>
+<p>The data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.</p>
+</section>
+</section>
+<section id="customizing-your-graphs" class="level2 tutorial-part" style="display: block;">
+<h2 class="anchored" data-anchor-id="customizing-your-graphs">Customizing your graphs!</h2>
+<p>In this tutorial, you can create graphs with various customizations. Here are your options:</p>
 <ul>
-<li><p>The words on the top (country, year, iso_code, population, etc) are the different <strong>variables</strong> in our data set</p></li>
-<li><p>Underneath those words are the <strong>type of variable</strong>, which we’ll ignore right now.</p></li>
-<li><p>Below that, you’ll see some numbers and NA values. Those are different values for each variable.</p></li>
+<li><p><a href="#sec-tilemylocation">make another tile plot and choose your own location(s)</a></p></li>
+<li><p><a href="#sec-scatterplot">make a scatterplot of AQI over time for any location(s)</a></p></li>
+<li><p><a href="#sec-rawdata">view raw data for any county</a></p></li>
 </ul>
-<p>Our data is called <code>co2Data</code>. If you type <code>co2Data</code> into any code chunk, you’ll be able to see our data.</p>
+<p>Choose one of the options above, or click “continue” to do all of them!</p>
+<button id="continue-button" class="btn btn-primary float-start me-2">
+Continue
+</button>
 </section>
-</section>
-<section id="our-first-graph" class="level2">
-<h2 class="anchored" data-anchor-id="our-first-graph">Our First Graph</h2>
-<p>We can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won’t be able to cover all the details of how to make a graph, but there’s lots of resources online you can find to learn more. We use something called <code>ggplot</code> to make graphs in this tutorial.</p>
-<p>First, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!</p>
-<p><strong>Press</strong> Run Code on the code chunk below!</p>
-<div id="qwebr-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="temperature-data" class="level2">
-<h2 class="anchored" data-anchor-id="temperature-data">Temperature Data</h2>
-<p>What if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how <em>different</em> the temperature each year is from the average in 1900.</p>
-<p>In the code chunk below type <code>tempData</code> and click “run code” to see the new data set.</p>
-<div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>You should see 2 columns: one called <code>Year</code> and one called <code>Anomaly</code>. The Anomaly column tells us how <em>different</em> the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.</p>
-<p>Let’s graph this! <strong>Press</strong> “run code” and see what happens!</p>
-<div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Now, what if we combine our co2 data and our temperature data?</p>
-<p>Lets put these two data sets together matching up the years. Then, we can make a graph of temperature anomaly and co2 levels. Click “run code”.</p>
-<div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="co2-sources" class="level2">
-<h2 class="anchored" data-anchor-id="co2-sources">CO2 Sources</h2>
-<p>Now what if we ask where most of that CO2 we’re emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we’ve edited some of our data in the background to make it easier to graph with. Our new edited data is called <code>co2DataFiltered</code>.</p>
-<div id="qwebr-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Let’s see what a graph looks like! Click “run code”.</p>
-<div id="qwebr-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<section id="sec-tilemylocation" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="sec-tilemylocation">Make a tile plot of any county!</h2>
+<p>What if you wanted to look at the air quality data for another place? You’ll be able to do that below.</p>
+<p>This data is also <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">from the EPA</a>, but it has all the counties in the US!</p>
+<section id="sec-choosecounty" class="level3">
+<h3 class="anchored" data-anchor-id="sec-choosecounty">Choose a county</h3>
+<p>First, you’ll need to choose a county that you want to graph.</p>
+<p>Here are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Optional: Open this if you want to learn more about how the code works
+States and County Names
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>GGPlot is an awesome tool you can use to create plots! There’s lots of tutorials online that I recommend checking out. But for now, here’s a brief explanation of how our code works. Below, I’ve copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a <code>#</code> (called a comment) and are gray. See if you can find out which line creates the title of the graph!</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Tell R what data to use and what the x and y values are</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>co2DataFiltered, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>year_chr, <span class="at">y=</span>value, <span class="at">fill=</span>name))<span class="sc">+</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Select what kind of graph we're making</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position=</span><span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Label the graph to make it easy to read</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"CO2 Production from Energy Vs. Other Sources"</span>, <span class="at">x=</span><span class="st">"Year"</span>, <span class="at">y=</span><span class="st">"CO2 In Tons"</span>) <span class="sc">+</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">#add a legend to show what each color means </span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">name=</span><span class="st">"CO2 Source"</span>, <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"CO2 from Energy"</span>, <span class="st">"All Other Sources of CO2"</span>)) <span class="sc">+</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="co">#make it pretty :)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_light</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Were you able to tell which line created the title??</p>
-<p>If you want even more code to look at, keep reading! You can also feel free to skip to the next section called <strong>Scatter Plot Generator</strong></p>
-<p>Below, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the <code>co2Data</code> and edits it to make it easier to graph with.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Creates new columns called "co2_from_energy" that includes co2 data from coal, gas, oil. </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#Then creates a column called "co2_no_energy" that is the rest of the co2 production</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>co2DataBar<span class="ot">&lt;-</span>co2Data<span class="sc">%&gt;%</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year)<span class="sc">%&gt;%</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">co2_from_energy=</span><span class="fu">sum</span>(coal_co2, gas_co2, oil_co2, <span class="at">na.rm=</span>T))<span class="sc">%&gt;%</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">co2_no_energy=</span>co2<span class="sc">-</span>co2_from_energy)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Filter data to get just the columns we need and make it graphable</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#Tells R to only use "year", "co2_no_energy" and "co2_from_energy" in the graph. </span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>co2DataFiltered<span class="ot">&lt;-</span>co2DataBar<span class="sc">%&gt;%</span><span class="fu">select</span>(year, co2_no_energy, co2_from_energy)<span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="co">#Chooses only years above 2019</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year<span class="sc">&gt;=</span><span class="dv">2019</span>)<span class="sc">%&gt;%</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="co">#A few final adjustments to make the graph easier to use</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols=</span><span class="fu">c</span>(co2_no_energy, co2_from_energy))<span class="sc">%&gt;%</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year_chr=</span><span class="fu">as.character</span>(year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+
 </div>
 </div>
 </div>
 </section>
-<section id="scatter-plot-generator" class="level2">
-<h2 class="anchored" data-anchor-id="scatter-plot-generator">Scatter Plot Generator!</h2>
-<p>Now you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven’t been answered by the infographics and graphs you’ve already seen, take a look at the data and see what you can ask to try and learn more.</p>
-<p>First, decide which variable you want to learn about. You can choose any variable from <code>co2Data</code>. Here are some options:</p>
-<ul>
-<li>population</li>
-<li>year</li>
-<li>cement_co2</li>
-<li>co2</li>
-<li>consumption_co2</li>
-<li>cumulative_co2</li>
-<li>energy_per_gdp</li>
-<li>land_use_change_co2</li>
-<li>gas_co2</li>
-<li>coal_co2</li>
-<li>cement_co2</li>
-<li>land_use_change_co2</li>
-<li>methane</li>
-<li>temperature_change_from_co2</li>
-</ul>
-<p>Choose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.</p>
-<p>Then click “run code”!</p>
+<section id="create-a-tile-plot" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-tile-plot">Create a tile plot</h3>
+<p>Now, you’ll tell the computer which county you chose.</p>
+<p><strong>Important</strong> make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Example</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Example</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="qwebr-insertion-location-11"></div>
+<p><strong>Type</strong> your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes <code>""</code>.</p>
+<p><strong>Press</strong> Run Code</p>
+<div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+<p>Now we can graph!</p>
+<p><strong>Press</strong> run code below.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">View multiple counties at once</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Troubleshooting</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p><strong>Press</strong> run code</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Want to combine county data?</p>
+<p><strong>Replace</strong> the red lines with your county names! Make sure you enclose them with quotes <code>""</code> and spell their names properly (refer back to <a href="#sec-choosecounty">this table</a>).</p>
+<p><strong>Press</strong> run code</p>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Example</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>myCounty <span class="ot">=</span> <span class="st">"Clackamas"</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>myCounty2 <span class="ot">=</span> <span class="st">"Multnomah"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, let’s make the graph again:</p>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<ul>
+<li><p>Run Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. <img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png" class="quarto-figure quarto-figure-right" style="height:0.5in" alt="webr ready image"></p></li>
+<li><p>Error message:</p>
+<ul>
+<li>Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.</li>
+<li>Did you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the “Run code” button.</li>
+<li>Did you spell and capitalize the County name correctly, exactly as it was found in the table of <a href="#sec-choosecounty">“States and County Names”?</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Click “Continue” to make a scatter plot of the AQI over time in any location!</p>
+<button id="continue-button" class="btn btn-primary float-start me-2">
+Continue
+</button>
+</section>
+</section>
+<section id="sec-scatterplot" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="sec-scatterplot">Create a scatter plot of AQI over time</h2>
+<p>Next, we’re going to graph the number of <strong>days per year</strong> when the AQI was above a certain threshold.</p>
+<p>In other words, we’ll graph the number of days when the AQI was red or orange or green or whatever level you choose. Then, we’ll see how this <strong>data changes over time</strong>, from 2020 to 2023.</p>
+<p>To do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.</p>
+<p><strong>Stop and Think</strong></p>
+<p>Before we start, what do you think the graph might look like? Discuss these questions with your neighbor:</p>
+<ul>
+<li><p>In Portland, do you think the air quality is getting <strong>better</strong> or <strong>worse</strong> since 2000?</p></li>
+<li><p>If we only look at <strong>Unhealthy</strong> AQI levels (red) in Portland, do you think there will be <strong>more</strong> or <strong>less</strong> total days of unhealthy air quality since 2000?</p></li>
+</ul>
+<button id="continue-button" class="btn btn-primary float-start me-2">
+Continue
+</button>
+</section>
+<div class="tutorial-part" style="display: none;">
+<section id="sec-scatterplotstep1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-scatterplotstep1">Step 1: Choose your county</h3>
+<p><strong>Important</strong> make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<p><strong>Type</strong> your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes <code>""</code>.</p>
+<p><strong>Press</strong> Run Code</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-choose-which-aqi-level-you-want-to-graph" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-choose-which-aqi-level-you-want-to-graph">Step 2: Choose which AQI level you want to graph</h3>
+<p>Now, you can choose which air quality level you’d like to graph. You can focus on any of the following:</p>
+<ul>
+<li>“Good”</li>
+<li>“Moderate”</li>
+<li>“Unhealthy for Sensitive Groups”</li>
+<li>“Unhealthy”</li>
+<li>“Very Unhealthy”</li>
+<li>“Hazardous”</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p><strong>Type</strong> the level you choose in the code chunk. Replace the red line and be sure to keep the quotes.</p>
+<p><strong>Press</strong> Run code</p>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-choose-a-color" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-choose-a-color">Step 3: Choose a color</h3>
+<p>Now you can choose a color for your points. Here are a few options. Otherwise go to <a href="http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf">this link</a> for more options.</p>
+<ul>
+<li>“red”</li>
+<li>“green”</li>
+<li>“blue”</li>
+<li>“orange”</li>
+<li>“pink”</li>
+<li>“purple”</li>
+<li>“yellow”</li>
+</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p><strong>Type</strong> your color name in the code chunk. Replace the red line. Do not use any capitalization and be sure to keep the quotes <code>""</code>.</p>
+<p><strong>Press</strong> run code</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 </div>
 </div>
-<p>Now, let’s add titles and labels to your graph! Again, type your title between the quotation marks. Then click “run code”!</p>
+</section>
+<section id="step-4-create-the-graph" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-create-the-graph">Step 4: Create the graph!</h3>
+<p>Now you can create your graph!</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Example</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false">Add a line of best fit</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-3" role="tab" aria-controls="tabset-6-3" aria-selected="false">Compare two counties</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-4" role="tab" aria-controls="tabset-6-4" aria-selected="false">Troubleshooting</a></li></ul>
 <div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<p><strong>Press</strong> run code</p>
 <div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<p>Want to add a line of best fit?</p>
+<p><strong>Press</strong> run code.</p>
 <div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
-</div>
-</div>
-<p>Finally, run this to see your scatter plot! Click “run code” and if something doesn’t look right, click through the “troubleshooting” tabs to see how to fix it.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Troubleshooting: error message</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false">Troubleshooting - points clustered at the bottom</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div id="tabset-6-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-3-tab">
+<p>Want to overlay 2 scatterplots and compare 2 different counties?</p>
+<p><strong>Replace</strong> the red lines with your county names! Make sure you enclose them with quotes <code>""</code> and spell their names properly (refer back to <a href="#sec-choosecounty">this table</a>).</p>
+<p><strong>Press</strong> run code</p>
 <div id="qwebr-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>Example</strong>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>myCounty <span class="ot">=</span> <span class="st">"Multnomah"</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>myCounty2 <span class="ot">=</span> <span class="st">"Los Angeles"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<p>Did you get an error message in red?</p>
-<ul>
-<li><p>If the graph also displayed and looks right, don’t worry about the error message!</p></li>
-<li><p>If the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.</p>
-<ul>
-<li>Did you put everything in quotes when you defined the variables and labels?</li>
-</ul></li>
-<li><p>You don’t need to edit this code at all, just the code where you define variables and labels</p></li>
-<li><p>If it still isn’t working or if you accidentally deleted something, you can refresh the page to restart.</p></li>
-</ul>
-</div>
-<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
-<p>If your x variable is <code>year</code> and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn’t much change until much more recently.</p>
-<p>So try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is <code>year</code>.</p>
+<p>Now, let’s make the graph again:</p>
+<p><strong>Press</strong> Run code</p>
 <div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
+<div id="tabset-6-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-4-tab">
+<ul>
+<li><p>Run Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. <img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png" class="quarto-figure quarto-figure-right" style="height:0.5in" alt="webr ready image"></p></li>
+<li><p>Error message:</p>
+<ul>
+<li>Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.</li>
+<li>Did you run all the previous code chunks in this section? Return to <a href="#sec-scatterplotstep1">Step 1</a> and make sure you pressed “Run code” in every step.</li>
+<li>Did you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step.</li>
+</ul></li>
+</ul>
 </div>
 </div>
-<p>Nice work! Hopefully you enjoyed making your own graph with this data!</p>
-
-
+</div>
+<button id="continue-button" class="btn btn-primary float-start me-2">
+Continue
+</button>
+</section>
+</div>
+<section id="sec-rawdata" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="sec-rawdata">View raw data</h2>
+<p>After graphing, you may wonder why the graph looks like it does. Here, you can look at your raw data.</p>
+<section id="choose-a-county" class="level3">
+<h3 class="anchored" data-anchor-id="choose-a-county">Choose a county</h3>
+<p>First, you’ll need to choose a county that you want to graph. See section <a href="#sec-choosecounty">Choose a county</a> to see a list of county options.</p>
+<p>After choosing a county, you’ll tell the computer which county you chose.</p>
+<p><strong>Important</strong> make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-7-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-1" role="tab" aria-controls="tabset-7-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-7-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-7-2" role="tab" aria-controls="tabset-7-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-7-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-7-1-tab">
+<p><strong>Type</strong> your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes <code>""</code>. Keep all the code below the red line as well.</p>
+<p><strong>Press</strong> Run Code</p>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-7-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-7-2-tab">
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="raw-data">Raw data</h3>
+<p>Click the blue box to see raw data for the county you chose.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Open this blue box first!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Press</strong> run code to see your raw data!</p>
+<p>It might be very large, so you can click the blue rectangle again to close the data.</p>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Note: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to <a href="#sec-choosecounty">Choose a county</a> and run the code to choose your county.</p>
+</div>
+</div>
+</div>
+<p>Click “continue” for a coding challenge.</p>
+<button id="continue-button" class="btn btn-primary float-start me-2">
+Continue
+</button>
 </section>
 </section>
+<section id="code-challenge" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="code-challenge">Code Challenge</h2>
+<p>Want to change your graph up? Follow the steps below to edit your graph even more!</p>
+<section id="sec-challengestep1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-challengestep1">Step 1: Choose your location</h3>
+<p>First, you’ll tell the computer which county you’d like to graph.</p>
+<p><strong>Important</strong> make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.</p>
+<p><strong>Type</strong> the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes <code>""</code>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-8-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-1" role="tab" aria-controls="tabset-8-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-8-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-8-2" role="tab" aria-controls="tabset-8-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-8-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-8-1-tab">
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-8-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-8-2-tab">
+<div id="qwebr-insertion-location-21"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-choose-your-variables" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-choose-your-variables">Step 2: Choose your variables</h3>
+<p>Next, you can decide whether you want to view the data by <strong>month</strong> or by <strong>day of the year</strong>. In the graph we made previously, we looked at the AQI index for each <strong>day of year</strong>. But, if you’d like, you can combine the data and look at it by <strong>month</strong>.</p>
+<p>Choose which one you prefer and <strong>press</strong> run code below.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-9-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-1" role="tab" aria-controls="tabset-9-1" aria-selected="true">View data by MONTH</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-9-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-9-2" role="tab" aria-controls="tabset-9-2" aria-selected="false">View data by DAY OF YEAR</a></li></ul>
+<div class="tab-content">
+<div id="tabset-9-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-9-1-tab">
+<div id="qwebr-insertion-location-22"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-9-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-9-2-tab">
+<div id="qwebr-insertion-location-23"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-add-labels" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-add-labels">Step 3: Add labels</h3>
+<p>Now let’s add labels to your tile plot.</p>
+<p>Type in names for your labels below. Replace the red lines and keep the quotes <code>""</code>.</p>
+<p>The <code>xlabel</code> is the label for the bottom axis.</p>
+<p>The <code>ylabel</code> is the label for the left axis. This will be year for all plots.</p>
+<p>The <code>title</code> goes on the top of the graph.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-10-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-1" role="tab" aria-controls="tabset-10-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-10-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-10-2" role="tab" aria-controls="tabset-10-2" aria-selected="false">Example</a></li></ul>
+<div class="tab-content">
+<div id="tabset-10-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-10-1-tab">
+<p><strong>Type</strong> your labels below.</p>
+<p><strong>Press</strong> run code.</p>
+<div id="qwebr-insertion-location-24"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-10-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-10-2-tab">
+<div id="qwebr-insertion-location-25"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-choose-your-category-levels" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-choose-your-category-levels">Step 4: Choose your category levels</h3>
+<p>The EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the “good” category to be smaller. Here, you have the option to define those categories.</p>
+<p>Now let’s make your graph!</p>
+<p><strong>Press</strong> run code below to see your graph. If you want to know more about how the code works, click “Learn more”!</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-11-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-1" role="tab" aria-controls="tabset-11-1" aria-selected="true">Code editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-2" role="tab" aria-controls="tabset-11-2" aria-selected="false">Learn more</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-11-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-11-3" role="tab" aria-controls="tabset-11-3" aria-selected="false">Troubleshooting</a></li></ul>
+<div class="tab-content">
+<div id="tabset-11-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-11-1-tab">
+<p><strong>Press</strong> run code</p>
+<div id="qwebr-insertion-location-26"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-11-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-2-tab">
+<p>I’ll get to this :)</p>
+</div>
+<div id="tabset-11-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-11-3-tab">
+<ul>
+<li><p>Run Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. <img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/webrready.png" class="quarto-figure quarto-figure-right" style="height:0.5in" alt="webr ready image"></p></li>
+<li><p>Error message:</p>
+<ul>
+<li>Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.</li>
+<li>Did you run all the previous code chunks in this section? Return to <a href="#sec-challengestep1">Step 1</a> and make sure you pressed “Run code” in every step.</li>
+<li>Did you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2758,4 +3112,5 @@ qwebrInstance.then(
 
 
 
+<script src="../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
 </body></html>

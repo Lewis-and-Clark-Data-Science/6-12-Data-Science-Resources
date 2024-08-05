@@ -32,6 +32,16 @@ website:
       menu:
         - resources/resources.qmd
         - resources/cheatsheet.qmd
+  sidebar: 
+      style: "docked"
+      id: tutorials/AQI_tutorial.qmd
+      contents:
+      - section: "AQI tutorials"
+        href: tutorials/AQI_tutorial.qmd
+        contents: 
+          - tutorials/AQI_tutorial.qmd
+          - tutorials/AQI_tutorial_advanced.qmd
+    
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
   

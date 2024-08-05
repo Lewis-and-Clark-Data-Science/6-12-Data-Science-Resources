@@ -9,24 +9,22 @@ format:
   html: 
     toc: true
     self-contained: false
-    include-in-header: 
-      - text: 
-          < script src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/js/js3.js"><script>
 ---
-
 
 <script>
 console.log("Script loaded");
-console.log("Button clicked");
+
 document.addEventListener("DOMContentLoaded", function() {
     let currentPartIndex = 0;
     const parts = document.querySelectorAll(".tutorial-part");
     const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const nextButton = document.getElementById("next-button");
+    const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+    const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
 
- // Log the selected elements
+    // Log the selected elements
     console.log('Tutorial parts:', parts);
     console.log('Continue buttons:', buttons);
-
 
     // Hide all tutorial parts except the first one
     parts.forEach(function(part, index) {
@@ -34,7 +32,38 @@ document.addEventListener("DOMContentLoaded", function() {
             part.style.display = "none";
         }
     });
+
+    // Function to scroll to the top of the element, accounting for a fixed header
+    function scrollToElement(element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: elementTop - headerHeight,
+            behavior: "smooth"
+        });
+    }
+
+    // Function to show a specific part
+    function showPart(index) {
+        if (index >= 0 && index < parts.length) {
+            parts.forEach((part, idx) => {
+                part.style.display = (idx === index) ? "block" : "none";
+            });
+            scrollToElement(parts[index]);
+            currentPartIndex = index;
+        }
+    }
     
+     // Function to show all parts up to a specific index
+    function showPartsUpTo(index) {
+        parts.forEach((part, idx) => {
+            if (idx <= index) {
+                part.style.display = "block";
+            }
+        });
+        scrollToElement(parts[index]);
+        currentPartIndex = index;
+    }
+
     // Add click event listeners to each button
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
@@ -42,23 +71,51 @@ document.addEventListener("DOMContentLoaded", function() {
                 parts[currentPartIndex].style.display = "block";
                 buttons[currentPartIndex].style.display = "none";
                 currentPartIndex++;
-                parts[currentPartIndex].style.display= "block";
-                } else {
+                showPartsUpTo(currentPartIndex);
+            } else {
                 alert("End of tutorial");
             }
         });
     });
+
+    // Listen for hash changes to navigate to the correct section
+    window.addEventListener("hashchange", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetPart = document.querySelector(hash);
+            if (targetPart) {
+                const targetIndex = Array.prototype.indexOf.call(parts, targetPart);
+                showPartsUpTo(targetIndex);
+                buttons.forEach((button, idx) => {
+                  if (idx < targetIndex) {
+                  button.style.display="none";}});
+            }
+        }
+    });
+
+    // Check the URL hash on page load
+    const initialHash = window.location.hash;
+    if (initialHash) {
+        const initialTarget = document.querySelector(initialHash);
+        if (initialTarget) {
+          const intialIndex=Array.prototype.indexOf.call(parts, initialTarget);
+            showPartsUpTo(initalIndex);
+            buttons.forEach((button, idx) => {
+                if (idx < initialIndex) {
+                    button.style.display = "none";
+                }
+            });
+        }
+    }
+    // Add click event listener to the new next button
+    if (nextButton) {
+        nextButton.addEventListener("click", function() {
+            window.location.href = "https://www.example.com"; 
+        });
+    }
 });
 
-
 </script>
-
-
-<!-- Include your JavaScript file -->
-
-<script src="6-12-Data-Science-Resources/js/js3.js"></script>
-
-
 
 
 
@@ -73,7 +130,9 @@ document.addEventListener("DOMContentLoaded", function() {
 ## Part 1: Introduction to Topic
 
 
-no 
+no [go to sec2](#sec-2)
+
+[or sec 3](#sec-3)
 
 <button id="continue-button">Continue</button>
 </div>
@@ -82,7 +141,7 @@ no
 <div class="tutorial-part" style="display: none;">
 
 
-## Part 2: Explanation of Concept
+## Part 2: Explanation of Concept {#sec-2}
 
 right
       
@@ -93,11 +152,20 @@ right
 
 
 
-## Part 3: Practical Examples
+## Part 3: Practical Examples {#sec-3}
 
 hello
 
        
+<button id="continue-button-2">Continue</button>
 </div>
 
+<div class="tutorial-part" style="display: none;">
+
+
+## Part 4: howdy
+
+yes
+
+</div>
 

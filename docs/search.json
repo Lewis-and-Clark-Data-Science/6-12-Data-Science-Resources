@@ -2,79 +2,62 @@
   {
     "objectID": "tutorials/AQI_tutorial.html",
     "href": "tutorials/AQI_tutorial.html",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "",
-    "text": "Note to self, here’s some options for downloading other cities data:\nr package https://cran.r-project.org/web/packages/RAQSAPI/vignettes/RAQSAPIvignette.html\nThis explains how to get json data and i did make an account https://aqs.epa.gov/aqsweb/documents/data_api.html#daily"
+    "text": "Note to self, here’s some options for downloading other cities data:\nr package https://cran.r-project.org/web/packages/RAQSAPI/vignettes/RAQSAPIvignette.html\nThis explains how to get json data and i did make an account https://aqs.epa.gov/aqsweb/documents/data_api.html#daily",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#introduction",
     "href": "tutorials/AQI_tutorial.html#introduction",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "Introduction",
-    "text": "Introduction\nWelcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will be able to create your own graph of air quality!\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue"
+    "text": "Introduction\nWelcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will see how to create an air quality graph.\nNote, this is Part 1 of the air quality tutorials. In Part 2, you will be able to customize air quality graphs for any location you choose! Click here to navigate to Part 2 now.\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#data-science",
     "href": "tutorials/AQI_tutorial.html#data-science",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "Data Science",
-    "text": "Data Science\nWhat is data?\n\nData is large amounts of information that you collect. Often, it looks like a lot of numbers that are collected to describe some phenomenon.\nFor example, if you measure the temperature every day in one location for one year, you would have created data. You can then use data science to analyze that data.\n\nWhat is data science?\n\nData science is the ability to synthesize data and derive meaningful information. Often, graphs, maps, models, and charts are used to help understand data and display information.\n\nStop and think\n\nQuestion\n\n\n\nWhat is an example of data?\n\n\n\n\n ✓The age and grade of everyone in your school\n\n\n ✓The favorite restaurant of everyone who walks down your street\n\n\n ✓The pm2.5 data for every day in 2023 in Portland\n\n\n ✓All of the above\n\n\n\n\n\n\n\n\n\nContinue"
+    "text": "Data Science\nWhat is data?\n\nData is large amounts of information that you collect. Often, it looks like a lot of numbers that are collected to describe some phenomenon.\nFor example, if you measure the temperature every day in one location for one year, you would have created data. You can then use data science to analyze that data.\n\nWhat is data science?\n\nData science is the ability to synthesize data and derive meaningful information. Often, graphs, maps, models, and charts are used to help understand data and display information.\n\nStop and think\n\nQuestion\n\n\n\nWhat is an example of data?\n\n\n\n\n ✓The age and grade of everyone in your school\n\n\n ✓The favorite restaurant of everyone who walks down your street\n\n\n ✓The pm2.5 data for every day in 2023 in Portland\n\n\n ✓All of the above\n\n\n\n\n\n\n\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#using-the-computer-to-do-data-science",
     "href": "tutorials/AQI_tutorial.html#using-the-computer-to-do-data-science",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "Using the computer to do data science",
-    "text": "Using the computer to do data science\nIn this tutorial, we’re going to use coding to analyze large amounts of data. We’ll be able to create graphs by writing code.\nWe’re going to use a coding language called R. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\n\nIntroduction to R\nThis tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green “run code” button. These are called code chunks. You can type commands into these boxes and it will output answers. Let’s try it out.\nOne command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then press the green play button that says “run code”.\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nDid you see the number 15 pop out?\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nAnalyzing data with R\nThe programming language R can also do very complicated things, like work with large amounts of data and create graphs.\n\nYou can import data from various sources, clean and process it, perform statistical analyses and generate reports or visualizations\nWe are going to be utilizing the data visualization aspect and create graphs from a big data set\n\n\nContinue"
+    "text": "Using the computer to do data science\nIn this tutorial, we’re going to use coding to analyze large amounts of data. We’ll be able to create graphs by writing code.\nWe’re going to use a coding language called R. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\n\nIntroduction to R\nThis tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green “run code” button. These are called code chunks. You can type commands into these boxes and it will output answers. Let’s try it out.\nOne command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then press the green play button that says “run code”.\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nDid you see the number 15 pop out?\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nAnalyzing data with R\nThe programming language R can also do very complicated things, like work with large amounts of data and create graphs.\n\nYou can import data from various sources, clean and process it, perform statistical analyses and generate reports or visualizations\nWe are going to be utilizing the data visualization aspect and create graphs from a big data set\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#our-data",
     "href": "tutorials/AQI_tutorial.html#our-data",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "Our data",
-    "text": "Our data\n\n\n\n\n\n\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the air quality index based on the PM 2.5 levels.\n\n\n \n\n\n\n\n\nfrom.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/\n\n\n\n\n\n\n\nfrom.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles\n\n\n\n\n\n\n\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the air quality index based on the PM 2.5 levels.\nWe’re focusing on Portland and Los Angeles air quality data.\n\n\n\n\nfrom.https://cleanairenc.org/blog/2017/02/16/north-carolinas-air-quality/\n\n\n\n\n\nfrom.https://www.amtrakvacations.com/trips/portland-or-ultimate-getaway-roundtrip-from-los-angeles\n\n\n\n\nClick the blue box below to view the data.\n\n\n\n\n\n\nAir quality raw data Portland\n\n\n\n\n\n\n\nWarning in instance$preRenderHook(instance): It seems your data is too big for\nclient-side DataTables. You may consider server-side processing:\nhttps://rstudio.github.io/DT/server.html\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality raw data Los Angelos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of data! It’s pretty hard to get any meaningful information from just that table of information. Luckily, we can use R to better understand it and make graphs!\nBefore we use R, though, let’s try to understand a bit of what’s going on.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names that are collected when measuring air quality.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\nStop and think\n\nQuestion\n\n\n\nHow many data entries are there in the Los Angeles data?\n\n\n\n\n ✓8,594 data entries\n\n\n ✗8,744 data entries\n\n\n ✗10 data entries\n\n\n ✗100 data entries\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat was the PM2.5 AQI Value in Portland on 01/01/2000?\n\n\n\n\n ✗158\n\n\n ✗62\n\n\n ✓49\n\n\n ✗100\n\n\n\n\n\n\n\n\n\nData location\nLet’s find out exactly where the air quality data was recorded. If you look at the data table, are you able to find all the locations (sites) in Portland where they recorded the air quality?\n\nThis is a pretty hard task, as it requires you to look through all the data and find all the different site names. Luckily, we can use the computer to quickly check how many locations there are.\nThe R command unique() outputs all the unique data entries in one column. In other words, it will tell us all the different entries the Site Name column.\n\nPress run code below. If you want to learn more about the code, click “Learn more”!\n\nCode editorLearn moreChallengeChallenge Answer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nThe command we used is\n\nunique(portland_AQI$Site.Name)\n\n\nportland_AQI specifies the data we’re looking at. In this case, portland_AQI is the name of our data frame - it contains all the data in the Portland table you saw above.\n\nThe name for the Los Angeles data is la_AQI. It contains all the data in the Los Angeles table you saw above.\n\nThe $ tells R to find a column name.\nSite.Name is the name of the column we want to look at, as it contains the locations\n\n\n\nCan you figure out the names of the Los Angeles locations where they measured air quality data?\nEdit the code below so that it outputs Los Angeles site names.\nHint: You’ll need to change the part of the code that says portland_AQI. What’s the name of the Los Angeles data set?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nDo you recognize any of the site names? Are any close to where you live?"
+    "text": "Our data\n\n\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the air quality index based on the PM 2.5 levels.\nWe’re focusing on Portland and Los Angeles air quality data.\n\n\n\n\n\n\n\nImage from https://cleanairenc.org/ blog/2017/02/16/ north-carolinas-air-quality/\n\n\n\n\n\nFrom.maps.google.com\n\n\nClick the blue box below to view the data.\n\n\n\n\n\n\nAir quality raw data Portland\n\n\n\n\n\n\n\nWarning in instance$preRenderHook(instance): It seems your data is too big for\nclient-side DataTables. You may consider server-side processing:\nhttps://rstudio.github.io/DT/server.html\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality raw data Los Angelos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of data! It’s pretty hard to get any meaningful information from just that table of information. Luckily, we can use R to better understand it and make graphs!\nBefore we use R, though, let’s try to understand a bit of what’s going on.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names that are collected when measuring air quality.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\nStop and think\n\nQuestion\n\n\n\nHow many data entries are there in the Los Angeles data?\n\n\n\n\n ✓8,594 data entries\n\n\n ✗8,744 data entries\n\n\n ✗10 data entries\n\n\n ✗100 data entries\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat was the PM2.5 AQI Value in Portland on 01/01/2000?\n\n\n\n\n ✗158\n\n\n ✗62\n\n\n ✓49\n\n\n ✗100\n\n\n\n\n\n\n\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/AQI_tutorial.html#graphing-our-data",
     "href": "tutorials/AQI_tutorial.html#graphing-our-data",
-    "title": "AQI tutorial",
+    "title": "AQI Part 1 - Introduction to Data Science",
     "section": "Graphing our data",
-    "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means.\nOur goal is to make a graph of the overall air quality in Portland and Los Angeles by describing how healthy or unhealthy the air is.\nThe EPA defines the following categories based on the air quality index (AQI):\n We’ve inputted these values and colors into our code for the graph.\nYou may have noticed that if you go to the EPA website, they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!\n\nAQI Tile Plot\nWe’ll start by making a tile plot for the air quality index (AQI) from 2000-2023. Let’s see what the graph looks like for Portland and Los Angeles. Later on, you’ll have options to create other types of graphs for more locations.\nPress run code below.\n\nPortland AQI Tile GraphLos Angeles AQI Tile GraphTroubleshooting\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message: Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\n\n\n\n\nStop and think\nTalk with your neighbor about the graphs!\n\nWhat do you notice?\nWhat do you wonder?\nWhat is different between the two graphs?\n-   Why are they different? \nWhat else would you like to know?"
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial.html#customize-your-own-graphs",
-    "href": "tutorials/AQI_tutorial.html#customize-your-own-graphs",
-    "title": "AQI tutorial",
-    "section": "Customize your own graphs!",
-    "text": "Customize your own graphs!\nIn the next section section, you’ll have the options to make more air quality graphs with lots of customizations. You’ll be able to make another tile plot and choose your own location or make a scatterplot of AQI over time."
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial.html#sec-tilemylocation",
-    "href": "tutorials/AQI_tutorial.html#sec-tilemylocation",
-    "title": "AQI tutorial",
-    "section": "Make a tile plot of any county!",
-    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place? You’ll be able to do that below.\nThis data is also from the EPA, but it has all the counties in the US!\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\nCreate a tile plot\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow we can graph!\nPress run code below.\n\nCode editorTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the “Run code” button.\nDid you spell and capitalize the County name correctly, exactly as it was found in the table of “States and County Names”?"
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial.html#sec-scatterplot",
-    "href": "tutorials/AQI_tutorial.html#sec-scatterplot",
-    "title": "AQI tutorial",
-    "section": "Create a scatter plot of AQI over time",
-    "text": "Create a scatter plot of AQI over time\nNext, we’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red or orange or green or whatever level you choose. Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\nStep 1: Choose your county\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 2: Choose which AQI level you want to graph\nNow, you can choose which air quality level you’d like to graph. You can focus on any of the following:\n\n“Good”\n“Moderate”\n“Unhealthy for Sensitive Groups”\n“Unhealthy”\n“Very Unhealthy”\n“Hazardous”\n\n\nCode editorExample\n\n\nType the level you choose in the code chunk. Replace the red line and be sure to keep the quotes.\nPress Run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 3: Choose a color\nNow you can choose a color for your points. Here are a few options. Otherwise go to this link for more options.\n\n“red”\n“green”\n“blue”\n“orange”\n“pink”\n“purple”\n“yellow”\n\n\nCode editorExample\n\n\nType your color name in the code chunk. Replace the red line. Do not use any capitalization and be sure to keep the quotes \"\".\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 4: Create the graph!\nNow you can create your graph!\n\nCode editorAdd a line of best fitTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWant to add a line of best fit?\nPress run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to Step 1 and make sure you pressed “Run code” in every step.\nDid you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step."
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial.html#code-challenge",
-    "href": "tutorials/AQI_tutorial.html#code-challenge",
-    "title": "AQI tutorial",
-    "section": "Code Challenge",
-    "text": "Code Challenge\nWant to change your graph up? Follow the steps below to edit your graph even more!\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 2: Choose your variables\nNext, you can decide whether you want to view the data by month or by day of the year. In the graph we made previously, we looked at the AQI index for each day of year. But, if you’d like, you can combine the data and look at it by month.\nChoose which one you prefer and press run code below.\n\nView data by MONTHView data by DAY OF YEAR\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 3: Add labels\nNow let’s add labels to your tile plot.\nType in names for your labels below. Replace the red lines and keep the quotes \"\".\nThe xlabel is the label for the bottom axis.\nThe ylabel is the label for the left axis. This will be year for all plots.\nThe title goes on the top of the graph.\n\nCode editorExample\n\n\nType your labels below.\nPress run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 4: Choose your category levels\nThe EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the “good” category to be smaller. Here, you have the option to define those categories.\nNow let’s make your graph!\nPress run code below to see your graph. If you want to know more about how the code works, click “Learn more”!\n\nCode editorLearn moreTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nI’ll get to this :)\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to Step 1 and make sure you pressed “Run code” in every step.\nDid you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step."
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial.html#other-options-to-learn-more",
-    "href": "tutorials/AQI_tutorial.html#other-options-to-learn-more",
-    "title": "AQI tutorial",
-    "section": "Other options to learn more",
-    "text": "Other options to learn more\nAfter graphing, you may have some more questions! In the tabs below, there is some code you can run to learn more about your data and hopefully answer some of those questions.\n\nLook at your raw dataView multiple counties at onceChoose year limits\n\n\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nWant to combine county data?\nReplace the red lines with your county names! Make sure you enclose them with quotes \"\" and spell their names properly (refer back to this table).\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, let’s make the graph again:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nTHIS DOESN”T WORK YET… MAYBE WILL NEED TO JUST DELETE\nWould you like to focus on a specific set of years? To do this, we’ll add limits for the year.\nType a year below. Replace the red line.\nPress Run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExample:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, we can run the graph code again:\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means.\nOur goal is to make a graph of the overall air quality in Portland and Los Angeles by describing how healthy or unhealthy the air is.\nThe EPA defines the following categories based on the air quality index (AQI):\n\n\n\nFrom https://www.airnow.gov/aqi/aqi-basics/\n\n\nWe’ve inputted these values and colors into our code for the graph.\nYou may have noticed that if you go to the EPA website, they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!\n\nAQI Tile Plot\nWe’ll start by making a tile plot for the air quality index (AQI) from 2000-2023. Let’s see what the graph looks like for Portland and Los Angeles. Later on, you’ll have options to create other types of graphs for more locations.\nPress run code below.\n\nPortland AQI Tile GraphLos Angeles AQI Tile GraphTroubleshooting\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message: Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\n\n\n\n\nStop and think\nTalk with your neighbor about the graphs!\n\nWhat do you notice?\nWhat do you wonder?\nWhat is different between the two graphs?\n-   Why are they different? \nWhat else would you like to know?\n\nNext, you can move on to AQI Tutorial Part 2 in order to customize your own graphs! You’ll be able to choose your own locations, make a scatterplot, and view raw data.\n\nAQI Tutorial Part 2",
+    "crumbs": [
+      "AQI tutorials"
+    ]
   },
   {
     "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
@@ -119,116 +102,77 @@
     "text": "Congratulations!!\nYou learned how you can use the computer to look at large amounts of numbers and data. But, data doesn’t tell us everything!\nBrainstorm\n-   What questions do you have after looking at this data? \n-   How could you find the answer to those questions?\n-   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? \n      -   How would you do that? \n      -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology\n-   What does the data/numbers **not** tell us? \n\nThe end\nThat’s the end of the tutorial!\n-   Click the \"More Graphs!\" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. \n-   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!\n\nMore Graphs!"
   },
   {
-    "objectID": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
-    "href": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
+    "objectID": "tutorials/AQI_tutorial_advanced.html#introduction",
+    "href": "tutorials/AQI_tutorial_advanced.html#introduction",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur data set\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
+    "href": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "Customizing your graphs!",
+    "text": "Customizing your graphs!\nIn this tutorial, you can create graphs with various customizations. Here are your options:\n\nmake another tile plot and choose your own location(s)\nmake a scatterplot of AQI over time for any location(s)\nview raw data for any county\n\nChoose one of the options above, or click “continue” to do all of them!\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "Make a tile plot of any county!",
+    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place? You’ll be able to do that below.\nThis data is also from the EPA, but it has all the counties in the US!\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\nCreate a tile plot\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow we can graph!\nPress run code below.\n\nCode editorView multiple counties at onceTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWant to combine county data?\nReplace the red lines with your county names! Make sure you enclose them with quotes \"\" and spell their names properly (refer back to this table).\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExample:\n\nmyCounty = \"Clackamas\" \nmyCounty2 = \"Multnomah\"\n\nNow, let’s make the graph again:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the “Run code” button.\nDid you spell and capitalize the County name correctly, exactly as it was found in the table of “States and County Names”?\n\n\n\n\n\nClick “Continue” to make a scatter plot of the AQI over time in any location!\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "Create a scatter plot of AQI over time",
+    "text": "Create a scatter plot of AQI over time\nNext, we’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red or orange or green or whatever level you choose. Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "View raw data",
+    "text": "View raw data\nAfter graphing, you may wonder why the graph looks like it does. Here, you can look at your raw data.\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph. See section Choose a county to see a list of county options.\nAfter choosing a county, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\". Keep all the code below the red line as well.\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nRaw data\nClick the blue box to see raw data for the county you chose.\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to Choose a county and run the code to choose your county.\n\n\n\nClick “continue” for a coding challenge.\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#code-challenge",
+    "href": "tutorials/AQI_tutorial_advanced.html#code-challenge",
+    "title": "AQI Part 2 - Customize Graphs",
+    "section": "Code Challenge",
+    "text": "Code Challenge\nWant to change your graph up? Follow the steps below to edit your graph even more!\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 2: Choose your variables\nNext, you can decide whether you want to view the data by month or by day of the year. In the graph we made previously, we looked at the AQI index for each day of year. But, if you’d like, you can combine the data and look at it by month.\nChoose which one you prefer and press run code below.\n\nView data by MONTHView data by DAY OF YEAR\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 3: Add labels\nNow let’s add labels to your tile plot.\nType in names for your labels below. Replace the red lines and keep the quotes \"\".\nThe xlabel is the label for the bottom axis.\nThe ylabel is the label for the left axis. This will be year for all plots.\nThe title goes on the top of the graph.\n\nCode editorExample\n\n\nType your labels below.\nPress run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 4: Choose your category levels\nThe EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the “good” category to be smaller. Here, you have the option to define those categories.\nNow let’s make your graph!\nPress run code below to see your graph. If you want to know more about how the code works, click “Learn more”!\n\nCode editorLearn moreTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nI’ll get to this :)\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to Step 1 and make sure you pressed “Run code” in every step.\nDid you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step.",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Customize Graphs"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "6-12 Data Science Resources",
-    "section": "Part 1: Introduction to Topic",
-    "text": "Part 1: Introduction to Topic\nno\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#part-2-explanation-of-concept",
-    "href": "tutorials/sealevel_tutorial.html#part-2-explanation-of-concept",
-    "title": "6-12 Data Science Resources",
-    "section": "Part 2: Explanation of Concept",
-    "text": "Part 2: Explanation of Concept\nright\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#part-3-practical-examples",
-    "href": "tutorials/sealevel_tutorial.html#part-3-practical-examples",
-    "title": "6-12 Data Science Resources",
-    "section": "Part 3: Practical Examples",
-    "text": "Part 3: Practical Examples\nhello"
-  },
-  {
-    "objectID": "resources/resources.html",
-    "href": "resources/resources.html",
-    "title": "Other Resources",
     "section": "",
-    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!"
-  },
-  {
-    "objectID": "resources/resources.html#visualizations-and-interactive-graphs",
-    "href": "resources/resources.html#visualizations-and-interactive-graphs",
-    "title": "Other Resources",
-    "section": "Visualizations and Interactive Graphs",
-    "text": "Visualizations and Interactive Graphs\n\nEducational resources for teaching data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\n\n\nVisualization Examples\nNASA Interactive Graphs - Vital Signs of the Planet\nVisual stories\nCarbon and Climate infographics\nData is Beautiful: 10 of the best data visualization examples from history and today\nTableu - Viz of the day\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP"
-  },
-  {
-    "objectID": "resources/resources.html#coding-with-r-a-data-science-coding-language",
-    "href": "resources/resources.html#coding-with-r-a-data-science-coding-language",
-    "title": "Other Resources",
-    "section": "Coding with R (a data science coding language)",
-    "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
-  },
-  {
-    "objectID": "lesson_plans/COR_lesson.html",
-    "href": "lesson_plans/COR_lesson.html",
-    "title": "COR Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on COR?"
-  },
-  {
-    "objectID": "lesson_plans/sea_levels_lesson.html",
-    "href": "lesson_plans/sea_levels_lesson.html",
-    "title": "Sea Levels Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/Biodiversity_lesson.html",
-    "href": "lesson_plans/Biodiversity_lesson.html",
-    "title": "Biodiversity Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/climate_lesson.html",
-    "href": "lesson_plans/climate_lesson.html",
-    "title": "Climate Change Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/Salmon_lesson.html",
-    "href": "lesson_plans/Salmon_lesson.html",
-    "title": "Salmon School",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/AQI_lesson.html",
-    "href": "lesson_plans/AQI_lesson.html",
-    "title": "Air Quality Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html",
-    "href": "lesson_plans/lesson_links.html",
-    "title": "R Files for Data Science Lessons",
-    "section": "",
-    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio).\nAdditionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
-    "href": "lesson_plans/lesson_links.html#middle-school-lessons",
-    "title": "R Files for Data Science Lessons",
-    "section": "Middle School Lessons",
-    "text": "Middle School Lessons\nSalmon Lesson Code .zip file\nAir Quality Lesson Code .zip file\nCOR Lesson code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
-    "href": "lesson_plans/lesson_links.html#high-school-lessons",
-    "title": "R Files for Data Science Lessons",
-    "section": "High School Lessons",
-    "text": "High School Lessons\nAir Quality Lesson Code .zip file (same file as the middle school air quality lesson… wasn’t sure where to put it)\nBiodiversity Lesson Code .zip file\nClimate Change Lesson Code .zip file\nSea Levels Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#sec-DITW",
-    "href": "lesson_plans/lesson_links.html#sec-DITW",
-    "title": "R Files for Data Science Lessons",
-    "section": "Other downloadable tutorials",
-    "text": "Other downloadable tutorials\nBelow are R tutorials developed for Lewis & Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.\nTo use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
+    "text": "Welcome! This site includes lots of resources for using data science in your middle or high school classroom.\nUnder Lesson Plans, you’ll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in Rstudio desktop or posit.cloud (an online version of Rstudio).\nUnder Online Tutorials, you’ll find tutorials that can be done directly on this website which can be used to teach and learn about data science. These correspond with the lesson plans and can often be used instead of downloading the code files under “Lesson Plans” (if you prefer not to use Rstudio). They generally require minimal to no experience in R coding."
   },
   {
     "objectID": "resources/cheatsheet.html",
@@ -273,11 +217,130 @@
     "text": "Inferential Statistics\n\nBasic statistical tests\n\nt.test(data, dependentVariable ~ independentVariable): 2 sample t-test - compare 2 groups on a numerical measure\n\nRequires: 2 samples of quantitative data\n\naov(data, dependentVariable ~ independentVariable): ANOVA (analysis of variance) test - compare means among groups\n\nRequires: Independent variable - categorical; dependent variable - numerical\n\nTukeyHSD(data): Tukey’s HSD - Post Hoc test which tells you which specific means differ from each other\n\n\n\nLinear regression\n\ncor(data$independentVariable, data$dependentVariable): Correlation coefficient - outputs a number between -1 and 1 which tells strength and direction of the relationship between 2 numeric variables\n\nRequires 2 numeric variables\n\nlm(data, dependentVariable ~ independentVariable): Fit a linear model\n\nsummary(yourLinearModel): View more details about a linear model including regression coefficients, p value for linear model coefficients, quartiles, residual standard error, F-statistic."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "6-12 Data Science Resources",
+    "objectID": "lesson_plans/lesson_links.html",
+    "href": "lesson_plans/lesson_links.html",
+    "title": "R Files for Data Science Lessons",
     "section": "",
-    "text": "Welcome! This site includes lots of resources for using data science in your middle or high school classroom.\nUnder Lesson Plans, you’ll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in Rstudio desktop or posit.cloud (an online version of Rstudio).\nUnder Online Tutorials, you’ll find tutorials that can be done directly on this website which can be used to teach and learn about data science. These correspond with the lesson plans and can often be used instead of downloading the code files under “Lesson Plans” (if you prefer not to use Rstudio). They generally require minimal to no experience in R coding."
+    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio).\nAdditionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "href": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "Middle School Lessons",
+    "text": "Middle School Lessons\nSalmon Lesson Code .zip file\nAir Quality Lesson Code .zip file\nCOR Lesson code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
+    "href": "lesson_plans/lesson_links.html#high-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "High School Lessons",
+    "text": "High School Lessons\nAir Quality Lesson Code .zip file (same file as the middle school air quality lesson… wasn’t sure where to put it)\nBiodiversity Lesson Code .zip file\nClimate Change Lesson Code .zip file\nSea Levels Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#sec-DITW",
+    "href": "lesson_plans/lesson_links.html#sec-DITW",
+    "title": "R Files for Data Science Lessons",
+    "section": "Other downloadable tutorials",
+    "text": "Other downloadable tutorials\nBelow are R tutorials developed for Lewis & Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.\nTo use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
+  },
+  {
+    "objectID": "lesson_plans/AQI_lesson.html",
+    "href": "lesson_plans/AQI_lesson.html",
+    "title": "Air Quality Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/Salmon_lesson.html",
+    "href": "lesson_plans/Salmon_lesson.html",
+    "title": "Salmon School",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/climate_lesson.html",
+    "href": "lesson_plans/climate_lesson.html",
+    "title": "Climate Change Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/Biodiversity_lesson.html",
+    "href": "lesson_plans/Biodiversity_lesson.html",
+    "title": "Biodiversity Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/sea_levels_lesson.html",
+    "href": "lesson_plans/sea_levels_lesson.html",
+    "title": "Sea Levels Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/COR_lesson.html",
+    "href": "lesson_plans/COR_lesson.html",
+    "title": "COR Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on COR?"
+  },
+  {
+    "objectID": "resources/resources.html",
+    "href": "resources/resources.html",
+    "title": "Other Resources",
+    "section": "",
+    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!"
+  },
+  {
+    "objectID": "resources/resources.html#visualizations-and-interactive-graphs",
+    "href": "resources/resources.html#visualizations-and-interactive-graphs",
+    "title": "Other Resources",
+    "section": "Visualizations and Interactive Graphs",
+    "text": "Visualizations and Interactive Graphs\n\nEducational resources for teaching data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\n\n\nVisualization Examples\nNASA Interactive Graphs - Vital Signs of the Planet\nVisual stories\nCarbon and Climate infographics\nData is Beautiful: 10 of the best data visualization examples from history and today\nTableu - Viz of the day\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP"
+  },
+  {
+    "objectID": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "href": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "title": "Other Resources",
+    "section": "Coding with R (a data science coding language)",
+    "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html",
+    "href": "tutorials/sealevel_tutorial.html",
+    "title": "Sea Level tutorial",
+    "section": "",
+    "text": "no go to sec2\nor sec 3\n\nContinue\n\n\n\n\nright\n\nContinue\n\n\n\n\nhello\n\nContinue\n\n\n\n\nyes"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
+    "href": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
+    "title": "Sea Level tutorial",
+    "section": "",
+    "text": "no go to sec2\nor sec 3\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#sec-2",
+    "href": "tutorials/sealevel_tutorial.html#sec-2",
+    "title": "Sea Level tutorial",
+    "section": "",
+    "text": "right\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#sec-3",
+    "href": "tutorials/sealevel_tutorial.html#sec-3",
+    "title": "Sea Level tutorial",
+    "section": "",
+    "text": "hello\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#part-4-howdy",
+    "href": "tutorials/sealevel_tutorial.html#part-4-howdy",
+    "title": "Sea Level tutorial",
+    "section": "",
+    "text": "yes"
   },
   {
     "objectID": "tutorials/climate_change_tutorial.html",
