@@ -1,5 +1,5 @@
 ---
-title: "AQI Part 2 - Customize Graphs"
+title: "AQI Part 2 - Custom Graphs"
 filters: 
   - webr
   - naquiz
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function scrollToElement(element) {
         const elementTop = element.getBoundingClientRect().top + window.scrollY;
         window.scrollTo({
-            top: elementTop,
+            top: elementTop - headerHeight,
             behavior: "smooth"
         });
     }
@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (idx <= index) {
                 part.style.display = "block";
             }
+            if (idx > index){
+            part.style.display = "none";
+}
         });
         scrollToElement(parts[index]);
         currentPartIndex = index;
@@ -91,7 +94,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 showPartsUpTo(targetIndex);
                 buttons.forEach((button, idx) => {
                   if (idx < targetIndex) {
-                  button.style.display="none";}});
+                  button.style.display="none";}
+                  if (idx >= targetIndex) {
+                  button.style.display="block";
+}
+                  });
             }
         }
     });
@@ -121,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 ```{webr-r}
-##| context: setup
+#| context: setup
 library(tidyverse)
 
 #Download USA AQI data from 2000 to 2023 from a file stored in github
@@ -142,7 +149,7 @@ aqi_colors<- setNames(object=myColors, nm=colLabels)
 
 ```{r}
 #| include: false
-#| eval: false
+##| eval: false
 library(tidyverse)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
 download.file(url, dest="dataset.zip", mode="wb") 
@@ -161,17 +168,20 @@ Part 2 will build off of the graphs created in Part 1 and allow you to customize
 ### Our data set
 
 ::: columns
-::: {.column width="60%"}
+::: {.column width="40%"}
 
 This tutorial uses air quality data from [the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a [link to the data](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) and here is a [link to more information](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards) about the data. 
 
 The data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial. 
 
 :::
-::: {.column width="40%"}
+::: {.column width="10%"}
+:::
+::: {.column width="50%"}
 
 ![From.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/airqualityimage.png){fig-align="center" fig-alt="air quality images of 6 cities" height="3in" fig-cap-location="margin"}
 :::
+
 :::
 
 <div class="tutorial-part" style="display: block;">
@@ -196,12 +206,9 @@ Choose one of the options above, or click "continue" to do all of them!
 
 ## Make a tile plot of any county! {#sec-tilemylocation}
 
-What if you wanted to look at the air quality data for another place? You'll be able to do that below.
+What if you wanted to look at the air quality data for another place (other than Portland and LA which were analyzed in Part 1)? You'll be able to do that below.
 
-This data is also [from the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI), but it has all the counties in the US!
-
-
-### Choose a county {#sec-choosecounty}
+### Step 1: Choose a county {#sec-choosecounty1}
 
 First, you'll need to choose a county that you want to graph. 
 
@@ -213,7 +220,7 @@ Here are your options, organized by state. Click through them and find the count
 ```{r}
 #| output: true
 #| echo: false
-#| eval: false
+##| eval: false
 
 library(downloader)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
@@ -228,15 +235,15 @@ usa_aqi_data|>
   unique()|>
   group_by(State.Name)|>
   datatable()
-usa_aqi_data|>
-  select('State.Name','county.Name')|>
-  unique()|>
-  group_by(State.Name)|>
-  kable()
+#usa_aqi_data|>
+#  select('State.Name','county.Name')|>
+#  unique()|>
+#  group_by(State.Name)|>
+#  kable()
 ```
 :::
 
-### Create a tile plot
+### Step 2: Add your county name to the code
 
 Now, you'll tell the computer which county you chose.
 
@@ -264,9 +271,14 @@ myCounty = "Multnomah"
 ```
 :::
 
-Now we can graph! 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
 
-**Press** run code below. 
+<div class="tutorial-part" style="display: none;">
+
+### Step 3: Make a tile plot
+
+Now we can graph! 
 
 ::: panel-tabset
 
@@ -294,7 +306,7 @@ myCountyData<- usa_aqi_data|>
 
 Want to combine county data? 
 
-**Replace** the red lines with your county names! Make sure you enclose them with quotes `""` and spell their names properly (refer back to [this table](#sec-choosecounty)).
+**Replace** the red lines with your county names! Make sure you enclose them with quotes `""` and spell their names properly (refer back to [this table](#sec-tilemylocation)).
 
 **Press** run code
 
@@ -338,7 +350,7 @@ ggplot(myCountyData, aes(x = DOY, y = Year, fill = Category))+
 
     -   Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again. 
     -   Did you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the "Run code" button.
-    -   Did you spell and capitalize the County name correctly, exactly as it was found in the table of ["States and County Names"?](#sec-choosecounty)
+    -   Did you spell and capitalize the County name correctly, exactly as it was found in the table of ["States and County Names"?](#sec-tilemylocation) 
 
 :::
 
@@ -374,6 +386,43 @@ Before we start, what do you think the graph might look like? Discuss these ques
 
 ### Step 1: Choose your county {#sec-scatterplotstep1}
 
+First, you'll need to choose a county that you want to graph.
+
+Here are your options, organized by state. Click through them and find the county you'd like to graph. You'll need to remember the exact spelling AND capitalization. 
+
+::: {.callout-note collapse="true"}
+## States and County Names
+
+```{r}
+#| output: true
+#| echo: false
+##| eval: false
+
+library(downloader)
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
+download(url, dest="dataset.zip", mode="wb") 
+usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
+  read.csv()
+
+library(DT)
+library(knitr)
+usa_aqi_data|>
+  select('State.Name','county.Name')|>
+  unique()|>
+  group_by(State.Name)|>
+  datatable()
+#usa_aqi_data|>
+#  select('State.Name','county.Name')|>
+#  unique()|>
+#  group_by(State.Name)|>
+#  kable()
+```
+:::
+
+### Step 2: Add your county name to the code
+
+Now, you'll tell the computer which county you chose.
+
 **Important** make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well. 
 
 
@@ -398,7 +447,13 @@ myCounty = "Multnomah"
 ```
 :::
 
-### Step 2: Choose which AQI level you want to graph
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 3: Choose which AQI level you want to graph
 
 Now, you can choose which air quality level you'd like to graph. You can focus on any of the following: 
 
@@ -429,7 +484,12 @@ myLevel = "Unhealthy"
 
 :::
 
-### Step 3: Choose a color
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 4: Choose a color
 
 Now you can choose a color for your points. Here are a few options. Otherwise go to [this link](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) for more options.
 
@@ -463,7 +523,12 @@ myColor = "red"
 
 :::
 
-### Step 4: Create the graph!
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 5: Create the graph!
 
 Now you can create your graph! 
 
@@ -528,7 +593,7 @@ myScatterplotData |>
 
 Want to overlay 2 scatterplots and compare 2 different counties? 
 
-**Replace** the red lines with your county names! Make sure you enclose them with quotes `""` and spell their names properly (refer back to [this table](#sec-choosecounty)).
+**Replace** the red lines with your county names! Make sure you enclose them with quotes `""` and spell their names properly (refer back to [this table](#sec-tilemylocation)).
 
 **Press** run code
 
@@ -596,7 +661,7 @@ After graphing, you may wonder why the graph looks like it does. Here, you can l
 
 ### Choose a county 
 
-First, you'll need to choose a county that you want to graph. See section [Choose a county](#sec-choosecounty) to see a list of county options.
+First, you'll need to choose a county that you want to graph. See section [Choose a county](#sec-tilemylocation) to see a list of county options.
 
 After choosing a county, you'll tell the computer which county you chose.
 
@@ -644,7 +709,7 @@ It might be very large, so you can click the blue rectangle again to close the d
 myCountyData
 ```
 
-Note: If this code doesn't work, it's because you haven't chosen a county in a previous step. Return to [Choose a county](#sec-choosecounty) and run the code to choose your county. 
+Note: If this code doesn't work, it's because you haven't chosen a county in a previous step. Return to [Choose a county](#sec-tilemylocation) and run the code to choose your county. 
 :::
 
 Click "continue" for a coding challenge.

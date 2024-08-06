@@ -104,67 +104,67 @@
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#introduction",
     "href": "tutorials/AQI_tutorial_advanced.html#introduction",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "Introduction",
-    "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur data set\n\n\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.\n\n\n\n\nFrom.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality",
+    "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur data set\n\n\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.\n\n\n\n\n\n\nFrom.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
     "href": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "Customizing your graphs!",
     "text": "Customizing your graphs!\nIn this tutorial, you can create graphs with various customizations. Here are your options:\n\nmake another tile plot and choose your own location(s)\nmake a scatterplot of AQI over time for any location(s)\nview raw data for any county\n\nChoose one of the options above, or click “continue” to do all of them!\n\nContinue",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
     "href": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "Make a tile plot of any county!",
-    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place? You’ll be able to do that below.\nThis data is also from the EPA, but it has all the counties in the US!\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\nCreate a tile plot\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow we can graph!\nPress run code below.\n\nCode editorView multiple counties at onceTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWant to combine county data?\nReplace the red lines with your county names! Make sure you enclose them with quotes \"\" and spell their names properly (refer back to this table).\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExample:\n\nmyCounty = \"Clackamas\" \nmyCounty2 = \"Multnomah\"\n\nNow, let’s make the graph again:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to the code editor where you chose your county name. Make sure you clicked the “Run code” button.\nDid you spell and capitalize the County name correctly, exactly as it was found in the table of “States and County Names”?\n\n\n\n\n\nClick “Continue” to make a scatter plot of the AQI over time in any location!\n\nContinue",
+    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place (other than Portland and LA which were analyzed in Part 1)? You’ll be able to do that below.\n\nStep 1: Choose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Add your county name to the code\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
     "href": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "Create a scatter plot of AQI over time",
     "text": "Create a scatter plot of AQI over time\nNext, we’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red or orange or green or whatever level you choose. Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\nContinue",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
     "href": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "View raw data",
     "text": "View raw data\nAfter graphing, you may wonder why the graph looks like it does. Here, you can look at your raw data.\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph. See section Choose a county to see a list of county options.\nAfter choosing a county, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\". Keep all the code below the red line as well.\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nRaw data\nClick the blue box to see raw data for the county you chose.\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to Choose a county and run the code to choose your county.\n\n\n\nClick “continue” for a coding challenge.\n\nContinue",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
     "objectID": "tutorials/AQI_tutorial_advanced.html#code-challenge",
     "href": "tutorials/AQI_tutorial_advanced.html#code-challenge",
-    "title": "AQI Part 2 - Customize Graphs",
+    "title": "AQI Part 2 - Custom Graphs",
     "section": "Code Challenge",
     "text": "Code Challenge\nWant to change your graph up? Follow the steps below to edit your graph even more!\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 2: Choose your variables\nNext, you can decide whether you want to view the data by month or by day of the year. In the graph we made previously, we looked at the AQI index for each day of year. But, if you’d like, you can combine the data and look at it by month.\nChoose which one you prefer and press run code below.\n\nView data by MONTHView data by DAY OF YEAR\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 3: Add labels\nNow let’s add labels to your tile plot.\nType in names for your labels below. Replace the red lines and keep the quotes \"\".\nThe xlabel is the label for the bottom axis.\nThe ylabel is the label for the left axis. This will be year for all plots.\nThe title goes on the top of the graph.\n\nCode editorExample\n\n\nType your labels below.\nPress run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nStep 4: Choose your category levels\nThe EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the “good” category to be smaller. Here, you have the option to define those categories.\nNow let’s make your graph!\nPress run code below to see your graph. If you want to know more about how the code works, click “Learn more”!\n\nCode editorLearn moreTroubleshooting\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nI’ll get to this :)\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message:\n\nDid you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\nDid you run all the previous code chunks in this section? Return to Step 1 and make sure you pressed “Run code” in every step.\nDid you spell and capitalize all the variables correctly, as specified in each step? If not, correct it and press “run code” in that step.",
     "crumbs": [
       "AQI tutorials",
-      "AQI Part 2 - Customize Graphs"
+      "AQI Part 2 - Custom Graphs"
     ]
   },
   {
