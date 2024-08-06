@@ -10,7 +10,6 @@ output:
     self-contained: false
     toc-expand: true
     sidebar: true
-css: styles1.css
 
 toc: true
 toc-depth: 2
@@ -149,11 +148,20 @@ myColors <- c('seagreen','yellow', 'orange1', 'red','darkmagenta', 'darkred')
 
 aqi_colors<- setNames(object=myColors, nm=colLabels)
 
+
+# Define categories for the challenge section 
+hazardous = 301
+very_unhealthy = 201
+unhealthy = 151
+unhealthy_for_sensitive_groups = 101
+moderate = 51
+good = 0
+
 ```
 
 ```{r}
 #| include: false
-#| eval: false
+##| eval: false
 library(tidyverse)
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/aqi_usa_2000_2023.csv.zip"
 download.file(url, dest="dataset.zip", mode="wb") 
@@ -220,7 +228,7 @@ In other words, we'll graph the number of days when the AQI was red (or orange o
 
 To do this, we'll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value. 
 
-::: {.callout-warning}
+::: {.callout-warning appearance="simple"}
 **Stop and Think**
 
 Before we start, what do you think the graph might look like? Discuss these questions with your neighbor: 
@@ -247,7 +255,7 @@ Here are your options, organized by state. Click through them and find the count
 ```{r}
 #| output: true
 #| echo: false
-#| eval: false
+##| eval: false
 
 library(DT)
 library(knitr)
@@ -518,7 +526,7 @@ Here are your options, organized by state. Click through them and find the count
 ```{r}
 #| output: true
 #| echo: false
-#| eval: false
+##| eval: false
 
 library(DT)
 library(knitr)
@@ -631,7 +639,7 @@ ggplot(myCountyData, aes(x = DOY, y = Year, fill = Category))+
   geom_tile()+
   scale_y_reverse()+
   scale_fill_manual(values=aqi_colors, drop=FALSE)+
-  labs(x=xlabel, y="Year", title=paste0("AQI levels for ", myCounty, " and ", myCounty2))
+  labs(x="Day of year", y="Year", title=paste0("AQI levels for ", myCounty, " and ", myCounty2))
 ```
 
 ## Troubleshooting
@@ -734,11 +742,13 @@ First, you'll tell the computer which county you'd like to graph.
 
 **Important** make sure you spell the County name exactly as you found it in the [table above](#sec-tilemylocation), and be sure to use proper capitalization as well. 
 
-**Type** the county name in the code chunk below. Replace the red line with the county but DON'T delete the quotes `""`. 
-
 ::: panel-tabset 
 
 ## Code editor
+
+**Type** the county name in the code chunk below. Replace the red line with the county but DON'T delete the quotes `""`. 
+
+**Press** run code
 
 ```{webr-r}
 myCounty = "__________"
@@ -789,11 +799,11 @@ xvar = 'DOY'
 
 The EPA has defined category levels for air quality (good, moderate, unhealthy for sensitive groups, unhealthy, very unhealthy, hazardous). But maybe, you want to adjust those categories. For example, you might be extra sensitive to air pollution, so you want the "good" category to be smaller. Here, you have the option to define those categories. 
 
-If you want to keep the categories the same, skip this step!
+-   If you want to keep the categories the same, skip this step!
 
-Below, you can change the numbers for each category. Each category includes numbers **equal to or greater than** the one you input. For example, right now *hazardous* is anything equal to or greater than 301, and very unhealthy is between 201-300. 
+-   Below, you can change the numbers for each category. Each category includes numbers **equal to or greater than** the one you input. For example, right now *hazardous* is anything equal to or greater than 301, and very unhealthy is between 201-300. 
 
-**Replace** the current numbers with your AQI value.
+**Replace** the current numbers with your chosen AQI values.
 
 **Press** run code
 
@@ -821,7 +831,7 @@ good = 0
 
 -   How do you think the EPA makes those decisions? (Check out [table 6 in this document](https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf){target="_blank"} if you want more information on this!)
 
--   Do you think the same AQI level affects everyone equally? Or does it affect some people more than others? 
+-   Do you think one AQI level affects everyone the same? Or does it affect some people more than others? 
 :::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
@@ -840,7 +850,7 @@ Type in names for your labels below. Replace the red lines and keep the quotes `
 
 -   The `ylabel` is the label for the left axis. This will be year for all plots.
 
--   The `title` goes on the top of the graph. 
+-   The `title` tells the reader what the graph is about and will be on top of the graph. 
 
 ::: panel-tabset
 

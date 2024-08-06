@@ -4,7 +4,7 @@ project:
   resources:
     - files
     - js
-    - styles.css
+    - styles1.css
   
 #webr: 
 #  packages: ['tidyverse']
@@ -52,9 +52,10 @@ website:
 
 format:
   html:
-    theme: yeti
-#    theme: lux sandstone yeti
-    css: styles.css
+    theme: 
+      - yeti
+      #    theme: lux sandstone yeti
+    css: styles1.scss
     toc: true
     toc-depth: 3
     knitr: 
