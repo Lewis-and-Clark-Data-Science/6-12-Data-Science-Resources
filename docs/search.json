@@ -1,15 +1,5 @@
 [
   {
-    "objectID": "tutorials/AQI_tutorial.html",
-    "href": "tutorials/AQI_tutorial.html",
-    "title": "AQI Part 1 - Introduction to Data Science",
-    "section": "",
-    "text": "Note to self, here’s some options for downloading other cities data:\nr package https://cran.r-project.org/web/packages/RAQSAPI/vignettes/RAQSAPIvignette.html\nThis explains how to get json data and i did make an account https://aqs.epa.gov/aqsweb/documents/data_api.html#daily",
-    "crumbs": [
-      "AQI tutorials"
-    ]
-  },
-  {
     "objectID": "tutorials/AQI_tutorial.html#introduction",
     "href": "tutorials/AQI_tutorial.html#introduction",
     "title": "AQI Part 1 - Introduction to Data Science",
@@ -442,7 +432,7 @@
     "href": "tutorials/biodiversity_tutorial.html#congratulations",
     "title": "Biodiversity tutorial",
     "section": "Congratulations!",
-    "text": "Congratulations!\nYou have created a data visualization from a big data set!\nStop and Think:\n\nWhat were some challenges?\nWhat have you learned about Data Science?\nWhat kinda of data would you want to look at in Posit Cloud?\nWhat kind of graphs do you want to make or see more of?\n\nIf you want to learn more about the code we used to create the graph, you can click “continue” to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!\n Continue"
+    "text": "Congratulations!\nYou have created a data visualization from a big data set!\nStop and Think:\n\nWhat were some challenges?\nWhat have you learned about Data Science?\nWhat kinda of data would you want to look at in Posit Cloud?\nWhat kind of graphs do you want to make or see more of?\n\nIf you want to learn more about the code we used to create the graph, you can click “continue” to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!\n\n\n\nFrom.giphy.com\n\n\n\nContinue"
   },
   {
     "objectID": "tutorials/biodiversity_tutorial.html#sec-codechallenge",

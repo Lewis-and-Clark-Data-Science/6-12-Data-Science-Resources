@@ -28,6 +28,7 @@ website:
         - tutorials/climate_change_tutorial.qmd
         - tutorials/biodiversity_tutorial.qmd
         - tutorials/AQI_tutorial.qmd
+        - tutorials/AQI_tutorial_advanced.qmd
         - tutorials/sealevel_tutorial.qmd
     - text: Resources
       menu:

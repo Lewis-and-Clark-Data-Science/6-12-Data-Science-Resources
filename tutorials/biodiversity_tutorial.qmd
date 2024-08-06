@@ -694,6 +694,9 @@ Did you get an error message in red?
 If you want to learn more about the code we used to create the graph, you can click "continue" to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!
 
 ![From.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhhZnlpMjFmanJ2NG5hajBjbWxyYzVtdmkzMDJqcGN5bjg0b2xmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ely3apij36BJhoZ234/giphy-downsized-large.gif)
+
+
+
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
