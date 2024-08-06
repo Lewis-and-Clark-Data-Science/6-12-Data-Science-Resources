@@ -111,6 +111,8 @@ In the code chunk below type `tempData` and click "run code" to see the new data
 
 :::
 ::: {.column width=25%}
+
+
 ![https://geographicbook.com/temperature/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/temperature.jpg){height=3in}
 :::
 :::
