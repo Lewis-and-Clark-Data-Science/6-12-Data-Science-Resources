@@ -10,6 +10,7 @@ format:
   html: 
     toc: true
     self-contained: false
+    toc-collapse: false
 ---
 
 <script>
@@ -122,6 +123,10 @@ Biodiversity_Index <- Biodiversity_Index[-c(2)]
 names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
 
 ```
+
+::: {.column-leftmargin}
+![from.https://www.newscientist.com/definition/biodiversity/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage.jpg){cap-location="margin"}
+:::
 
 ## Introduction
 
@@ -681,6 +686,7 @@ Did you get an error message in red?
 
 If you want to learn more about the code we used to create the graph, you can click "continue" to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!
 
+![From.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhhZnlpMjFmanJ2NG5hajBjbWxyYzVtdmkzMDJqcGN5bjg0b2xmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ely3apij36BJhoZ234/giphy-downsized-large.gif)
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
@@ -919,7 +925,7 @@ Biodiversity_Index|>
 ```
 
 
-If you're having trouble with the code, click continue to see the answers and edit your code accordingly. 
+If you're having trouble with the code, click below to see the answers and edit your code accordingly. 
 
 
 ::: {.callout-note collapse="true"}
@@ -1029,16 +1035,18 @@ Biodiversity_Index|>
 :::
 :::
 
-## Congratulations!\*\*
-
-**You have created a data visualization from a big data set!**
-
 <button id="continue-button" class="btn btn-primary float-start me-2">The End</button>
 </div>
 
 <div class="tutorial-part" style="display: none;">
 
+## Congratulations!\*\*
+
+**You have created a data visualization from a big data set!**
+
 Nice work!
+
+![from giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXJ5b3RzY2RwbjV4N3prcHZldjZkMGVlc2NodGZuMXU5cHZnMHF4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6fJ1BM7R2EBRDnxK/giphy.gif)
 
 
 ```{r}

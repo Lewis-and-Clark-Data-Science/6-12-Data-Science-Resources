@@ -458,7 +458,7 @@ numbers = c(41, 55, 98, 104, 2, 8)
 Now you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.
 
 ```{webr-r}
-numbers = c(_,_,_,_,_,_,)
+numbers = c(_,_,_,_,_,_)
 ```
 
 Now let's run a function that will tell us which number is the biggest. Click the play button on this code chunk too.
@@ -842,3 +842,5 @@ ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path=
 <div class="tutorial-part" style="display: none;">
 
 The End!
+
+![From.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnJkNnowYzFvYW45bXU4bDk2Mjd2b3VmZnVvMW0zdDB5d3Y1bDhkciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fxsqOYnIMEefC/giphy.gif)

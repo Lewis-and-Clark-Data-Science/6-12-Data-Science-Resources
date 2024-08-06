@@ -34,6 +34,9 @@ download.file(url, "data.csv")
 tempData<- read_csv("data.csv")
 ```
 
+::: {.column-leftmargin}
+![https://physicsworld.com/a/solving-climate-change-with-jonathan-koomey-and-ian-monroe/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climateimage.jpg){}
+:::
 Welcome to this data science tutorial! We'll be using R to look at climate change data.
 
 R is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!
@@ -325,3 +328,6 @@ ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
 :::
 
 Nice work! Hopefully you enjoyed making your own graph with this data!
+
+![from.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3IyeWw4a3ZjZTZ3bWhqOW5lbndxcDZ6dW9zMTEyd2Z4bmxjeG5odiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/93uYptVAHE7C0/giphy.gif)
+

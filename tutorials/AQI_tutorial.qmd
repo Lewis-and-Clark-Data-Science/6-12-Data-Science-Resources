@@ -463,7 +463,7 @@ numbers = c(41, 55, 98, 104, 2, 8)
 Now you try. **Type** your numbers after the first parenthesis and separate them with a comma. Then **click** run code.
 
 ```{webr-r}
-numbers = c(_,_,_,_,_,_,)
+numbers = c(_,_,_,_,_,_)
 ```
 
 Now let's run a function that will tell us which number is the biggest. **Click** the play button on this code chunk too.
@@ -690,7 +690,7 @@ You may have noticed that if you go to the [EPA website](https://www.epa.gov/out
 
 We'll start by making a *tile plot* for the air quality index (AQI) from 2000-2023. Let's see what the graph looks like for Portland and Los Angeles. Later on, you'll have options to create other types of graphs for more locations.
 
-**Press** run code below. 
+**Press** run code below. Then, click through the tabs at the top of the code chunk to make a tile graph for Los Angeles.
 
 ::: panel-tabset
 
@@ -765,7 +765,14 @@ Talk with your neighbor about the graphs!
         
 -   What else would you like to know? 
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 Next, you can move on to AQI Tutorial Part 2 in order to customize your own graphs! You'll be able to choose your own locations, make a scatterplot, and view raw data. 
+
+![from giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHl3cnk1M3FxN3Jza21tcGJ3a2lqOGg3NHpwY21ta3AxaGNpbDI2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YgbWOUHSWoYMy0gCiU/giphy.gif)
 
 <button id="next-button" class="btn btn-primary float-start me-2"> AQI Tutorial Part 2 </button>
 </div>

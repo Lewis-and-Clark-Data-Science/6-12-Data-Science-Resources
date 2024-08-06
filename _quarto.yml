@@ -11,6 +11,7 @@ project:
 website:
   title: "6-12 Data Science Resources"
   favicon: files/figures/data-science-icon.png
+  back-to-top-navigation: true
   navbar: 
     left: 
     - text: Lesson Plans 
