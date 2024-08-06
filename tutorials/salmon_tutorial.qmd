@@ -347,7 +347,7 @@ Watch this video to see!
 
 {{< video https://www.youtube.com/watch?v=zoHpE5scs2I >}}
 
-As you saw in the video, someone counts each fish that goes by. They write down exactly how many fish they see, what time and what kind of fish. All those numbers get added together and become **data**. Then, someone puts all that data [online](https://www.cbr.washington.edu/dart/query/adult_daily) for anyone to see (like us!).
+As you saw in the video, someone counts each fish that goes by. They write down exactly how many fish they see, what time and what kind of fish. All those numbers get added together and become **data**. Then, someone puts all that data [online](https://www.cbr.washington.edu/dart/query/adult_daily){target="_blank"} for anyone to see (like us!).
 
 There is A LOT of data (numbers of fish) that they collect. It would be pretty pretty hard to understand just by looking at it. In fact, if you click the blue box right below this, you can see all the data. It should look pretty confusing! Keep reading to learn how we can use the computer to better understand all those numbers.
 
@@ -364,7 +364,7 @@ datatable(Bon_chinook1)
 ```
 :::
 
-Note: the data is from [Columbia Basin Research](https://www.cbr.washington.edu/dart/query/adult_daily)
+Note: the data is from [Columbia Basin Research](https://www.cbr.washington.edu/dart/query/adult_daily){target="_blank"}
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>

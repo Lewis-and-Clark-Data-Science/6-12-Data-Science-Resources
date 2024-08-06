@@ -180,7 +180,7 @@ This tutorial lets you use R to work with data. Throughout the tutorial, there a
 
 ## Data Set
 
-We are going to be using data from BioTIME (<https://biotime.st-andrews.ac.uk>)
+We are going to be using data from [BioTIME](https://biotime.st-andrews.ac.uk){target="_blank"}
 
 -   We are specifically looking at data on the Biodiversity of Terrestrial Plants and Invertebrates in the Temperate Coniferous Forest and in Tropical Forest.
 

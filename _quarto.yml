@@ -4,6 +4,7 @@ project:
   resources:
     - files
     - js
+    - styles.css
   
 #webr: 
 #  packages: ['tidyverse']

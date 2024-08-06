@@ -10,8 +10,11 @@ output:
     self-contained: false
     toc-expand: true
     sidebar: true
+css: styles1.css
+
 toc: true
 toc-depth: 2
+callout-icon: false
 ---
 
 
@@ -175,7 +178,7 @@ Part 2 will build off of the graphs created in Part 1 and allow you to customize
 ::: columns
 ::: {.column width="40%"}
 
-This tutorial uses air quality data from [the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a [link to the data](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI) and here is a [link to more information](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards) about the data. 
+This tutorial uses air quality data from [the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI){target="_blank"} ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a [link to the data](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI){target="_blank"} and here is a [link to more information](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards){target="_blank"} about the data. 
 
 The data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial. 
 
@@ -217,6 +220,7 @@ In other words, we'll graph the number of days when the AQI was red (or orange o
 
 To do this, we'll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value. 
 
+::: {.callout-warning}
 **Stop and Think**
 
 Before we start, what do you think the graph might look like? Discuss these questions with your neighbor: 
@@ -224,7 +228,7 @@ Before we start, what do you think the graph might look like? Discuss these ques
 -   In Portland, do you think the air quality is getting **better** or **worse** since 2000? 
 
 -   If we only look at **Unhealthy** AQI levels (red) in Portland, do you think there will be **more** or **less** total days of unhealthy air quality since 2000?
-
+:::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -332,7 +336,7 @@ myLevel = "Unhealthy"
 
 ### Step 4: Choose a color
 
-Now you can choose a color for your points. Here are a few options. Otherwise go to [this link](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) for more options.
+Now you can choose a color for your points. Here are a few options. Otherwise go to [this link](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf){target="_blank"} for more options.
 
 -   "red"
 -   "green"
@@ -809,13 +813,16 @@ good = 0
 
 ```
 
+::: {.callout-warning appearance="simple" fontsize=2}
+
 **Stop and think** 
 
 -   Why did you choose the AQI values you did for each category? 
 
--   How do you think the EPA makes those decisions? (Check out [table 6 in this document](https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf) if you want more information on this!)
+-   How do you think the EPA makes those decisions? (Check out [table 6 in this document](https://document.airnow.gov/technical-assistance-document-for-the-reporting-of-daily-air-quailty.pdf){target="_blank"} if you want more information on this!)
 
 -   Do you think the same AQI level affects everyone equally? Or does it affect some people more than others? 
+:::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>

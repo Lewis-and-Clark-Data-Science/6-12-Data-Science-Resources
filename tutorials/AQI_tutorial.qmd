@@ -13,6 +13,7 @@ output:
     sidebar: true
 toc: true
 toc-depth: 2
+callout-icon: false
 ---
 
 <script>
@@ -474,13 +475,6 @@ max(numbers)
 ```
 :::
 
-### Analyzing data with R
-
-The programming language R can also do very complicated things, like work with large amounts of data and create graphs. 
-
--   You can import data from various sources, clean and process it, perform statistical analyses and generate reports or visualizations
-
--   We are going to be utilizing the data visualization aspect and create graphs from a big data set
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -493,7 +487,7 @@ The programming language R can also do very complicated things, like work with l
 ::: columns
 ::: {.column width="50%"}
 
-Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot). It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
+Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot){target="_blank"}. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
 
 We're focusing on Portland and Los Angeles air quality data. 
 
@@ -685,7 +679,7 @@ The EPA defines the following categories based on the air quality index (AQI):
 
 We've inputted these values and colors into our code for the graph. 
 
-You may have noticed that if you go to the [EPA website](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot), they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!
+You may have noticed that if you go to the [EPA website](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot){target="_blank"}, they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!
 
 ### AQI Tile Plot
 
@@ -752,6 +746,7 @@ la_AQI |>
 
 :::
 
+::: {.callout-warning appearance="simple" }
 **Stop and think**
 
 Talk with your neighbor about the graphs!
@@ -765,13 +760,14 @@ Talk with your neighbor about the graphs!
         -   Why are they different? 
         
 -   What else would you like to know? 
+:::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
 <div class="tutorial-part" style="display: none;">
 
-Next, you can move on to AQI Tutorial Part 2 in order to customize your own graphs! You'll be able to choose your own locations, make a scatterplot, and view raw data. 
+Next, you can move on to **AQI Tutorial Part 2** in order to customize your own graphs! You'll be able to choose your own locations, make a scatterplot, and view raw data. 
 
 ![from giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHl3cnk1M3FxN3Jza21tcGJ3a2lqOGg3NHpwY21ta3AxaGNpbDI2bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YgbWOUHSWoYMy0gCiU/giphy.gif)
 
