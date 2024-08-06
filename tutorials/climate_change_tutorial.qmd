@@ -34,9 +34,8 @@ download.file(url, "data.csv")
 tempData<- read_csv("data.csv")
 ```
 
-::: {.column-leftmargin}
-![https://physicsworld.com/a/solving-climate-change-with-jonathan-koomey-and-ian-monroe/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climateimage.jpg){}
-:::
+![https://physicsworld.com/a/solving-climate-change-with-jonathan-koomey-and-ian-monroe/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climateimage.jpg){height=4in}
+
 Welcome to this data science tutorial! We'll be using R to look at climate change data.
 
 R is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!
@@ -96,6 +95,9 @@ ggplot(data=co2Data, mapping=aes(x=year, y=co2))+
        y="CO2 Emissions (Million Tons)")
 ```
 
+::: columns
+::: {.column width=70%}
+
 ## Temperature Data
 
 What if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how *different* the temperature each year is from the average in 1900.
@@ -106,6 +108,12 @@ In the code chunk below type `tempData` and click "run code" to see the new data
 
 
 ```
+
+:::
+::: {.column width=25%}
+![https://geographicbook.com/temperature/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/temperature.jpg){height=3in}
+:::
+:::
 
 You should see 2 columns: one called `Year` and one called `Anomaly`. The Anomaly column tells us how *different* the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.
 

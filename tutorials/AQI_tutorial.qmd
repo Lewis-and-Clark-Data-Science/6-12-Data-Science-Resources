@@ -377,13 +377,19 @@ All of the above
 
 <div class="tutorial-part" style="display: none;">
 
-
+::: columns
+:::{.column width=50%}
 ## Using the computer to do data science 
 
 In this tutorial, we're going to use coding to analyze large amounts of data. We'll be able to create graphs by writing code. 
 
 We're going to use a coding language called **R**. Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
 
+:::
+:::{.column width=50%}
+![https://imgur.com/i-heard-hes-good-coding-3F7d7](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dogcoding.jpg){height=3in}
+:::
+:::
 ### Introduction to R
 
 This tutorial lets you use R to work with data. Throughout the tutorial, there are gray boxes with a green "run code" button. These are called code chunks. You can type commands into these boxes and it will output answers. Let's try it out.

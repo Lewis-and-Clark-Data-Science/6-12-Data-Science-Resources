@@ -124,13 +124,20 @@ names(Biodiversity_Index)[names(Biodiversity_Index)=='...1'] <- 'entry'
 
 ```
 
-::: {.column-leftmargin}
-![from.https://www.newscientist.com/definition/biodiversity/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage.jpg){cap-location="margin"}
-:::
 
+::: columns
+::: {.column width="35%"}
 ## Introduction
 
 Today we'll be looking at biodiversity!
+
+We're going to using coding to help us think about biodiversity and make graphs. 
+
+:::
+::: {.column width="65%"}
+![from.https://www.newscientist.com/definition/biodiversity/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage.jpg){cap-location="margin" height=3.5in}
+:::
+:::
 
 <div class="tutorial-part" style="display: block;">
 
