@@ -10,6 +10,8 @@ output:
     self-contained: false
     toc-expand: true
     sidebar: true
+toc: true
+toc-depth: 2
 ---
 
 
@@ -158,7 +160,11 @@ usa_aqi_data<- unzip("dataset.zip", exdir = "./")|>
 #Note: in the future you could probably just use the link right from this website instead of going through github https://aqs.epa.gov/aqsweb/airdata/daily_aqi_by_county_2023.zip
 ```
 
+<div class="tutorial-part" style="display: block;">
+
+
 ## Introduction
+
 
 Welcome to **Part 2 of the Air Quality Data Science Tutorials**! If you have not done Part 1 yet, [click here](AQI_tutorial.qmd) to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.
 
@@ -183,7 +189,6 @@ The data set is very large, so we will not view it now, but there will be an opt
 
 :::
 
-<div class="tutorial-part" style="display: block;">
 
 ## Customizing your graphs!
 

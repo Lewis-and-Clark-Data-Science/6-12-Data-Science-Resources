@@ -11,6 +11,8 @@ output:
     self-contained: false
     toc-expand: true
     sidebar: true
+toc: true
+toc-depth: 2
 ---
 
 <script>
