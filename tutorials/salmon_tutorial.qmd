@@ -9,6 +9,7 @@ format:
   html: 
     toc: true
     self-contained: false
+callout-icon: false
 ---
 
 <script>
@@ -313,6 +314,8 @@ We'll start by looking at the Bonneville Dam and learn how many salmon and steel
 
 The Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.
 
+::: {.callout-warning collapse="false" appearance="simple"}
+
 **Brainstorm:**
 
 *What are some positive and negative impacts you think the dam might have?*
@@ -325,6 +328,8 @@ Talk with your classmates about how some impacts the dam might have on the surro
 -   Salmon are important spiritually and culturally to Native Americans
 -   Sea lions
 -   Other animals who live where the dam was created
+
+:::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -615,9 +620,11 @@ So the largest number of fish that crossed the Bonneville dam in 2021 in a day i
 
 What if you wanted to know how many **total** fish crossed the dam this year, compared to 50 years ago? We can use the computer to answer that question too!
 
+::: {.callout-warning collapse="false" appearance="simple"}
 First, let's make a prediction. Think about what you've learned about dams and how they impact fish trying to get past them.
 
 Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions!
+:::
 
 When you're ready to check your answer, run the code below. It will find the **sum** of the row with 2022 data and 1972 data
 
@@ -723,38 +730,56 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 
 :::
 
+::: {.callout-warning collapse="false" appearance="simple"}
 **Stop and think** 
 
 -   What do you see? 
 -   What does it mean? 
 -   What do you wonder? 
 
+:::
+
 **Note to teachers** At this point I recommend you check out THIS PRESENTATION to explore what the graphs mean in your class! 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 ## Congratulations!!
 
 You learned how you can use the computer to look at large amounts of numbers and data. But, data doesn't tell us everything! 
 
+::: {.callout-warning collapse="false" appearance="simple"}
+
 **Brainstorm**
 
-    -   What questions do you have after looking at this data? 
-    -   How could you find the answer to those questions?
-    -   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? 
-          -   How would you do that? 
-          -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology
-    -   What does the data/numbers **not** tell us? 
+-   What questions do you have after looking at this data? 
+-   How could you find the answer to those questions?
+-   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? 
+    
+    -   How would you do that? 
+          
+    -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology
+    
+-   What do the data/numbers **not** tell us? 
 
-### The end 
+:::
 
-That's the end of the tutorial! 
+### Want to learn more
 
-    -   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
-    -   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!
+This is the end of the tutorial but there's lots more resources to explore!
+
+-   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
+
+-   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!
 
 <button id="continue-button" class="btn btn-primary float-start me-2">More Graphs!</button>
 </div>
 
 <div class="tutorial-part" style="display: none;">
+
+## Graphs of other species and locations
 
 Here are graphs of other species (Chinook and Steelhead) at other dams (Dalles and Bonneville) as well which you can take a look at! 
 
