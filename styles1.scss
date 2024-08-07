@@ -2,3 +2,18 @@
 .callout-warning {
    font-size: 20px; !important;
 }
+
+.border-left {
+  border: 1px solid lightgray;
+  border-left: 5px solid darkorange;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.border-left::first-line {
+  font-size: 1.2em; /* Adjust font size as needed */
+  font-weight: bold; /* Optional: make it bold */
+}

@@ -14,8 +14,8 @@ output:
 toc: true
 toc-depth: 2
 callout-icon: false
-execute: 
-  eval: false
+#execute: 
+#  eval: false
 ---
 
 
@@ -230,7 +230,7 @@ In other words, we'll graph the number of days when the AQI was red (or orange o
 
 To do this, we'll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value. 
 
-::: {.callout-warning appearance="simple"}
+::: {.border-left}
 **Stop and Think**
 
 Before we start, what do you think the graph might look like? Discuss these questions with your neighbor: 
@@ -825,7 +825,7 @@ good = 0
 
 ```
 
-::: {.callout-warning appearance="simple" fontsize=2}
+::: {.border-left}
 
 **Stop and think** 
 

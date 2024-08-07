@@ -12,37 +12,65 @@ format:
     self-contained: false
     toc-collapse: false
 callout-icon: false
+toc: true
+toc-depth: 2
 ---
 
 <script>
-console.log("Script loaded");
-console.log("Button clicked");
+
 document.addEventListener("DOMContentLoaded", function() {
     let currentPartIndex = 0;
     const parts = document.querySelectorAll(".tutorial-part");
     const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const nextButton = document.getElementById("next-button");
     const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
     const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
 
- // Log the selected elements
+    // Log the selected elements
     console.log('Tutorial parts:', parts);
     console.log('Continue buttons:', buttons);
 
     // Hide all tutorial parts except the first one
     parts.forEach(function(part, index) {
         if (index !== 0) {
-            part.style.display = "none";}});
-    
-    // Function to scroll to the top of the element, accounting for a fixed header
-      function scrollToElement(element) {
-          const elementTop = element.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-              top: elementTop - headerHeight,
-             behavior: "smooth"
-         });
-     }
+            part.style.display = "none";
+        }
+    });
 
+    // Function to scroll to the top of the element, accounting for a fixed header
+    function scrollToElement(element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: elementTop - headerHeight,
+            behavior: "smooth"
+        });
+    }
+
+    // Function to show a specific part
+    function showPart(index) {
+        if (index >= 0 && index < parts.length) {
+            parts.forEach((part, idx) => {
+                part.style.display = (idx === index) ? "block" : "none";
+            });
+            scrollToElement(parts[index]);
+            currentPartIndex = index;
+        }
+    }
     
+     // Function to show all parts up to a specific index
+    function showPartsUpTo(index) {
+        parts.forEach((part, idx) => {
+            if (idx <= index) {
+                part.style.display = "block";
+            }
+            if (idx > index){
+            part.style.display = "none";
+}
+        });
+        scrollToElement(parts[index]);
+        currentPartIndex = index;
+    }
+
     // Add click event listeners to each button
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
@@ -50,15 +78,53 @@ document.addEventListener("DOMContentLoaded", function() {
                 parts[currentPartIndex].style.display = "block";
                 buttons[currentPartIndex].style.display = "none";
                 currentPartIndex++;
-                parts[currentPartIndex].style.display= "block";
-                 // Jump to the id anchor for the current section
-         //   window.location.hash = parts[currentPartIndex].id;
-        // Scroll to the top of the current section
-                scrollToElement(parts[currentPartIndex]);
-             // Adjust scroll position to account for the height of the navbar
-              //   window.scrollBy(0, 10000);
-                } else {
-                alert("End of tutorial");}});});});
+                showPartsUpTo(currentPartIndex);
+            } else {
+                alert("End of tutorial");
+            }
+        });
+    });
+
+    // Listen for hash changes to navigate to the correct section
+    window.addEventListener("hashchange", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetPart = document.querySelector(hash);
+            if (targetPart) {
+                const targetIndex = Array.prototype.indexOf.call(parts, targetPart);
+                showPartsUpTo(targetIndex);
+                buttons.forEach((button, idx) => {
+                  if (idx < targetIndex) {
+                  button.style.display="none";}
+                  if (idx >= targetIndex) {
+                  button.style.display="block";
+}
+                  });
+            }
+        }
+    });
+
+    // Check the URL hash on page load
+    const initialHash = window.location.hash;
+    if (initialHash) {
+        const initialTarget = document.querySelector(initialHash);
+        if (initialTarget) {
+          const intialIndex=Array.prototype.indexOf.call(parts, initialTarget);
+            showPartsUpTo(initalIndex);
+            buttons.forEach((button, idx) => {
+                if (idx < initialIndex) {
+                    button.style.display = "none";
+                }
+            });
+        }
+    }
+    // Add click event listener to the new next button
+    if (nextButton) {
+        nextButton.addEventListener("click", function() {
+            window.location.href = "https://www.example.com"; 
+        });
+    }
+});
 
 </script>
 
@@ -73,14 +139,6 @@ url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resource
 download.file(url, "Biodiversity_Index.csv")
 
 Biodiversity_Index <- read_csv("Biodiversity_Index.csv")
-
-#Fix spelling errors in the dataset
-#Biodiversity_Index <- Biodiversity_Index |> 
-#  mutate(Biome=recode(Biome, 'Temperate Conferous Forest' = 'Temperate Coniferous #Forest', 
-#                     'Tropical and Subtropical moist broadleaf forest' = 'Tropical #Forest'), 
-#         Taxa=recode(Taxa, 'Terrestial Invertebrate'='Terrestrial Invertebrates', 
-#                     'Terrestial Plant' = 'Terrestrial Plants',
-#                     'Terrestial Plants' = 'Terrestrial Plants'))
 
 Biodiversity_Index <- Biodiversity_Index[-c(2)]
 
@@ -115,19 +173,45 @@ We're going to using coding to help us think about biodiversity and make graphs.
 
 :::
 ::: {.column width="65%"}
-![from.https://www.newscientist.com/definition/biodiversity/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage.jpg){cap-location="margin" height=3.5in}
+
+<br>
+<br>
+
+
+![from.https://www.newscientist.com/definition/biodiversity/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage.jpg){cap-location="margin" height=2in}
 :::
 :::
 
 <div class="tutorial-part" style="display: block;">
 
+## What is biodiversity? 
+
+Biodiversity is the variety of all life on Earth. It is often measured by the number of species in an ecosystem. 
+
+Here's [a video](https://www.youtube.com/watch?v=7DOuku8876I) to learn more about biodiversity and how we can calculate it using Simpson's Diversity Index.
+
+### Collecting data
+
+To better understand the biodiversity in an ecosystem, scientists perform *field work* where they record information about an ecosystem. Let's learn about the Borneo rainforst where scientists collect data about the plants, animals, and ecological factors there. 
+
+{{< video https://www.youtube.com/watch?v=IuyFDz0VA70&list=TLGGNH2RFY9J5t0wNzA4MjAyNA&t=131s >}}
+
+After scientists collect all this data, other people **analyze** it. They import and process data and then generate graphs and perform statistical analyses to learn more about what is happening in that ecosystem. 
+
+Today, we're going to learn more about how to analyze data. We'll use a coding language called R to process and analyze biodiversity data. 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ## What is R and what can it do?
 
 R is a programming language that helps us work with large amounts of data.
 
--   You can import data from various sources,clean and process it, perform statistical analyses and generate reports or visualizations
+-   You can import data from various sources, clean and process it, perform statistical analyses and generate reports or visualizations
 
--   We are going to be utilizing the data visualization aspect by creating graphs from a big data set
+-   Today, we are going to create graphs from a big data set!
 
 -   [Fun Fact:]{.underline} R is like a fancy calculator
 
@@ -160,9 +244,9 @@ This tutorial lets you use R to work with data. Throughout the tutorial, there a
 
 ## Data Set {#sec-dataset}
 
-We are going to be using data from [BioTIME](https://biotime.st-andrews.ac.uk){target="_blank"}
+We are going to be using data from [BioTIME,](https://biotime.st-andrews.ac.uk){target="_blank"} which is a database with a focus on biodiversity. They include free open-access data in an effort to make data more accessible and usable by anyone. 
 
--   We are specifically looking at data on the Biodiversity of Terrestrial Plants and Invertebrates in the Temperate Coniferous Forest and in Tropical Forest.
+-   We are specifically looking at data on the Biodiversity of Terrestrial Plants and Invertebrates in the Temperate Coniferous Forest and in Tropical Forests.
 
 We've pre-loaded a data set from the biotime data into this tutorial
 
@@ -245,15 +329,17 @@ At the top you'll see the names of all the columns. Try scrolling all the way to
 
 ## Choosing our columns
 
-We are going to make graphs that represent biodiversity, so we want to look at **biodiversity Index** and the **number of different species**.
+How can we narrow down all the data and variables? Let's consider our goal, which is to graph biodiversity. 
 
-::: {.callout-warning appearance="simple"}
+We will focus on **biodiversity Index** and the **number of different species** to help us understand biodiversity in this data set.
+
+::: {.border-left}
 
 **Stop and Think:**
 
 Discuss these questions with your neighbor:
 
--   How might biodiversity index and number of different species represent biodiversity in an area? 
+-   How do biodiversity index and number of different species represent biodiversity in an area? 
 
 -   What is the difference between biodiversity index and number of different species?
 
@@ -265,6 +351,11 @@ Discuss these questions with your neighbor:
 </div>
 
 <div class="tutorial-part" style="display: none;">
+
+#### Dataset format
+
+-   The columns names are **variables** in the data. 
+-   The rows show **individual data entries**. 
 
 ::: panel-tabset
 ## Question
@@ -314,13 +405,13 @@ We've determined that we want to work with the `index` and `numspecies` columns.
 
 Now let's look closer at each biome and taxa in the data set. In order to make a better graph, we want to narrow down the data we're looking at. We'll need to choose a biome and taxa to focus on. 
 
-::: {.callout-warning appearance="simple"}
+::: {.border-left}
 
 **Stop and Think**
 
 *How many different biomes does the data set have?*
 
-(Go back to look at the [`Biodiversity_Index`](#sec-dataset) data set to try to find the answer)
+-   (Go back and look at the `Biodiversity_Index` data set to try to find the answer)
 
 -   notice this is HARD to find by just looking at the data set, especially if the data set is huge.
 
@@ -332,7 +423,7 @@ Now let's look closer at each biome and taxa in the data set. In order to make a
 <div class="tutorial-part" style="display: none;">
 
 
-Let's use R to solve this question instead! The `unique()` function lists unique values within a column, so it shows us all the different values.
+Let's use R to solve this question instead! The `unique()` function lists unique values within a column, so it shows us all the **distinct** values in a column.
 
 ::: panel-tabset
 ## Code editor
@@ -355,15 +446,10 @@ There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropic
 
 ### Unique Taxa
 
-::: {.callout-warning appearance="simple"}
-
-**Stop and Think**
-
-*How many different taxa does the data set have?*
+**How many different taxa does the data set have?**
 
 -   Now you know what code to use to find unique values within a column. See if you can reuse the code to find the unique values for the `Taxa` column.
 
-:::
 
 ::: panel-tabset
 ## Code editor
@@ -405,6 +491,19 @@ Now that you have extracted the columns you need, let's graph!
 We have A LOT of data. It would be really hard to graph by hand. Luckily, we can use the computer (R) to graph it.
 
 Our goal is to create a graph that tracks the biodiversity of a specific location over time. We have two methods of measuring biodiversity: the **number of species** and the **biodiversity index**. We will also narrow down our data by choosing a specific **biome** and **taxa**. 
+
+::: {.border-left}
+
+**Stop and Think**
+
+*Before you make the graph, make a prediction about what it will look like:*
+
+-   How do you think biodiversity is changing over time? 
+
+    -   Will there be **more** or **less** biodiversity now compared to 50 years ago? 
+
+-   Will biodiversity look different in different biomes and taxas? How? 
+:::
 
 Go through the following steps to create your graph. 
 
@@ -651,7 +750,7 @@ yLabel = "Number of Species"
 
 <div class="tutorial-part" style="display: none;">
 
-## Step 6: Create the graph!
+### Step 6: Create the graph!
 
 Now, you can create your graph! Click "run" on the code chunk below
 
@@ -687,6 +786,25 @@ Did you get an error message in red?
 
 :::
 
+::: {.border-left}
+
+**Stop and think**
+
+Talk with your group about the graphs!
+
+-   What patterns do you notice?
+    
+    -   Do you see any outliers? 
+    
+    -   How is the data changing over time? 
+
+-   What do you wonder? 
+
+-   Does this data give you all the information you want? What is the data *missing*? 
+        
+-   What else would you like to know? 
+:::
+
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
 
@@ -696,15 +814,19 @@ Did you get an error message in red?
 
 **You have created a data visualization from a big data set!**
 
+::: {.border-left}
+
 **Stop and Think**:
 
 1.  *What were some challenges?*
 
 2.  *What have you learned about Data Science?*
 
-3.  *What kinda of data would you want to look at in Posit Cloud?*
+3.  *What other kind of data would you like to look at in the future?*
 
 4.  *What kind of graphs do you want to make or see more of?*
+
+:::
 
 If you want to learn more about the code we used to create the graph, you can click "continue" to go to the Code Challenge. This is OPTIONAL. Otherwise you are all done! Great work!!
 
@@ -742,6 +864,11 @@ Lets look at line 1 : `Biodiversity_Index |>`
 -   This line is telling the computer which data set we want to create a graph from
 
 -   You do not need to make any changes to this line.
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 ### Step 2: Identifying which `Biome` and which `Taxa`
 
@@ -784,6 +911,11 @@ filter(Biome=="Savannah Desert", Taxa=="Mammals")
 ```
 :::
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ### Step 3: Choose your X and Y variables
 
 Looking at Line 3: `ggplot(aes(x= YEAR, y="numspecies or index"))`
@@ -819,6 +951,11 @@ ggplot(aes(x= YEAR, y=numspecies))
 ```
 :::
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 ### Step 4: Choosing the type of graph
 
 Looking at line 5, this is where we choose the type of graph we want to use. Currently it says `geom_col(________)` with some random words in the parenthesis that you can ignore for now. 
@@ -840,6 +977,11 @@ geom_col(fill= "Insert Color Name Here", color="grey37")
 
 ```
 :::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 
 ### Step 5: Assigning corresponding color to the bars
@@ -892,7 +1034,12 @@ geom_col(fill= "salmon3", color="grey37")
 ```
 :::
 
-### Step 5:
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Step 6: Labels
 
 Looking at lines 5,6,and 7 : `labs(title = "Insert Title Name", subtitle = "Insert Subtititle", x= "Year", y= "Number of species or Biodiversity index")`
 
@@ -930,9 +1077,14 @@ labs(title = "Number of Terrestrial Invertebrate Species",
 ```
 :::
 
-### Step 6: Putting all the lines together!
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
 
-Now that you have edited all the necessary code lines, lets put them together to create our graphs
+<div class="tutorial-part" style="display: none;">
+
+### Step 7: Putting all the lines together!
+
+Now that you have edited all the necessary code lines, let's put them together to create our graphs
 
 **Your Turn:**
 
@@ -1065,33 +1217,11 @@ Biodiversity_Index|>
 
 <div class="tutorial-part" style="display: none;">
 
-## Congratulations!\*\*
+## Congratulations!
 
 **You have created a data visualization from a big data set!**
 
 Nice work!
 
 ![from giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXJ5b3RzY2RwbjV4N3prcHZldjZkMGVlc2NodGZuMXU5cHZnMHF4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6fJ1BM7R2EBRDnxK/giphy.gif)
-
-
-```{r}
-#| echo: false
-#| results: asis
-#| output: false
-create_buttons <- function(next_topic = "#") {
-  if (is.null(next_topic)) {
-    next_button <- ""
-  } else {
-    next_button <- glue::glue('<a id="nextTopicButton" class="btn btn-danger disabled" href="{next_topic}" role="button">Next topic</a>')
-  }
-  button_section <- glue::glue('
-<section id="buttons">
-<button id="continueButton" class="btn btn-primary float-start me-2">Continue</button>
-{next_button}
-<button id="resetButton" class="btn btn-outline-warning btn-sm float-end">Start over</button>
-</section>')
-  
-  cat(button_section)
-}
-create_buttons("https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html")
-```
+</div>

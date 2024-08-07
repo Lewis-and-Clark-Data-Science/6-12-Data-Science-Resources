@@ -746,7 +746,7 @@ la_AQI |>
 
 :::
 
-::: {.callout-warning appearance="simple" }
+::: {.border-left}
 **Stop and think**
 
 Talk with your neighbor about the graphs!
