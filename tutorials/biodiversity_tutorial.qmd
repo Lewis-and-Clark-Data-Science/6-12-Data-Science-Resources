@@ -11,6 +11,7 @@ format:
     toc: true
     self-contained: false
     toc-collapse: false
+callout-icon: false
 ---
 
 <script>
@@ -58,27 +59,6 @@ document.addEventListener("DOMContentLoaded", function() {
               //   window.scrollBy(0, 10000);
                 } else {
                 alert("End of tutorial");}});});});
-
-
-  // Add click event listeners to sidebar links
-  
- //    sidebarLinks.forEach((link, index) => {
-//           link.addEventListener("click", function(event) {
-//               event.preventDefault(); // Prevent default anchor behavior
-
-            // Hide current part and button
-            //parts[currentPartIndex].style.display = "none";
-           // buttons[currentPartIndex].style.display = "none";
-
-            // Move to the part corresponding to the sidebar link
- //           currentPartIndex = index;
- //           parts[currentPartIndex].style.display = "block";
-
-            // Scroll to the current part
-//            scrollToElement(parts[currentPartIndex]);
-//        });
-//      });
-//    });
 
 </script>
 
@@ -178,7 +158,7 @@ This tutorial lets you use R to work with data. Throughout the tutorial, there a
 <div class="tutorial-part" style="display: none;">
 
 
-## Data Set
+## Data Set {#sec-dataset}
 
 We are going to be using data from [BioTIME](https://biotime.st-andrews.ac.uk){target="_blank"}
 
@@ -190,7 +170,7 @@ We've pre-loaded a data set from the biotime data into this tutorial
 
 Lets look at it!
 
-::: {.callout-note collapse="true"}
+::: {.callout-note collapse="true"} 
 ## Click this to see our data!
 
 ::: panel-tabset
@@ -267,13 +247,30 @@ At the top you'll see the names of all the columns. Try scrolling all the way to
 
 We are going to make graphs that represent biodiversity, so we want to look at **biodiversity Index** and the **number of different species**.
 
+::: {.callout-warning appearance="simple"}
+
 **Stop and Think:**
+
+Discuss these questions with your neighbor:
+
+-   How might biodiversity index and number of different species represent biodiversity in an area? 
+
+-   What is the difference between biodiversity index and number of different species?
+
+-   Why would we want to look at **both** biodiversity index and number of different species? 
+
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
 
 ::: panel-tabset
 ## Question
 
 ::: question
-**Which Columns do you think represent these two things?**
+**Which Columns in the dataset do you think represent biodiversity index and number of different species?**
 
 ::: choices
 ::: choice
@@ -312,24 +309,30 @@ We've determined that we want to work with the `index` and `numspecies` columns.
 
 -   The `numspecies` column represents the different number of species observed per year.
 
-<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
-</div>
-
-<div class="tutorial-part" style="display: none;">
 
 ### Choosing the biome and taxa
 
-Now we want to look closer at each biome and taxa that the data set has. In order to make a better graph, we want to narrow down the data we're looking at. We'll need to choose a biome and taxa to focus on. 
+Now let's look closer at each biome and taxa in the data set. In order to make a better graph, we want to narrow down the data we're looking at. We'll need to choose a biome and taxa to focus on. 
+
+::: {.callout-warning appearance="simple"}
 
 **Stop and Think**
 
 *How many different biomes does the data set have?*
 
-(Go back to look at the `Biodiversity_Index` data set to try to find the answer)
+(Go back to look at the [`Biodiversity_Index`](#sec-dataset) data set to try to find the answer)
 
 -   notice this is HARD to find by just looking at the data set, especially if the data set is huge.
 
-Let's use R to solve this question instead! The `unique()` function list unique values within a column, so it shows us all the different values.
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+
+Let's use R to solve this question instead! The `unique()` function lists unique values within a column, so it shows us all the different values.
 
 ::: panel-tabset
 ## Code editor
@@ -352,11 +355,15 @@ There are two Biomes in this Data Set; `Temperate Coniferous Forest` and `Tropic
 
 ### Unique Taxa
 
+::: {.callout-warning appearance="simple"}
+
 **Stop and Think**
 
 *How many different taxa does the data set have?*
 
 -   Now you know what code to use to find unique values within a column. See if you can reuse the code to find the unique values for the `Taxa` column.
+
+:::
 
 ::: panel-tabset
 ## Code editor
@@ -430,7 +437,11 @@ Here are your options again:
 :::
 :::
 
-Now, you'll need to tell the computer what you chose. In the code chunk below, type in the name of your Biome and Taxa. Replace the red line ______ and make sure you leave the quotes "". Make sure you spell everything correct and use the exact capitalization in the dataset! Then click "run code".
+Now, you'll need to tell the computer what you chose. In the code chunk below: 
+
+**Type** in the name of your Biome and Taxa. Replace the red line ______ and don't delete the quotes `""`. Make sure you spell everything correct and use the exact capitalization in the dataset! 
+
+Then **press** "run code".
 
 ::: panel-tabset
 
@@ -497,9 +508,9 @@ Now, you'll need to choose what **variables** you want to plot on the graph. Rec
 
 Remember: 
 
-   -   The **x variable** is the independent variable. It is NOT affected by the other variable. It's sort of like the "cause" variable.
+   -   The **x variable** is the independent variable. It is NOT affected by the other variable. It's like the "cause" variable.
    
-   -   The **y variable** is the dependent variable. It IS affected by the other variable. It is sort of like the "effect" variable.
+   -   The **y variable** is the dependent variable. It IS affected by the other variable. It's like the "effect" variable.
    
 ## Reasoning
 
@@ -518,7 +529,11 @@ The y variable is **biodiversity index or number of species** (whichever you cho
 
 Now, you get to input which y variable you want to graph - either **biodiversity index** or **number of species**.
 
-Recall the column names for each of these variables: `index` and `numspecies`. Type in the name of your y variable below. Replace the red line _____ with its name. Be sure to spell it exactly as it is spelled in the data! Then click "run code".
+-   Recall the column names for each of these variables: `index` and `numspecies`. 
+
+-   **Type** in the name of your y variable below. Replace the red line _____ with its name. Be sure to spell it exactly as it is spelled in the data! 
+
+-   Then **press** "run code".
 
 ::: panel-tabset
 ## Code editor

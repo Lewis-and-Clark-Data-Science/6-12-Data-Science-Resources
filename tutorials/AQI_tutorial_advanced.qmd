@@ -14,6 +14,8 @@ output:
 toc: true
 toc-depth: 2
 callout-icon: false
+execute: 
+  eval: false
 ---
 
 
@@ -884,6 +886,8 @@ title = "AQI Levels for Multnomah County"
 </div>
 
 <div class="tutorial-part" style="display: none;">
+
+### Step 5: Graph
 
 Now let's make your graph! 
 
