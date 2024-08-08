@@ -56,3 +56,5 @@ project.Rproj
 R_files_NOT_github
 
 tutorials/*.csv
+
+tutorials/*.zip
