@@ -90,6 +90,8 @@ download.file(url, "Steelhead_1939_2023_BonnevilleDamCSV.csv")
 
 ```{webr-r}
 #| context: setup
+# Dalles and Steelhead data
+
 Dalles_chinook <- read.csv("Chinook_Dalles_1957_2023.csv")
 
 names(Dalles_chinook) <- Dalles_chinook[1,]
@@ -162,6 +164,8 @@ Bon_steel_sum <- Bon_steel_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
 
 ```{webr-r}
 #| context: setup
+#Bonneville chinook data
+
 #add 2023 data: 
 url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/Bon_chinook_2023.csv"
 download.file(url, "Bon_chinook_2023.csv")
@@ -314,8 +318,7 @@ We'll start by looking at the Bonneville Dam and learn how many salmon and steel
 
 The Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.
 
-::: {.callout-warning collapse="false" appearance="simple"}
-
+::: {.border-left}
 **Brainstorm:**
 
 *What are some positive and negative impacts you think the dam might have?*
@@ -620,13 +623,15 @@ So the largest number of fish that crossed the Bonneville dam in 2021 in a day i
 
 What if you wanted to know how many **total** fish crossed the dam this year, compared to 50 years ago? We can use the computer to answer that question too!
 
-::: {.callout-warning collapse="false" appearance="simple"}
+::: {.border-left}
+Brainstorm
+
 First, let's make a prediction. Think about what you've learned about dams and how they impact fish trying to get past them.
 
 Do you think there are **more** fish or **less** fish in 2022 compared to 1972 (50 years before)? Talk to your neighbor about your predictions!
 :::
 
-When you're ready to check your answer, run the code below. It will find the **sum** of the row with 2022 data and 1972 data
+When you're ready to check your answer, run the code below. It will find the **sum** of the rows with 2022 data and 1972 data.
 
 ::: panel-tabset
 
@@ -656,6 +661,8 @@ Below this, we have code to create graphs of all the data we were looking at bef
 ::: panel-tabset
 ## Graph without connecting line
 
+**Press** run code
+
 ```{webr-r}
 #| read-only:true
 y_max <- max(Bon_chinook_sum$sum_of_rows_100)
@@ -666,11 +673,12 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
        x = "Year",
        y = "Number of Chinook Crossing (in 1000s)") + 
       scale_x_continuous(breaks = seq(1938,2023,5)) +
-      #scale_x_continuous(breaks = scales::pretty_breaks(n=10)) + 
       scale_y_continuous(breaks = seq(0,y_max,100))
 ```
 
 ## Graph with Connecting Line
+
+**Press** run code
 
 ```{webr-r}
 #| read-only:true
@@ -683,7 +691,6 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
        x = "Year",
        y = "Number of Chinook Crossing (in 1000s)") + 
       scale_x_continuous(breaks = seq(1938,2023,5)) +
-      #scale_x_continuous(breaks = scales::pretty_breaks(n=10)) + 
       scale_y_continuous(breaks = seq(0,y_max,100))
 ```
 
@@ -730,8 +737,8 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 
 :::
 
-::: {.callout-warning collapse="false" appearance="simple"}
-**Stop and think** 
+::: {.border-left}
+**Brainstorm** 
 
 -   What do you see? 
 -   What does it mean? 
@@ -739,7 +746,7 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 
 :::
 
-**Note to teachers** At this point I recommend you check out THIS PRESENTATION to explore what the graphs mean in your class! 
+**Note to teachers** At this point I recommend you check out [THIS PRESENTATION](https://docs.google.com/presentation/d/1Y7wV1RD7vIZekLII6g6N3B1gyEcbyqoUPD5KLykXRNM/edit#slide=id.g2ece6933889_0_659){target="_blank"} to explore what the graphs mean in your class. Additionally, click to the end of this tutorial to see other graphs for different locations and species. 
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -750,7 +757,7 @@ ggplot(data = Bon_chinook_sum, aes(x = year, y = sum_of_rows_100)) +
 
 You learned how you can use the computer to look at large amounts of numbers and data. But, data doesn't tell us everything! 
 
-::: {.callout-warning collapse="false" appearance="simple"}
+::: {.border-left}
 
 **Brainstorm**
 
@@ -759,7 +766,7 @@ You learned how you can use the computer to look at large amounts of numbers and
 -   Are there **other** ways you could learn about the impact of the dam **other than** looking at data? 
     
     -   How would you do that? 
-          
+           
     -   Possible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology
     
 -   What do the data/numbers **not** tell us? 
@@ -772,7 +779,7 @@ This is the end of the tutorial but there's lots more resources to explore!
 
 -   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
 
--   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam!
+-   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam.
 
 <button id="continue-button" class="btn btn-primary float-start me-2">More Graphs!</button>
 </div>
@@ -839,7 +846,7 @@ ggplot(data = Bon_steel_sum, aes(x = year, y = sum_of_rows_100)) +
        color = "darkgreen") +
      scale_x_continuous(breaks = seq(x_min,2023,2))  +
      scale_y_continuous(breaks = seq(0,175,25))
-ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path="output", width=2500, height=1200, units="px")
+
 ```
 
 ## Graph with connecting line
@@ -856,7 +863,7 @@ ggplot(data = Bon_steel_sum, aes(x = year, y = sum_of_rows_100)) +
        color = "darkgreen") +
      scale_x_continuous(breaks = seq(x_min,2023,2))  +
      scale_y_continuous(breaks = seq(0,175,25))
-ggsave(filename="Steelhead_Bonneville_Graph_noline.jpg",  plot=last_plot(),path="output", width=2500, height=1200, units="px")
+
 ```
 :::
 

@@ -49,12 +49,15 @@ rsconnect/
 
 project.Rproj
 
+#Don't need the Rproj thing
 6-12-Data-Science-Resources.Rproj
 
+#This is a folder with extra csv files that I can use to experiment with code and graphs
+#But I don't want it in the github because they're too big and any necessary ones are in the files folder
 .R_files_NOT_github/
-
 R_files_NOT_github
 
+#Don't want csv or zip files that are stored in the tutorials (because they are made from the r in the qmd docs) 
+#There's copies of them in the files, so don't need to push them to github twice 
 tutorials/*.csv
-
 tutorials/*.zip
