@@ -1,6 +1,6 @@
 ---
 title: "Biodiversity tutorial"
-author: Grace, edited for web version by Olivia
+author: Grace Kazmir, edited for web version by Olivia Spagnuolo
 filters: 
   - webr
   - naquiz
