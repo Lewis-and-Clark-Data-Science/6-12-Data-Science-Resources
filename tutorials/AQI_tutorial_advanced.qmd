@@ -183,7 +183,7 @@ Welcome to **Part 2 of the Air Quality Data Science Tutorials**! If you have not
 
 Part 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs. 
 
-### Our data set
+### Our Data Set
 
 ::: columns
 ::: {.column width="40%"}

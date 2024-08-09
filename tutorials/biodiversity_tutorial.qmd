@@ -505,6 +505,11 @@ Our goal is to create a graph that tracks the biodiversity of a specific locatio
 -   Will biodiversity look different in different biomes and taxas? How? 
 :::
 
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
 Go through the following steps to create your graph. 
 
 ### Step 1: Choosing a Biome and Taxa
