@@ -11,6 +11,8 @@ project:
   
 website:
   title: "6-12 Data Science Resources"
+  repo-url: https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources
+  repo-actions: source
   favicon: files/figures/data-science-icon.png
   back-to-top-navigation: true
   navbar: 
@@ -48,7 +50,8 @@ website:
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
   
-
+exclude: 
+  - "tutorials/sealevel_tutorial.qmd"
 
 format:
   html:

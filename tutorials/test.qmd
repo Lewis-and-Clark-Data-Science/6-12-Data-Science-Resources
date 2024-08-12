@@ -1,3 +1,16 @@
+---
+title: "test tutorial"
+author: _____
+filters: 
+  - webr
+  - naquiz
+
+format: 
+  html: 
+    toc: true
+    self-contained: false
+---
+
 ```{=html}
 <script>
 console.log("Script loaded");
@@ -112,3 +125,58 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 ```
+# Interactive Tutorial
+
+::: {.tutorial-part style="display: block;"}
+## Part 1: Introduction to Topic
+
+::: {.callout-warning style="font-size:25px !important;" appearance="minimal"}
+hello
+
+what is up
+:::
+
+::: border-left
+let's try this ok
+:::
+
+no [go to sec2](#sec-2)
+
+[or sec 3](#sec-3)
+
+<button id="continue-button">
+
+Continue
+
+</button>
+:::
+
+::: {.tutorial-part style="display: none;"}
+## Part 2: Explanation of Concept {#sec-2}
+
+right
+
+<button id="continue-button-2">
+
+Continue
+ 
+</button>
+:::
+
+::: {.tutorial-part style="display: none;"}
+## Part 3: Practical Examples {#sec-3}
+
+hello
+
+<button id="continue-button-2">
+
+Continue
+
+</button>
+:::
+
+::: {.tutorial-part style="display: none;"}
+## Part 4: howdy
+
+yes
+:::

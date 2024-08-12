@@ -1,6 +1,6 @@
 ---
 title: "Sea Level tutorial"
-author: _____
+author: "Bel Kuhl, edited for web version by Olivia Spagnuolo"
 filters: 
   - webr
   - naquiz
@@ -11,7 +11,6 @@ format:
     self-contained: false
 ---
 
-```{=html}
 <script>
 console.log("Script loaded");
 
@@ -60,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (idx <= index) {
                 part.style.display = "block";
             }
+            if (idx > index){
+            part.style.display = "none";
+}
         });
         scrollToElement(parts[index]);
         currentPartIndex = index;
@@ -89,7 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 showPartsUpTo(targetIndex);
                 buttons.forEach((button, idx) => {
                   if (idx < targetIndex) {
-                  button.style.display="none";}});
+                  button.style.display="none";}
+                  if (idx >= targetIndex) {
+                  button.style.display="block";
+}
+                  });
             }
         }
     });
@@ -117,60 +123,238 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
+
+
+```{webr-r}
+#| context: setup
+
+# Install and load packages
+library(tidyverse)
+library(knitr)
+
+# Load data 
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/No_Garibaldi.csv"
+download.file(url, "No_Garibaldi.csv")
+#Pulls data that has been loaded into the 6-12-Data-Sceince_resources github repo. 
+No_Garibaldi <- read_csv('No_Garibaldi.csv')
+Astoria<-No_Garibaldi|>filter(Location=="Astoria")
+
+Astoria_Avg<-Astoria%>%
+  group_by(Year, Location)%>%
+  summarize(Avg=mean(Monthly_MSL)) %>% 
+  filter(Year>1969&Year<2022)
 ```
-# Interactive Tutorial
 
-::: {.tutorial-part style="display: block;"}
-## Part 1: Introduction to Topic
+## Introduction
 
-::: {.callout-warning style="font-size:25px !important;" appearance="minimal"}
-hello
+Welcome to this lesson on changing sea levels. We'll be looking at how the sea level is changing in different parts of the world. We're going to use the computer to help us look at and understand data. 
 
-what is up
+First, let's take a look at this map showing how sea levels have changed since 1880. It shows the change in sea level compared to a baseline determined by the average sea level between 1993 and 2008.
+
+![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/graph_sealevel.png){fig-align="left" fig-alt="Average global sea level change" height="2.5in"}
+<div class="tutorial-part" style="display: block;">
+
+## Change in Sea Level Since 1970
+
+As we can see in the graph, there is an upwards trend of sea level rise. 
+
+But how do we know there is an upward trend? How do we know what the sea level is in the first place? Check out [this video](https://www.britannica.com/video/179993/sea-level) to learn more about how scientists measure the sea level.
+
+So, scientists use water level gauges as well as satellites to measure the sea level at any given time. They write down all the numbers they measure and collect it. This collection of numbers is called **data**. 
+
+After we have all that data (often called **raw data**), other scientists will analyze it and use it to create graphs. That's what we're going to do today! We'll use the computer to code and analyze our data. 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Using R
+
+We will use a coding language called "R". Basically, "R" is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.
+
+For example one command the computer knows is multiplication! Try typing `5*3` in the box right below this. Then click the green play button that says "run code"
+
+::: panel-tabset
+
+## Code editor
+
+```{webr-r}
+# Type your code here!
+
+
+```
+
+## Answer
+
+**Press** run code
+
+```{webr-r}
+# Type your code here!
+5*3
+
+```
 :::
 
-::: {.border-left}
+What happened? Did you see the number 15 pop out?
 
-let's try this
+The computer can also do very complicated things, like create graphs. We'll learn more about that later in this tutorial.
+
+The box above where you typed `5*3` is called a **code chunk**. You can type commands into any similar box and it will tell the computer to do various things.
+
+Here's another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There's a few different tabs you can click on to learn how to do cool things!
+
+::: panel-tabset
+## Code editor
+
+Want to try out your own code? Maybe another math problem? Here's a place to do that. Otherwise click on the tabs to learn something new!
+
+```{webr}
+#Type your code here
+
+
+
+```
+
+## Say hello
+
+Would you like the computer to say hello to you?
+
+First, type your name where the blank \_\_\_\_\_\_\_ is, in the second code chunk. Don't delete the quotation marks.
+
+Here's an example:
+
+```{webr}
+#| read-only: true
+name = "Olivia"
+```
+
+Now your turn. Type your name instead of the blank \_\_\_\_\_ and then click play:
+
+```{webr}
+name = "_____"
+
+cat("Hello", name, "How are you today?")
+
+```
+
+## Find the largest number
+
+We can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (\_\_\_\_\_\_). Separate your numbers with a comma. Don't delete anything else!
+
+Here's an example:
+
+```{webr-r}
+#| read-only:true
+numbers = c(41, 55, 98, 104, 2, 8)
+```
+
+Now you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.
+
+```{webr-r}
+numbers = c(_,_,_,_,_,_)
+```
+
+Now let's run a function that will tell us which number is the biggest. Click the play button on this code chunk too.
+
+```{webr-r}
+max(numbers)
+```
+
 :::
 
-no [go to sec2](#sec-2)
 
-[or sec 3](#sec-3)
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
 
-<button id="continue-button">
+<div class="tutorial-part" style="display: none;">
 
-Continue
+Raw data (the actual numbers collected by scientists) is cleaned up before analysis. This can look like removing missing information and duplicated values.
 
-</button>
-:::
+In this case, we will use raw data and interpret it through the form of a graph. A chunk of the data we will use to create graphics looks like:
 
-::: {.tutorial-part style="display: none;"}
-## Part 2: Explanation of Concept {#sec-2}
+```{webr-r}
+head(Astoria_Avg)
+```
 
-right
+Here, we see the average change in Sea Level recorded in Astoria from 1970-1975. This is one small portion of the large data set we used. This data set can be used to create different types of graphs through coding. Let's use code to create a scatter plot for Astoria, our local location.
 
-<button id="continue-button-2">
+Does anyone know what a scatter plot is used for?
 
-Continue
+```{webr-r}
+ggplot(Astoria_Avg,aes(x=Year,y=Avg))+
+  geom_point(color="salmon")+
+  labs(title="Average Change In Sea Level per Meter in Astoria",y="Average Change in Sea Level (m)")+
+  theme_light()+geom_smooth(method="lm",color="black",se=FALSE)
+```
 
-</button>
-:::
+Although the data varies per year, there appears to be an upwards trend within this data. This is an indicator for rising sea levels in this area.
 
-::: {.tutorial-part style="display: none;"}
-## Part 3: Practical Examples {#sec-3}
+How does this compare to other locations within the United States? Let's take a look at 6 different locations across the US.
 
-hello
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/Map_w_Labels.png)
 
-<button id="continue-button-2">
+Let's look at a linear trend of these locations.
 
-Continue
+```{webr-r}
+Trend<-No_Garibaldi %>% 
+filter(Year>1969, Year<2023 , Location != "Majuro C, Marshall Islands") %>% 
+  group_by(Location,Year) %>% 
+  summarize(Avg=mean(Monthly_MSL))
 
-</button>
-:::
+ggplot(Trend, aes(x = Year, y = Avg, color = Location)) +
+  geom_point(size=0.5)+  geom_smooth(method = lm, se = FALSE)+
+  facet_wrap(vars(Location))+
+  facet_wrap(. ~ factor(Location, levels = c("Astoria", "San Francisco", "Los Angeles","Portland ME","Sewells Point VA","Charleston SC")))+
+  scale_color_manual(values = c(
+    "Astoria" = "salmon",
+    "Charleston SC" = "gold",
+    "Los Angeles" = "chartreuse",
+    "Portland ME" = "cyan2",
+    "San Francisco" = "blue",
+    "Sewells Point VA" = "blueviolet"))  +
+  theme_light()+
+  labs(title="Change in Sea Level from 1970-2022",x="Year",y="Meters")+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
 
-::: {.tutorial-part style="display: none;"}
-## Part 4: howdy
+It seems as if there is a general upwards trend for change in sea levels across the coastal areas of the United States.
 
-yes
-:::
+Turning to a more global scale, how does this compare to the low-lying island nation of Marshall Islands?
+
+To represent this question, we can use a bar graph.
+
+In this case, why might we use a bar graph?
+
+```{webr-r}
+Avg<-No_Garibaldi%>%
+  group_by(Year,Location)%>%
+  summarize(Avg=mean(Monthly_MSL))%>%
+  filter(Year>1969&Year<2023)
+
+Avg %>% 
+  split(.$Location) %>% 
+  map(~lm(Avg ~ Year, data = .x)) %>% 
+  map_df(broom::tidy, .id = 'Location') %>%
+  filter(term == 'Year')%>%
+  mutate(Region=case_when(Location %in% c("Astoria","Los Angeles","San Francisco")~"West Coast",Location %in% c("Charleston SC","Sewells Point VA", "Portland ME")~"East Coast",Location %in% c("Majuro C, Marshall Islands")~"Oceania"))%>%
+  
+ggplot(aes(x = reorder(Location, estimate), y = estimate, fill=Location)) +
+  geom_col(position="dodge")+
+  theme_light()+
+  labs(x="Location", y="Slope (m)",
+       title="Change in the Change of Sea Level from 1970-2022")+
+  facet_grid(. ~ factor(Region, levels = c("West Coast", "East Coast", "Oceania")), drop = TRUE, scales = "free_x", space = "free") +
+  scale_fill_manual(values=c("Astoria"="salmon", "Charleston SC"="gold", 
+                             "Los Angeles"="chartreuse","Portland ME"="cyan2",
+                             "San Francisco"="blue","Sewells Point VA"="blueviolet",
+                             "Majuro C, Marshall Islands" = "forestgreen")) +
+  theme_light() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+When comparing the rate of change for each location, we are able to notice that locations further South (LA, SF, VA, SC) have sea levels rising at faster rates. Furthermore, sea levels are rising at higher rates on the East Coast of the country. In comparison to Marshall Islands, which lie in the Western Pacific Ocean, we notice a slope aligning more with those on the East Coast (higher rate of change).
+
+Data science can take on many forms, from data collection to coding. This is just a little nibble of the possibilities data science has to offer; there is so much more to chew on!
+
+</div>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -391,7 +391,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"code":"library(tidyverse)\nlibrary(palmerpenguins)","options":{"results":"markup","label":"unnamed-chunk-1","editor-quick-suggestions":"false","out-height":"","fig-width":7,"out-width":"700px","context":"setup","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","comment":"","fig-height":5,"warning":"true","read-only":"false","dpi":72,"output":"true","fig-cap":"","autorun":"true"},"id":1},{"code":"penguins","options":{"results":"markup","label":"unnamed-chunk-2","editor-quick-suggestions":"false","out-height":"","fig-width":7,"out-width":"700px","context":"interactive","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","comment":"","fig-height":5,"warning":"true","read-only":"false","dpi":72,"output":"true","fig-cap":"","autorun":"false"},"id":2},{"code":"penguins |> \n  group_by(island) |> \n  summarize(medianFlipperLength = median(flipper_length_mm, na.rm=TRUE))|> \n  \n  ggplot(mapping=aes(x=island, y=medianFlipperLength, fill=island))+\n    geom_bar(stat=\"identity\")+\n    labs(title=\"Median Flipper Length on each Island\", x=\"Island\", y=\"Flipper Length (mm)\")","options":{"results":"markup","label":"unnamed-chunk-3","editor-quick-suggestions":"false","out-height":"","fig-width":7,"out-width":"700px","context":"interactive","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","comment":"","fig-height":5,"warning":"true","read-only":"false","dpi":72,"output":"true","fig-cap":"","autorun":"false"},"id":3},{"code":"AdelieData <- penguins |> \n  filter(species == \"Adelie\")\n\nggplot(data=AdelieData, mapping = aes(x = sex, y = flipper_length_mm, fill=sex))+\n  stat_boxplot(geom=\"errorbar\")+\n  geom_boxplot()+\n  labs(title=\"Boxplot of Adelie penguin flipper length, by sex\", x=\"Sex\",y=\"Flipper Length (mm)\")","options":{"results":"markup","label":"unnamed-chunk-4","editor-quick-suggestions":"false","out-height":"","fig-width":7,"out-width":"700px","context":"interactive","message":"true","editor-word-wrap":"true","classes":"","editor-max-height":"","editor-font-scale":"1","comment":"","fig-height":5,"warning":"true","read-only":"false","dpi":72,"output":"true","fig-cap":"","autorun":"false"},"id":4}];
+globalThis.qwebrCellDetails = [{"code":"library(tidyverse)\nlibrary(palmerpenguins)","options":{"output":"true","out-height":"","message":"true","results":"markup","read-only":"false","fig-cap":"","comment":"","warning":"true","dpi":72,"autorun":"true","context":"setup","label":"unnamed-chunk-1","fig-width":7,"classes":"","fig-height":5,"editor-word-wrap":"true","editor-quick-suggestions":"false","editor-max-height":"","editor-font-scale":"1","out-width":"700px"},"id":1},{"code":"penguins","options":{"output":"true","out-height":"","message":"true","results":"markup","read-only":"false","fig-cap":"","comment":"","warning":"true","dpi":72,"autorun":"false","context":"interactive","label":"unnamed-chunk-2","fig-width":7,"classes":"","fig-height":5,"editor-word-wrap":"true","editor-quick-suggestions":"false","editor-max-height":"","editor-font-scale":"1","out-width":"700px"},"id":2},{"code":"penguins |> \n  group_by(island) |> \n  summarize(medianFlipperLength = median(flipper_length_mm, na.rm=TRUE))|> \n  \n  ggplot(mapping=aes(x=island, y=medianFlipperLength, fill=island))+\n    geom_bar(stat=\"identity\")+\n    labs(title=\"Median Flipper Length on each Island\", x=\"Island\", y=\"Flipper Length (mm)\")","options":{"output":"true","out-height":"","message":"true","results":"markup","read-only":"false","fig-cap":"","comment":"","warning":"true","dpi":72,"autorun":"false","context":"interactive","label":"unnamed-chunk-3","fig-width":7,"classes":"","fig-height":5,"editor-word-wrap":"true","editor-quick-suggestions":"false","editor-max-height":"","editor-font-scale":"1","out-width":"700px"},"id":3},{"code":"AdelieData <- penguins |> \n  filter(species == \"Adelie\")\n\nggplot(data=AdelieData, mapping = aes(x = sex, y = flipper_length_mm, fill=sex))+\n  stat_boxplot(geom=\"errorbar\")+\n  geom_boxplot()+\n  labs(title=\"Boxplot of Adelie penguin flipper length, by sex\", x=\"Sex\",y=\"Flipper Length (mm)\")","options":{"output":"true","out-height":"","message":"true","results":"markup","read-only":"false","fig-cap":"","comment":"","warning":"true","dpi":72,"autorun":"false","context":"interactive","label":"unnamed-chunk-4","fig-width":7,"classes":"","fig-height":5,"editor-word-wrap":"true","editor-quick-suggestions":"false","editor-max-height":"","editor-font-scale":"1","out-width":"700px"},"id":4}];
 
 </script>
 <script type="module">
@@ -1726,7 +1726,7 @@ globalThis.qwebrExecuteCode = async function (
   <li><a href="#linear-regression" id="toc-linear-regression" class="nav-link" data-scroll-target="#linear-regression">Linear regression</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/resources/cheatsheet.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -2665,7 +2665,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script type="module">
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/resources/cheatsheet.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer><script type="module">
 // Handle cell initialization initialization
 qwebrCellDetails.map(
   (entry) => {

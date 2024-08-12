@@ -50,349 +50,6 @@
     ]
   },
   {
-    "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
-    "href": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Fish Crossings - Introduction",
-    "text": "Fish Crossings - Introduction\nHello! Welcome to this tutorial. We’re going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.\n\n\n\n\n\n\nFrom https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/\n\n\n\n\n\nToday we’ll get to learn about fish crossings at dams in the Columbia River.\nWe’ll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year.\n\n\n\nWhat is the Bonneville Dam?\n\n\n\n\n\nFrom https://thegorgeguide.com/bonneville-dam-visitor-center/\n\n\n\n\n\n\n\n\n\n\nThe Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.\n\nBrainstorm:\nWhat are some positive and negative impacts you think the dam might have?\nTalk with your classmates about how some impacts the dam might have on the surronding areas. Here are some ideas you can consider:\n\nHydropower\nNative American communities\nSalmon populations\nSalmon are important spiritually and culturally to Native Americans\nSea lions\nOther animals who live where the dam was created\n\n\n\nContinue\n\n\n\n\nHow does the Bonneville Dam impact Salmon?\nIn this tutorial, we’re going to look at data and learn about how the dam impacts Salmon returning to the Columbia river to spawn.\nFirst, how are fishing swimming through the Bonneville Dam?\nIt is way to large for them to swim over, so they use a fish ladder to swim through the dam. Someone built the fish ladder when they were building the dam to help the fish get through! Watch this video to see how they can swim through the fish ladder.\n\nAs salmon come through the fish ladder, they need to be counted to see how many salmon come through and learn how many make it through the dam and return upstream to spawn. Some days, thousands of fish come through the dam! How do you think they are counted?\nWatch this video to see!\n\nAs you saw in the video, someone counts each fish that goes by. They write down exactly how many fish they see, what time and what kind of fish. All those numbers get added together and become data. Then, someone puts all that data online for anyone to see (like us!).\nThere is A LOT of data (numbers of fish) that they collect. It would be pretty pretty hard to understand just by looking at it. In fact, if you click the blue box right below this, you can see all the data. It should look pretty confusing! Keep reading to learn how we can use the computer to better understand all those numbers.\n\n\n\n\n\n\nClick this to see the data that someone collected at the fish ladder!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: the data is from Columbia Basin Research\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#what-is-the-bonneville-dam",
-    "href": "tutorials/salmon_tutorial.html#what-is-the-bonneville-dam",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "What is the Bonneville Dam?",
-    "text": "What is the Bonneville Dam?\n\n\n\n\n\nFrom https://thegorgeguide.com/bonneville-dam-visitor-center/\n\n\n\n\n\n\n\n\n\n\nThe Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.\n\nBrainstorm:\nWhat are some positive and negative impacts you think the dam might have?\nTalk with your classmates about how some impacts the dam might have on the surronding areas. Here are some ideas you can consider:\n\nHydropower\nNative American communities\nSalmon populations\nSalmon are important spiritually and culturally to Native Americans\nSea lions\nOther animals who live where the dam was created\n\n\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#analyzing-huge-data-with-the-computer",
-    "href": "tutorials/salmon_tutorial.html#analyzing-huge-data-with-the-computer",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Analyzing HUGE data with the computer",
-    "text": "Analyzing HUGE data with the computer\nWe’re going to analyze all the numbers that are collected at the Bonneville Dam using the computer.\n\nUsing R\nWe will use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#looking-at-data",
-    "href": "tutorials/salmon_tutorial.html#looking-at-data",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Looking at data",
-    "text": "Looking at data\nOne thing the computer is very useful for is dealing with HUGE amounts of data. Data is a collection of lots of numbers that tell us information about something.\nLet’s return to the data that is collected at the Bonneville Dam. I’ve used coding in the background of this tutorial to make it a little more condensed than the data you saw before. Want to look at it? Click the blue box below.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.\n\nHow to read the data table\nLet’s learn about what some of this data means. First, the table that you see when you click the blue rectangle above is called a data table. It contains a bunch of numbers which tell us how many fish crossed the Bonneville Dam on any given day.\n\nReading Dates\n\nQuestionAnswer\n\n\nOn the top of the data table, you’ll see bolded numbers like 1/1, 1/2, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click the tab above to see the answer.\n\n\n\nThose numbers are referring to dates! For example, 1/1 is January 1. But, they don’t include the year. Can you spot where the year is in the data?\n\n\n\n\nCheck for understandingHint\n\n\n\nCan you find how many fish crossed the Bonneville Dam on April 1 in 2022?\n\n\n\n\n ✗0\n\n\n ✓57\n\n\n ✗30495\n\n\n\n\n\n\n\nOn the far left side of the data, you should see the year. Find 2022 and then find 4/1 on the top. What number is underneath 4/1 in the 2022 row?\n\n\n\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#graphing",
-    "href": "tutorials/salmon_tutorial.html#graphing",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Graphing",
-    "text": "Graphing\nAnother way we can look at this data is by graphing it. The computer can help us a lot with this too.\nWe’re going to make a graph of the total number of Chinook that cross the Bonneville each year.\nBelow this, we have code to create graphs of all the data we were looking at before. Press the green run code button to see the graph. There are options to look at a graph with and without a connecting line between the points.\n\nGraph without connecting lineGraph with Connecting LineChange the graph color!\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWant to try changing the color of the line and the points?\nIn the code chunk below, replace the red lines ____ with the color you want for the connecting line and the points. Make sure to write your color inside the quotes \"\". Here’s an example: pointColor = \"red\"\nHere are some color options you can try:\n-   \"red\"\n-   \"green\"\n-   \"purple\"\n-   \"salmon\"\n-   \"darkblue\"\n-   \"orange\"\nType in your colors below and then press run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow that you’ve chosen the colors, you can run the graph code again. Press run code right below this text.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nBrainstorm\n\nWhat do you see?\nWhat does it mean?\nWhat do you wonder?\n\n\nNote to teachers At this point I recommend you check out THIS PRESENTATION to explore what the graphs mean in your class. Additionally, click to the end of this tutorial to see other graphs for different locations and species.\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#congratulations",
-    "href": "tutorials/salmon_tutorial.html#congratulations",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Congratulations!!",
-    "text": "Congratulations!!\nYou learned how you can use the computer to look at large amounts of numbers and data. But, data doesn’t tell us everything!\n\nBrainstorm\n\nWhat questions do you have after looking at this data?\nHow could you find the answer to those questions?\nAre there other ways you could learn about the impact of the dam other than looking at data?\n\nHow would you do that?\nPossible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology\n\nWhat do the data/numbers not tell us?\n\n\n\nWant to learn more\nThis is the end of the tutorial but there’s lots more resources to explore!\n\nClick the “More Graphs!” button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom.\nAdditionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam.\n\n\nMore Graphs!"
-  },
-  {
-    "objectID": "tutorials/salmon_tutorial.html#graphs-of-other-species-and-locations",
-    "href": "tutorials/salmon_tutorial.html#graphs-of-other-species-and-locations",
-    "title": "Salmon Crossing Data Tutorial",
-    "section": "Graphs of other species and locations",
-    "text": "Graphs of other species and locations\nHere are graphs of other species (Chinook and Steelhead) at other dams (Dalles and Bonneville) as well which you can take a look at!\nPress run code on each of the code chunks below to see different graphs.\n\nChinook Crossings at the Dalles\n\nGraph without connecting lineGraph with connecting line\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nSteelhead Crossings at the Bonneville Dam\n\nGraph without connecting lineGraph with connecting line\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nThe End"
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#introduction",
-    "href": "tutorials/AQI_tutorial_advanced.html#introduction",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Introduction",
-    "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur Data Set\n\n\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nOur data tells gives the highest recorded AQI value on a given day in a given location.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.\n\n\n\n\n\n\nFrom.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
-    "href": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Customizing your graphs!",
-    "text": "Customizing your graphs!\nIn this tutorial, you can create graphs with various customizations. Here are your options:\n\nmake a scatterplot of AQI over time for any location(s)\nmake a tile plot and choose your own location(s)\nview raw data for any county\nChallenge - make a tile plot and customize the location, x axis, legend, and labels\n\nChoose one of the options above, or click “continue” to do all of them!\n\nContinue: scatterplot",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
-    "href": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Create a scatter plot of AQI over time",
-    "text": "Create a scatter plot of AQI over time\nFirst, let’s create a scatterplot! We’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red (or orange or green or whatever level you choose). Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\n\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\n\nContinue",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
-    "href": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Make a tile plot of any county!",
-    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place (other than Portland and LA which were analyzed in Part 1)? You’ll be able to do that below.\nIf you’d like a challenge, go to the final section to create a tile plot with multiple different variables you can adjust!\n\nStep 1: Choose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Add your county name to the code\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
-    "href": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "View raw data",
-    "text": "View raw data\nAfter graphing, you may wonder why the graph looks the way it does. Here, you can look at your raw data.\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph. See section Choose a county to see a list of county options.\nAfter choosing a county, tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\". Keep all the code below the red line as well.\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nRaw data\nClick the blue box to see raw data for the county you chose.\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to Choose a county and run the code to choose your county.\n\n\n\nClick “continue” for a coding challenge.\n\nContinue: Tile plot challenge",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-codechallenge",
-    "href": "tutorials/AQI_tutorial_advanced.html#sec-codechallenge",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Challenge: Tile plot with more variable options",
-    "text": "Challenge: Tile plot with more variable options\nWant to create a more complex tile plot? In this section, you’ll have the opportunity to customize the x axis, legend, and plot labels.\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "tutorials/AQI_tutorial_advanced.html#congratulations",
-    "href": "tutorials/AQI_tutorial_advanced.html#congratulations",
-    "title": "AQI Part 2 - Custom Graphs",
-    "section": "Congratulations!",
-    "text": "Congratulations!\nYou have finished this tutorial and made lots of different types of air quality graphs! Excellent work!\n\n\n\nfrom.giphy.com",
-    "crumbs": [
-      "AQI tutorials",
-      "AQI Part 2 - Custom Graphs"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "6-12 Data Science Resources",
-    "section": "",
-    "text": "Welcome! This site includes lots of resources for using data science in your middle or high school classroom.\nUnder Lesson Plans, you’ll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in Rstudio desktop or posit.cloud (an online version of Rstudio).\nUnder Online Tutorials, you’ll find tutorials that can be done directly on this website which can be used to teach and learn about data science and basic R coding. These correspond with the lesson plans and can often be used instead of downloading the code files under “Lesson Plans” (if you prefer not to use Rstudio). They generally require minimal to no experience in R coding.\nBrowser information: The online R tutorials will not run on safari. Use chrome, firefox, or another browser instead.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "resources/cheatsheet.html",
-    "href": "resources/cheatsheet.html",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "",
-    "text": "The following cheatsheet is based on commands used in a course developed for Lewis & Clark College, called “Data in the Wild”. It covers basic R commands (including basic arithmetic, importing data), cleaning and mutating data, plotting using ggplot and inferential statistics.\nFor more information and to download the tutorials used in conjunction with this cheatsheet, refer to the R files page."
-  },
-  {
-    "objectID": "resources/cheatsheet.html#basic-r-commands",
-    "href": "resources/cheatsheet.html#basic-r-commands",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "Basic R Commands",
-    "text": "Basic R Commands\n\nBasic arithmetic\n\nExamples: 5*6, sqrt(9), abs(-3)\nType help(command) to find information about any command\n\nCreate variables: Use &lt;- or = to assign values to a variable.\n\nExample: x &lt;- 7\n\nCreate a vector:\n\nvector &lt;- c(1,3,7)\nvector\n\n[1] 1 3 7\n\n\nCreate a data frame: data.frame(____)\n\ndf &lt;- data.frame(var_1 = c(1,2,3) , var_2 = c(\"cat\", \"dog\", \"fish\"))\ndf\n\n  var_1 var_2\n1     1   cat\n2     2   dog\n3     3  fish\n\n\n\n\nBasic Statistics\n\nmean(vector) : Calculates the mean of a given set of values.\nmedian(vector) : Calculates the median of a given set of values.\nsd(vector) : Calculates the standard deviation of a given set of values.\nnrow(data): Calculates the total number of rows in a dataset\nna.rm = TRUE : Remove NA values. Add this as an argument to any of the statistics calculations. E.g. mean(vector, na.rm=TRUE)"
-  },
-  {
-    "objectID": "resources/cheatsheet.html#working-with-a-data-set-in-the-tidyverse",
-    "href": "resources/cheatsheet.html#working-with-a-data-set-in-the-tidyverse",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "Working with a data set in the tidyverse",
-    "text": "Working with a data set in the tidyverse\nWe use the tidyverse to analyze data in this cheatsheet. To install run the following code:\n\ninstall.packages(\"tidyverse\")\n\nAfter installing, to load the tidyverse run:\n\nlibrary(tidyverse)\n\n\nUploading and viewing a data set\n\ndataFrame &lt;- read_csv(\"myCSV.csv\") : Creates a data frame from a file called myCSV.csv\nwrite_csv(dataFrame, \"myCSV.csv\"): Creates a csv from a data frame\nview(dataFrame): Enter view-mode to see the entire data frame\nstr(dataFrame): Gives the structure of data frame\nglimpse(dataFrame): Take a quick look at a data frame\nsummary(dataFrame): Returns min, max, mean, meadian, 1st/3rd quartiles for all vectors in dataFrame\ndataFrame$columnName: Calls up specific column from a data frame\nunique(vector): Find the number of unique values in a column/vector\nlength(): Counts the number of entries in a column/vector\n\n\n\nRearranging & Summarizing data\n\nUse logical operators to combine conditions: & (and), | (or), ! (not)\nUse comparison operators to describe conditions: &lt;, &gt;, ==, !=, &lt;=, &gt;=\ngroup_by(.data, column): Takes a dataset and groups it by a column/variable\nsummarize(.data, summaryStat = statistic formula): Takes a dataset and outputs summary statistics that you define.\n\nn(): Calculates current group size. Can be used in summarize and group_by\nCombine group_by and summarize using the pipe (|&gt;) to see summary statistics for specific groups/variables.\nThe pipe: Use |&gt; OR %&gt;% to string functions and data together. Read as “AND THEN”.\n\nExample:\n\n  dataFrame |&gt; \n    group_by(firstColumn)|&gt; \n    summarize(mean_of_secondColumn = mean(secondColumn), \n              standard_deviation_of_secondColumn = sd(secondColumn),\n              number_in_each_group = n(), \n              percent = n()/nrow(dataFrame)*100)\n\nfilter(.data=myDataFrame, column==\"some value\"): Subsets dataframe, lets us pick rows of data based on “some value”, including a specific value, mean, median, etc.\nselect(.data, column(s)): Choose columns from a dataframe.\n\ncolumn1 , column2 : choose column1 and column2\ncolumn1:column5 : choose all columns between column1 and column5\n-column1: choose all columns except column1\n\nmutate(data, newColumn = yourFormula): Creates a new column in a dataset defined by a calculation you input.\narrange(data, column): Rearrange data into numerical order by a specific column"
-  },
-  {
-    "objectID": "resources/cheatsheet.html#plotting-with-ggplot",
-    "href": "resources/cheatsheet.html#plotting-with-ggplot",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "Plotting with GGPlot",
-    "text": "Plotting with GGPlot\n\nResources:\n\nGGPlot Cheatsheet pdf\nPosit.cloud ggplot cheatsheet, website version\n\n\n\nGGPlot Basics:\n\nBasic structure:\n\nggplot(data, mapping=aes()) +\n      geom_function()\n\nConnect different properties using a +\nBasic Components:\n\nData: data=dataSet: Define your data set\nAesthetics: mapping = aes(variables): Define the variables. Can also specify color/fill for your graph and geometries.\nGeometry: geom_GeometricObject(): Define the type of plot\n\n\n\n\nGeometries\n\ngeom_histogram(): Creates a histogram\n\nSyntax: geom_histogram(bins=X) Specify number of bins\n\ngeom_point(): Creates points (scatterplot) for each data point\n\nCan specify color = ___ and shape = ____\n\ngeom_bar() : Creates a bar graph\n\nSyntax:\n\ngeom_bar(): Aggregates data for you\ngeom_bar(stat = \"identity\"): Creates a bar graph with pre-aggregated data that you input\ngeom_bar(position=\"___\") Can choose “stack” (bars on top of each other), “dodge” (bars side by side) or “fill” (bars stacked, scaled to 100%).\nAdd error bars: geom_errorbar(mapping=aes(ymin, ymax), width)\n\n\ngeom_boxplot(): Creates a boxplot\n\nAdd error bars: stat_boxplot(geom=\"errorbar\")\n\ngeom_density(): Creates a density graph\n\nSyntax: geom_density(adjust=X) X is a ratio, how smooth the graph is\n\ngeom_smooth(method=\"lm\", se=FALSE): Creates a line of best fit\nlabs() : Add a title and axes labels to your graph\nfacet_wrap(~ variable): Create separate plots for each aspect of a given variable\nAnd more!\n\n\n\nOther useful GGPlot functions:\n\ninstall.packages(\"ggplot2\") and library(ggplot2): Install and load GGplot package. Note: ggplot2 is included in the tidyverse so you do NOT need to load both packages.\nggsave(\"yourTitleHere.jpg\", currentPlotName): Saves “currentPlotName” as a jpg file called “yourTitleHere.jpg”."
-  },
-  {
-    "objectID": "resources/cheatsheet.html#examples-using-ggplot-with-other-tidyverse-functions",
-    "href": "resources/cheatsheet.html#examples-using-ggplot-with-other-tidyverse-functions",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "Examples: Using GGPlot with other tidyverse functions",
-    "text": "Examples: Using GGPlot with other tidyverse functions\nUse the pipe to string together functions and create tidy data before plotting.\nThe following examples use data from the palmerpenguins package which has been preloaded into this document. Click the green play button to see them run. Feel free to edit the code as well if you want to try out other functions!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHere’s a preview of the penguin data, and here is a link to more information about the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBasic bar graph of median flipper length on each island:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoxplot of Adelie penguin flipper length, by sex:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "resources/cheatsheet.html#inferential-statistics",
-    "href": "resources/cheatsheet.html#inferential-statistics",
-    "title": "Cheatsheet for Data in the Wild Tutorials",
-    "section": "Inferential Statistics",
-    "text": "Inferential Statistics\n\nBasic statistical tests\n\nt.test(data, dependentVariable ~ independentVariable): 2 sample t-test - compare 2 groups on a numerical measure\n\nRequires: 2 samples of quantitative data\n\naov(data, dependentVariable ~ independentVariable): ANOVA (analysis of variance) test - compare means among groups\n\nRequires: Independent variable - categorical; dependent variable - numerical\n\nTukeyHSD(data): Tukey’s HSD - Post Hoc test which tells you which specific means differ from each other\n\n\n\nLinear regression\n\ncor(data$independentVariable, data$dependentVariable): Correlation coefficient - outputs a number between -1 and 1 which tells strength and direction of the relationship between 2 numeric variables\n\nRequires 2 numeric variables\n\nlm(data, dependentVariable ~ independentVariable): Fit a linear model\n\nsummary(yourLinearModel): View more details about a linear model including regression coefficients, p value for linear model coefficients, quartiles, residual standard error, F-statistic."
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html",
-    "href": "lesson_plans/lesson_links.html",
-    "title": "R Files for Data Science Lessons",
-    "section": "",
-    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio).\nAdditionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
-    "href": "lesson_plans/lesson_links.html#middle-school-lessons",
-    "title": "R Files for Data Science Lessons",
-    "section": "Middle School Lessons",
-    "text": "Middle School Lessons\nSalmon Lesson Code .zip file\nAir Quality Lesson Code .zip file\nCOR Lesson code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
-    "href": "lesson_plans/lesson_links.html#high-school-lessons",
-    "title": "R Files for Data Science Lessons",
-    "section": "High School Lessons",
-    "text": "High School Lessons\nAir Quality Lesson Code .zip file (same file as the middle school air quality lesson… wasn’t sure where to put it)\nBiodiversity Lesson Code .zip file\nClimate Change Lesson Code .zip file\nSea Levels Lesson Code .zip file"
-  },
-  {
-    "objectID": "lesson_plans/lesson_links.html#sec-DITW",
-    "href": "lesson_plans/lesson_links.html#sec-DITW",
-    "title": "R Files for Data Science Lessons",
-    "section": "Other downloadable tutorials",
-    "text": "Other downloadable tutorials\nBelow are R tutorials developed for Lewis & Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.\nTo use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
-  },
-  {
-    "objectID": "lesson_plans/AQI_lesson.html",
-    "href": "lesson_plans/AQI_lesson.html",
-    "title": "Air Quality Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lesson_plans/Salmon_lesson.html",
-    "href": "lesson_plans/Salmon_lesson.html",
-    "title": "Salmon School",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lesson_plans/climate_lesson.html",
-    "href": "lesson_plans/climate_lesson.html",
-    "title": "Climate Change Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lesson_plans/Biodiversity_lesson.html",
-    "href": "lesson_plans/Biodiversity_lesson.html",
-    "title": "Biodiversity Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lesson_plans/sea_levels_lesson.html",
-    "href": "lesson_plans/sea_levels_lesson.html",
-    "title": "Sea Levels Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "lesson_plans/COR_lesson.html",
-    "href": "lesson_plans/COR_lesson.html",
-    "title": "COR Lesson",
-    "section": "",
-    "text": "Here are resources for teaching a lesson on COR?\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "resources/resources.html",
-    "href": "resources/resources.html",
-    "title": "Other Resources",
-    "section": "",
-    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!"
-  },
-  {
-    "objectID": "resources/resources.html#visualizations-and-interactive-graphs",
-    "href": "resources/resources.html#visualizations-and-interactive-graphs",
-    "title": "Other Resources",
-    "section": "Visualizations and Interactive Graphs",
-    "text": "Visualizations and Interactive Graphs\n\nEducational resources for teaching data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\n\n\nVisualization Examples\nNASA Interactive Graphs - Vital Signs of the Planet\nVisual stories\nCarbon and Climate infographics\nData is Beautiful: 10 of the best data visualization examples from history and today\nTableu - Viz of the day\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP"
-  },
-  {
-    "objectID": "resources/resources.html#coding-with-r-a-data-science-coding-language",
-    "href": "resources/resources.html#coding-with-r-a-data-science-coding-language",
-    "title": "Other Resources",
-    "section": "Coding with R (a data science coding language)",
-    "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html",
-    "href": "tutorials/sealevel_tutorial.html",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "hello\nwhat is up\n\n\n\n\nlet’s try this\n\nno go to sec2\nor sec 3\n\nContinue\n\n\n\n\nright\n\nContinue\n\n\n\n\nhello\n\nContinue\n\n\n\n\nyes"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
-    "href": "tutorials/sealevel_tutorial.html#part-1-introduction-to-topic",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "hello\nwhat is up\n\n\n\n\nlet’s try this\n\nno go to sec2\nor sec 3\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#sec-2",
-    "href": "tutorials/sealevel_tutorial.html#sec-2",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "right\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#sec-3",
-    "href": "tutorials/sealevel_tutorial.html#sec-3",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "hello\n\nContinue"
-  },
-  {
-    "objectID": "tutorials/sealevel_tutorial.html#part-4-howdy",
-    "href": "tutorials/sealevel_tutorial.html#part-4-howdy",
-    "title": "Sea Level tutorial",
-    "section": "",
-    "text": "yes"
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html",
-    "href": "tutorials/climate_change_tutorial.html",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nhttps://physicsworld.com/a/solving-climate-change-with-jonathan-koomey-and-ian-monroe/\n\n\nWelcome to this data science tutorial! We’ll be using R to look at climate change data.\nR is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!\nWant to try using R?\nIn the code box right below this, type in 6+3 and press the green play button:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you see the answer 9 that popped out right under your code? Pretty cool!\nThe gray and white box with the green arrow and “run code” button is called a code chunk. You can type in “R commands” into that box and it will output the answer underneath the code chunk.\n\n\nToday we’ll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.\nWe’ve preloaded a dataset into this tutorial. This was found\n\n\nLet’s start by taking a look at the data set. Press the green play button below and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou should see 10 rows of data and a lot of random words. We won’t go into what all of it means, but here’s a quick overview:\n\nThe words on the top (country, year, iso_code, population, etc) are the different variables in our data set\nUnderneath those words are the type of variable, which we’ll ignore right now.\nBelow that, you’ll see some numbers and NA values. Those are different values for each variable.\n\nOur data is called co2Data. If you type co2Data into any code chunk, you’ll be able to see our data.\n\n\n\n\nWe can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won’t be able to cover all the details of how to make a graph, but there’s lots of resources online you can find to learn more. We use something called ggplot to make graphs in this tutorial.\nFirst, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!\nPress Run Code on the code chunk below!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nWhat if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how different the temperature each year is from the average in 1900.\nIn the code chunk below type tempData and click “run code” to see the new data set.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\n\n\nhttps://geographicbook.com/temperature/\n\n\n\n\nYou should see 2 columns: one called Year and one called Anomaly. The Anomaly column tells us how different the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.\nLet’s graph this! Press “run code” and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, what if we combine our co2 data and our temperature data?\nLets put these two data sets together matching up the years. Then, we can make a graph of temperature anomaly and co2 levels. Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nNow what if we ask where most of that CO2 we’re emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we’ve edited some of our data in the background to make it easier to graph with. Our new edited data is called co2DataFiltered.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s see what a graph looks like! Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nOptional: Open this if you want to learn more about how the code works\n\n\n\n\n\nGGPlot is an awesome tool you can use to create plots! There’s lots of tutorials online that I recommend checking out. But for now, here’s a brief explanation of how our code works. Below, I’ve copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a # (called a comment) and are gray. See if you can find out which line creates the title of the graph!\n\n#Tell R what data to use and what the x and y values are\nggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+\n  \n  #Select what kind of graph we're making\n  geom_col(position=\"dodge\") +\n  \n  #Label the graph to make it easy to read\n  labs(title=\"CO2 Production from Energy Vs. Other Sources\", x=\"Year\", y=\"CO2 In Tons\") +\n  \n  #add a legend to show what each color means \n  scale_fill_discrete(name=\"CO2 Source\", labels=c(\"CO2 from Energy\", \"All Other Sources of CO2\")) +\n  \n  #make it pretty :)\n  theme_light() \n\nWere you able to tell which line created the title??\nIf you want even more code to look at, keep reading! You can also feel free to skip to the next section called Scatter Plot Generator\nBelow, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the co2Data and edits it to make it easier to graph with.\n\n#Creates new columns called \"co2_from_energy\" that includes co2 data from coal, gas, oil. \n#Then creates a column called \"co2_no_energy\" that is the rest of the co2 production\nco2DataBar&lt;-co2Data%&gt;%\n  group_by(year)%&gt;%\n  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%&gt;%\n  mutate(co2_no_energy=co2-co2_from_energy)\n\n#Filter data to get just the columns we need and make it graphable\n#Tells R to only use \"year\", \"co2_no_energy\" and \"co2_from_energy\" in the graph. \nco2DataFiltered&lt;-co2DataBar%&gt;%select(year, co2_no_energy, co2_from_energy)%&gt;%\n  \n  #Chooses only years above 2019\n  filter(year&gt;=2019)%&gt;%\n  \n  #A few final adjustments to make the graph easier to use\n  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%&gt;%\n  mutate(year_chr=as.character(year))\n\n\n\n\n\n\n\nNow you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven’t been answered by the infographics and graphs you’ve already seen, take a look at the data and see what you can ask to try and learn more.\nFirst, decide which variable you want to learn about. You can choose any variable from co2Data. Here are some options:\n\npopulation\nyear\ncement_co2\nco2\nconsumption_co2\ncumulative_co2\nenergy_per_gdp\nland_use_change_co2\ngas_co2\ncoal_co2\ncement_co2\nland_use_change_co2\nmethane\ntemperature_change_from_co2\n\nChoose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.\nThen click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow, let’s add titles and labels to your graph! Again, type your title between the quotation marks. Then click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFinally, run this to see your scatter plot! Click “run code” and if something doesn’t look right, click through the “troubleshooting” tabs to see how to fix it.\n\nCode editorTroubleshooting: error messageTroubleshooting - points clustered at the bottom\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDid you get an error message in red?\n\nIf the graph also displayed and looks right, don’t worry about the error message!\nIf the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.\n\nDid you put everything in quotes when you defined the variables and labels?\n\nYou don’t need to edit this code at all, just the code where you define variables and labels\nIf it still isn’t working or if you accidentally deleted something, you can refresh the page to restart.\n\n\n\nIf your x variable is year and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn’t much change until much more recently.\nSo try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is year.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNice work! Hopefully you enjoyed making your own graph with this data!\n\n\n\nfrom.giphy.com"
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html#our-data",
-    "href": "tutorials/climate_change_tutorial.html#our-data",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "Today we’ll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.\nWe’ve preloaded a dataset into this tutorial. This was found\n\n\nLet’s start by taking a look at the data set. Press the green play button below and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou should see 10 rows of data and a lot of random words. We won’t go into what all of it means, but here’s a quick overview:\n\nThe words on the top (country, year, iso_code, population, etc) are the different variables in our data set\nUnderneath those words are the type of variable, which we’ll ignore right now.\nBelow that, you’ll see some numbers and NA values. Those are different values for each variable.\n\nOur data is called co2Data. If you type co2Data into any code chunk, you’ll be able to see our data."
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html#our-first-graph",
-    "href": "tutorials/climate_change_tutorial.html#our-first-graph",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "We can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won’t be able to cover all the details of how to make a graph, but there’s lots of resources online you can find to learn more. We use something called ggplot to make graphs in this tutorial.\nFirst, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!\nPress Run Code on the code chunk below!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html#temperature-data",
-    "href": "tutorials/climate_change_tutorial.html#temperature-data",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "What if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how different the temperature each year is from the average in 1900.\nIn the code chunk below type tempData and click “run code” to see the new data set.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html#co2-sources",
-    "href": "tutorials/climate_change_tutorial.html#co2-sources",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "Now what if we ask where most of that CO2 we’re emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we’ve edited some of our data in the background to make it easier to graph with. Our new edited data is called co2DataFiltered.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s see what a graph looks like! Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nOptional: Open this if you want to learn more about how the code works\n\n\n\n\n\nGGPlot is an awesome tool you can use to create plots! There’s lots of tutorials online that I recommend checking out. But for now, here’s a brief explanation of how our code works. Below, I’ve copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a # (called a comment) and are gray. See if you can find out which line creates the title of the graph!\n\n#Tell R what data to use and what the x and y values are\nggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+\n  \n  #Select what kind of graph we're making\n  geom_col(position=\"dodge\") +\n  \n  #Label the graph to make it easy to read\n  labs(title=\"CO2 Production from Energy Vs. Other Sources\", x=\"Year\", y=\"CO2 In Tons\") +\n  \n  #add a legend to show what each color means \n  scale_fill_discrete(name=\"CO2 Source\", labels=c(\"CO2 from Energy\", \"All Other Sources of CO2\")) +\n  \n  #make it pretty :)\n  theme_light() \n\nWere you able to tell which line created the title??\nIf you want even more code to look at, keep reading! You can also feel free to skip to the next section called Scatter Plot Generator\nBelow, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the co2Data and edits it to make it easier to graph with.\n\n#Creates new columns called \"co2_from_energy\" that includes co2 data from coal, gas, oil. \n#Then creates a column called \"co2_no_energy\" that is the rest of the co2 production\nco2DataBar&lt;-co2Data%&gt;%\n  group_by(year)%&gt;%\n  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%&gt;%\n  mutate(co2_no_energy=co2-co2_from_energy)\n\n#Filter data to get just the columns we need and make it graphable\n#Tells R to only use \"year\", \"co2_no_energy\" and \"co2_from_energy\" in the graph. \nco2DataFiltered&lt;-co2DataBar%&gt;%select(year, co2_no_energy, co2_from_energy)%&gt;%\n  \n  #Chooses only years above 2019\n  filter(year&gt;=2019)%&gt;%\n  \n  #A few final adjustments to make the graph easier to use\n  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%&gt;%\n  mutate(year_chr=as.character(year))"
-  },
-  {
-    "objectID": "tutorials/climate_change_tutorial.html#scatter-plot-generator",
-    "href": "tutorials/climate_change_tutorial.html#scatter-plot-generator",
-    "title": "Climate Change Data Tutorial",
-    "section": "",
-    "text": "Now you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven’t been answered by the infographics and graphs you’ve already seen, take a look at the data and see what you can ask to try and learn more.\nFirst, decide which variable you want to learn about. You can choose any variable from co2Data. Here are some options:\n\npopulation\nyear\ncement_co2\nco2\nconsumption_co2\ncumulative_co2\nenergy_per_gdp\nland_use_change_co2\ngas_co2\ncoal_co2\ncement_co2\nland_use_change_co2\nmethane\ntemperature_change_from_co2\n\nChoose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.\nThen click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow, let’s add titles and labels to your graph! Again, type your title between the quotation marks. Then click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFinally, run this to see your scatter plot! Click “run code” and if something doesn’t look right, click through the “troubleshooting” tabs to see how to fix it.\n\nCode editorTroubleshooting: error messageTroubleshooting - points clustered at the bottom\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDid you get an error message in red?\n\nIf the graph also displayed and looks right, don’t worry about the error message!\nIf the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.\n\nDid you put everything in quotes when you defined the variables and labels?\n\nYou don’t need to edit this code at all, just the code where you define variables and labels\nIf it still isn’t working or if you accidentally deleted something, you can refresh the page to restart.\n\n\n\nIf your x variable is year and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn’t much change until much more recently.\nSo try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is year.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNice work! Hopefully you enjoyed making your own graph with this data!\n\n\n\nfrom.giphy.com"
-  },
-  {
     "objectID": "tutorials/biodiversity_tutorial.html#introduction",
     "href": "tutorials/biodiversity_tutorial.html#introduction",
     "title": "Biodiversity tutorial",
@@ -454,5 +111,362 @@
     "title": "Biodiversity tutorial",
     "section": "Congratulations!",
     "text": "Congratulations!\nYou have created a data visualization from a big data set!\nNice work!\n\n\n\nfrom giphy.com"
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html",
+    "href": "tutorials/climate_change_tutorial.html",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nhttps://physicsworld.com/a/solving-climate-change-with-jonathan-koomey-and-ian-monroe/\n\n\nWelcome to this data science tutorial! We’ll be using R to look at climate change data.\nR is a coding language that is often used to look at LARGE amounts of data. It can do all sorts of things including basic math!\nWant to try using R?\nIn the code box right below this, type in 6+3 and press the green play button:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo you see the answer 9 that popped out right under your code? Pretty cool!\nThe gray and white box with the green arrow and “run code” button is called a code chunk. You can type in “R commands” into that box and it will output the answer underneath the code chunk.\n\n\nToday we’ll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.\nWe’ve preloaded a dataset into this tutorial. This was found\n\n\nLet’s start by taking a look at the data set. Press the green play button below and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou should see 10 rows of data and a lot of random words. We won’t go into what all of it means, but here’s a quick overview:\n\nThe words on the top (country, year, iso_code, population, etc) are the different variables in our data set\nUnderneath those words are the type of variable, which we’ll ignore right now.\nBelow that, you’ll see some numbers and NA values. Those are different values for each variable.\n\nOur data is called co2Data. If you type co2Data into any code chunk, you’ll be able to see our data.\n\n\n\n\nWe can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won’t be able to cover all the details of how to make a graph, but there’s lots of resources online you can find to learn more. We use something called ggplot to make graphs in this tutorial.\nFirst, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!\nPress Run Code on the code chunk below!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nWhat if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how different the temperature each year is from the average in 1900.\nIn the code chunk below type tempData and click “run code” to see the new data set.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\n\n\nhttps://geographicbook.com/temperature/\n\n\n\n\nYou should see 2 columns: one called Year and one called Anomaly. The Anomaly column tells us how different the temperature that year was from the average in 1900. This only shows us 10 years, but the data goes all the way to 2023! We can graph the data to visualize it better.\nLet’s graph this! Press “run code” and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow, what if we combine our co2 data and our temperature data?\nLets put these two data sets together matching up the years. Then, we can make a graph of temperature anomaly and co2 levels. Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nNow what if we ask where most of that CO2 we’re emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we’ve edited some of our data in the background to make it easier to graph with. Our new edited data is called co2DataFiltered.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s see what a graph looks like! Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nOptional: Open this if you want to learn more about how the code works\n\n\n\n\n\nGGPlot is an awesome tool you can use to create plots! There’s lots of tutorials online that I recommend checking out. But for now, here’s a brief explanation of how our code works. Below, I’ve copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a # (called a comment) and are gray. See if you can find out which line creates the title of the graph!\n\n#Tell R what data to use and what the x and y values are\nggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+\n  \n  #Select what kind of graph we're making\n  geom_col(position=\"dodge\") +\n  \n  #Label the graph to make it easy to read\n  labs(title=\"CO2 Production from Energy Vs. Other Sources\", x=\"Year\", y=\"CO2 In Tons\") +\n  \n  #add a legend to show what each color means \n  scale_fill_discrete(name=\"CO2 Source\", labels=c(\"CO2 from Energy\", \"All Other Sources of CO2\")) +\n  \n  #make it pretty :)\n  theme_light() \n\nWere you able to tell which line created the title??\nIf you want even more code to look at, keep reading! You can also feel free to skip to the next section called Scatter Plot Generator\nBelow, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the co2Data and edits it to make it easier to graph with.\n\n#Creates new columns called \"co2_from_energy\" that includes co2 data from coal, gas, oil. \n#Then creates a column called \"co2_no_energy\" that is the rest of the co2 production\nco2DataBar&lt;-co2Data%&gt;%\n  group_by(year)%&gt;%\n  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%&gt;%\n  mutate(co2_no_energy=co2-co2_from_energy)\n\n#Filter data to get just the columns we need and make it graphable\n#Tells R to only use \"year\", \"co2_no_energy\" and \"co2_from_energy\" in the graph. \nco2DataFiltered&lt;-co2DataBar%&gt;%select(year, co2_no_energy, co2_from_energy)%&gt;%\n  \n  #Chooses only years above 2019\n  filter(year&gt;=2019)%&gt;%\n  \n  #A few final adjustments to make the graph easier to use\n  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%&gt;%\n  mutate(year_chr=as.character(year))\n\n\n\n\n\n\n\nNow you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven’t been answered by the infographics and graphs you’ve already seen, take a look at the data and see what you can ask to try and learn more.\nFirst, decide which variable you want to learn about. You can choose any variable from co2Data. Here are some options:\n\npopulation\nyear\ncement_co2\nco2\nconsumption_co2\ncumulative_co2\nenergy_per_gdp\nland_use_change_co2\ngas_co2\ncoal_co2\ncement_co2\nland_use_change_co2\nmethane\ntemperature_change_from_co2\n\nChoose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.\nThen click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow, let’s add titles and labels to your graph! Again, type your title between the quotation marks. Then click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFinally, run this to see your scatter plot! Click “run code” and if something doesn’t look right, click through the “troubleshooting” tabs to see how to fix it.\n\nCode editorTroubleshooting: error messageTroubleshooting - points clustered at the bottom\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDid you get an error message in red?\n\nIf the graph also displayed and looks right, don’t worry about the error message!\nIf the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.\n\nDid you put everything in quotes when you defined the variables and labels?\n\nYou don’t need to edit this code at all, just the code where you define variables and labels\nIf it still isn’t working or if you accidentally deleted something, you can refresh the page to restart.\n\n\n\nIf your x variable is year and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn’t much change until much more recently.\nSo try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is year.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNice work! Hopefully you enjoyed making your own graph with this data!\n\n\n\nfrom.giphy.com"
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html#our-data",
+    "href": "tutorials/climate_change_tutorial.html#our-data",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "Today we’ll be using R to look at climate data. We will be able to create graphs of different variables in our data, like carbon dioxide emissions and temperature.\nWe’ve preloaded a dataset into this tutorial. This was found\n\n\nLet’s start by taking a look at the data set. Press the green play button below and see what happens!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou should see 10 rows of data and a lot of random words. We won’t go into what all of it means, but here’s a quick overview:\n\nThe words on the top (country, year, iso_code, population, etc) are the different variables in our data set\nUnderneath those words are the type of variable, which we’ll ignore right now.\nBelow that, you’ll see some numbers and NA values. Those are different values for each variable.\n\nOur data is called co2Data. If you type co2Data into any code chunk, you’ll be able to see our data."
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html#our-first-graph",
+    "href": "tutorials/climate_change_tutorial.html#our-first-graph",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "We can use R to do all sorts of things, including make graphs easily and quickly! In this tutorial we won’t be able to cover all the details of how to make a graph, but there’s lots of resources online you can find to learn more. We use something called ggplot to make graphs in this tutorial.\nFirst, lets make a graph that just looks at the worlds CO2 Emissions over time, this data goes all the way back to 1750!\nPress Run Code on the code chunk below!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html#temperature-data",
+    "href": "tutorials/climate_change_tutorial.html#temperature-data",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "What if we want to compare this to how the worlds temperature has changed over this same time? We have another dataset that contains temperature data. It tells us how different the temperature each year is from the average in 1900.\nIn the code chunk below type tempData and click “run code” to see the new data set.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html#co2-sources",
+    "href": "tutorials/climate_change_tutorial.html#co2-sources",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "Now what if we ask where most of that CO2 we’re emitting comes from? We can do this with a bar graph that shows the data from the past few years. A bar graph is a little more complicated to make, so we’ve edited some of our data in the background to make it easier to graph with. Our new edited data is called co2DataFiltered.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLet’s see what a graph looks like! Click “run code”.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nOptional: Open this if you want to learn more about how the code works\n\n\n\n\n\nGGPlot is an awesome tool you can use to create plots! There’s lots of tutorials online that I recommend checking out. But for now, here’s a brief explanation of how our code works. Below, I’ve copied and pasted the code from above, but this time there are explanations scattered throughout. The explanations start with a # (called a comment) and are gray. See if you can find out which line creates the title of the graph!\n\n#Tell R what data to use and what the x and y values are\nggplot(data=co2DataFiltered, mapping=aes(x=year_chr, y=value, fill=name))+\n  \n  #Select what kind of graph we're making\n  geom_col(position=\"dodge\") +\n  \n  #Label the graph to make it easy to read\n  labs(title=\"CO2 Production from Energy Vs. Other Sources\", x=\"Year\", y=\"CO2 In Tons\") +\n  \n  #add a legend to show what each color means \n  scale_fill_discrete(name=\"CO2 Source\", labels=c(\"CO2 from Energy\", \"All Other Sources of CO2\")) +\n  \n  #make it pretty :)\n  theme_light() \n\nWere you able to tell which line created the title??\nIf you want even more code to look at, keep reading! You can also feel free to skip to the next section called Scatter Plot Generator\nBelow, you can see the code that was used to filter our data and make it easier to use in a bar graph. This is code that we ran secretly in the background before you created the bar graph. It takes the co2Data and edits it to make it easier to graph with.\n\n#Creates new columns called \"co2_from_energy\" that includes co2 data from coal, gas, oil. \n#Then creates a column called \"co2_no_energy\" that is the rest of the co2 production\nco2DataBar&lt;-co2Data%&gt;%\n  group_by(year)%&gt;%\n  mutate(co2_from_energy=sum(coal_co2, gas_co2, oil_co2, na.rm=T))%&gt;%\n  mutate(co2_no_energy=co2-co2_from_energy)\n\n#Filter data to get just the columns we need and make it graphable\n#Tells R to only use \"year\", \"co2_no_energy\" and \"co2_from_energy\" in the graph. \nco2DataFiltered&lt;-co2DataBar%&gt;%select(year, co2_no_energy, co2_from_energy)%&gt;%\n  \n  #Chooses only years above 2019\n  filter(year&gt;=2019)%&gt;%\n  \n  #A few final adjustments to make the graph easier to use\n  pivot_longer(cols=c(co2_no_energy, co2_from_energy))%&gt;%\n  mutate(year_chr=as.character(year))"
+  },
+  {
+    "objectID": "tutorials/climate_change_tutorial.html#scatter-plot-generator",
+    "href": "tutorials/climate_change_tutorial.html#scatter-plot-generator",
+    "title": "Climate Change Data Tutorial",
+    "section": "",
+    "text": "Now you get to try creating your own plot! You will be able to choose any two variables and see how they relate to each other. If your questions haven’t been answered by the infographics and graphs you’ve already seen, take a look at the data and see what you can ask to try and learn more.\nFirst, decide which variable you want to learn about. You can choose any variable from co2Data. Here are some options:\n\npopulation\nyear\ncement_co2\nco2\nconsumption_co2\ncumulative_co2\nenergy_per_gdp\nland_use_change_co2\ngas_co2\ncoal_co2\ncement_co2\nland_use_change_co2\nmethane\ntemperature_change_from_co2\n\nChoose two of these variables that you want to plot against each other. Then, in the code chunk below, type them inside the quotes. Make sure you leave the quotes and just replace the red line. Also make sure you type the variable name exactly - in fact, you can just copy and paste from the list.\nThen click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNow, let’s add titles and labels to your graph! Again, type your title between the quotation marks. Then click “run code”!\n\nCode editorExample\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nFinally, run this to see your scatter plot! Click “run code” and if something doesn’t look right, click through the “troubleshooting” tabs to see how to fix it.\n\nCode editorTroubleshooting: error messageTroubleshooting - points clustered at the bottom\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nDid you get an error message in red?\n\nIf the graph also displayed and looks right, don’t worry about the error message!\nIf the graph is not displaying, go back and make sure you ran all the code chunks previously where you defined the variables and labels.\n\nDid you put everything in quotes when you defined the variables and labels?\n\nYou don’t need to edit this code at all, just the code where you define variables and labels\nIf it still isn’t working or if you accidentally deleted something, you can refresh the page to restart.\n\n\n\nIf your x variable is year and your points are clustered at the bottom of your graph, this may be because it goes all the way back to 1750 and there wasn’t much change until much more recently.\nSo try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is year.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nNice work! Hopefully you enjoyed making your own graph with this data!\n\n\n\nfrom.giphy.com"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#introduction",
+    "href": "tutorials/sealevel_tutorial.html#introduction",
+    "title": "Sea Level tutorial",
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to this lesson on changing sea levels. We’ll be looking at how the sea level is changing in different parts of the world. We’re going to use the computer to help us look at and understand data.\nFirst, let’s take a look at this map showing how sea levels have changed since 1880. It shows the change in sea level compared to a baseline determined by the average sea level between 1993 and 2008.\n\n\n\nFrom https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level"
+  },
+  {
+    "objectID": "tutorials/sealevel_tutorial.html#change-in-sea-level-since-1970",
+    "href": "tutorials/sealevel_tutorial.html#change-in-sea-level-since-1970",
+    "title": "Sea Level tutorial",
+    "section": "Change in Sea Level Since 1970",
+    "text": "Change in Sea Level Since 1970\nAs we can see in the graph, there is an upwards trend of sea level rise.\nBut how do we know there is an upward trend? How do we know what the sea level is in the first place? Check out this video to learn more about how scientists measure the sea level.\n“”\nSo, scientists use water level gauges as well as satellites to measure the sea level at any given time. They write down all the numbers they measure and collect it. This collection of numbers is called data.\nAfter we have all that data (often called raw data), other scientists will analyze it and use it to create graphs. That’s what we’re going to do today! We’ll use the computer to code and analyze our data.\n\nContinue"
+  },
+  {
+    "objectID": "resources/resources.html",
+    "href": "resources/resources.html",
+    "title": "Other Resources",
+    "section": "",
+    "text": "If you’d like to learn more about R coding and data science, here are some more resources you can refer to!"
+  },
+  {
+    "objectID": "resources/resources.html#visualizations-and-interactive-graphs",
+    "href": "resources/resources.html#visualizations-and-interactive-graphs",
+    "title": "Other Resources",
+    "section": "Visualizations and Interactive Graphs",
+    "text": "Visualizations and Interactive Graphs\n\nEducational resources for teaching data visualizations\nPresentation with data visualization warm-ups\nNYT What’s Going on in this Graph Lessons\n\n\nVisualization Examples\nNASA Interactive Graphs - Vital Signs of the Planet\nVisual stories\nCarbon and Climate infographics\nData is Beautiful: 10 of the best data visualization examples from history and today\nTableu - Viz of the day\n\n\nWebsites for creating graphs (that don’t require coding)\nRaw Graphs\nCODAP"
+  },
+  {
+    "objectID": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "href": "resources/resources.html#coding-with-r-a-data-science-coding-language",
+    "title": "Other Resources",
+    "section": "Coding with R (a data science coding language)",
+    "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
+  },
+  {
+    "objectID": "lesson_plans/COR_lesson.html",
+    "href": "lesson_plans/COR_lesson.html",
+    "title": "COR Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on COR?\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/sea_levels_lesson.html",
+    "href": "lesson_plans/sea_levels_lesson.html",
+    "title": "Sea Levels Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/Biodiversity_lesson.html",
+    "href": "lesson_plans/Biodiversity_lesson.html",
+    "title": "Biodiversity Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/climate_lesson.html",
+    "href": "lesson_plans/climate_lesson.html",
+    "title": "Climate Change Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/Salmon_lesson.html",
+    "href": "lesson_plans/Salmon_lesson.html",
+    "title": "Salmon School",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/AQI_lesson.html",
+    "href": "lesson_plans/AQI_lesson.html",
+    "title": "Air Quality Lesson",
+    "section": "",
+    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html",
+    "href": "lesson_plans/lesson_links.html",
+    "title": "R Files for Data Science Lessons",
+    "section": "",
+    "text": "Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using Rstudio desktop or posit.cloud (an online version of Rstudio).\nAdditionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "href": "lesson_plans/lesson_links.html#middle-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "Middle School Lessons",
+    "text": "Middle School Lessons\nSalmon Lesson Code .zip file\nAir Quality Lesson Code .zip file\nCOR Lesson code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#high-school-lessons",
+    "href": "lesson_plans/lesson_links.html#high-school-lessons",
+    "title": "R Files for Data Science Lessons",
+    "section": "High School Lessons",
+    "text": "High School Lessons\nAir Quality Lesson Code .zip file (same file as the middle school air quality lesson… wasn’t sure where to put it)\nBiodiversity Lesson Code .zip file\nClimate Change Lesson Code .zip file\nSea Levels Lesson Code .zip file"
+  },
+  {
+    "objectID": "lesson_plans/lesson_links.html#sec-DITW",
+    "href": "lesson_plans/lesson_links.html#sec-DITW",
+    "title": "R Files for Data Science Lessons",
+    "section": "Other downloadable tutorials",
+    "text": "Other downloadable tutorials\nBelow are R tutorials developed for Lewis & Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.\nTo use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.\nWe recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.\nModule 1 - Basic data wrangling .zip file\nModule 2 - Plotting with ggplot .zip file\nModule 3 - Inferential Statistics .zip file"
+  },
+  {
+    "objectID": "resources/cheatsheet.html",
+    "href": "resources/cheatsheet.html",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "",
+    "text": "The following cheatsheet is based on commands used in a course developed for Lewis & Clark College, called “Data in the Wild”. It covers basic R commands (including basic arithmetic, importing data), cleaning and mutating data, plotting using ggplot and inferential statistics.\nFor more information and to download the tutorials used in conjunction with this cheatsheet, refer to the R files page."
+  },
+  {
+    "objectID": "resources/cheatsheet.html#basic-r-commands",
+    "href": "resources/cheatsheet.html#basic-r-commands",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "Basic R Commands",
+    "text": "Basic R Commands\n\nBasic arithmetic\n\nExamples: 5*6, sqrt(9), abs(-3)\nType help(command) to find information about any command\n\nCreate variables: Use &lt;- or = to assign values to a variable.\n\nExample: x &lt;- 7\n\nCreate a vector:\n\nvector &lt;- c(1,3,7)\nvector\n\n[1] 1 3 7\n\n\nCreate a data frame: data.frame(____)\n\ndf &lt;- data.frame(var_1 = c(1,2,3) , var_2 = c(\"cat\", \"dog\", \"fish\"))\ndf\n\n  var_1 var_2\n1     1   cat\n2     2   dog\n3     3  fish\n\n\n\n\nBasic Statistics\n\nmean(vector) : Calculates the mean of a given set of values.\nmedian(vector) : Calculates the median of a given set of values.\nsd(vector) : Calculates the standard deviation of a given set of values.\nnrow(data): Calculates the total number of rows in a dataset\nna.rm = TRUE : Remove NA values. Add this as an argument to any of the statistics calculations. E.g. mean(vector, na.rm=TRUE)"
+  },
+  {
+    "objectID": "resources/cheatsheet.html#working-with-a-data-set-in-the-tidyverse",
+    "href": "resources/cheatsheet.html#working-with-a-data-set-in-the-tidyverse",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "Working with a data set in the tidyverse",
+    "text": "Working with a data set in the tidyverse\nWe use the tidyverse to analyze data in this cheatsheet. To install run the following code:\n\ninstall.packages(\"tidyverse\")\n\nAfter installing, to load the tidyverse run:\n\nlibrary(tidyverse)\n\n\nUploading and viewing a data set\n\ndataFrame &lt;- read_csv(\"myCSV.csv\") : Creates a data frame from a file called myCSV.csv\nwrite_csv(dataFrame, \"myCSV.csv\"): Creates a csv from a data frame\nview(dataFrame): Enter view-mode to see the entire data frame\nstr(dataFrame): Gives the structure of data frame\nglimpse(dataFrame): Take a quick look at a data frame\nsummary(dataFrame): Returns min, max, mean, meadian, 1st/3rd quartiles for all vectors in dataFrame\ndataFrame$columnName: Calls up specific column from a data frame\nunique(vector): Find the number of unique values in a column/vector\nlength(): Counts the number of entries in a column/vector\n\n\n\nRearranging & Summarizing data\n\nUse logical operators to combine conditions: & (and), | (or), ! (not)\nUse comparison operators to describe conditions: &lt;, &gt;, ==, !=, &lt;=, &gt;=\ngroup_by(.data, column): Takes a dataset and groups it by a column/variable\nsummarize(.data, summaryStat = statistic formula): Takes a dataset and outputs summary statistics that you define.\n\nn(): Calculates current group size. Can be used in summarize and group_by\nCombine group_by and summarize using the pipe (|&gt;) to see summary statistics for specific groups/variables.\nThe pipe: Use |&gt; OR %&gt;% to string functions and data together. Read as “AND THEN”.\n\nExample:\n\n  dataFrame |&gt; \n    group_by(firstColumn)|&gt; \n    summarize(mean_of_secondColumn = mean(secondColumn), \n              standard_deviation_of_secondColumn = sd(secondColumn),\n              number_in_each_group = n(), \n              percent = n()/nrow(dataFrame)*100)\n\nfilter(.data=myDataFrame, column==\"some value\"): Subsets dataframe, lets us pick rows of data based on “some value”, including a specific value, mean, median, etc.\nselect(.data, column(s)): Choose columns from a dataframe.\n\ncolumn1 , column2 : choose column1 and column2\ncolumn1:column5 : choose all columns between column1 and column5\n-column1: choose all columns except column1\n\nmutate(data, newColumn = yourFormula): Creates a new column in a dataset defined by a calculation you input.\narrange(data, column): Rearrange data into numerical order by a specific column"
+  },
+  {
+    "objectID": "resources/cheatsheet.html#plotting-with-ggplot",
+    "href": "resources/cheatsheet.html#plotting-with-ggplot",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "Plotting with GGPlot",
+    "text": "Plotting with GGPlot\n\nResources:\n\nGGPlot Cheatsheet pdf\nPosit.cloud ggplot cheatsheet, website version\n\n\n\nGGPlot Basics:\n\nBasic structure:\n\nggplot(data, mapping=aes()) +\n      geom_function()\n\nConnect different properties using a +\nBasic Components:\n\nData: data=dataSet: Define your data set\nAesthetics: mapping = aes(variables): Define the variables. Can also specify color/fill for your graph and geometries.\nGeometry: geom_GeometricObject(): Define the type of plot\n\n\n\n\nGeometries\n\ngeom_histogram(): Creates a histogram\n\nSyntax: geom_histogram(bins=X) Specify number of bins\n\ngeom_point(): Creates points (scatterplot) for each data point\n\nCan specify color = ___ and shape = ____\n\ngeom_bar() : Creates a bar graph\n\nSyntax:\n\ngeom_bar(): Aggregates data for you\ngeom_bar(stat = \"identity\"): Creates a bar graph with pre-aggregated data that you input\ngeom_bar(position=\"___\") Can choose “stack” (bars on top of each other), “dodge” (bars side by side) or “fill” (bars stacked, scaled to 100%).\nAdd error bars: geom_errorbar(mapping=aes(ymin, ymax), width)\n\n\ngeom_boxplot(): Creates a boxplot\n\nAdd error bars: stat_boxplot(geom=\"errorbar\")\n\ngeom_density(): Creates a density graph\n\nSyntax: geom_density(adjust=X) X is a ratio, how smooth the graph is\n\ngeom_smooth(method=\"lm\", se=FALSE): Creates a line of best fit\nlabs() : Add a title and axes labels to your graph\nfacet_wrap(~ variable): Create separate plots for each aspect of a given variable\nAnd more!\n\n\n\nOther useful GGPlot functions:\n\ninstall.packages(\"ggplot2\") and library(ggplot2): Install and load GGplot package. Note: ggplot2 is included in the tidyverse so you do NOT need to load both packages.\nggsave(\"yourTitleHere.jpg\", currentPlotName): Saves “currentPlotName” as a jpg file called “yourTitleHere.jpg”."
+  },
+  {
+    "objectID": "resources/cheatsheet.html#examples-using-ggplot-with-other-tidyverse-functions",
+    "href": "resources/cheatsheet.html#examples-using-ggplot-with-other-tidyverse-functions",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "Examples: Using GGPlot with other tidyverse functions",
+    "text": "Examples: Using GGPlot with other tidyverse functions\nUse the pipe to string together functions and create tidy data before plotting.\nThe following examples use data from the palmerpenguins package which has been preloaded into this document. Click the green play button to see them run. Feel free to edit the code as well if you want to try out other functions!\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHere’s a preview of the penguin data, and here is a link to more information about the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBasic bar graph of median flipper length on each island:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoxplot of Adelie penguin flipper length, by sex:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "resources/cheatsheet.html#inferential-statistics",
+    "href": "resources/cheatsheet.html#inferential-statistics",
+    "title": "Cheatsheet for Data in the Wild Tutorials",
+    "section": "Inferential Statistics",
+    "text": "Inferential Statistics\n\nBasic statistical tests\n\nt.test(data, dependentVariable ~ independentVariable): 2 sample t-test - compare 2 groups on a numerical measure\n\nRequires: 2 samples of quantitative data\n\naov(data, dependentVariable ~ independentVariable): ANOVA (analysis of variance) test - compare means among groups\n\nRequires: Independent variable - categorical; dependent variable - numerical\n\nTukeyHSD(data): Tukey’s HSD - Post Hoc test which tells you which specific means differ from each other\n\n\n\nLinear regression\n\ncor(data$independentVariable, data$dependentVariable): Correlation coefficient - outputs a number between -1 and 1 which tells strength and direction of the relationship between 2 numeric variables\n\nRequires 2 numeric variables\n\nlm(data, dependentVariable ~ independentVariable): Fit a linear model\n\nsummary(yourLinearModel): View more details about a linear model including regression coefficients, p value for linear model coefficients, quartiles, residual standard error, F-statistic."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "6-12 Data Science Resources",
+    "section": "",
+    "text": "Welcome! This site includes lots of resources for using data science in your middle or high school classroom.\nUnder Lesson Plans, you’ll find resources for various types of STEM lessons that all incorporate some data science. Most of these will link to powerpoints, code files, lesson plans, and more that you can use. The code files found here require some basic R coding knowledge and can be opened in Rstudio desktop or posit.cloud (an online version of Rstudio).\nUnder Online Tutorials, you’ll find tutorials that can be done directly on this website which can be used to teach and learn about data science and basic R coding. These correspond with the lesson plans and can often be used instead of downloading the code files under “Lesson Plans” (if you prefer not to use Rstudio). They generally require minimal to no experience in R coding.\nBrowser information: The online R tutorials will not run on safari. Use chrome, firefox, or another browser instead.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#introduction",
+    "href": "tutorials/AQI_tutorial_advanced.html#introduction",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Introduction",
+    "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur Data Set\n\n\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nOur data tells gives the highest recorded AQI value on a given day in a given location.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.\n\n\n\n\n\n\nFrom.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
+    "href": "tutorials/AQI_tutorial_advanced.html#customizing-your-graphs",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Customizing your graphs!",
+    "text": "Customizing your graphs!\nIn this tutorial, you can create graphs with various customizations. Here are your options:\n\nmake a scatterplot of AQI over time for any location(s)\nmake a tile plot and choose your own location(s)\nview raw data for any county\nChallenge - make a tile plot and customize the location, x axis, legend, and labels\n\nChoose one of the options above, or click “continue” to do all of them!\n\nContinue: scatterplot",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-scatterplot",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Create a scatter plot of AQI over time",
+    "text": "Create a scatter plot of AQI over time\nFirst, let’s create a scatterplot! We’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red (or orange or green or whatever level you choose). Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\n\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-tilemylocation",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Make a tile plot of any county!",
+    "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place (other than Portland and LA which were analyzed in Part 1)? You’ll be able to do that below.\nIf you’d like a challenge, go to the final section to create a tile plot with multiple different variables you can adjust!\n\nStep 1: Choose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Add your county name to the code\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-rawdata",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "View raw data",
+    "text": "View raw data\nAfter graphing, you may wonder why the graph looks the way it does. Here, you can look at your raw data.\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph. See section Choose a county to see a list of county options.\nAfter choosing a county, tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\". Keep all the code below the red line as well.\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nRaw data\nClick the blue box to see raw data for the county you chose.\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to Choose a county and run the code to choose your county.\n\n\n\nClick “continue” for a coding challenge.\n\nContinue: Tile plot challenge",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#sec-codechallenge",
+    "href": "tutorials/AQI_tutorial_advanced.html#sec-codechallenge",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Challenge: Tile plot with more variable options",
+    "text": "Challenge: Tile plot with more variable options\nWant to create a more complex tile plot? In this section, you’ll have the opportunity to customize the x axis, legend, and plot labels.\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/AQI_tutorial_advanced.html#congratulations",
+    "href": "tutorials/AQI_tutorial_advanced.html#congratulations",
+    "title": "AQI Part 2 - Custom Graphs",
+    "section": "Congratulations!",
+    "text": "Congratulations!\nYou have finished this tutorial and made lots of different types of air quality graphs! Excellent work!\n\n\n\nfrom.giphy.com",
+    "crumbs": [
+      "AQI tutorials",
+      "AQI Part 2 - Custom Graphs"
+    ]
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
+    "href": "tutorials/salmon_tutorial.html#fish-crossings---introduction",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Fish Crossings - Introduction",
+    "text": "Fish Crossings - Introduction\nHello! Welcome to this tutorial. We’re going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.\n\n\n\n\n\n\nFrom https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/\n\n\n\n\n\nToday we’ll get to learn about fish crossings at dams in the Columbia River.\nWe’ll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year.\n\n\n\nWhat is the Bonneville Dam?\n\n\n\n\n\nFrom https://thegorgeguide.com/bonneville-dam-visitor-center/\n\n\n\n\n\n\n\n\n\n\nThe Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.\n\nBrainstorm:\nWhat are some positive and negative impacts you think the dam might have?\nTalk with your classmates about how some impacts the dam might have on the surronding areas. Here are some ideas you can consider:\n\nHydropower\nNative American communities\nSalmon populations\nSalmon are important spiritually and culturally to Native Americans\nSea lions\nOther animals who live where the dam was created\n\n\n\nContinue\n\n\n\n\nHow does the Bonneville Dam impact Salmon?\nIn this tutorial, we’re going to look at data and learn about how the dam impacts Salmon returning to the Columbia river to spawn.\nFirst, how are fishing swimming through the Bonneville Dam?\nIt is way to large for them to swim over, so they use a fish ladder to swim through the dam. Someone built the fish ladder when they were building the dam to help the fish get through! Watch this video to see how they can swim through the fish ladder.\n\nAs salmon come through the fish ladder, they need to be counted to see how many salmon come through and learn how many make it through the dam and return upstream to spawn. Some days, thousands of fish come through the dam! How do you think they are counted?\nWatch this video to see!\n\nAs you saw in the video, someone counts each fish that goes by. They write down exactly how many fish they see, what time and what kind of fish. All those numbers get added together and become data. Then, someone puts all that data online for anyone to see (like us!).\nThere is A LOT of data (numbers of fish) that they collect. It would be pretty pretty hard to understand just by looking at it. In fact, if you click the blue box right below this, you can see all the data. It should look pretty confusing! Keep reading to learn how we can use the computer to better understand all those numbers.\n\n\n\n\n\n\nClick this to see the data that someone collected at the fish ladder!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote: the data is from Columbia Basin Research\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#what-is-the-bonneville-dam",
+    "href": "tutorials/salmon_tutorial.html#what-is-the-bonneville-dam",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "What is the Bonneville Dam?",
+    "text": "What is the Bonneville Dam?\n\n\n\n\n\nFrom https://thegorgeguide.com/bonneville-dam-visitor-center/\n\n\n\n\n\n\n\n\n\n\nThe Bonneville Dam is in the Columbia River and was constructed between 1933 and 1938. When it was constructed, it had a large impact on the surrounding land, Indigenous communities, and animals and plants.\n\nBrainstorm:\nWhat are some positive and negative impacts you think the dam might have?\nTalk with your classmates about how some impacts the dam might have on the surronding areas. Here are some ideas you can consider:\n\nHydropower\nNative American communities\nSalmon populations\nSalmon are important spiritually and culturally to Native Americans\nSea lions\nOther animals who live where the dam was created\n\n\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#analyzing-huge-data-with-the-computer",
+    "href": "tutorials/salmon_tutorial.html#analyzing-huge-data-with-the-computer",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Analyzing HUGE data with the computer",
+    "text": "Analyzing HUGE data with the computer\nWe’re going to analyze all the numbers that are collected at the Bonneville Dam using the computer.\n\nUsing R\nWe will use a coding language called “R”. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.\nFor example one command the computer knows is multiplication! Try typing 5*3 in the box right below this. Then click the green play button that says “run code”\n\nCode editorAnswer\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWhat happened? Did you see the number 15 pop out?\nThe computer can also do very complicated things, like create graphs. We’ll learn more about that later in this tutorial.\nThe box above where you typed 5*3 is called a code chunk. You can type commands into any similar box and it will tell the computer to do various things.\nHere’s another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There’s a few different tabs you can click on to learn how to do cool things!\n\nCode editorSay helloFind the largest number\n\n\nWant to try out your own code? Maybe another math problem? Here’s a place to do that. Otherwise click on the tabs to learn something new!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWould you like the computer to say hello to you?\nFirst, type your name where the blank _______ is, in the second code chunk. Don’t delete the quotation marks.\nHere’s an example:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow your turn. Type your name instead of the blank _____ and then click play:\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nWe can use r to find the largest number in a long list of numbers. To try this out, type a bunch of numbers inside the parentheses (______). Separate your numbers with a comma. Don’t delete anything else!\nHere’s an example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow let’s run a function that will tell us which number is the biggest. Click the play button on this code chunk too.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#looking-at-data",
+    "href": "tutorials/salmon_tutorial.html#looking-at-data",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Looking at data",
+    "text": "Looking at data\nOne thing the computer is very useful for is dealing with HUGE amounts of data. Data is a collection of lots of numbers that tell us information about something.\nLet’s return to the data that is collected at the Bonneville Dam. I’ve used coding in the background of this tutorial to make it a little more condensed than the data you saw before. Want to look at it? Click the blue box below.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of numbers! This is a HUGE amount of data. Notice how you can scroll on the data and there are 9 separate pages which show new entries.\n\nHow to read the data table\nLet’s learn about what some of this data means. First, the table that you see when you click the blue rectangle above is called a data table. It contains a bunch of numbers which tell us how many fish crossed the Bonneville Dam on any given day.\n\nReading Dates\n\nQuestionAnswer\n\n\nOn the top of the data table, you’ll see bolded numbers like 1/1, 1/2, etc. Do you have a guess what those might mean? Discuss with your neighbor and then click the tab above to see the answer.\n\n\n\nThose numbers are referring to dates! For example, 1/1 is January 1. But, they don’t include the year. Can you spot where the year is in the data?\n\n\n\n\nCheck for understandingHint\n\n\n\nCan you find how many fish crossed the Bonneville Dam on April 1 in 2022?\n\n\n\n\n ✗0\n\n\n ✓57\n\n\n ✗30495\n\n\n\n\n\n\n\nOn the far left side of the data, you should see the year. Find 2022 and then find 4/1 on the top. What number is underneath 4/1 in the 2022 row?\n\n\n\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#graphing",
+    "href": "tutorials/salmon_tutorial.html#graphing",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Graphing",
+    "text": "Graphing\nAnother way we can look at this data is by graphing it. The computer can help us a lot with this too.\nWe’re going to make a graph of the total number of Chinook that cross the Bonneville each year.\nBelow this, we have code to create graphs of all the data we were looking at before. Press the green run code button to see the graph. There are options to look at a graph with and without a connecting line between the points.\n\nGraph without connecting lineGraph with Connecting LineChange the graph color!\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nWant to try changing the color of the line and the points?\nIn the code chunk below, replace the red lines ____ with the color you want for the connecting line and the points. Make sure to write your color inside the quotes \"\". Here’s an example: pointColor = \"red\"\nHere are some color options you can try:\n-   \"red\"\n-   \"green\"\n-   \"purple\"\n-   \"salmon\"\n-   \"darkblue\"\n-   \"orange\"\nType in your colors below and then press run code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow that you’ve chosen the colors, you can run the graph code again. Press run code right below this text.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nBrainstorm\n\nWhat do you see?\nWhat does it mean?\nWhat do you wonder?\n\n\nNote to teachers At this point I recommend you check out THIS PRESENTATION to explore what the graphs mean in your class. Additionally, click to the end of this tutorial to see other graphs for different locations and species.\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#congratulations",
+    "href": "tutorials/salmon_tutorial.html#congratulations",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Congratulations!!",
+    "text": "Congratulations!!\nYou learned how you can use the computer to look at large amounts of numbers and data. But, data doesn’t tell us everything!\n\nBrainstorm\n\nWhat questions do you have after looking at this data?\nHow could you find the answer to those questions?\nAre there other ways you could learn about the impact of the dam other than looking at data?\n\nHow would you do that?\nPossible methods: interviews, online research, looking at pictures of the dam and surronding areas, visiting the dam, learning about salmon biology\n\nWhat do the data/numbers not tell us?\n\n\n\nWant to learn more\nThis is the end of the tutorial but there’s lots more resources to explore!\n\nClick the “More Graphs!” button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom.\nAdditionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam.\n\n\nMore Graphs!"
+  },
+  {
+    "objectID": "tutorials/salmon_tutorial.html#graphs-of-other-species-and-locations",
+    "href": "tutorials/salmon_tutorial.html#graphs-of-other-species-and-locations",
+    "title": "Salmon Crossing Data Tutorial",
+    "section": "Graphs of other species and locations",
+    "text": "Graphs of other species and locations\nHere are graphs of other species (Chinook and Steelhead) at other dams (Dalles and Bonneville) as well which you can take a look at!\nPress run code on each of the code chunks below to see different graphs.\n\nChinook Crossings at the Dalles\n\nGraph without connecting lineGraph with connecting line\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nSteelhead Crossings at the Bonneville Dam\n\nGraph without connecting lineGraph with connecting line\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nThe End"
+  },
+  {
+    "objectID": "tutorials/test.html",
+    "href": "tutorials/test.html",
+    "title": "test tutorial",
+    "section": "",
+    "text": "hello\nwhat is up\n\n\n\n\nlet’s try this ok\n\nno go to sec2\nor sec 3\n\nContinue\n\n\n\n\nright\n\nContinue\n\n\n\n\nhello\n\nContinue\n\n\n\n\nyes"
+  },
+  {
+    "objectID": "tutorials/test.html#part-1-introduction-to-topic",
+    "href": "tutorials/test.html#part-1-introduction-to-topic",
+    "title": "test tutorial",
+    "section": "",
+    "text": "hello\nwhat is up\n\n\n\n\nlet’s try this ok\n\nno go to sec2\nor sec 3\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/test.html#sec-2",
+    "href": "tutorials/test.html#sec-2",
+    "title": "test tutorial",
+    "section": "",
+    "text": "right\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/test.html#sec-3",
+    "href": "tutorials/test.html#sec-3",
+    "title": "test tutorial",
+    "section": "",
+    "text": "hello\n\nContinue"
+  },
+  {
+    "objectID": "tutorials/test.html#part-4-howdy",
+    "href": "tutorials/test.html#part-4-howdy",
+    "title": "test tutorial",
+    "section": "",
+    "text": "yes"
   }
 ]

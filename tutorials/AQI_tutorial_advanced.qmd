@@ -14,8 +14,8 @@ output:
 toc: true
 toc-depth: 2
 callout-icon: false
-#execute: 
-#  eval: false
+execute: 
+  eval: false
 ---
 
 
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add click event listener to the new next button
     if (nextButton) {
         nextButton.addEventListener("click", function() {
-            window.location.href = "https://www.example.com"; 
+            window.location.href = "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html"; 
         });
     }
 });

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="_____">
 
-<title>6-12 Data Science Resources - R Files for Data Science Lessons</title>
+<title>6-12 Data Science Resources - test tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,6 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,24 +184,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#middle-school-lessons" id="toc-middle-school-lessons" class="nav-link active" data-scroll-target="#middle-school-lessons">Middle School Lessons</a></li>
-  <li><a href="#high-school-lessons" id="toc-high-school-lessons" class="nav-link" data-scroll-target="#high-school-lessons">High School Lessons</a></li>
-  <li><a href="#sec-DITW" id="toc-sec-DITW" class="nav-link" data-scroll-target="#sec-DITW">Other downloadable tutorials</a></li>
+  <li><a href="#interactive-tutorial" id="toc-interactive-tutorial" class="nav-link active" data-scroll-target="#interactive-tutorial">Interactive Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#part-1-introduction-to-topic" id="toc-part-1-introduction-to-topic" class="nav-link" data-scroll-target="#part-1-introduction-to-topic">Part 1: Introduction to Topic</a></li>
+  <li><a href="#sec-2" id="toc-sec-2" class="nav-link" data-scroll-target="#sec-2">Part 2: Explanation of Concept</a></li>
+  <li><a href="#sec-3" id="toc-sec-3" class="nav-link" data-scroll-target="#sec-3">Part 3: Practical Examples</a></li>
+  <li><a href="#part-4-howdy" id="toc-part-4-howdy" class="nav-link" data-scroll-target="#part-4-howdy">Part 4: howdy</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/lesson_plans/lesson_links.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/tutorials/test.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Files for Data Science Lessons</h1>
+<h1 class="title">test tutorial</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>_____ </p>
+          </div>
+  </div>
     
   
     
@@ -210,29 +222,160 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Here, you can find R code files for each lesson we have on this website. Each link below will download a .zip file containing the code and datasets for each lesson. We recommend you open the files using <a href="https://posit.co/download/rstudio-desktop/">Rstudio desktop</a> or <a href="https://posit.cloud/content/yours?sort=name_asc">posit.cloud</a> (an online version of Rstudio).</p>
-<p>Additionally, check out the tabs under “Lesson Plans” for more information and resources on how to teach these lessons!</p>
-<section id="middle-school-lessons" class="level2">
-<h2 class="anchored" data-anchor-id="middle-school-lessons">Middle School Lessons</h2>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip">Salmon Lesson Code .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip">Air Quality Lesson Code .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip">COR Lesson code .zip file</a></p>
+<script>
+console.log("Script loaded");
+
+document.addEventListener("DOMContentLoaded", function() {
+    let currentPartIndex = 0;
+    const parts = document.querySelectorAll(".tutorial-part");
+    const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const nextButton = document.getElementById("next-button");
+    const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
+    const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
+
+    // Log the selected elements
+    console.log('Tutorial parts:', parts);
+    console.log('Continue buttons:', buttons);
+
+    // Hide all tutorial parts except the first one
+    parts.forEach(function(part, index) {
+        if (index !== 0) {
+            part.style.display = "none";
+        }
+    });
+
+    // Function to scroll to the top of the element, accounting for a fixed header
+    function scrollToElement(element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: elementTop - headerHeight,
+            behavior: "smooth"
+        });
+    }
+
+    // Function to show a specific part
+    function showPart(index) {
+        if (index >= 0 && index < parts.length) {
+            parts.forEach((part, idx) => {
+                part.style.display = (idx === index) ? "block" : "none";
+            });
+            scrollToElement(parts[index]);
+            currentPartIndex = index;
+        }
+    }
+    
+     // Function to show all parts up to a specific index
+    function showPartsUpTo(index) {
+        parts.forEach((part, idx) => {
+            if (idx <= index) {
+                part.style.display = "block";
+            }
+            if (idx > index){
+            part.style.display = "none";
+}
+        });
+        scrollToElement(parts[index]);
+        currentPartIndex = index;
+    }
+
+    // Add click event listeners to each button
+    buttons.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            if (currentPartIndex < parts.length - 1) {
+                parts[currentPartIndex].style.display = "block";
+                buttons[currentPartIndex].style.display = "none";
+                currentPartIndex++;
+                showPartsUpTo(currentPartIndex);
+            } else {
+                alert("End of tutorial");
+            }
+        });
+    });
+
+    // Listen for hash changes to navigate to the correct section
+    window.addEventListener("hashchange", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetPart = document.querySelector(hash);
+            if (targetPart) {
+                const targetIndex = Array.prototype.indexOf.call(parts, targetPart);
+                showPartsUpTo(targetIndex);
+                buttons.forEach((button, idx) => {
+                  if (idx < targetIndex) {
+                  button.style.display="none";}
+                  if (idx >= targetIndex) {
+                  button.style.display="block";
+}
+                  });
+            }
+        }
+    });
+
+    // Check the URL hash on page load
+    const initialHash = window.location.hash;
+    if (initialHash) {
+        const initialTarget = document.querySelector(initialHash);
+        if (initialTarget) {
+          const intialIndex=Array.prototype.indexOf.call(parts, initialTarget);
+            showPartsUpTo(initalIndex);
+            buttons.forEach((button, idx) => {
+                if (idx < initialIndex) {
+                    button.style.display = "none";
+                }
+            });
+        }
+    }
+    // Add click event listener to the new next button
+    if (nextButton) {
+        nextButton.addEventListener("click", function() {
+            window.location.href = "https://www.example.com"; 
+        });
+    }
+});
+
+</script>
+<section id="interactive-tutorial" class="level1">
+<h1>Interactive Tutorial</h1>
+<section id="part-1-introduction-to-topic" class="level2 tutorial-part" style="display: block;">
+<h2 class="anchored" data-anchor-id="part-1-introduction-to-topic">Part 1: Introduction to Topic</h2>
+<div class="callout callout-style-simple callout-warning no-icon" style="font-size:25px !important;">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>hello</p>
+<p>what is up</p>
+</div>
+</div>
+</div>
+<div class="border-left">
+<p>let’s try this ok</p>
+</div>
+<p>no <a href="#sec-2">go to sec2</a></p>
+<p><a href="#sec-3">or sec 3</a></p>
+<button id="continue-button">
+<p>Continue</p>
+</button>
 </section>
-<section id="high-school-lessons" class="level2">
-<h2 class="anchored" data-anchor-id="high-school-lessons">High School Lessons</h2>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip">Air Quality Lesson Code .zip file</a> (same file as the middle school air quality lesson… wasn’t sure where to put it)</p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip">Biodiversity Lesson Code .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip">Climate Change Lesson Code .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip">Sea Levels Lesson Code .zip file</a></p>
+<section id="sec-2" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="sec-2">Part 2: Explanation of Concept</h2>
+<p>right</p>
+<button id="continue-button-2">
+<p>Continue</p>
+</button>
 </section>
-<section id="sec-DITW" class="level2">
-<h2 class="anchored" data-anchor-id="sec-DITW">Other downloadable tutorials</h2>
-<p>Below are R tutorials developed for Lewis &amp; Clark College’s Data in the Wild data science course. They cover basic data wrangling, graphing with ggplot and inferential statistics.</p>
-<p>To use the tutorials, download the following .zip files and open in an R project on posit.cloud or R studio desktop. Each file contains modules which include a code-a-long, practice problems and homework.</p>
-<p>We recommend you begin with the code-a-long and refer to the code-a-long key to determine which commands to type in the code-a-long. Then, proceed to the homework and practice problems for more practice.</p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Module1.zip">Module 1 - Basic data wrangling .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Module2.zip">Module 2 - Plotting with ggplot .zip file</a></p>
-<p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/DITW_Inferential_stats.zip">Module 3 - Inferential Statistics .zip file</a></p>
+<section id="sec-3" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="sec-3">Part 3: Practical Examples</h2>
+<p>hello</p>
+<button id="continue-button-2">
+<p>Continue</p>
+</button>
+</section>
+<section id="part-4-howdy" class="level2 tutorial-part" style="display: none;">
+<h2 class="anchored" data-anchor-id="part-4-howdy">Part 4: howdy</h2>
+<p>yes</p>
+</section>
 
 
 </section>
@@ -652,4 +795,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/lesson_plans/lesson_links.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/tutorials/test.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-contrib/alpine-3.12/alpine@3.12.min.js"></script>
+</body></html>
