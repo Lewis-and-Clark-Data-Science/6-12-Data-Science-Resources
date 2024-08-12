@@ -305,7 +305,7 @@ Finally, run this to see your scatter plot! Click "run code" and if something do
 ## Code editor
 
 ```{webr-r}
-ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
+ggplot(data=co2Data, mapping=aes(x=.data[[XVar]], y=.data[[YVar]]))+
   geom_point(color="aquamarine4")+
   labs(x=XLabel, y=YLabel, title=Title)+
   theme_light()
@@ -333,7 +333,7 @@ If your x variable is `year` and your points are clustered at the bottom of your
 So try running this code instead. It will display your graph from 2000 to 2020. Note: This code will only work if your x variable is `year`.
 
 ```{webr-r}
-ggplot(data=co2Data, mapping=aes_string(x=XVar, y=YVar))+
+ggplot(data=co2Data, mapping=aes(x=.data[[XVar]], y=.data[[YVar]]))+
   geom_point(color="aquamarine4")+
   labs(x=XLabel, y=YLabel, title=Title)+
   theme_light()+

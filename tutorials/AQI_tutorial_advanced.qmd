@@ -190,6 +190,8 @@ Part 2 will build off of the graphs created in Part 1 and allow you to customize
 
 This tutorial uses air quality data from [the EPA](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI){target="_blank"} ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a [link to the data](https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI){target="_blank"} and here is a [link to more information](https://aqs.epa.gov/aqsweb/airdata/FileFormats.html#_pollutant_standards){target="_blank"} about the data. 
 
+Our data tells gives the highest recorded AQI value on a given day in a given location. 
+
 The data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial. 
 
 :::
@@ -920,7 +922,7 @@ myCountyData<- usa_aqi_data|>
                                   TRUE ~ paste0('Good: AQI under ', moderate)))|>
   mutate(AQI_Category = factor(AQI_Category, levels= colLabels)) 
 
-  ggplot(myCountyData, aes_string(x = xvar, y = "Year", fill = "AQI_Category"))+
+  ggplot(myCountyData, aes(x = .data[[xvar]], y = .data[["Year"]], fill = .data[["AQI_Category"]]))+
   geom_tile()+
   scale_y_reverse()+
   scale_fill_manual(values=aqi_colors, drop=FALSE)+

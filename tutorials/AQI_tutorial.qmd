@@ -487,7 +487,7 @@ max(numbers)
 ::: columns
 ::: {.column width="50%"}
 
-Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-tile-plot){target="_blank"}. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
+Today, we'll be looking at air quality data [from the EPA](https://www.epa.gov/outdoor-air-quality-data/air-data-multiyear-tile-plot){target="_blank"}. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the **air quality index** based on the **PM 2.5** levels. 
 
 We're focusing on Portland and Los Angeles air quality data. 
 

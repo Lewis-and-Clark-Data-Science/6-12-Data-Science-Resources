@@ -764,10 +764,10 @@ Now, you can create your graph! Click "run" on the code chunk below
 ## Code editor 
 
 ```{webr-r}
-#| read-only: true
+##| read-only: true
 Biodiversity_Index|>
   filter(Biome==myBiome, Taxa==myTaxa) |>
-  ggplot(aes_string(x="YEAR", y= yvar )) + 
+  ggplot(aes(x=.data[["YEAR"]], y=.data[[yvar]])) + 
   geom_col(fill=graphColor, color="grey37") + 
   labs(title = titleName, 
        subtitle = subtitleName, 
