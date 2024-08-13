@@ -145,13 +145,24 @@ Astoria_Avg<-Astoria%>%
   filter(Year>1969&Year<2022)
 ```
 
+::: columns
+::: {.column width="65%"}
+
 ## Introduction
 
 Welcome to this lesson on changing sea levels. We'll be looking at how the sea level is changing in different parts of the world. We're going to use the computer to help us look at and understand data. 
+:::
+::: {.column width="35%"}
+
+<br>
+
+![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_houses.jpg){fig-align="right" fig-alt="sea hitting houses" height="4in"}
+:::
+::: 
 
 First, let's take a look at this map showing how sea levels have changed since 1880. It shows the change in sea level compared to a baseline determined by the average sea level between 1993 and 2008.
 
-![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/graph_sealevel.png){fig-align="left" fig-alt="Average global sea level change" height="2.5in"}
+![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/graph_sealevel.png){fig-align="left" fig-alt="Average global sea level change" height="4in"}
 <div class="tutorial-part" style="display: block;">
 
 ## Change in Sea Level Since 1970
