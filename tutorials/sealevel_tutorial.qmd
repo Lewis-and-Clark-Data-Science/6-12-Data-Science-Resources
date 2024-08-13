@@ -143,29 +143,73 @@ Astoria_Avg<-Astoria%>%
   group_by(Year, Location)%>%
   summarize(Avg=mean(Monthly_MSL)) %>% 
   filter(Year>1969&Year<2022)
+
+sea_level <- No_Garibaldi %>% 
+filter(Year>1969, Year<2023 , Location != "Majuro C, Marshall Islands") %>% 
+  group_by(Location,Year) %>% 
+  summarize(Avg=mean(Monthly_MSL))
+
+sea_level_marshall <- No_Garibaldi%>%
+  group_by(Year,Location)%>%
+  summarize(Avg=mean(Monthly_MSL))%>%
+  filter(Year>1969&Year<2023)%>% 
+  split(.$Location) %>% 
+  map(~lm(Avg ~ Year, data = .x)) %>% 
+  map_df(broom::tidy, .id = 'Location') %>%
+  filter(term == 'Year')%>%
+  mutate(Region=case_when(Location %in% c("Astoria","Los Angeles","San Francisco")~"West Coast",Location %in% c("Charleston SC","Sewells Point VA", "Portland ME")~"East Coast",Location %in% c("Majuro C, Marshall Islands")~"Oceania"))
+```
+
+```{r}
+#| include: FALSE
+
+# Install and load packages
+library(tidyverse)
+library(knitr)
+library(DT)
+
+# Load data 
+url<- "https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/data/No_Garibaldi.csv"
+download.file(url, "No_Garibaldi.csv")
+#Pulls data that has been loaded into the 6-12-Data-Sceince_resources github repo. 
+No_Garibaldi <- read_csv('No_Garibaldi.csv')
+Astoria<-No_Garibaldi|>filter(Location=="Astoria")
+
+Astoria_Avg<-Astoria%>%
+  group_by(Year, Location)%>%
+  summarize(Avg=mean(Monthly_MSL)) %>% 
+  filter(Year>1969&Year<2022)
+
+sea_level <- No_Garibaldi %>% 
+filter(Year>1969, Year<2023 , Location != "Majuro C, Marshall Islands") %>% 
+  group_by(Location,Year) %>% 
+  summarize(Avg=mean(Monthly_MSL))
 ```
 
 ::: columns
-::: {.column width="65%"}
+::: {.column width="55%"}
 
 ## Introduction
 
 Welcome to this lesson on changing sea levels. We'll be looking at how the sea level is changing in different parts of the world. We're going to use the computer to help us look at and understand data. 
 :::
+::: {.column width="10%"}
+:::
 ::: {.column width="35%"}
 
 <br>
 
-![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_houses.jpg){fig-align="right" fig-alt="sea hitting houses" height="4in"}
+![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_houses.jpg){fig-align="right" fig-alt="sea hitting houses" height="2in"}
 :::
 ::: 
+<div class="tutorial-part" style="display: block;">
+
+
+## Change in Sea Level Since 1970
 
 First, let's take a look at this map showing how sea levels have changed since 1880. It shows the change in sea level compared to a baseline determined by the average sea level between 1993 and 2008.
 
 ![From https://www.climate.gov/news-features/understanding-climate/climate-change-global-sea-level](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/graph_sealevel.png){fig-align="left" fig-alt="Average global sea level change" height="4in"}
-<div class="tutorial-part" style="display: block;">
-
-## Change in Sea Level Since 1970
 
 As we can see in the graph, there is an upwards trend of sea level rise. 
 
@@ -174,6 +218,8 @@ But how do we know there is an upward trend? How do we know what the sea level i
 So, scientists use water level gauges as well as satellites to measure the sea level at any given time. They write down all the numbers they measure and collect it. This collection of numbers is called **data**. 
 
 After we have all that data (often called **raw data**), other scientists will analyze it and use it to create graphs. That's what we're going to do today! We'll use the computer to code and analyze our data. 
+
+Click "Continue" to learn about coding!
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
 </div>
@@ -240,7 +286,7 @@ Here's an example:
 name = "Olivia"
 ```
 
-Now your turn. Type your name instead of the blank \_\_\_\_\_ and then click play:
+Now your turn. **Type** your name instead of the blank \_\_\_\_\_ and then **click** play:
 
 ```{webr}
 name = "_____"
@@ -260,13 +306,13 @@ Here's an example:
 numbers = c(41, 55, 98, 104, 2, 8)
 ```
 
-Now you try. Type your numbers after the first parenthesis and separate them with a comma. Then click run.
+Now you try. **Type** your numbers after the first parenthesis and separate them with a comma. Then **click** run.
 
 ```{webr-r}
 numbers = c(_,_,_,_,_,_)
 ```
 
-Now let's run a function that will tell us which number is the biggest. Click the play button on this code chunk too.
+Now let's run a function that will tell us which number is the biggest. **Click** the play button on this code chunk too.
 
 ```{webr-r}
 max(numbers)
@@ -280,40 +326,234 @@ max(numbers)
 
 <div class="tutorial-part" style="display: none;">
 
-Raw data (the actual numbers collected by scientists) is cleaned up before analysis. This can look like removing missing information and duplicated values.
+## Our data 
 
-In this case, we will use raw data and interpret it through the form of a graph. A chunk of the data we will use to create graphics looks like:
+Now we're going to use commands to learn more about sea level. As we learned, scientists use satellites and water level gauges to measure the sea level. They collect all those numbers and it becomes **data**. 
+
+Let's take a look at some sea level data for various coastal towns in the US. Click the blue box below to see the data. 
+
+::: {.callout-note collapse="true"}
+## Click this to see our data!
+
+```{r}
+#| echo: false
+#| output: true
+datatable(sea_level)
+```
+:::
+
+Here, we see the average change in Sea Level recorded in various locations from 1970-2021. It's pretty hard to get any meaningful information from just that table of information - there's so many numbers to look at. Luckily, we can use R to better understand it and make graphs.
+
+Before we use R, though, let's try to understand a bit of what's going on. 
+
+-   At the top of the table, there are bolded words. These are column titles and refer to the **variable names**. 
+
+-   Underneath the variable names, you'll see individual **entries** for the data. 
+
+-   At the very bottom of the data table, you can click to different pages of data and see how many total entries there are.
+
+
+::: panel-tabset
+
+## Question
+
+::: question 
+
+*How many data entries are there in the data?* 
+
+::: choices
+::: {.choice .correct-choice}
+52 data entries
+:::
+::: choice
+99 data entries
+:::
+::: choice
+10 data entries
+:::
+::: choice
+79 data entries
+:::
+:::
+:::
+:::
+
+
+::: panel-tabset
+
+## Question
+
+::: question 
+
+The `Avg` column shows the average change in sea level compared to **WHAT?????** year.
+
+*What was the average sea level change in Astoria in 1974?*
+
+::: choices
+::: choice
+1.002
+:::
+::: choice
+0.06667
+:::
+::: {.choice .correct-choice}
+0.03383
+:::
+::: choice
+-0.0432
+:::
+:::
+:::
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Data Locations
+
+Now let's look at where the data comes from. Can you figure out all the locations where sea level data was measured? Look back at the data and try to find some of the locations! 
+
+It's probably kind of hard to find all the different locations. Luckily, we can use R to help us. The command `unique()` will tell us all the different data entries in one column. Let's use it with the `Location` column to find all the locations. 
+
+::: panel-tabset
+
+## Code editor
+
+**Press** run code
 
 ```{webr-r}
-head(Astoria_Avg)
+unique(sea_level$Location)
+
 ```
 
-Here, we see the average change in Sea Level recorded in Astoria from 1970-1975. This is one small portion of the large data set we used. This data set can be used to create different types of graphs through coding. Let's use code to create a scatter plot for Astoria, our local location.
+## Learn more about the code
 
-Does anyone know what a scatter plot is used for?
+The code we used to find the different locations is `unique(sea_level$Location)`. Here's what all the parts of it do: 
+
+-   `unique`: outputs all the different data entries in a column
+
+-   `sea_level`: tells the computer to focus on the data set named 'sea_level'
+
+-   `$`: tells the computer we are about to tell it the name of a column
+
+-   `Location`: this is the name of the column we want to focus on 
+
+## Coding Challenge
+
+Can you figure out a way to see **all** the different years in the data set? 
+
+Hint: Use the `unique()` function again on a different column! Make sure you spell everything correctly and use the exact capitalization as in the dataset. 
+
+## Challenge Answer
 
 ```{webr-r}
+unique(sea_level$Year)
+```
+
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+Here's a map of all the locations we have in our data: 
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/Map_w_Labels.png)
+
+So, what do you think all this data is telling us? 
+
+::: {.border-left}
+
+**Stop and think**
+
+-   How do you think the sea level has changed from 1970 to 2021? 
+
+    -   Look back at the data and see if you can tell if it is rising or getting lower? 
+
+    -   Is it easy or difficult to tell how it is changing? 
+
+-   Focus on Astoria (the location shown first in the data). How has the sea level in Astoria changed from 1970-2021? 
+
+Discuss with your neighbor how you think it is changing. 
+
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+## Graphing our data
+
+It was probably difficult to tell how the sea level is changing overall. Luckily we can use coding to help us out. We can create different types of graphs through coding. 
+
+### Astoria Scatterplot
+
+Let's start by focusing on Astoria and create a scatter plot. A scatter plot will plot a point for each individual data entry. We can also add a line of best fit to see the overall trend of how sea level is changing. 
+
+::: panel-tabset
+
+## Code editor
+
+**Press** run code
+
+```{webr-r}
+Astoria_Avg <- filter(sea_level, Location=="Astoria")
+  
 ggplot(Astoria_Avg,aes(x=Year,y=Avg))+
   geom_point(color="salmon")+
   labs(title="Average Change In Sea Level per Meter in Astoria",y="Average Change in Sea Level (m)")+
-  theme_light()+geom_smooth(method="lm",color="black",se=FALSE)
+  theme_light()
 ```
+
+## Add a line of best fit
+
+```{webr-r}
+Astoria_Avg <- filter(sea_level, Location=="Astoria")
+  
+ggplot(Astoria_Avg,aes(x=Year,y=Avg))+
+  geom_point(color="salmon")+
+  labs(title="Average Change In Sea Level per Meter in Astoria",y="Average Change in Sea Level (m)")+
+  theme_light()+
+  geom_smooth(method="lm",color="black",se=FALSE)
+```
+
+::: 
+
+::: {.border-left}
+**Stop and think**
+
+Talk with your neighbor about the graph!
+
+-   What do you notice?
+
+-   What do you wonder? 
+
+-   What is the overall trend?
+        
+-   What else would you like to know? 
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+
+### Scatterplot of other locations
 
 Although the data varies per year, there appears to be an upwards trend within this data. This is an indicator for rising sea levels in this area.
 
 How does this compare to other locations within the United States? Let's take a look at 6 different locations across the US.
 
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/Map_w_Labels.png)
-
 Let's look at a linear trend of these locations.
 
 ```{webr-r}
-Trend<-No_Garibaldi %>% 
-filter(Year>1969, Year<2023 , Location != "Majuro C, Marshall Islands") %>% 
-  group_by(Location,Year) %>% 
-  summarize(Avg=mean(Monthly_MSL))
 
-ggplot(Trend, aes(x = Year, y = Avg, color = Location)) +
+ggplot(sea_level, aes(x = Year, y = Avg, color = Location)) +
   geom_point(size=0.5)+  geom_smooth(method = lm, se = FALSE)+
   facet_wrap(vars(Location))+
   facet_wrap(. ~ factor(Location, levels = c("Astoria", "San Francisco", "Los Angeles","Portland ME","Sewells Point VA","Charleston SC")))+
@@ -329,28 +569,54 @@ ggplot(Trend, aes(x = Year, y = Avg, color = Location)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-It seems as if there is a general upwards trend for change in sea levels across the coastal areas of the United States.
+::: {.border-left}
+**Stop and think**
+
+Talk with your neighbor about the graph!
+
+-   What do you notice?
+
+-   What do you wonder? 
+
+-   What is the overall trend in different locations?
+        
+-   What else would you like to know? 
+:::
+
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Bar graph of other locations
 
 Turning to a more global scale, how does this compare to the low-lying island nation of Marshall Islands?
 
 To represent this question, we can use a bar graph.
 
-In this case, why might we use a bar graph?
+::: {.border-left}
+**Stop and think**
+
+What is the difference between a bar graph and a scatterplot?
+
+Why might we use a bar graph to compare locations?
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+#### **Create a bar graph**
+
+Here's the code to create a bar graph comparing the locations we previously looked at and the Marshall Islands. 
+
+**Press** run code
 
 ```{webr-r}
-Avg<-No_Garibaldi%>%
-  group_by(Year,Location)%>%
-  summarize(Avg=mean(Monthly_MSL))%>%
-  filter(Year>1969&Year<2023)
 
-Avg %>% 
-  split(.$Location) %>% 
-  map(~lm(Avg ~ Year, data = .x)) %>% 
-  map_df(broom::tidy, .id = 'Location') %>%
-  filter(term == 'Year')%>%
-  mutate(Region=case_when(Location %in% c("Astoria","Los Angeles","San Francisco")~"West Coast",Location %in% c("Charleston SC","Sewells Point VA", "Portland ME")~"East Coast",Location %in% c("Majuro C, Marshall Islands")~"Oceania"))%>%
-  
-ggplot(aes(x = reorder(Location, estimate), y = estimate, fill=Location)) +
+ggplot(sea_level_marshall, aes(x = reorder(Location, estimate), y = estimate, fill=Location)) +
   geom_col(position="dodge")+
   theme_light()+
   labs(x="Location", y="Slope (m)",
@@ -364,8 +630,42 @@ ggplot(aes(x = reorder(Location, estimate), y = estimate, fill=Location)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-When comparing the rate of change for each location, we are able to notice that locations further South (LA, SF, VA, SC) have sea levels rising at faster rates. Furthermore, sea levels are rising at higher rates on the East Coast of the country. In comparison to Marshall Islands, which lie in the Western Pacific Ocean, we notice a slope aligning more with those on the East Coast (higher rate of change).
+
+::: {.border-left}
+**Stop and think**
+
+Talk with your neighbor about the graph!
+
+-   How is a bar graph different than a scatterplot? 
+
+-   What information did you learn from the bar graph that you **did not** notice in the scatter plot?
+
+-   Why might the sea level be rising faster in some locations than others? 
+        
+-   What else would you like to know? 
+:::
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+## Congratulations!!
+
+You finished this tutorial on sea level! Nice work! Hopefully you learned a little bit about how we can use coding to create graphs. 
 
 Data science can take on many forms, from data collection to coding. This is just a little nibble of the possibilities data science has to offer; there is so much more to chew on!
 
+::: columns
+
+::: {.column width="50%"}
+
+![from.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnZvaTA1c3N0aXJ3NnZscDl6MHRhdDFwb2xhZDZldDgzeHJtcjlvcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m6dm34kEpM1gc/giphy.gif)
+:::
+
+::: {.column width="50%"}
+
+![from.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanRhamlkaHVkNnhuaWRhN3Y3aWxrMG95MzM1cDRtaTQ3ZTBscTgxMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPjagnSA6mZWS1G/giphy.gif)
+:::
+:::
 </div>
