@@ -46,4 +46,6 @@ If you'd like to learn more about R coding and data science, here are some more 
 
 maybe some posit.cloud links?? 
 
+## Other data science websites 
 
+[Lewis & Clark college data science hub](https://lewis-and-clark-data-science.github.io/Data-Science-Resources/)

@@ -13,6 +13,7 @@ website:
   title: "6-12 Data Science Resources"
   repo-url: https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources
   repo-actions: source
+  site-url: https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/
   favicon: files/figures/data-science-icon.png
   back-to-top-navigation: true
   navbar: 
@@ -20,7 +21,8 @@ website:
     - text: Lesson Plans 
       menu: 
         - lesson_plans/lesson_links.qmd
-        - lesson_plans/Salmon_lesson.qmd
+        - text: "Salmon Return at Bonneville Dam"
+          href: lesson_plans/Salmon_lesson.qmd
         - lesson_plans/AQI_lesson.qmd
         - lesson_plans/Biodiversity_lesson.qmd
         - lesson_plans/climate_lesson.qmd
@@ -37,21 +39,44 @@ website:
       menu:
         - resources/resources.qmd
         - resources/cheatsheet.qmd
-  sidebar: 
+  
+  sidebar:
+    - id: tutorials/AQI_tutorial.qmd
+      title: "Air Quality Tutorials"
       style: "docked"
-      id: tutorials/AQI_tutorial.qmd
+      collapse-level: 2
+      contents: 
+        - section: "Air Quality Tutorials"
+          contents: 
+            - tutorials/AQI_tutorial.qmd
+            - tutorials/AQI_tutorial_advanced.qmd
+    - id: lesson_plans/Salmon_lesson.qmd
+      title: "Salmon Crossing Lesson Materials"
+      style: "docked"
+      collapse-level: 2
       contents:
-      - section: "AQI tutorials"
-        href: tutorials/AQI_tutorial.qmd
-        contents: 
-          - tutorials/AQI_tutorial.qmd
-          - tutorials/AQI_tutorial_advanced.qmd
+        - section: "Salmon Crossing Lesson Materials"
+          contents:
+              - text: "Lesson Overview - Salmon Return at Bonneville Dam" 
+                href: lesson_plans/Salmon_lesson.qmd
+              - text: "Lesson Plan - Salmon Return at Bonneville Dam"
+                href: lesson_plans/Salmon_lesson_plan.qmd
+  
+  
+  #sidebar: 
+  #    style: "docked"
+  #    - id: tutorials/AQI_tutorial.qmd
+  #      contents:
+  #       - section: "AQI tutorials"
+  #         href: tutorials/AQI_tutorial.qmd
+  #         contents: 
+  #            - tutorials/AQI_tutorial.qmd
+  #            - tutorials/AQI_tutorial_advanced.qmd
+              
     
 #    background: "info" https://quarto.org/docs/websites/website-navigation.html
 #    foreground: "light"
   
-exclude: 
-  - "tutorials/sealevel_tutorial.qmd"
 
 format:
   html:

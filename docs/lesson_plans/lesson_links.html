@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/Salmon_lesson.html">
- <span class="dropdown-text">Salmon School</span></a>
+ <span class="dropdown-text">Salmon Return at Bonneville Dam</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/AQI_lesson.html">
@@ -319,7 +319,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/lewis-and-clark-data-science\.github\.io\/6-12-Data-Science-Resources\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

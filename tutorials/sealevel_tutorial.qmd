@@ -328,7 +328,7 @@ max(numbers)
 
 ## Our data 
 
-Now we're going to use commands to learn more about sea level. As we learned, scientists use satellites and water level gauges to measure the sea level. They collect all those numbers and it becomes **data**. 
+Now we're going to use coding to learn more about sea level. As we learned, scientists use satellites and water level gauges to measure the sea level. They collect all those numbers and it becomes **data**. 
 
 Let's take a look at some sea level data for various coastal towns in the US. Click the blue box below to see the data. 
 
@@ -344,7 +344,7 @@ datatable(sea_level)
 
 Here, we see the average change in Sea Level recorded in various locations from 1970-2021. It's pretty hard to get any meaningful information from just that table of information - there's so many numbers to look at. Luckily, we can use R to better understand it and make graphs.
 
-Before we use R, though, let's try to understand a bit of what's going on. 
+First, let's try to understand a bit of what's going on in the data table. 
 
 -   At the top of the table, there are bolded words. These are column titles and refer to the **variable names**. 
 
@@ -363,7 +363,7 @@ Before we use R, though, let's try to understand a bit of what's going on.
 
 ::: choices
 ::: {.choice .correct-choice}
-52 data entries
+318 data entries
 :::
 ::: choice
 99 data entries
@@ -372,7 +372,7 @@ Before we use R, though, let's try to understand a bit of what's going on.
 10 data entries
 :::
 ::: choice
-79 data entries
+400 data entries
 :::
 :::
 :::
@@ -446,6 +446,12 @@ Can you figure out a way to see **all** the different years in the data set?
 
 Hint: Use the `unique()` function again on a different column! Make sure you spell everything correctly and use the exact capitalization as in the dataset. 
 
+```{webr-r}
+#Type your code here
+
+
+```
+
 ## Challenge Answer
 
 ```{webr-r}
@@ -492,11 +498,7 @@ It was probably difficult to tell how the sea level is changing overall. Luckily
 
 ### Astoria Scatterplot
 
-Let's start by focusing on Astoria and create a scatter plot. A scatter plot will plot a point for each individual data entry. We can also add a line of best fit to see the overall trend of how sea level is changing. 
-
-::: panel-tabset
-
-## Code editor
+Let's start by focusing on Astoria and create a scatter plot. A scatter plot will plot a point for each individual data entry.
 
 **Press** run code
 
@@ -509,7 +511,20 @@ ggplot(Astoria_Avg,aes(x=Year,y=Avg))+
   theme_light()
 ```
 
-## Add a line of best fit
+What can you tell from this graph? Does it help you understand how sea level is changing in Astoria? What would you add to make it easier to tell how sea level is changing? 
+
+<button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Astoria scatterplot with line of best fit
+
+One thing we can do to help understand the graph is add a line of best fit. This will help us see the overall trend of how sea level is changing. We can add a line of best fit very easily by adding on one more command to our code. 
+
+*Code Challenge*: Can you spot what is different in this code compared to the previous graph code? What did we add to make a line of best fit? What color do you think the line will be? 
+
+**Press** run code
 
 ```{webr-r}
 Astoria_Avg <- filter(sea_level, Location=="Astoria")
@@ -521,12 +536,11 @@ ggplot(Astoria_Avg,aes(x=Year,y=Avg))+
   geom_smooth(method="lm",color="black",se=FALSE)
 ```
 
-::: 
 
 ::: {.border-left}
 **Stop and think**
 
-Talk with your neighbor about the graph!
+Talk with your neighbor about the graphs!
 
 -   What do you notice?
 
@@ -547,7 +561,7 @@ Talk with your neighbor about the graph!
 
 Although the data varies per year, there appears to be an upwards trend within this data. This is an indicator for rising sea levels in this area.
 
-How does this compare to other locations within the United States? Let's take a look at 6 different locations across the US.
+How does this compare to other locations within the United States? Let's take a look at the 6 different locations across the US.
 
 Let's look at a linear trend of these locations.
 

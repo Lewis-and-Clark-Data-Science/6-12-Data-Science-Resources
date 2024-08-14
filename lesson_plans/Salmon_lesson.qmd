@@ -1,7 +1,95 @@
 ---
-title: Salmon School
+title: Lesson Overview - Analyzing and Interpreting Salmon Return at Bonneville Dam
 ---
 
-Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!
+::: column-margin
+### Grade Level & Class type
 
-[Salmon Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
+-   Appropriate for: 6th-8th grade
+-   Unit title: Ecology Unit
+-   Number of students: 20-25 per class
+
+### Lesson Plan and Slides
+
+[Salmon Crossing Lesson Plan - google doc](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit)
+
+[Salmon Crossing Powerpoint Slides](https://docs.google.com/presentation/d/1Y7wV1RD7vIZekLII6g6N3B1gyEcbyqoUPD5KLykXRNM/edit#slide=id.g2ed2407c0e1_0_0){target="_blank"}
+
+[Salmon Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html)
+
+<br>
+<br>
+
+![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" height="2.5in"}
+:::
+
+**Lesson Title**: Analyzing and Interpreting Salmon Return at Bonneville Dam
+
+**Lesson Description:**
+
+Students will explore how data on salmon return rates are collected and coded to produce a data graph. Students will analyze and interpret the graph to describe population changes in Chinook salmon species in the Columbia River.  Students will apply their knowledge of habitat needs to identify and explain why we see changes in populations over time. 
+
+**Data Science in the Lesson:**
+
+Students identify how Chinook salmon are counted and recorded crossing the Bonneville Dam from 1937-2023. Students gain an understanding in how coding works using a game, in which they took the role of "computer" or "coder" and guided each other across the room; this modeled code commands that a computer understands.
+
+Students are guided in understanding how the collection of raw data points are translated using code into a data visualization. They saw the raw data and noticed how hard it is to understand without a visualization, and from there were shown code being used to create a data visualization.
+
+Students analyzed and interpreted the output graph data to describe and explain the patterns of salmon return rates at the Bonneville Dam. Students researched impacts to salmon to explain the patterns in the graph.
+
+### Lesson Materials
+
+**Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit){target="_blank"}
+
+#### **Student-Facing Materials**
+
+-   [Data Analysis Pre-Assesment](https://docs.google.com/document/d/1L8ErRd4Fq2YnI6el4H8kyP4Jy4T1HK5SbtUlejvXDfE/edit?usp=sharing){target="_blank"}
+    -   Description: Practice identifying patterns and how to describe patterns in data, identifying phenomena and variables. Practice analyzing and interpreting data using Monthly Average Price for a Dozen Eggs.
+
+-   [Data Analysis Final Assessment](https://docs.google.com/document/d/1gSmukQIFNwuMucHjg8HNc9bRM1adVvKqDWZphJu1xAM/edit){target="_blank"}
+    -   Description: After the lesson examining how the data was collected and coded for data visualization, students complete a final assessment to show proficiency in analyzing and interpreting data.
+
+-   [Coding Activity Worksheet](https://docs.google.com/document/d/1KGzwHzc2LCTbUm1vFHBk8IoVLK9XhPlOgybvhabctI4/edit){target="_blank"}
+    -   Description: This half page is for each student to practice giving their partner “code” to navigate them to a different place in the room
+
+-   [WIS/WIM Graphs for Notebook](https://docs.google.com/document/d/1uIlFOfdUn2YK9Ntbdcj8e6EDegEH2YD9SLZuP7e5_m8/template/preview){target="_blank"}
+    -   Description: This half page is for each student to write their interpretation of what they see and what it means on the graph
+    
+-   [Coding Demonstration video](https://drive.google.com/file/d/1XxaYQI9goj-USI-ZLHoaRkEsvAo_FBaN/view?usp=share_link) OR [Coding Interactive Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html)
+    -   Description of video: The video provides an overview of how we can use code to synthesize large amounts of data from the Bonneville Dam and create the graphs used in this lesson. 
+    -   Description of tutorial: The tutorial also provides an overview of creating data visualizations in an interactive format where students can attempt some basic coding. 
+
+#### **Teacher-Facing Materials**
+
+-   [Salmon School Lesson Plan](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit){target="_blank"}
+    -   A three day lesson sequence that could be used to support 
+
+-   [Salmon School Powerpoint Slides](https://docs.google.com/presentation/d/1Y7wV1RD7vIZekLII6g6N3B1gyEcbyqoUPD5KLykXRNM/edit#slide=id.g2ed2407c0e1_0_0){target="_blank"}
+
+-   [Optional: R code .zip file used to create the graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
+
+### Reflection from teachers who have done this lesson
+
+**What worked well? Why?**
+
+-   Teacher A: The data (Chinook salmon return rates at the Bonneville Dam on the Columbia from 1937-2023) fit onto the unit content, exploring ecology and how and why populations of species change over time. We raised Chinook salmon in the classroom so we had a real reference for the students.
+
+-   Teacher B: Students were engaged in the coding activity. Everyone was up and moving and worked well together to make the moment adjustments for time of day considerations (more structure for later in the day!) and opportunities for pair-share before whole class adjustments. 
+
+**What changes would you make to future iterations? Why?**
+
+-   Teacher A: In addition to the video that demonstrates coding, I would include the coding game where students direct each other across the classroom. Coding was an abstract idea and I did not have enough time to develop a deeper understanding of this tool. It is not a requirement of the curriculum I teach. My focus was on showing students how humans are behind the data, collecting specific data using tools (in this case identifying species and counting them) over many decades to produce raw data tables. They saw the coding operate to create a graph, but the process of making selections on the variables, how to code, and exploring the raw data table itself was outside the scope of the lesson. My focus was on developing data literacy skills in analyzing and interpreting the graph.
+
+-   Teacher B: This lesson really kind of stood alone in the larger unit I taught. This was not at all their first exposure to data science over the year so I think that was okay… but it made it feel like data science was a bit peripheral. When I taught the unit, I really just did the day 2 sequence. I would teach is more closely aligned to the attached lesson plan in the future.
+
+
+**What do you believe are some of your students' major takeaways from this lesson?**
+
+-   Teacher A: Students created a file folder for this mini unit and formally showcased their learning to peers and received peer feedback. They described and explained the return patterns in the data and used the extension lesson on linking impacts to salmon using global temperature data and drought patterns to deepen their thinking on impacts to salmon populations.
+
+-   Teacher B: I believe students better understood a bit of the process involved in data visualization creation. I think they also saw some ways that coding can be connected to science. Students also better understood the variability in salmon populations over time.
+
+
+**Student data science takeaways**
+
+-   Students watched a [video](https://drive.google.com/file/d/1XxaYQI9goj-USI-ZLHoaRkEsvAo_FBaN/view?usp=share_link){target="_blank"} which demonstrated how coding can be used to synthesize large amounts of data into a graph. Students were able to recognize how real humans are behind the compilation and creation of data and data visualizations. Students observed videos of salmon crossing the fish ladder at Bonneville and humans counting the species as they crossed to record the data points of return rates. The video showed students the source of this raw data and demonstrated how it was coded into a graphical visualization, emphasizing how huge and hard to understand it was. Students worked in groups on the classroom white boards to describe how the graph was created. Students identified how code was used to organize the data and create a visualization, which could be more easily interpreted to describe and explain patterns and predict future trends. Students were provided with the graphical output to analyze and interpret patterns as an assessment in order to demonstrate proficiency in analyzing and interpreting data to describe/explain a phenomena.

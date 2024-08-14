@@ -6,7 +6,8 @@
     "section": "Introduction",
     "text": "Introduction\nWelcome to this lesson on air quality! We’ll be using data science to learn about air quality. This tutorial will introduce coding to help you better understand air quality. Advance through the tutorial by clicking the blue “Continue” buttons. By the end of the tutorial, you will see how to create an air quality graph.\nNote, this is Part 1 of the air quality tutorials. In Part 2, you will be able to customize air quality graphs for any location you choose! Click here to navigate to Part 2 now.\n\nFirst, let’s learn about air quality. Check out this video to learn more about how air quality affects us.\n\nClick “Continue” to move to the next section.\n\nContinue",
     "crumbs": [
-      "AQI tutorials"
+      "Air Quality Tutorials",
+      "AQI Part 1 - Introduction to Data Science"
     ]
   },
   {
@@ -16,7 +17,8 @@
     "section": "Data Science",
     "text": "Data Science\nWhat is data?\n\nData is large amounts of information that you collect. Often, it looks like a lot of numbers that are collected to describe some phenomenon.\nFor example, if you measure the temperature every day in one location for one year, you would have created data. You can then use data science to analyze that data.\n\nWhat is data science?\n\nData science is the ability to synthesize data and derive meaningful information. Often, graphs, maps, models, and charts are used to help understand data and display information.\n\nStop and think\n\nQuestion\n\n\n\nWhat is an example of data?\n\n\n\n\n ✓The age and grade of everyone in your school\n\n\n ✓The favorite restaurant of everyone who walks down your street\n\n\n ✓The pm2.5 data for every day in 2023 in Portland\n\n\n ✓All of the above\n\n\n\n\n\n\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials"
+      "Air Quality Tutorials",
+      "AQI Part 1 - Introduction to Data Science"
     ]
   },
   {
@@ -26,7 +28,8 @@
     "section": "Using the computer to do data science",
     "text": "Using the computer to do data science\nIn this tutorial, we’re going to use coding to analyze large amounts of data. We’ll be able to create graphs by writing code.\nWe’re going to use a coding language called R. Basically, “R” is a collection of commands that the computer understands. You can tell the computer one of the commands and it will know to do something.",
     "crumbs": [
-      "AQI tutorials"
+      "Air Quality Tutorials",
+      "AQI Part 1 - Introduction to Data Science"
     ]
   },
   {
@@ -36,7 +39,8 @@
     "section": "Our data",
     "text": "Our data\n\n\nToday, we’ll be looking at air quality data from the EPA. It contains data that was collected nearly every day for 23 years (2000-2023). It calculates the air quality index based on the PM 2.5 levels.\nWe’re focusing on Portland and Los Angeles air quality data.\n\n\n\n\n\n\n\nImage from https://cleanairenc.org/ blog/2017/02/16/ north-carolinas-air-quality/\n\n\n\n\n\nFrom.maps.google.com\n\n\nClick the blue box below to view the data.\n\n\n\n\n\n\nAir quality raw data Portland\n\n\n\n\n\n\n\nWarning in instance$preRenderHook(instance): It seems your data is too big for\nclient-side DataTables. You may consider server-side processing:\nhttps://rstudio.github.io/DT/server.html\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAir quality raw data Los Angelos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWow that’s a lot of data! It’s pretty hard to get any meaningful information from just that table of information. Luckily, we can use R to better understand it and make graphs!\nBefore we use R, though, let’s try to understand a bit of what’s going on.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names that are collected when measuring air quality.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\nStop and think\n\nQuestion\n\n\n\nHow many data entries are there in the Los Angeles data?\n\n\n\n\n ✓8,594 data entries\n\n\n ✗8,744 data entries\n\n\n ✗10 data entries\n\n\n ✗100 data entries\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nWhat was the PM2.5 AQI Value in Portland on 01/01/2000?\n\n\n\n\n ✗158\n\n\n ✗62\n\n\n ✓49\n\n\n ✗100\n\n\n\n\n\n\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials"
+      "Air Quality Tutorials",
+      "AQI Part 1 - Introduction to Data Science"
     ]
   },
   {
@@ -46,7 +50,8 @@
     "section": "Graphing our data",
     "text": "Graphing our data\nNow that we understand what the data table contains, let’s try to graph it and better understand what it means.\nOur goal is to make a graph of the overall air quality in Portland and Los Angeles by describing how healthy or unhealthy the air is.\nThe EPA defines the following categories based on the air quality index (AQI):\n\n\n\nFrom https://www.airnow.gov/aqi/aqi-basics/\n\n\nWe’ve inputted these values and colors into our code for the graph.\nYou may have noticed that if you go to the EPA website, they have options to generate a graph right there! So why would we make our own graph? Well, they have pretty limited options for what type of graph you can create and what variables you can choose. If we use R (coding), we have lots more options for types of graphs!\n\nAQI Tile Plot\nWe’ll start by making a tile plot for the air quality index (AQI) from 2000-2023. Let’s see what the graph looks like for Portland and Los Angeles. Later on, you’ll have options to create other types of graphs for more locations.\nPress run code below. Then, click through the tabs at the top of the code chunk to make a tile graph for Los Angeles.\n\nPortland AQI Tile GraphLos Angeles AQI Tile GraphTroubleshooting\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nRun Code button not working: Make sure you wait until the green circle at the very top of this page says “Ready!” We have some code running in the background and the green circle indicates it has finished running. \nError message: Did you accidentally delete or change some code? Click the refresh button at the top of the code cell and try running it again.\n\n\n\n\n\nStop and think\nTalk with your neighbor about the graphs!\n\nWhat do you notice?\nWhat do you wonder?\nWhat is different between the two graphs?\n-   Why are they different? \nWhat else would you like to know?\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials"
+      "Air Quality Tutorials",
+      "AQI Part 1 - Introduction to Data Science"
     ]
   },
   {
@@ -173,14 +178,14 @@
     "href": "tutorials/sealevel_tutorial.html#our-data",
     "title": "Sea Level tutorial",
     "section": "Our data",
-    "text": "Our data\nNow we’re going to use commands to learn more about sea level. As we learned, scientists use satellites and water level gauges to measure the sea level. They collect all those numbers and it becomes data.\nLet’s take a look at some sea level data for various coastal towns in the US. Click the blue box below to see the data.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere, we see the average change in Sea Level recorded in various locations from 1970-2021. It’s pretty hard to get any meaningful information from just that table of information - there’s so many numbers to look at. Luckily, we can use R to better understand it and make graphs.\nBefore we use R, though, let’s try to understand a bit of what’s going on.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\n\nQuestion\n\n\n\nHow many data entries are there in the data?\n\n\n\n\n ✓52 data entries\n\n\n ✗99 data entries\n\n\n ✗10 data entries\n\n\n ✗79 data entries\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nThe Avg column shows the average change in sea level compared to WHAT????? year.\nWhat was the average sea level change in Astoria in 1974?\n\n\n\n\n ✗1.002\n\n\n ✗0.06667\n\n\n ✓0.03383\n\n\n ✗-0.0432\n\n\n\n\n\n\n\n\n\nContinue"
+    "text": "Our data\nNow we’re going to use coding to learn more about sea level. As we learned, scientists use satellites and water level gauges to measure the sea level. They collect all those numbers and it becomes data.\nLet’s take a look at some sea level data for various coastal towns in the US. Click the blue box below to see the data.\n\n\n\n\n\n\nClick this to see our data!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere, we see the average change in Sea Level recorded in various locations from 1970-2021. It’s pretty hard to get any meaningful information from just that table of information - there’s so many numbers to look at. Luckily, we can use R to better understand it and make graphs.\nFirst, let’s try to understand a bit of what’s going on in the data table.\n\nAt the top of the table, there are bolded words. These are column titles and refer to the variable names.\nUnderneath the variable names, you’ll see individual entries for the data.\nAt the very bottom of the data table, you can click to different pages of data and see how many total entries there are.\n\n\nQuestion\n\n\n\nHow many data entries are there in the data?\n\n\n\n\n ✓318 data entries\n\n\n ✗99 data entries\n\n\n ✗10 data entries\n\n\n ✗400 data entries\n\n\n\n\n\n\n\n\n\nQuestion\n\n\n\nThe Avg column shows the average change in sea level compared to WHAT????? year.\nWhat was the average sea level change in Astoria in 1974?\n\n\n\n\n ✗1.002\n\n\n ✗0.06667\n\n\n ✓0.03383\n\n\n ✗-0.0432\n\n\n\n\n\n\n\n\n\nContinue"
   },
   {
     "objectID": "tutorials/sealevel_tutorial.html#graphing-our-data",
     "href": "tutorials/sealevel_tutorial.html#graphing-our-data",
     "title": "Sea Level tutorial",
     "section": "Graphing our data",
-    "text": "Graphing our data\nIt was probably difficult to tell how the sea level is changing overall. Luckily we can use coding to help us out. We can create different types of graphs through coding.\n\nAstoria Scatterplot\nLet’s start by focusing on Astoria and create a scatter plot. A scatter plot will plot a point for each individual data entry. We can also add a line of best fit to see the overall trend of how sea level is changing.\n\nCode editorAdd a line of best fit\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nStop and think\nTalk with your neighbor about the graph!\n\nWhat do you notice?\nWhat do you wonder?\nWhat is the overall trend?\nWhat else would you like to know?\n\n\n\nContinue"
+    "text": "Graphing our data\nIt was probably difficult to tell how the sea level is changing overall. Luckily we can use coding to help us out. We can create different types of graphs through coding.\n\nAstoria Scatterplot\nLet’s start by focusing on Astoria and create a scatter plot. A scatter plot will plot a point for each individual data entry.\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhat can you tell from this graph? Does it help you understand how sea level is changing in Astoria? What would you add to make it easier to tell how sea level is changing?\n\nContinue"
   },
   {
     "objectID": "tutorials/sealevel_tutorial.html#congratulations",
@@ -211,6 +216,13 @@
     "text": "Coding with R (a data science coding language)\n\nCoding tutorial websites\nBiology Tutorials used in Lewis & Clark College intro to biology courses\nCheatsheet of Basic R commands\n\n\nTutorials that can be downloaded\nIntro to R Tutorial downloads and more information, Data in the Wild - This will take you to the “R files” page where you can download Intro to R tutorials called “Data in the Wild”, developed for an introductory data science course at Lewis & Clark College.\n\n\nOther websites to learn more about R coding\nmaybe some posit.cloud links??"
   },
   {
+    "objectID": "resources/resources.html#other-data-science-websites",
+    "href": "resources/resources.html#other-data-science-websites",
+    "title": "Other Resources",
+    "section": "Other data science websites",
+    "text": "Other data science websites\nLewis & Clark college data science hub"
+  },
+  {
     "objectID": "lesson_plans/COR_lesson.html",
     "href": "lesson_plans/COR_lesson.html",
     "title": "COR Lesson",
@@ -225,11 +237,22 @@
     "text": "Here are resources for teaching a lesson on sea level change!\nSea Levels Lesson Code .zip file\n\n\n\n Back to top"
   },
   {
-    "objectID": "lesson_plans/Biodiversity_lesson.html",
-    "href": "lesson_plans/Biodiversity_lesson.html",
-    "title": "Biodiversity Lesson",
+    "objectID": "lesson_plans/AQI_lesson.html",
+    "href": "lesson_plans/AQI_lesson.html",
+    "title": "Air Quality Lesson",
     "section": "",
-    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file\n\n\n\n Back to top"
+    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "lesson_plans/Salmon_lesson.html",
+    "href": "lesson_plans/Salmon_lesson.html",
+    "title": "Lesson Overview - Analyzing and Interpreting Salmon Return at Bonneville Dam",
+    "section": "",
+    "text": "Grade Level & Class type\n\nAppropriate for: 6th-8th grade\nUnit title: Ecology Unit\nNumber of students: 20-25 per class\n\n\n\nLesson Plan and Slides\nSalmon Crossing Lesson Plan - google doc\nSalmon Crossing Powerpoint Slides\nSalmon Lesson Coding Tutorial\n \n\n\n\nFrom https://thegorgeguide.com/bonneville-dam-visitor-center/\n\n\n\nLesson Title: Analyzing and Interpreting Salmon Return at Bonneville Dam\nLesson Description:\nStudents will explore how data on salmon return rates are collected and coded to produce a data graph. Students will analyze and interpret the graph to describe population changes in Chinook salmon species in the Columbia River.  Students will apply their knowledge of habitat needs to identify and explain why we see changes in populations over time. \nData Science in the Lesson:\nStudents identify how Chinook salmon are counted and recorded crossing the Bonneville Dam from 1937-2023. Students gain an understanding in how coding works using a game, in which they took the role of “computer” or “coder” and guided each other across the room; this modeled code commands that a computer understands.\nStudents are guided in understanding how the collection of raw data points are translated using code into a data visualization. They saw the raw data and noticed how hard it is to understand without a visualization, and from there were shown code being used to create a data visualization.\nStudents analyzed and interpreted the output graph data to describe and explain the patterns of salmon return rates at the Bonneville Dam. Students researched impacts to salmon to explain the patterns in the graph.\n\nLesson Materials\nNote: All these materials including lesson slides, pre-assessment and final assessment are embedded in the Lesson Plan\n\nStudent-Facing Materials\n\nData Analysis Pre-Assesment\n\nDescription: Practice identifying patterns and how to describe patterns in data, identifying phenomena and variables. Practice analyzing and interpreting data using Monthly Average Price for a Dozen Eggs.\n\nData Analysis Final Assessment\n\nDescription: After the lesson examining how the data was collected and coded for data visualization, students complete a final assessment to show proficiency in analyzing and interpreting data.\n\nCoding Activity Worksheet\n\nDescription: This half page is for each student to practice giving their partner “code” to navigate them to a different place in the room\n\nWIS/WIM Graphs for Notebook\n\nDescription: This half page is for each student to write their interpretation of what they see and what it means on the graph\n\nCoding Demonstration video OR Coding Interactive Tutorial\n\nDescription of video: The video provides an overview of how we can use code to synthesize large amounts of data from the Bonneville Dam and create the graphs used in this lesson.\nDescription of tutorial: The tutorial also provides an overview of creating data visualizations in an interactive format where students can attempt some basic coding.\n\n\n\n\nTeacher-Facing Materials\n\nSalmon School Lesson Plan\n\nA three day lesson sequence that could be used to support \n\nSalmon School Powerpoint Slides\nOptional: R code .zip file used to create the graphs\n\n\n\n\nReflection from teachers who have done this lesson\nWhat worked well? Why?\n\nTeacher A: The data (Chinook salmon return rates at the Bonneville Dam on the Columbia from 1937-2023) fit onto the unit content, exploring ecology and how and why populations of species change over time. We raised Chinook salmon in the classroom so we had a real reference for the students.\nTeacher B: Students were engaged in the coding activity. Everyone was up and moving and worked well together to make the moment adjustments for time of day considerations (more structure for later in the day!) and opportunities for pair-share before whole class adjustments.\n\nWhat changes would you make to future iterations? Why?\n\nTeacher A: In addition to the video that demonstrates coding, I would include the coding game where students direct each other across the classroom. Coding was an abstract idea and I did not have enough time to develop a deeper understanding of this tool. It is not a requirement of the curriculum I teach. My focus was on showing students how humans are behind the data, collecting specific data using tools (in this case identifying species and counting them) over many decades to produce raw data tables. They saw the coding operate to create a graph, but the process of making selections on the variables, how to code, and exploring the raw data table itself was outside the scope of the lesson. My focus was on developing data literacy skills in analyzing and interpreting the graph.\nTeacher B: This lesson really kind of stood alone in the larger unit I taught. This was not at all their first exposure to data science over the year so I think that was okay… but it made it feel like data science was a bit peripheral. When I taught the unit, I really just did the day 2 sequence. I would teach is more closely aligned to the attached lesson plan in the future.\n\nWhat do you believe are some of your students’ major takeaways from this lesson?\n\nTeacher A: Students created a file folder for this mini unit and formally showcased their learning to peers and received peer feedback. They described and explained the return patterns in the data and used the extension lesson on linking impacts to salmon using global temperature data and drought patterns to deepen their thinking on impacts to salmon populations.\nTeacher B: I believe students better understood a bit of the process involved in data visualization creation. I think they also saw some ways that coding can be connected to science. Students also better understood the variability in salmon populations over time.\n\nStudent data science takeaways\n\nStudents watched a video which demonstrated how coding can be used to synthesize large amounts of data into a graph. Students were able to recognize how real humans are behind the compilation and creation of data and data visualizations. Students observed videos of salmon crossing the fish ladder at Bonneville and humans counting the species as they crossed to record the data points of return rates. The video showed students the source of this raw data and demonstrated how it was coded into a graphical visualization, emphasizing how huge and hard to understand it was. Students worked in groups on the classroom white boards to describe how the graph was created. Students identified how code was used to organize the data and create a visualization, which could be more easily interpreted to describe and explain patterns and predict future trends. Students were provided with the graphical output to analyze and interpret patterns as an assessment in order to demonstrate proficiency in analyzing and interpreting data to describe/explain a phenomena.\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Salmon Crossing Lesson Materials",
+      "Lesson Overview - Salmon Return at Bonneville Dam"
+    ]
   },
   {
     "objectID": "lesson_plans/climate_lesson.html",
@@ -239,18 +262,22 @@
     "text": "Here are resources for teaching a lesson on climate change!\nClimate Change Lesson Code .zip file\n\n\n\n Back to top"
   },
   {
-    "objectID": "lesson_plans/Salmon_lesson.html",
-    "href": "lesson_plans/Salmon_lesson.html",
-    "title": "Salmon School",
+    "objectID": "lesson_plans/Biodiversity_lesson.html",
+    "href": "lesson_plans/Biodiversity_lesson.html",
+    "title": "Biodiversity Lesson",
     "section": "",
-    "text": "Here are resources for teaching a lesson on salmon crossing the dams in the Columbia river!\nSalmon Lesson Code .zip file\n\n\n\n Back to top"
+    "text": "Here are resources for teaching a lesson on biodiversity!\nBiodiversity Lesson Code .zip file\n\n\n\n Back to top"
   },
   {
-    "objectID": "lesson_plans/AQI_lesson.html",
-    "href": "lesson_plans/AQI_lesson.html",
-    "title": "Air Quality Lesson",
+    "objectID": "lesson_plans/Salmon_lesson_plan.html",
+    "href": "lesson_plans/Salmon_lesson_plan.html",
+    "title": "Lesson Plan - Analyzing and Interpreting Salmon Return at Bonneville Dam",
     "section": "",
-    "text": "Here are resources for teaching a lesson on air quality!\nAir Quality Lesson Code .zip file\n\n\n\n Back to top"
+    "text": "Grade Level & Class type\n\nAppropriate for: 6th-8th grade\nUnit title: Ecology Unit\nNumber of students: 20-25 per class\n\n\n\nLesson Plan and Slides\nSalmon Crossing Lesson Plan - google doc\nSalmon Crossing Powerpoint Slides\nSalmon Lesson Coding Tutorial\n\nCentral Focus/Big idea (core concepts students will develop):\n\nAnalyze and interpret data about Chinook salmon return at Bonneville and Dalles dams to describe and explain changes in Chinook salmon population over time.\n\nContent Standards: (Include the number and text of each standard. If only a portion of a standard is being addressed, only list the part(s) that are relevant.)\n\nNGSS Science and Engineering: Practice 4 Analyzing and Interpreting Data\nOpportunities to extend this lesson to a broader unit that covers other contents standards like: \n\nMS-ESS3-3. Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment (classroom 2)\nMS-LS2-1. Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem.\nMS-LS2-4. Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations.\n\n\n\nLearning Objectives: What do you want students to know and be able to do at the end of this lesson? (Learning Objectives)\n\nStudents will practice analyzing and interpreting data and complete a pre assessment. \nStudents will understand how a larger data set was compiled into a data visualization.\nStudents will analyze patterns in salmon return rates.\nStudents will interpret patterns applying their research/background knowledge. \nStudents will complete an assessment to show proficiency in analyzing and interpreting data.\n\nExtension: \n\nStudents will research the salmon life cycle and impacts on salmon populations.  \nStudents will learn about dams and their role in salmon population changes.\nStudents will apply data analysis and interpretation skills to analyzing global temperature patterns and drought patterns in the West. \n\nAssessment: What evidence of learning will you collect at the end of the lesson? How will you know what students have learned?\n\nPre Assessment: Data Analysis and Interpretation\nFinal Assessment: Data Analysis and Interpretation: Salmon population patterns. Checklist and grading rubric included. \n\nDetailed Lesson Sequence\n\n\n\nPart\nDuration\nSummary\nSlides\nMaterials\n\n\n1\n5 min\nWARM UP\nGet ready for the day and analyze a graph from New York TImes, What’s Going on In this Graph: Egg Prices\n1-2\nSlides\n\n\n2\n10 min\nWHY SHOULD WE KNOW HOW TO MAKE SENSE OF DATA\nStudents work in partners to brainstorm reasons to be able to read graphs and data and come together for a whole group share out\n3\nChart paper and/or sticky notes\n\n\n3\n15 - 20 min\nINDEPENDENT PRE-ASSESSMENT\nStudents work independently on a pre-assessment to interpret changes in a two variable data visualization\n4-5\nPre-assessment\n\n\n4\n10 min\nREVIEW PRE-ASSESSMENT\nGo over the pre-assessment with students, solicit correct answers from students and correct where needed\nN/A\n\n\n\nEnd of day 1\n\n\n\n\n\n\n5\n3 min\nINTRO TO CODING\nIntroduce the idea that computers take specific commands to generate something great! Data visualizations or graphs, in our case.\n6-7\n\n\n\n6\n8 min\nSTUDENTS AS COMPUTERS\nStudents will do a quick activity where they channel their inner programmer and give their classmates code/commands to move to a different spot in the room.\n8\nHandout: Coding Worksheet\n\n\n\n\n7\n10 min\nUSING CODE TO MAKE DATA VISUALIZATIONS\nWatch the video or demo how computer tools, like R, can help us to take really large data sets more easily to analyze by creating a data visualization.\n9\nVideo of how to code OR\nInteractive tutorial to model using code to create graphs\n\n\n8\n10 min\nESTABLISH BACKGROUND INFO ABOUT THE DATA\nProvide students with some background info about where the data they are about to look at comes from\n10-13\nBonneville Dam Fish Ladder September\nData source\nFish passage at Bonneville Dam\nBonneville Dam Fish Counter\n\n\n9\n10 min\nINTRODUCTION TO THE GRAPHS\nStudents are introduced to two graphs they will analyze on their assessment and are asked to begin interpreting changes. Student begin by just looking at the axis titles\n14-16\nWIS/WIM Graphs for Notebooks\n\n\n10\n5 min\nEXIT TICKET @ WHITEBOARDS\nStudents work in a small group to complete two short reflections questions\n17\n\n\n\nEnd of day 2\n\n\n\n\n\n\n10\n40 min\nWORK TIME FOR ASSESSMENT\nStudents are given time to work on their assessment to assess the standard to analyze and interpret data.\n18-19\nAssessment: Data Analysis and Interpretation: Salmon population patterns\n\n\nEnd of day 3\n\n\n\n\n\n\n\n\nAdaptations/Modifications:\n\n\n\n\n\n\n\nEmergent Bilingual\nThe assessment could be given in different languages, sentence stems are provided for longer response\n\n\nTAG\nExtension activities provided\n\n\nSpecial Needs\nSentence stems are provided\n\n\n\n\nSupplemental Lesson Resources:\nConsider using these resources to support variations in teaching this lesson.\n\nBiodiversity and Environmental Impacts, Created by Emily Bosanquet\nGlobal Temperature Patterns and Data Analysis Assessment (NASA data), Created by Emily Bosanquet\nDrought and Its Impacts and Data Analysis Assessment (US Drought Monitor data), Created by Emily Bosanquet\nPre lesson on salmon life cycle and impacts to salmon population: Salmon Life Cycle and Impacts, Created by Emily Bosanquet\nImpacts of dams on our communityresource folder, created by Jenna Mobley\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Salmon Crossing Lesson Materials",
+      "Lesson Plan - Salmon Return at Bonneville Dam"
+    ]
   },
   {
     "objectID": "lesson_plans/lesson_links.html",
@@ -336,7 +363,7 @@
     "section": "Introduction",
     "text": "Introduction\nWelcome to Part 2 of the Air Quality Data Science Tutorials! If you have not done Part 1 yet, click here to complete that tutorial first - it will provide helpful background info about air quality and the basics of data science.\nPart 2 will build off of the graphs created in Part 1 and allow you to customize them with your own locations as well as create different types of graphs.\n\nOur Data Set\n\n\nThis tutorial uses air quality data from the EPA ranging from 2000-2023, and has data on all counties in the United States. The Air Quality Index (AQI) is calculated by looking at various pollutants including Particle Pollution (PM2.5 and PM10), Carbon Monoxide, Lead, Nitrogen Dioxide, Ozone, and Sulfur Dioxide. Here is a link to the data and here is a link to more information about the data.\nOur data tells gives the highest recorded AQI value on a given day in a given location.\nThe data set is very large, so we will not view it now, but there will be an option to view individual counties later in the tutorial.\n\n\n\n\n\n\nFrom.https://www.earthdata.nasa.gov/topics/atmosphere/air-quality",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -347,7 +374,7 @@
     "section": "Customizing your graphs!",
     "text": "Customizing your graphs!\nIn this tutorial, you can create graphs with various customizations. Here are your options:\n\nmake a scatterplot of AQI over time for any location(s)\nmake a tile plot and choose your own location(s)\nview raw data for any county\nChallenge - make a tile plot and customize the location, x axis, legend, and labels\n\nChoose one of the options above, or click “continue” to do all of them!\n\nContinue: scatterplot",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -358,7 +385,7 @@
     "section": "Create a scatter plot of AQI over time",
     "text": "Create a scatter plot of AQI over time\nFirst, let’s create a scatterplot! We’re going to graph the number of days per year when the AQI was above a certain threshold.\nIn other words, we’ll graph the number of days when the AQI was red (or orange or green or whatever level you choose). Then, we’ll see how this data changes over time, from 2020 to 2023.\nTo do this, we’ll use a scatterplot. A scatterplot is a collection of points, where each point represents a data value.\n\nStop and Think\nBefore we start, what do you think the graph might look like? Discuss these questions with your neighbor:\n\nIn Portland, do you think the air quality is getting better or worse since 2000?\nIf we only look at Unhealthy AQI levels (red) in Portland, do you think there will be more or less total days of unhealthy air quality since 2000?\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -369,7 +396,7 @@
     "section": "Make a tile plot of any county!",
     "text": "Make a tile plot of any county!\nWhat if you wanted to look at the air quality data for another place (other than Portland and LA which were analyzed in Part 1)? You’ll be able to do that below.\nIf you’d like a challenge, go to the final section to create a tile plot with multiple different variables you can adjust!\n\nStep 1: Choose a county\nFirst, you’ll need to choose a county that you want to graph.\nHere are your options, organized by state. Click through them and find the county you’d like to graph. You’ll need to remember the exact spelling AND capitalization.\n\n\n\n\n\n\nStates and County Names\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep 2: Add your county name to the code\nNow, you’ll tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -380,7 +407,7 @@
     "section": "View raw data",
     "text": "View raw data\nAfter graphing, you may wonder why the graph looks the way it does. Here, you can look at your raw data.\n\nChoose a county\nFirst, you’ll need to choose a county that you want to graph. See section Choose a county to see a list of county options.\nAfter choosing a county, tell the computer which county you chose.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType your county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\". Keep all the code below the red line as well.\nPress Run Code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\nRaw data\nClick the blue box to see raw data for the county you chose.\n\n\n\n\n\n\nOpen this blue box first!\n\n\n\n\n\nPress run code to see your raw data!\nIt might be very large, so you can click the blue rectangle again to close the data.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: If this code doesn’t work, it’s because you haven’t chosen a county in a previous step. Return to Choose a county and run the code to choose your county.\n\n\n\nClick “continue” for a coding challenge.\n\nContinue: Tile plot challenge",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -391,7 +418,7 @@
     "section": "Challenge: Tile plot with more variable options",
     "text": "Challenge: Tile plot with more variable options\nWant to create a more complex tile plot? In this section, you’ll have the opportunity to customize the x axis, legend, and plot labels.\n\nStep 1: Choose your location\nFirst, you’ll tell the computer which county you’d like to graph.\nImportant make sure you spell the County name exactly as you found it in the table above, and be sure to use proper capitalization as well.\n\nCode editorExample\n\n\nType the county name in the code chunk below. Replace the red line with the county but DON’T delete the quotes \"\".\nPress run code\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\nContinue",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
@@ -402,7 +429,7 @@
     "section": "Congratulations!",
     "text": "Congratulations!\nYou have finished this tutorial and made lots of different types of air quality graphs! Excellent work!\n\n\n\nfrom.giphy.com",
     "crumbs": [
-      "AQI tutorials",
+      "Air Quality Tutorials",
       "AQI Part 2 - Custom Graphs"
     ]
   },
