@@ -1,0 +1,9 @@
+---
+title: "Stand-alone Mini Lessons to Support Teaching Data Science & Coding"
+---
+
+## Introduction
+
+On this page, we've included a couple mini lessons that can help you introduce data science and coding to your students. They are not specific to subject and can be modified depending on your age group. 
+
+### Coding activity: Pretend to be computers {#sec-pretend_computers}

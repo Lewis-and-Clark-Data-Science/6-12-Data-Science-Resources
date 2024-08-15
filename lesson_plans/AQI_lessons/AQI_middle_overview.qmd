@@ -6,6 +6,7 @@ title: AQI Lesson Overview - Middle School
 ### Grade Level & Class type
 
 -   Appropriate for: 5th-9th grade
+-   Unit: Climate Change
 -   Number of students: 20-25 per class
 
 ### Lesson Plan and Slides
@@ -43,13 +44,12 @@ Coding involved:
 
 -   Note: this lesson was originally taught with the assistance of undergraduate students who  demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online AQI tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
 
-## Lesson Materials
+### Lesson Materials
 
 #### **Student-Facing Materials**
 
 -   [AQI Middle School Lesson Slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit?usp=sharing)
     -   Description: Slides used to teach the AQI lesson over 4 days to middle school students.
-
 
 -   [AQI Atmotube Instructions Slide](https://docs.google.com/presentation/d/1XXrfJQpvE5RGjBS77OqtPOPfW3baj4wc/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
     -   Description: This slide can be printed out for each group of students to follow the directions for connecting to and using the Atmotubes.
@@ -81,6 +81,12 @@ Coding involved:
 
 -   [Air Quality CER Digital Version](https://docs.google.com/document/d/1fY_DxzBfUWcnXi_lmqcLOUvUbjx9IH9f/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
     -   Description: A digital version of the graphic organizer for students to use to make a claim about a local issue, support the claim with evidence, and include reasoning to explain how the evidence supports the claim. There is a rubric for how the CER will be scored on a 1- 4 scale.
+    
+#### **Teacher-Facing Materials**
+
+-   [AQI Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_middle_lesson_plan.html)
+
+-   [Optional: R code .zip file used to create the graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip) OR [Interactive online coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
 
 
 ### Examples of Student Work 
@@ -88,3 +94,24 @@ Coding involved:
 [AQI Student Example CER](https://drive.google.com/file/d/1y_LIILT-K9rkli0rROJHdOu-vxwiUsf4/view?usp=drive_link)
     
 -   Description: Student example of a finished argumentative letter to a local politician using the information from their CER graphic organizer.
+
+### Reflection from teachers who have done this lesson
+
+**What worked well? Why?**
+
+-   Asking students to compare the air quality graphs of Portland and LA went really well. They understood the data visualization and how the EPA had incorrectly graphed the data. Having students test different factors that change air quality with the Atmotubes was also successful. Students really liked  trying out different factors like Clorox cleaning wipes or whiteboard markers with the Atmotubes because they could test different things and see the resulting numbers on the app. 
+
+**What do you feel was missing?**
+
+-   I would have given students little papers with questions to answer during the videos so that they stayed engaged. I might have had students compare the 2 graphs in small groups and then discuss the differences as an entire class.
+
+**What changes would you make to future iterations? Why?**
+
+-   In the future, I would want someone to help make a preset code that made the corrected graphs of the EPA air quality data so that students could copy that code and get to see the correct graphs on their screen. Then students could discuss the differences with their groups and why the two versions of graphs are different. Instead of watching someone else do this part, I am wondering if it would feel more authentic if students discovered the mistake on their own.
+    -   Note: we have updated the lesson since this feedback, and now there is an opportunity for students to make the graphs themselves. See [the online AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
+    -   Also check out [this coding activity](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/mini_lessons.html#sec-pretend_computers) which incorporates moving around the classroom and pretending to be computers in order to introduce coding to students. 
+
+**What do you believe are some of your students' major takeaways from this lesson?**
+
+-   Students learned that the ProLogis company was planning to build a truck warehouse across the street from their school. The students on the track team were very concerned about their lungs being affected by large amounts of exhaust. Students with asthma were concerned for their safety. The biggest takeaway was learning that different factors can change the air around them and that it will have an effect on their health. Students were also able to compare the graphs of Portland vs Los Angeles and also the corrected graphs made by coding.
+

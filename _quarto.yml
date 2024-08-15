@@ -31,6 +31,8 @@ website:
         - lesson_plans/Biodiversity_lesson.qmd
         - lesson_plans/climate_lesson.qmd
         - lesson_plans/sea_levels_lesson.qmd
+        - text: "Mini intro to data science lessons"
+          href: lesson_plans/mini_lessons.qmd
     - text: Online Tutorials
       menu:
         - tutorials/salmon_tutorial.qmd

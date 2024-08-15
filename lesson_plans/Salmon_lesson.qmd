@@ -61,7 +61,7 @@ Students analyzed and interpreted the output graph data to describe and explain 
 
 #### **Teacher-Facing Materials**
 
--   [Salmon School Lesson Plan](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit){target="_blank"}
+-   [Salmon School Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
     -   A three day lesson sequence that could be used to support 
 
 -   [Salmon School Powerpoint Slides](https://docs.google.com/presentation/d/1Y7wV1RD7vIZekLII6g6N3B1gyEcbyqoUPD5KLykXRNM/edit#slide=id.g2ed2407c0e1_0_0){target="_blank"}

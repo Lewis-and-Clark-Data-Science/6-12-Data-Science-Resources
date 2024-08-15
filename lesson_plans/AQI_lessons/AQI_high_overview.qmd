@@ -6,6 +6,7 @@ title: AQI Lesson Overview - High School
 ### Grade Level & Class type
 
 -   Appropriate for: 10th-12th grade
+-   Unit: Environmental Science
 -   Number of students: 30 per class
 
 ### Lesson Plan and Tutorial
@@ -14,8 +15,83 @@ title: AQI Lesson Overview - High School
 
 -   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
 
-<br>
-<br>
+<br> <br>
 
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
 :::
+
+**Lesson Title**: Air Quality Index
+
+**Lesson Description:**
+
+The goal of the lesson was to demonstrate air quality trends in different regional settings and examine how environmental factors can impact the Air Quality Index (AQI) using data science. Students had exposure to R, a data visualization language, to show them how to take large data sets and turn them into graphs that are easier to understand. We showed them how Posit Cloud is used through coding in a whole group demonstration, then used EPA data to compare air quality trends between Portland and Los Angeles in the last two decades. In groups, they looked at handouts of the EPA Tile Plots to practice searching for patterns and trends and critically analyze mistakes of data visualization. Finally, students used AQI data to write argumentative letters to support claims made about community impacts on air quality.
+
+**Data Science in the Lesson:**
+
+Working with raw data:
+
+-   Students did not work with the raw data. They looked at the large data set and watched a demonstration of coding to analyze data.
+
+Data visualization:
+
+-   Yes, students compared the EPA scatterplots of AQI in Portland vs LA. The student takeaways were searching for patterns and trends, comparing regional data sets, and critically analyzing mistakes of data visualization.
+
+Coding involved:
+
+-   Students saw computer code. They observed a demonstration of R/Positcloud coding. The demonstration included a preliminary example of sorting Star Wars characters into categories to demonstrate how to manipulate a large data set. Then students watched a demonstration of the process of uploading a large AQI data set and using it to create graphs to answer relevant questions.
+
+-   Note: this lesson was originally taught with the assistance of undergraduate students who demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online AQI tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
+
+### Lesson Materials
+
+#### **Student-Facing Materials**
+
+-   [Factors of Air Quality Slides](https://docs.google.com/presentation/d/1qR-LbLxIXSMSNDAkMpA2Bypg0H92ARDVuZt7nwIPpXs/edit?usp=sharing)
+    -   Description: Slides to introduce the factors that go into the AQI measurement. Includes blank slides with links to resources for students to research factors and instructions for gallery walk.
+-   [AQI Factors Graphic Organizer](https://docs.google.com/document/d/1gm3_wPXV2_9rL9rK86ZQ-T09kQMiNp8Nuy78v34cdog/edit?usp=drive_link)
+    -   Description: Graphic organizer for students to collect notes during gallery walk.
+-   [Using Data Science to Explore AQI Data Slides](https://docs.google.com/presentation/d/1kKUY2JZuxGCgZr4n8Z2dJnuRFYCroQ9DsLlKvK_5W5Q/edit?usp=sharing)
+    -   Description: Slides to introduce regional AQI data, places to collect notes for notice and wonder questions, and student-generated questions. Slides to introduce and demonstrate the ideas of Data Science and how we use coding to narrow down a large data set to answer a specific scientific question. Wrap-up discussion questions about Data Science. Extension activity with link to EPA data.
+-   [Using Data Science to Explore AQI Data Interactive Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
+    -   Description: Online tutorial which provides a walk-through on how to deal with large amounts of data and create air quality graphs.
+    -   In Part 2 AQI Tutorial, there is an option for students to create custom air quality graphs of any location.
+-   [AQI Tile Plots](https://docs.google.com/document/d/1HzMYg-YJU27HBA0hHPXMKhy8C3m43icc6YkGWjE4ssk/edit?usp=sharing)
+    -   Description: Plots of EPA data for Portland, OR and Los Angeles, CA for 2000-2023. Should be printed in color fo students to examine in groups or posted online so they can see the colors.
+-   [Air Quality Index Exploration Lab Slides](https://docs.google.com/presentation/d/12pu_TVCrGO2mNQfy6KlcVsDjKRNlh76NNdmzcfnV_7Y/edit?usp=sharing)
+    -   Description: Slides with information about Atmotube exploration and basic instructions to prepare students to formulate their own testable science question, write a procedure, perform the experiment, and write a report (CER).
+-   [Atmotube Exploration Graphic Organizer](https://docs.google.com/document/d/1AKg73LroeUM_wLSv5FnJj8HADKieX8mIYtRuQmLz1BI/edit?usp=sharing)
+    -   Description: Graphic organizer to direct students in exploration of Atmotubes. Meant to help familiarize them with the equipment before they perform a lab.
+-   [CER Writing Sentence Frames](https://docs.google.com/document/d/1zy2Ro2Smn6dAZ1KZkEjLkZo-oFyhhOHJtLHxpCA9XDw/edit?usp=sharing)
+    -   Description: Sentence starters for CER (Claim, Evidence, and Reasoning) writing.
+-   [\[Template\] Air Quality Lab(Formative Link)](https://app.formative.com/clone/C4QSZD?_rid=0x9mp1)
+    -   Description: This link will ask you to make a copy in Formative for the Air Quality Exploration Lab
+-   [\[Template\] Air Quality Lab(Google Doc)](https://docs.google.com/document/d/1bDoDPmaU8BdKlKlXXgK5r9ILxpmxeTOV_3LyyMcdEFo/edit?usp=sharing)
+    -   Description: Template for Air Quality Exploration Lab report
+
+#### **Teacher-Facing Materials**
+
+-   [AQI Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_high_lesson_plan.html)
+
+-   [Optional: R code .zip file used to create the graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip) OR [Interactive online coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
+
+### Reflection from teachers who have done this lesson
+
+**What worked well? Why?**
+
+-   The data discussions around the visualizations went really well. Students were engaged and interested in the patterns and anomalies in air quality in these regions.
+
+**What do you feel was missing?**
+
+-   Well, coding is not very engaging to watch or look at if you are a high school student with no experience in coding. The R program is really cool, and it would be great to give students a taste of coding to try on their own (with R or a different language) so they might be able to understand what they are looking at when we start talking about pipes and filters and plots and visualizations.
+
+-   I would rethink the way we presented the coding part. I would want to use a more interactive lesson with movement and visuals to demonstrate how coding helped us answer the questions we posed from the large data set. It would have been great to have the coding be part of the process that the students were part of as well. It would be ideal to have them ask questions that we could answer on the fly with the coding and go step-by-step, but that would be difficult to do quickly.
+    -   Note: we have updated the lesson since this feedback, and now there is an opportunity for students to make the graphs themselves in an interactive format. See [the online AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html).
+    -   Also check out [this coding activity](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/mini_lessons.html#sec-pretend_computers) which incorporates moving around the classroom and pretending to be computers in order to introduce coding to students.
+
+**What changes would you make to future iterations? Why?**
+
+-   I would want to add in the things I mentioned above. One class period is probably not enough for all of the cool things we could do, but it was a great experience. 
+
+**What do you believe are some of your students' major takeaways from this lesson?** 
+
+-   My students learned about how useful large data sets can be when trying to answer a long-term scientific question. They learned some basics of Data Science and the process of using the large data set to answer a question. They looked at patterns and analyzed regional data to compare the environmental conditions in two different locations.

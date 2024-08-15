@@ -6,7 +6,9 @@ format:
 
 Welcome to the landing page for air quality lessons! There are 2 different lessons, one for middle school and one for high school. Please use the left sidebar to navigate to the lesson you'd like to use. 
 
-Additionally, you can incorporate the [air quality coding tutorials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) into either lesson. They provide a walk-through of how to work with large amounts of data and create graphs. The [Part 2 AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html) gives students options to customize their own air quality graphs for any location. It additionally has some challenge options better suited for high school students. 
+Additionally, you can incorporate the [air quality coding tutorials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) into either lesson. They provide a walk-through of how to work with large amounts of data and create graphs. 
+
+A note about location: These lessons were originally taught in Portland, OR. If. you are teaching them elsewhere, check out [Part 2 of AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html) which gives students options to customize their own air quality graphs for any location. It additionally has some challenge options better suited for high school students. 
 
 
 ### Lesson Links: 
@@ -15,13 +17,13 @@ Middle School:
 
 -   [AQI Lesson Overview](AQI_middle_overview.qmd)
 
--   [AQI Lesson Plan](AQI_middle_lesson_plan.qmd)
+-   [AQI Detailed Lesson Plan](AQI_middle_lesson_plan.qmd)
 
 High School: 
 
 -   [AQI Lesson Overview](AQI_high_overview.qmd)
 
--   [AQI Lesson Plan](AQI_high_lesson_plan.qmd)
+-   [AQI Detailed Lesson Plan](AQI_high_lesson_plan.qmd)
 
 
 
