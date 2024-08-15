@@ -1,0 +1,21 @@
+---
+title: AQI Lesson Plan - High School
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: 10th-12th grade
+-   Number of students: 30 per class
+
+### Lesson Plan and Tutorial
+
+-   [AQI Lesson Plan - google doc](https://docs.google.com/document/d/1y9xauNIFp_KfCY-ATZMki1_5E1cc_EXpQvg_gQBBHAo/edit){target="_blank"}
+
+-   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
+
+<br>
+<br>
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
+:::

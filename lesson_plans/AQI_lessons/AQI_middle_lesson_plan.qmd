@@ -1,0 +1,23 @@
+---
+title: AQI Lesson Plan - Middle School
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: 5th-9th grade
+-   Number of students: 20-25 per class
+
+### Lesson Plan and Slides
+
+-   [AQI Lesson Plan - google doc](https://docs.google.com/document/d/1kCziI6JU0PTtkSJ0dqp8drIYHx0FHaQy/edit?pli=1){target="_blank"}
+
+-   [AQI Powerpoint Slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.p){target="_blank"}
+
+-   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
+
+<br>
+<br>
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
+:::

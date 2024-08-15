@@ -1,0 +1,90 @@
+---
+title: AQI Lesson Overview - Middle School
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: 5th-9th grade
+-   Number of students: 20-25 per class
+
+### Lesson Plan and Slides
+
+-   [AQI Lesson Plan - google doc](https://docs.google.com/document/d/1kCziI6JU0PTtkSJ0dqp8drIYHx0FHaQy/edit?pli=1){target="_blank"}
+
+-   [AQI Powerpoint Slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.p){target="_blank"}
+
+-   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
+
+<br> <br>
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
+:::
+
+**Lesson Title**: Air Quality Index
+
+**Lesson Description:**
+
+The goal of the lesson was to demonstrate air quality trends in different regional settings and examine how environmental factors can impact the Air Quality Index (AQI) using data science. Students had exposure to R, a data visualization language, to show them how to take large data sets and turn them into graphs that are easier to understand. We showed them how Posit Cloud is used through coding in a whole group demonstration, then used EPA data to compare air quality trends between Portland and Los Angeles in the last two decades. In groups, they looked at handouts of the EPA Tile Plots to practice searching for patterns and trends and critically analyze mistakes of data visualization. Finally, students used AQI data to write argumentative letters to support claims made about community impacts on air quality.
+
+**Data Science in the Lesson:**
+
+Working with raw data:
+
+-   Students did not work with the raw data. They looked at the large data set and watched a demonstration of coding to analyze data.
+
+Data visualization:
+
+-   Yes, students compared the EPA scatterplots of AQI in Portland vs LA. The student takeaways were searching for patterns and trends, comparing regional data sets, and critically analyzing mistakes of data visualization.
+
+Coding involved:
+
+-   Students saw computer code. They observed a demonstration of R/Positcloud coding. The demonstration included a preliminary example of sorting Star Wars characters into categories to demonstrate how to manipulate a large data set. Then students watched a demonstration of the process of uploading a large AQI data set and using it to create graphs to answer relevant questions.
+
+-   Note: this lesson was originally taught with the assistance of undergraduate students who  demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online AQI tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
+
+## Lesson Materials
+
+#### **Student-Facing Materials**
+
+-   [AQI Middle School Lesson Slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit?usp=sharing)
+    -   Description: Slides used to teach the AQI lesson over 4 days to middle school students.
+
+
+-   [AQI Atmotube Instructions Slide](https://docs.google.com/presentation/d/1XXrfJQpvE5RGjBS77OqtPOPfW3baj4wc/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: This slide can be printed out for each group of students to follow the directions for connecting to and using the Atmotubes.
+
+-   [AQI Atmotube Lab Doc](https://docs.google.com/document/d/1bKKUfd-O55aY_YGlJadSd0h69pfXJ7uS/edit?usp=drive_link&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: Document meant to print out and cut into sections so that each student can write down the data while they are testing the Atmotubes with different factors.
+
+-   [AQI Atmotube Exit Ticket](https://docs.google.com/document/d/1Y7HVhpTOtsHrWbZjZ2zUliK7AD3-Kn1e/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: Document meant to print out and cut into sections so that each student can write down their reflection about the Atmotube lab.
+
+-   [EPA AQI Graph for Portland and Los Angeles](https://docs.google.com/document/d/17UDwb4p_TTFaz5051rPjgIQ4Vfwb5uGUkRTBLjkcRQ4/edit?usp=sharing)
+    -   Description: Image of the EPA AQI scatterplot showing the air quality in Portland, OR and Los Angeles, CA from January 2000 to July 2023 coded with colors for different categories.
+
+-   [Online AQI Graphs Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
+    -   Description: Online tutorial which provides a walk-through on how to deal with large amounts of data and create air quality graphs. 
+    -   In [Part 2 AQI Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html), there is an option for students to create custom air quality graphs of any location. 
+
+-   [AQI Graphs Exit Ticket](https://docs.google.com/document/d/1lEhYONoM7ZNUolQUwxp6H42iyhdXANh7fdyaNPOwdFk/edit?usp=sharing)
+    -   Description: Document meant to print out and cut into sections so that each student can write down their reflection about AQI.
+
+-   [AQI Amazon\'s Warehouse Article](https://docs.google.com/document/d/1PVgs73dyP3-lsIb7eG3u65MvPRVKD7ST/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: Article students can read to understand the context for the impact that a truck warehouse has on a local community. Students can use evidence from this article to support their claim for the argumentative letter.
+
+-   [ AQI - Portland\'s Air Quality is Off the Charts Article](https://docs.google.com/document/d/1l77Lpg8OwFChzCq8uBZEPagHbgbF0zevMpAcz_TkbaU/edit?usp=sharing)
+    -   Description: Article students can read to understand how smoke impacts the air quality in a local community. Students can use evidence from this article to support their claim for the argumentative letter.
+
+-   [Air Quality CER Graphic Organizer](https://docs.google.com/document/d/1ZmF1u-25lXA9tjEJs8Okd_PmPtRhEQyW/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: A graphic organizer to print out for students to use to make a claim about a local issue, support the claim with evidence, and include reasoning to explain how the evidence supports the claim. There is a rubric for how the CER will be scored on a 1- 4 scale.
+
+-   [Air Quality CER Digital Version](https://docs.google.com/document/d/1fY_DxzBfUWcnXi_lmqcLOUvUbjx9IH9f/edit?usp=sharing&ouid=102489052810943387113&rtpof=true&sd=true)
+    -   Description: A digital version of the graphic organizer for students to use to make a claim about a local issue, support the claim with evidence, and include reasoning to explain how the evidence supports the claim. There is a rubric for how the CER will be scored on a 1- 4 scale.
+
+
+### Examples of Student Work 
+
+[AQI Student Example CER](https://drive.google.com/file/d/1y_LIILT-K9rkli0rROJHdOu-vxwiUsf4/view?usp=drive_link)
+    
+-   Description: Student example of a finished argumentative letter to a local politician using the information from their CER graphic organizer.

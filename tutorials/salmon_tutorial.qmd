@@ -4,7 +4,8 @@ filters:
   - webr
   - naquiz
 df-print: kable
-
+toc: true
+toc-depth: 2
 format: 
   html: 
     toc: true
@@ -14,33 +15,60 @@ callout-icon: false
 
 <script>
 console.log("Script loaded");
-console.log("Button clicked");
+
 document.addEventListener("DOMContentLoaded", function() {
     let currentPartIndex = 0;
     const parts = document.querySelectorAll(".tutorial-part");
     const buttons = document.querySelectorAll("button[id^='continue-button']");
+    const nextButton = document.getElementById("next-button");
     const headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 0;
     const sidebarLinks = document.querySelectorAll("#quarto-margin-sidebar .sidebar a"); // Updated selector
 
- // Log the selected elements
+    // Log the selected elements
     console.log('Tutorial parts:', parts);
     console.log('Continue buttons:', buttons);
 
     // Hide all tutorial parts except the first one
     parts.forEach(function(part, index) {
         if (index !== 0) {
-            part.style.display = "none";}});
-    
-    // Function to scroll to the top of the element, accounting for a fixed header
-      function scrollToElement(element) {
-          const elementTop = element.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-              top: elementTop - headerHeight,
-             behavior: "smooth"
-         });
-     }
+            part.style.display = "none";
+        }
+    });
 
+    // Function to scroll to the top of the element, accounting for a fixed header
+    function scrollToElement(element) {
+        const elementTop = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+            top: elementTop - headerHeight,
+            behavior: "smooth"
+        });
+    }
+
+    // Function to show a specific part
+    function showPart(index) {
+        if (index >= 0 && index < parts.length) {
+            parts.forEach((part, idx) => {
+                part.style.display = (idx === index) ? "block" : "none";
+            });
+            scrollToElement(parts[index]);
+            currentPartIndex = index;
+        }
+    }
     
+     // Function to show all parts up to a specific index
+    function showPartsUpTo(index) {
+        parts.forEach((part, idx) => {
+            if (idx <= index) {
+                part.style.display = "block";
+            }
+            if (idx > index){
+            part.style.display = "none";
+}
+        });
+        scrollToElement(parts[index]);
+        currentPartIndex = index;
+    }
+
     // Add click event listeners to each button
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
@@ -48,24 +76,54 @@ document.addEventListener("DOMContentLoaded", function() {
                 parts[currentPartIndex].style.display = "block";
                 buttons[currentPartIndex].style.display = "none";
                 currentPartIndex++;
-                parts[currentPartIndex].style.display= "block";
-                 // Jump to the id anchor for the current section
-         //   window.location.hash = parts[currentPartIndex].id;
-        // Scroll to the top of the current section
-                scrollToElement(parts[currentPartIndex]);
-             // Adjust scroll position to account for the height of the navbar
-              //   window.scrollBy(0, 10000);
-                } else {
-                alert("End of tutorial");}});});});
-                
-          // Add click event listeners to sidebar links
-            sidebarLinks.forEach((link, index) => {
-                link.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    showPart(index);
-                    scrollToElement(parts[index]);
-                });
+                showPartsUpTo(currentPartIndex);
+            } else {
+                alert("End of tutorial");
+            }
+        });
+    });
+
+    // Listen for hash changes to navigate to the correct section
+    window.addEventListener("hashchange", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetPart = document.querySelector(hash);
+            if (targetPart) {
+                const targetIndex = Array.prototype.indexOf.call(parts, targetPart);
+                showPartsUpTo(targetIndex);
+                buttons.forEach((button, idx) => {
+                  if (idx < targetIndex) {
+                  button.style.display="none";}
+                  if (idx >= targetIndex) {
+                  button.style.display="block";
+}
+                  });
+            }
+        }
+    });
+
+    // Check the URL hash on page load
+    const initialHash = window.location.hash;
+    if (initialHash) {
+        const initialTarget = document.querySelector(initialHash);
+        if (initialTarget) {
+          const intialIndex=Array.prototype.indexOf.call(parts, initialTarget);
+            showPartsUpTo(initalIndex);
+            buttons.forEach((button, idx) => {
+                if (idx < initialIndex) {
+                    button.style.display = "none";
+                }
             });
+        }
+    }
+    // Add click event listener to the new next button
+    if (nextButton) {
+        nextButton.addEventListener("click", function() {
+            window.location.href = "https://www.example.com"; 
+        });
+    }
+});
+
 </script>
 
 
@@ -281,27 +339,29 @@ options(scipen = 999)
 Bon_chinook_sum <- Bon_chinook_sum %>% mutate(sum_of_rows_100 = (sum_of_rows/1000))
 ```
 
+::: columns
+::: {.column width="35%"}
+
+<br>
+<br>
+
+![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/salmon_dog.jpg){fig-align="left" fig-alt="A dog jumping towards Chinook salmon in a fish ladder" height="2.5in"}
+:::
+
+::: {.column width="65%"}
+
 ## Fish Crossings - Introduction
 
 Hello! Welcome to this tutorial. We're going to learn about how a computer can use HUGE amounts of data and make cool graphs from it.
 
-<div class="tutorial-part" style="display: block;">
-
-::: columns
-::: {.column width="35%"}
-![From https://www.spokesman.com/blogs/outdoors/2015/may/08/how-fast-can-salmon-swim-upstream-idaho-waters/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/salmon_dog.jpg){fig-align="left" fig-alt="A dog jumping towards Chinook salmon in a fish ladder" height="2.5in"}
-:::
-
-::: {.column width="5%"}
-<br>
-:::
-
-::: {.column width="60%"}
 Today we'll get to learn about fish crossings at dams in the Columbia River.
 
 We'll start by looking at the Bonneville Dam and learn how many salmon and steelhead cross the Bonneville dam each year.
 :::
 :::
+
+<div class="tutorial-part" style="display: block;">
+
 
 ## What is the Bonneville Dam?
 
@@ -773,14 +833,26 @@ You learned how you can use the computer to look at large amounts of numbers and
 
 :::
 
-### Want to learn more
+<button id="continue-button" class="btn btn-primary float-start me-2">Learn more!</button>
+</div>
+
+<div class="tutorial-part" style="display: none;">
+
+### Want to learn more?
+
+::: columns
+::: {.column-width=50%}
 
 This is the end of the tutorial but there's lots more resources to explore!
 
 -   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
 
--   Additionally check out the linked lesson plans for more resources to teach about salmon and the Bonneville Dam.
-
+-   Additionally check out the [linked lesson plans](lesson_plans/salmon_lesson.qmd) for more resources to teach about salmon and the Bonneville Dam.
+:::
+::: {.column-width=50%}
+![From.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXJiNXJrZ3Q1enUzeHdkdWw1ODBiMzV4Y3Nhc3Rmdm84amdnNW1uOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVCajDohhJFq8/giphy.gif)
+:::
+:::
 <button id="continue-button" class="btn btn-primary float-start me-2">More Graphs!</button>
 </div>
 

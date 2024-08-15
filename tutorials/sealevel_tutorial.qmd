@@ -4,7 +4,8 @@ author: "Bel Kuhl, edited for web version by Olivia Spagnuolo"
 filters: 
   - webr
   - naquiz
-
+toc: true
+toc-depth: 3
 format: 
   html: 
     toc: true

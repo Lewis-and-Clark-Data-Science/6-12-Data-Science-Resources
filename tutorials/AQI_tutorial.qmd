@@ -418,7 +418,7 @@ Did you see the number 15 pop out?
 Here's another code chunk you can try typing something into. Maybe you want to try a division problem? Or maybe you want the computer to say hello to you? There's a few different tabs you can click on to learn how to do cool things!
 
 ::: panel-tabset
-## Code editor
+## Experiment with your own code!
 
 Want to try out your own code? Maybe another math problem? Here's a place to do that. Otherwise click on the tabs to learn something new!
 
@@ -473,6 +473,64 @@ Now let's run a function that will tell us which number is the biggest. **Click*
 ```{webr-r}
 max(numbers)
 ```
+
+## Star Wars! 
+
+### Looking at Data through Star Wars!
+
+We can use R to look at all kinds of data. Let's look at Star Wars.
+First we can get a table of all of the
+characters and columns with descriptions about them.
+
+**Press** run code
+
+```{webr-r}
+starwars
+```
+
+You'll probably see a lot of confusing words. But can you recognize some names of characters? 
+
+### Selecting Data
+
+If we want to look at just one column of data, we can use the `select`
+function. Let's just look at all of the names of characters. We can use
+the `select` function to show us that.
+
+**Press** run code
+
+```{webr-r}
+starwars %>% select (name)
+```
+
+Hopefully, you see some names of star wars characters! Is your favorite character displayed? You may notice that not all of the characters are displayed. That's because it's too long of a list, so the computer shortens it so it doesn't take up the whole page. 
+
+### Filtering Data
+
+To find data with a certain characteristic, we can use the `filter`
+function. For this example, we will find all of the Star Wars characters
+who are from Tatooine!
+
+**Press** run code
+
+```{webr-r}
+filter(starwars, homeworld=='Tatooine')
+```
+
+### Counting Data
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/bb8.png){width="50%"}
+
+Maybe we want to find the number of characters who are Droids! The
+`count` function will let us get a numerical value for the specific
+column we are looking at.
+
+**Press** run code
+
+```{webr-r}
+count(starwars, species=='Droid')
+```
+
+
 :::
 
 
@@ -760,6 +818,29 @@ Talk with your neighbor about the graphs!
         -   Why are they different? 
         
 -   What else would you like to know? 
+:::
+
+::: {.callout-tip collapse=true}
+
+## If you're using the slides, you may notice these graphs are different than the ones in the presentation. Open this to learn why!
+
+If you are using the [corresponding slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.g2ed25e6ebfd_0_108) for this lesson, you'll notice that the graphs in slides 28 and 30 look different than the graphs you made in this tutorial. The reason for this is a bit complicated, but I'll try to explain below. **In short, the graphs in this tutorial and the EPA graphs are correct, but the EPA should do a better job labeling their graphs - their legend is very misleading!**
+
+The graphs in the slides were made from the same data as the EPA used and as we used in this tutorial. So why would they look different? 
+
+-   Well, if you look at the legend on the EPA graph, you'll notice that the units are ug/m3. See slide 29 in the [middle school slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.g2ed25e6ebfd_0_108) or slide 28 in the [high school slides](https://docs.google.com/presentation/d/1kKUY2JZuxGCgZr4n8Z2dJnuRFYCroQ9DsLlKvK_5W5Q/edit#slide=id.g2787f590fe3_0_61){break="_target"}. 
+
+-   This led us to believe that the data was also recorded in those units (ug/m3), as there was no other indication of units in the raw data. Hence, we created the graphs on [slide 28 & 30](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.g2ed25e6ebfd_0_120) using those legend numbers (i.e. "good" was coded as anything under 12, "moderate" as anything between 12.1-35.4). 
+
+-   But, some weird things started going on with the data and graphs - the graphs we made had extra bad air quality. 
+
+-   So, I emailed the EPA to figure out what was going on with the data and their graphs. As it turns out, their graph legend uses the units **ug/m3**, BUT the data used to create the graph was originally in different units! The data used to create the graph uses an **Air Quality Index** scale between 0-500. Unfortunately this was *not* clear in their raw data. 
+
+**Conclusion:** It's important to be very clear about the units you are using when graphing, and the units in the raw data! Even large agencies like the EPA can be quite unclear about this. 
+
+In case you're still curious, here's the response from the EPA with a website you can check out to better understand their data: 
+You're spot on, the legend for the tile plot is showing the AQI breakpoints as they relate to the selected pollutant's concentration, but the data itself is only showing AQI values. Look at Table 6. in this technical assistance document to see the AQI breakpoints for each pollutant: https://www.airnow.gov/publications/air-quality-index/technical-assistance-document-for-reporting-the-daily-aqi/.
+
 :::
 
 <button id="continue-button" class="btn btn-primary float-start me-2">Continue</button>
