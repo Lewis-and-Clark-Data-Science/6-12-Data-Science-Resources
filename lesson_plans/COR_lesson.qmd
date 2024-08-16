@@ -1,5 +1,65 @@
---- 
-title: COR Lesson
+---
+title: "Gravity and Mass on Different Planets"
 ---
 
-Here are resources for teaching a lesson on COR? 
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: Middle to high school students
+-   Previously taught in: 8th grade
+-   Unit title: Astronomy Unit
+-   Number of students: 30 per class
+
+![from https://science.nasa.gov/solar-system/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/solar_system.png){fig-align="left" fig-alt="planets and sun" height="2.5in"}
+:::
+
+### Data Science in the Lesson
+
+Working with raw data set: 
+
+-   Students collected and researched data sets for several reference points (distance from the sun, length of rotation and revolution, diameter, mass, etc) about 2 different planets or moons within our solar system.
+
+Data visualization in lesson:
+
+-   Data visualization was present in several forms- Students had analyzed several different types of graphical displays of data that related to the data they were collecting. They also created scale model drawings to compare the diameters and distance from the sun for one inner planet or moon and one outer planet or moon
+
+Interaction with computer coding:
+
+-   Students were presented with computer code during the undergraduate student presentation.
+
+
+### Lesson materials 
+
+#### Student-Facing Materials
+
+-   Classroom presentation: [Data for beginning of class](https://docs.google.com/presentation/d/1aQmF7ADHeU932y5Oqt0jAgjYDaE-_0bd80ZPqSfFy8A/edit?usp=sharing) 
+    -   Description: these were used as warm ups for class (this is still a work in progress)
+
+-   [Data Science Presentation by Lewis & Clark undergraduate](https://docs.google.com/presentation/d/1XLYVwzpxOubcAJP1lXKijYDzbcTftTYKJkoW3luPvK8/edit?usp=sharing)
+    -   Description: A presentation give by an undergraduate student to introduce data science and coding to students. 
+
+-   [Comparing Surface Gravity to Mass over Surface Area of Planets](https://docs.google.com/document/d/1sZD7qzuVInUlpzgbYbFEIjADtHZci1g7DUAiMLbemDE/edit?usp=sharing)
+    -   Description: Students prove that the mass of the planet and its surface area determines the gravitational force of the planet
+
+#### Teacher-Facing Materials
+
+-   Scope and Scale presentation: [Classroom presentation Day 31-37 solar system exploration scale and structure](https://docs.google.com/presentation/d/19ey7WrkUJ5exxjkJ7S2zx5FNoYdM_6kw9i_zyT4SAzg/edit?usp=sharing)
+    -   Description: This is where the students researched and created their scale drawing models prior to the gravity vs. mass of planet lesson
+
+-   [Example Part 2-Solar System Scale investigation including gravity extension](https://docs.google.com/document/d/1WcqiFMx3W_KS9A6v75jKb4ixroK_IT8wEx0GqZGTFG4/edit?usp=sharing) 
+    -   Description: This is the example of the project the students created for the scale comparisons
+    
+-   [Optional: .zip file with R code used to make graphs for this lesson](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)
+
+### Reflection from teachers who have done this lesson
+
+**What worked well? Why?**
+
+-   The parts where the students were engaged in data manipulation.  The students remembered this information all the way to the end of the year.
+
+**What do you believe are some of your students' major takeaways from this lesson?**
+
+-   Data is used to support and defend science thinking.  
+-   Data is useful in helping us to determine how big or far away objects are in our universe.  
+-   R could be really useful in large data sets
+

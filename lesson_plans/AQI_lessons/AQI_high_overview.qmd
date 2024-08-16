@@ -6,8 +6,9 @@ title: AQI Lesson Overview - High School
 ### Grade Level & Class type
 
 -   Appropriate for: 10th-12th grade
--   Unit: Environmental Science
+-   Subject: environmental science or biology
 -   Number of students: 30 per class
+-   Time: 3-4 90 minute lessons
 
 ### Lesson Plan and Tutorial
 
@@ -85,13 +86,14 @@ Coding involved:
 -   Well, coding is not very engaging to watch or look at if you are a high school student with no experience in coding. The R program is really cool, and it would be great to give students a taste of coding to try on their own (with R or a different language) so they might be able to understand what they are looking at when we start talking about pipes and filters and plots and visualizations.
 
 -   I would rethink the way we presented the coding part. I would want to use a more interactive lesson with movement and visuals to demonstrate how coding helped us answer the questions we posed from the large data set. It would have been great to have the coding be part of the process that the students were part of as well. It would be ideal to have them ask questions that we could answer on the fly with the coding and go step-by-step, but that would be difficult to do quickly.
+
     -   Note: we have updated the lesson since this feedback, and now there is an opportunity for students to make the graphs themselves in an interactive format. See [the online AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html).
     -   Also check out [this coding activity](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/mini_lessons.html#sec-pretend_computers) which incorporates moving around the classroom and pretending to be computers in order to introduce coding to students.
 
 **What changes would you make to future iterations? Why?**
 
--   I would want to add in the things I mentioned above. One class period is probably not enough for all of the cool things we could do, but it was a great experience. 
+-   I would want to add in the things I mentioned above. One class period is probably not enough for all of the cool things we could do, but it was a great experience.
 
-**What do you believe are some of your students' major takeaways from this lesson?** 
+**What do you believe are some of your students' major takeaways from this lesson?**
 
 -   My students learned about how useful large data sets can be when trying to answer a long-term scientific question. They learned some basics of Data Science and the process of using the large data set to answer a question. They looked at patterns and analyzed regional data to compare the environmental conditions in two different locations.
