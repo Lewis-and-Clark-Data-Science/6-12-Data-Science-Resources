@@ -8,4 +8,50 @@ On this page, we've included a couple mini lessons that can help you introduce d
 
 ### Coding activity: Pretend to be computers {#sec-pretend_computers}
 
-{{< pdf https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/computer_activity_slides.pdf >}}
+**Overview** 
+
+This movement-based activity introduces students to the concept of coding by having them pretend to be computers and direct each other across a room using only specific "code" commands. 
+
+**Learning Outcomes**
+
+Through modeling how computers work live in person, students will understand that a computer can only understand specific code, and it must be written in a specific order. Code must also be run all at once as opposed to stopping and starting it. 
+
+**Instructions**
+
+-   Place a few chairs on one side of the room. Have students stand on the other side of the room. For a challenge, place extra obstacles between students and the chairs. 
+
+-   Students get into groups of two and choose one person to be the "computer" and one to be the "coder". The "coder" writes down code commands (see command options in the presentation and handout) to direct the "computer" across the room to sit in the chair. 
+-   After ALL the commands are written down, the "computer" reads the paper and follows the instructions. 
+
+-   Switch roles and discuss! 
+
+**Materials**
+
+::: {.column-body-outset}
+::: columns
+::: {.column width="47%"}
+
+Slides
+
+<iframe
+      src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/computer_activity_slides.pdf"
+      width="100%"
+      height="490px"
+  ></iframe>
+  
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="48%"}
+
+Handout
+
+<iframe
+      src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/computer_activity_worksheet.pdf"
+      width="100%"
+      height="490px"
+  ></iframe>
+  
+:::
+:::
+:::
