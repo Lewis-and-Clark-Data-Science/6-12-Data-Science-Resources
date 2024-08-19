@@ -2,7 +2,7 @@
 title: Biodiversity Lesson
 ---
 
-::: {.column-margin}
+::: column-margin
 ### Grade Level & Class type
 
 -   Appropriate for: 9th-12th grade
@@ -18,7 +18,7 @@ title: Biodiversity Lesson
 
 <br> <br>
 
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage1.png){fig-align="left" fig-alt="AQI levels" width="95%"}
+![from https://tualatinswcd.org/what-is-biodiversity-and-why-does-it-matter-for-you/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage1.png){fig-align="left" fig-alt="Biodiversity circle image" width="95%"}
 :::
 
 ## Lesson Overview
@@ -27,17 +27,15 @@ title: Biodiversity Lesson
 
 **Lesson Description:**
 
-::: {.column-screen-inset}
+::: column-screen-inset
 ::: columns
 ::: {.column width="30%"}
-
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/index_terr_plant.png){fig-align="left" fig-alt="Graph of biodiversity index of terrestrial plants" width="95%"}
 
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/number_terr_plant.png){fig-align="left" fig-alt="Graph of number of terrestrial plants" width="95%"}
-
 :::
-:::{.column width="45%"}
 
+::: {.column width="45%"}
 Long Term Ecological Research sites (LTERs). Students will look at long term biodiversity trends in groups. See example graphs at left. Students will be able to create the following graphs to analyze biodiversity:
 
 -   Temperate Coniferous Plant OR Invertebrates Total Species
@@ -51,19 +49,13 @@ THESE GRAPHS STILL IN PROGRESS:
 -   Temperate Deciduous Plant OR Invertebrates Diversity Index
 -   "All Ecosystem" Plant Total Species
 -   "All Ecosystem" Plant Diversity Index
-
-
 :::
 
-:::{.column width="25%"}
-
+::: {.column width="25%"}
 <br>
-
-
 :::
 :::
 :::
-
 
 **Data Science in the Lesson**
 
@@ -75,21 +67,35 @@ An undergraduate student came into the classroom and helped teach the lesson. Sh
 
 This data science/coding lesson was integrated within a larger Biodiversity Unit - see materials for that unit [below](#sec-broader-materials). The students had already studied the meaning, levels, and status of biodiversity globally as well as ways that biodiversity is measured and conserved. We had implemented a series of data collection/field survey activities including recording data about the presence/absence of various types of tree species on our campus. This effort was then connected back to the BIOTIME dataset and the coding analysis.
 
-Here are resources for teaching a lesson on biodiversity!
-
-[Lesson Plan google doc](https://docs.google.com/document/d/18A7jL6PxAJtWR246pzOt8rqpwKnKxpIoPs0NNtkx-T0/edit?usp=sharing){target="_blank"}
-
-[Biodiversity Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/biodiversity_tutorial.html#what-is-biodiversity){target="_blank"}
-
-[Biodiversity Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
-
-Plan for this lesson:
-
--   Make lesson plan into a quarto doc
-
--   Add materials in as broader lesson materials options
-
 ## Lesson Materials
+
+-   [Lesson Plan google doc](https://docs.google.com/document/d/18A7jL6PxAJtWR246pzOt8rqpwKnKxpIoPs0NNtkx-T0/edit?usp=sharing){target="_blank"}
+
+-   [Lesson Slides](https://docs.google.com/presentation/d/1D0uzKxcWlyrTyrq5zwtPyxEpkAerrAN7g5P-N-HUvqo/edit#slide=id.g278812203c7_0_0){target="_blank"}
+
+-   [Intro to NEON Science](https://www.youtube.com/watch?v=sSD84bIkWDw){target="_blank"}
+
+    -   Introduction to ecology field research, collecting and analyzing data.
+
+-   [BIOTIME website](https://biotime.st-andrews.ac.uk/aboutUs.php#:~:text=BioTIME%20is%20a%20comprehensive%20collection,they%20also%20include%20freshwater%20systems){target="_blank"}
+
+    -   Description: This is the website that hosts the BIOTIME data used to create the graphs in this lesson. We evaluated the website together with the students the days before the data science lesson.
+
+-   [Biodiversity Interactive Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/biodiversity_tutorial.html#what-is-biodiversity){target="_blank"}
+
+    -   Description: Online tutorial which provides a walk-through on how to deal with large amounts of data and create custom biodiversity graphs.
+
+-   [Analyzing Graphs Template](https://docs.google.com/presentation/d/1cZGviRE0Qg09jZAduCmRyTH9TBWMawPWfppBEBLjK4I/edit#slide=id.g28dee6d7864_0_80){target="_blank"}
+
+    -   Template where students can paste the graph they created using the online website. They are asked to create a title and caption for the graph.
+
+-   [Biodiversity Large Scale Graphic Organizer](https://docs.google.com/document/d/1EnOm65db0hgXHMq37JiuY8lg-fQifmqKDvoGdnWQY5M/edit){target="_blank"}
+
+    -   Graphic organizer for students to demonstrate what they've learned in this lesson so far about biodiversity. Includes an overview of biodiversity, ecological research programs, and comparing graphs they created.
+
+-   Optional: [Biodiversity Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
+
+    -   Description: .zip file of the R code used to create the graphs used in this lesson. Can be uploaded into posit.cloud or Rstudio desktop and run from there, if you are familiar with coding.
 
 ## Broader Unit Materials {#sec-broader-materials}
 
@@ -98,6 +104,7 @@ This lesson was taught by two different teachers and incorporated into slightly 
 ### Biodiversity Unit - IB Biology
 
 -   [Biodiversity and Ecology Unit Plan](https://docs.google.com/document/d/1qmtVrMQhG4XMadtgQ5mpko_jeBUxvfOaNZx-lK-pTHc/edit){traget="_blank"}
+    -   Description: Unit plan used in an IB Biology classroom. Includes many links to resources, slides, assessments, worksheets, and more!
 
 ### Biodiversity Unit with HIPPO framework {#sec-hippounit}
 
@@ -109,3 +116,31 @@ This lesson was taught by two different teachers and incorporated into slightly 
     -   Description: As part of the Biodiversity Unit, I have my students collect data about different plants/trees on the campus including species name, size, height, crown spread, etc. We conduct multiple surveys so the students can see temporal changes to the plants/trees over time. I presented this work as kind of the front end/first step of the process of data analysis that ends with large scale analysis of trends that can be done with Coding.
 -   [BIOTIME website](https://biotime.st-andrews.ac.uk/aboutUs.php#:~:text=BioTIME%20is%20a%20comprehensive%20collection,they%20also%20include%20freshwater%20systems){target="_blank"}
     -   Description: This is the website that hosts the BIOTIME data. We evaluated the website together with the students the days before the data science lesson.
+
+## Reflection from teachers who have taught this lesson before
+
+**What worked well? Why?**
+
+-   The data science lesson was well timed and integrated with our biology curriculum, specifically the unit on biodiversity. Students were already familiar with the key concepts around biodiversity and had already experienced collecting their own biodiversity data so they were well primed to talk about these larger datasets and analysis.
+
+**What do you feel was missing?**
+
+-   We implemented this lesson in a single, 50 minute class period. The actual student work time was probably 30-35 min. This is a huge topic to teach in a single, short period. It would have been better to have several points of engagement and scaffolding for the students that unfolded over multiple days.
+
+-   Data science is a broad field that includes data collection, data management, data visualization (maps, graphs, etc), data analysis, communicating data, etc. Each of these types generate different levels of student learning and engagement. It would have been interesting to actually assess which data science approach garnered the most student engagement and learning. Perhaps it was due to my lack of experience with coding, but I found that part to be the most difficult to teach and engage students with.
+
+    -   Note: we have updated the lesson since this feedback, and now there is an opportunity for students to create graphs in an easier-to-use format that requires less coding. See [Biodiversity Interactive Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/biodiversity_tutorial.html#what-is-biodiversity){target="_blank"}.
+
+**What changes would you make to future iterations? Why?**
+
+-   In order to make meaning from relatively complex topics like Biodiversity and Coding, the students need multiple points of access and scaffolding to be successful. Ideally, this topic would be chunked into multiple parts and assignments that unfold over several days and they need to be supported by me and the student teacher throughout this process.
+
+-   I would provide other opportunities for data science in the classroom beyond just coding/ R. I personally am much more interested in using spatial data to analyze biological phenomena, specifically using mapping software such as ArcGIS.
+
+-   I would have chosen a different dataset to manipulate and code with. I'm not entirely sure why, but the graphs we created with the BIOTIME dataset didn't impress the students very much or generate much discussion. It sort of generated a collective shrug.
+
+-   I am very interested in having my students generate their own data that could then be integrated and used in larger, real life datasets. Ideally, my students would have collected their own presence/absence data of ecological communities and then submitted that to be part of the BIOTIME effort that is already underway globally.
+
+**What do you believe are some of your students' major takeaways from this lesson?**
+
+-   That high level data analysis of large complex, biological datasets can be done more efficiently and quickly by writing and using code and computer programming. That BIOTIME database provides additional evidence that biodiversity is declining in many parts of the world.
