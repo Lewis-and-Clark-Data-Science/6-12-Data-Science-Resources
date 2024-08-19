@@ -17,3 +17,15 @@
   font-size: 1.1em; /* Adjust font size as needed */
   font-weight: bold; /* Optional: make it bold */
 }
+
+.column-screen-inset {
+  position: relative; /* Ensure the element is positioned for z-index to take effect */
+  z-index: 1; /* Lower z-index to send it to the back */
+  pointer-events: none;
+}
+
+/* Set the z-index of the margin elements */
+.column-margin {
+  position: relative;
+  z-index: 10; /* Higher z-index to bring it to the front */
+}

@@ -1,54 +1,79 @@
---- 
+---
 title: Biodiversity Lesson
 ---
 
-## Lesson Overview 
+::: {.column-margin}
+### Grade Level & Class type
+
+-   Appropriate for: 9th-12th grade
+-   Subject: Intro Biology, Honors Biology, IB Biology
+-   Number of students: 30 per class
+-   Time: Single 90 minute lesson (also included are resources for a longer unit)
+
+### Lesson Plan and Tutorial
+
+-   [Biodiversity Lesson Plan - google doc](https://docs.google.com/document/d/18A7jL6PxAJtWR246pzOt8rqpwKnKxpIoPs0NNtkx-T0/edit?usp=sharing){target="_blank"}
+
+-   [Biodiversity Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/biodiversity_tutorial.html){target="_blank"}
+
+<br> <br>
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/biodiversityimage1.png){fig-align="left" fig-alt="AQI levels" width="95%"}
+:::
+
+## Lesson Overview
 
 **Lesson Title**: Biodiversity
 
 **Lesson Description:**
 
+::: {.column-screen-inset}
 ::: columns
-::: {.column width="60%"}
+::: {.column width="30%"}
 
-Long Term Ecological Research sites (LTERs). Students will look at long term biodiversity trends in groups.  See example graphs at left. Students will be able to create the following graphs to analyze biodiversity:    
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/index_terr_plant.png){fig-align="left" fig-alt="Graph of biodiversity index of terrestrial plants" width="95%"}
 
-  -   Temperate Coniferous Plant OR Invertebrates Total Species
-  -   Temperate Coniferous Plant OR Invertebrates Diversity Index
-  -   Tropical Plant OR Invertebrates Total Species
-  -   Tropical Plant OR Invertebrates Diversity Index
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/number_terr_plant.png){fig-align="left" fig-alt="Graph of number of terrestrial plants" width="95%"}
+
+:::
+:::{.column width="45%"}
+
+Long Term Ecological Research sites (LTERs). Students will look at long term biodiversity trends in groups. See example graphs at left. Students will be able to create the following graphs to analyze biodiversity:
+
+-   Temperate Coniferous Plant OR Invertebrates Total Species
+-   Temperate Coniferous Plant OR Invertebrates Diversity Index
+-   Tropical Plant OR Invertebrates Total Species
+-   Tropical Plant OR Invertebrates Diversity Index
 
 THESE GRAPHS STILL IN PROGRESS:
 
--   Temperate Deciduous Plant OR Invertebrates Total Species 
+-   Temperate Deciduous Plant OR Invertebrates Total Species
 -   Temperate Deciduous Plant OR Invertebrates Diversity Index
--   “All Ecosystem” Plant Total Species
--   “All Ecosystem” Plant Diversity Index
+-   "All Ecosystem" Plant Total Species
+-   "All Ecosystem" Plant Diversity Index
 
-:::
-::: {.column width="40%"}
-::: {#fig-graphs layout-ncol=2}
-
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/index_terr_plant.png){fig-align="left" fig-alt="Graph of biodiversity index for terrestrial plants" height="2in"}
-
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/number_terr_plant.png){fig-align="left" fig-alt="Graph of number of terrestrial plants" height="2in"}
 
 :::
 
+:::{.column width="25%"}
+
+<br>
+
+
+:::
 :::
 :::
 
 
 **Data Science in the Lesson**
 
-An undergraduate student came into the classroom and helped teach the lesson. She introduced herself at first coming in as a data science minor at Lewis and Clark and then going into what data science is. She talked about her experience with it through the classes she took and how she used data science so far in college. Students were able to run some code to look at graphs. We discussed trends after.
+An undergraduate student came into the classroom and helped teach the lesson. She introduced herself as a data science minor at Lewis and Clark and then went into what data science is. She talked about her experience with it through the classes she took and how she used data science so far in college. Students were able to run some code to look at graphs. We discussed trends after.
 
 -   Note: this lesson was originally taught with the assistance of undergraduate students who demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online biodiversity tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/biodiversity_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
 
 **Broader Unit Context**
 
 This data science/coding lesson was integrated within a larger Biodiversity Unit - see materials for that unit [below](#sec-broader-materials). The students had already studied the meaning, levels, and status of biodiversity globally as well as ways that biodiversity is measured and conserved. We had implemented a series of data collection/field survey activities including recording data about the presence/absence of various types of tree species on our campus. This effort was then connected back to the BIOTIME dataset and the coding analysis.
-
 
 Here are resources for teaching a lesson on biodiversity!
 
@@ -58,23 +83,19 @@ Here are resources for teaching a lesson on biodiversity!
 
 [Biodiversity Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/BiodiversityLessonCode.zip)
 
-
-Plan for this lesson: 
+Plan for this lesson:
 
 -   Make lesson plan into a quarto doc
 
--   Add materials in as broader lesson materials options 
+-   Add materials in as broader lesson materials options
 
+## Lesson Materials
 
-## Lesson Materials 
+## Broader Unit Materials {#sec-broader-materials}
 
+This lesson was taught by two different teachers and incorporated into slightly different broader units. We've included both teachers materials below, separated into each of their units.
 
-
-## Broader Unit Materials {#sec-broader-materials} 
-
-This lesson was taught by two different teachers and incorporated into slightly different broader units. We've included both teachers materials below, separated into each of their units. 
-
-### Biodiversity Unit - IB Biology  
+### Biodiversity Unit - IB Biology
 
 -   [Biodiversity and Ecology Unit Plan](https://docs.google.com/document/d/1qmtVrMQhG4XMadtgQ5mpko_jeBUxvfOaNZx-lK-pTHc/edit){traget="_blank"}
 
@@ -82,12 +103,9 @@ This lesson was taught by two different teachers and incorporated into slightly 
 
 -   [Slides: Biodiversity: Status, Value, and Threats](https://docs.google.com/presentation/d/1MO2LFK69JWkD5spZVpHLYTGlibvRdHOxJmDshIZ8VIU/edit?usp=sharing){target="_blank"}
     -   Description: This is the slideshow I used to introduce the topic to the students. I presented these slides and the students took notes over several class periods. I designed the lecture around the HIPPO framework for Biodiversity loss that is detailed in the HHMI Biointeractive site I linked to below.
-
 -   [HHMI:Biointeractive](https://www.biointeractive.org/classroom-resources/designing-solutions-preserve-biodiversity){target="_blank"}
-    -   Description: HHMI Biointeractive is one of the leading on-line resources for teaching biology at the high school level. I have found their materials to be extremely useful and interactive and they always generate a high level of student engagement. 
-
+    -   Description: HHMI Biointeractive is one of the leading on-line resources for teaching biology at the high school level. I have found their materials to be extremely useful and interactive and they always generate a high level of student engagement.
 -   Tree Surveys: [1,](https://docs.google.com/document/d/1jHQEpJsg_wcV0SEoJ_j2UEKpGZKL3a9YvrB59GPFX7w/edit?usp=sharing){target="_blank"} [2,](https://docs.google.com/document/d/1yf0tV-um1tLWrv4FDgupjcoUqT7yL_E8j4-wy12o6yU/edit?usp=sharing){target="_blank"} [3,](https://docs.google.com/document/d/1jKz-RKn4c3CwdcYaiwAet5cl7IpMpi42wFtIYBsFA4M/edit?usp=sharing){target="_blank"} [4,](https://docs.google.com/document/d/1GdWyAJWyyj72cIOqW0t8X75sGUKyrTsDclYwgfu-v3Q/edit?usp=sharing){target="_blank"}
     -   Description: As part of the Biodiversity Unit, I have my students collect data about different plants/trees on the campus including species name, size, height, crown spread, etc. We conduct multiple surveys so the students can see temporal changes to the plants/trees over time. I presented this work as kind of the front end/first step of the process of data analysis that ends with large scale analysis of trends that can be done with Coding.
-
 -   [BIOTIME website](https://biotime.st-andrews.ac.uk/aboutUs.php#:~:text=BioTIME%20is%20a%20comprehensive%20collection,they%20also%20include%20freshwater%20systems){target="_blank"}
     -   Description: This is the website that hosts the BIOTIME data. We evaluated the website together with the students the days before the data science lesson.
