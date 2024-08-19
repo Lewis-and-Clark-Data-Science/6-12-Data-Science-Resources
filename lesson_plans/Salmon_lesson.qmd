@@ -39,7 +39,7 @@ Students analyzed and interpreted the output graph data to describe and explain 
 
 ### Lesson Materials
 
-**Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit){target="_blank"}
+**Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
 
 #### **Student-Facing Materials**
 

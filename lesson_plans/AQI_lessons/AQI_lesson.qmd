@@ -1,14 +1,14 @@
 ---
-title: Air Quality Lesson
+title: "Air Quality Lesson Landing Page"
 format: 
   html
 ---
 
 Welcome to the landing page for air quality lessons! There are 2 different lessons, one for middle school and one for high school. Please use the left sidebar to navigate to the lesson you'd like to use. 
 
-Additionally, you can incorporate the [air quality coding tutorials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) into either lesson. They provide a walk-through of how to work with large amounts of data and create graphs. 
+Additionally, you can incorporate the [air quality coding tutorials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) into both lessons. They provide a walk-through of how to work with large amounts of data and create graphs. Part 2 has some challenge options better suited for high school students. 
 
-A note about location: These lessons were originally taught in Portland, OR. If. you are teaching them elsewhere, check out [Part 2 of AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html) which gives students options to customize their own air quality graphs for any location. It additionally has some challenge options better suited for high school students. 
+**A note about location:** These lessons were originally taught in Portland, OR. If. you are teaching them elsewhere, check out [Part 2 of AQI coding tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html) which gives students options to customize their own air quality graphs for any location. 
 
 
 ### Lesson Links: 
@@ -29,4 +29,7 @@ High School:
 
 
 Other:
-[Air Quality Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)
+
+-   [AQI coding tutorials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
+
+-   [Air Quality Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/AQILessonCode.zip)

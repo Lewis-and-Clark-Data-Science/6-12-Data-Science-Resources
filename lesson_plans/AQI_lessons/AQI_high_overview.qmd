@@ -40,8 +40,7 @@ Data visualization:
 Coding involved:
 
 -   Students saw computer code. They observed a demonstration of R/Positcloud coding. The demonstration included a preliminary example of sorting Star Wars characters into categories to demonstrate how to manipulate a large data set. Then students watched a demonstration of the process of uploading a large AQI data set and using it to create graphs to answer relevant questions.
-
--   Note: this lesson was originally taught with the assistance of undergraduate students who demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online AQI tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
+    -   Note: this lesson was originally taught with the assistance of undergraduate students who demonstrated coding. If you have not coded before and would like to incorporate basic data science/coding into your lesson, refer to the [online AQI tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html) for an easy walk-through you can use to demonstrate data science in your classroom!
 
 ### Lesson Materials
 

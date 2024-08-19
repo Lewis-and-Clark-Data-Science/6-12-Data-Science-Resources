@@ -14,7 +14,7 @@ This movement-based activity introduces students to the concept of coding by hav
 
 **Learning Outcomes**
 
-Through modeling how computers work live in person, students will understand that a computer can only understand specific code, and it must be written in a specific order. Code must also be run all at once as opposed to stopping and starting it. 
+Through modeling how computers work in person, students will gain an understanding of the steps required in coding. Namely, a computer can only understand specific code, and it must be written in a specific order. Code must also be run all at once as opposed to stopping and starting it. 
 
 **Instructions**
 
