@@ -32,21 +32,21 @@ Interaction with computer coding:
 
 #### Student-Facing Materials
 
--   Classroom presentation: [Data for beginning of class](https://docs.google.com/presentation/d/1aQmF7ADHeU932y5Oqt0jAgjYDaE-_0bd80ZPqSfFy8A/edit?usp=sharing) 
+-   Classroom presentation: [Data for beginning of class - google presentation](https://docs.google.com/presentation/d/1aQmF7ADHeU932y5Oqt0jAgjYDaE-_0bd80ZPqSfFy8A/edit?usp=sharing) or download [Data for beginning of class - .pptx presentation](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR Data beginning class.pptx)
     -   Description: these were used as warm ups for class (this is still a work in progress)
 
--   [Data Science Presentation by Lewis & Clark undergraduate](https://docs.google.com/presentation/d/1XLYVwzpxOubcAJP1lXKijYDzbcTftTYKJkoW3luPvK8/edit?usp=sharing)
+-   [Data Science Presentation by Lewis & Clark undergraduate](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR LC presentation.pptx)
     -   Description: A presentation give by an undergraduate student to introduce data science and coding to students. 
 
--   [Comparing Surface Gravity to Mass over Surface Area of Planets](https://docs.google.com/document/d/1sZD7qzuVInUlpzgbYbFEIjADtHZci1g7DUAiMLbemDE/edit?usp=sharing)
+-   [Comparing Surface Gravity to Mass over Surface Area of Planets](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR gravity surface area.docx)
     -   Description: Students prove that the mass of the planet and its surface area determines the gravitational force of the planet
 
 #### Teacher-Facing Materials
 
--   Scope and Scale presentation: [Classroom presentation Day 31-37 solar system exploration scale and structure](https://docs.google.com/presentation/d/19ey7WrkUJ5exxjkJ7S2zx5FNoYdM_6kw9i_zyT4SAzg/edit?usp=sharing)
+-   Scope and Scale presentation: [Classroom presentation Day 31-37 solar system exploration scale and structure](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR slides.pptx)
     -   Description: This is where the students researched and created their scale drawing models prior to the gravity vs. mass of planet lesson
 
--   [Example Part 2-Solar System Scale investigation including gravity extension](https://docs.google.com/document/d/1WcqiFMx3W_KS9A6v75jKb4ixroK_IT8wEx0GqZGTFG4/edit?usp=sharing) 
+-   [Example Part 2-Solar System Scale investigation including gravity extension](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR Part 2 scale investigation.docx)
     -   Description: This is the example of the project the students created for the scale comparisons
     
 -   [Optional: .zip file with R code used to make graphs for this lesson](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)

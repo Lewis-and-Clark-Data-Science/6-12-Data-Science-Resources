@@ -1,7 +1,18 @@
 ---
 title: Climate Change Lesson
 ---
+::: column-margin
+### Grade Level & Class type
 
-Here are resources for teaching a lesson on climate change!
+-   Appropriate for: Middle to high school students
+-   Previously taught in: 8th grade
+-   Unit title: Astronomy Unit
+-   Number of students: 30 per class
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png){fig-align="left" fig-alt="planets and sun" height="2.5in"}
+:::
+
+
+
 
 [Climate Change Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
