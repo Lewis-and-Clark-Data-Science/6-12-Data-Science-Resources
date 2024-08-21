@@ -106,7 +106,7 @@ This lesson was taught by two different teachers and incorporated into slightly 
 -   [Biodiversity and Ecology Unit Plan](https://docs.google.com/document/d/1qmtVrMQhG4XMadtgQ5mpko_jeBUxvfOaNZx-lK-pTHc/edit){traget="_blank"}
     -   Description: Unit plan used in an IB Biology classroom. Includes many links to resources, slides, assessments, worksheets, and more!
 
-### Biodiversity Unit with HIPPO framework {#sec-hippounit}
+### Biodiversity Unit - HIPPO framework {#sec-hippounit}
 
 -   [Slides: Biodiversity: Status, Value, and Threats](https://docs.google.com/presentation/d/1MO2LFK69JWkD5spZVpHLYTGlibvRdHOxJmDshIZ8VIU/edit?usp=sharing){target="_blank"}
     -   Description: This is the slideshow I used to introduce the topic to the students. I presented these slides and the students took notes over several class periods. I designed the lecture around the HIPPO framework for Biodiversity loss that is detailed in the HHMI Biointeractive site I linked to below.
