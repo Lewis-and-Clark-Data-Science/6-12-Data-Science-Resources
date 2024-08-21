@@ -40,7 +40,7 @@ Although students do not directly work with raw data, they see a large data set 
     -   Description: Document is linked within the Project Handout; contains hyperlinks to useful resources students might use, listed by category
 -   [Sea Level Change Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Sea%20Level%20Rise%20Slides.pptx)
     -   Description: The slides provide information for direct instruction and guide students through the lesson. Contains a warm-up, review, discussion questions, videos, and data visualizations to help understand how sea level rise and thermal expansion are related.
--   [Coding Lesson Video](https://drive.google.com/drive/folders/11UtUpAuGhzJPy_qMZWC4OGDQwE187gUS)
+-   [Coding Lesson Video](https://drive.google.com/file/d/1LMjhUd9dK3wai0uNmiDuPBTeYa5-nUHV/view?usp=sharing)
     -   Description: Video created by a Lewis & Clark student which walks students through an introduction to data science and how to use code to create data visualizations.
 -   Coding lesson: [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/sealevel_tutorial.html) OR [R code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
     -   Description: Coding lesson to introduce students to working with large datasets and creating visualizations. Either material can be used in conjunction with the video above (based on your comfortability with coding).
