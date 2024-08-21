@@ -93,6 +93,16 @@ website:
           contents: 
             - lesson_plans/climate_lesson.qmd
             - lesson_plans/climate_lesson_plan.qmd
+    - id: lesson_plans/sea_level_lesson.qmd
+      title: "Sea Level Lesson"
+      style: "docked"
+      collapse-level: 2
+      contents: 
+        - section: "Sea Level Lesson"
+          contents: 
+            - lesson_plans/sea_level_lesson.qmd
+            - lesson_plans/sea_level_lesson_plan.qmd
+
 
   #sidebar: 
   #    style: "docked"
