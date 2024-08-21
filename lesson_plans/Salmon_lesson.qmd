@@ -40,7 +40,7 @@ Students analyzed and interpreted the output graph data to describe and explain 
 
 ### Lesson Materials
 
-**Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
+**Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan.](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
 
 #### **Student-Facing Materials**
 
@@ -65,7 +65,7 @@ Students analyzed and interpreted the output graph data to describe and explain 
 -   [Salmon School Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
     -   A three day lesson sequence that could be used to support 
 
--   [Salmon School Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Salmon Data Analysis Slides.pptx){target="_blank"}
+-   [Salmon School Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Salmon Data Analysis Slides.pptx)
 
 -   [Optional: R code .zip file used to create the graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
 

@@ -847,7 +847,7 @@ This is the end of the tutorial but there's lots more resources to explore!
 
 -   Click the "More Graphs!" button to see more graphs of Steelhead and Chinook species at the Bonneville and Dalles dams. Feel free to use these in your classroom. 
 
--   Additionally check out the [linked lesson plans](lesson_plans/salmon_lesson.qmd) for more resources to teach about salmon and the Bonneville Dam.
+-   Additionally check out the [linked lesson plans](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html) for more resources to teach about salmon and the Bonneville Dam.
 :::
 ::: {.column-width=50%}
 ![From.giphy.com](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXJiNXJrZ3Q1enUzeHdkdWw1ODBiMzV4Y3Nhc3Rmdm84amdnNW1uOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yVCajDohhJFq8/giphy.gif)

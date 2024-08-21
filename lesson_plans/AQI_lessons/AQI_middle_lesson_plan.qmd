@@ -8,12 +8,13 @@ title: AQI Lesson Plan - Middle School
 -   Appropriate for: 5th-9th grade
 -   Unit: Climate Change
 -   Number of students: 20-25 per class
+-   Time: Three 40 minute lessons
 
 ### Lesson Plan and Slides
 
 -   [AQI Lesson Plan - google doc](https://docs.google.com/document/d/1kCziI6JU0PTtkSJ0dqp8drIYHx0FHaQy/edit?pli=1){target="_blank"}
 
--   [AQI Powerpoint Slides](https://docs.google.com/presentation/d/1hPQw6Gl481AvMUeUY7qXd7gMvSMZAHrAfgu52hL5Z98/edit#slide=id.p){target="_blank"}
+-   [AQI Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Middle School Lesson Slides.pptx)
 
 -   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
 
