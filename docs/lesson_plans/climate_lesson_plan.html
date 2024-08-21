@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6-12 Data Science Resources - Climate Change Unit Plan</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/figures/data-science-icon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles1.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">6-12 Data Science Resources</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lesson-plans" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lesson Plans</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lesson-plans">    
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/lesson_links.html">
+ <span class="dropdown-text">R Files for Data Science Lessons</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/Salmon_lesson.html">
+ <span class="dropdown-text">Salmon Return at Bonneville Dam</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/AQI_lessons/AQI_lesson.html">
+ <span class="dropdown-text">Air Quality Lessons</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/Biodiversity_lesson.html">
+ <span class="dropdown-text">Biodiversity Lesson</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/climate_lesson.html">
+ <span class="dropdown-text">Climate Change Unit</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/sea_levels_lesson.html">
+ <span class="dropdown-text">Sea Levels Lesson</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/COR_lesson.html">
+ <span class="dropdown-text">Gravity and Mass on Different Planets</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lesson_plans/mini_lessons.html">
+ <span class="dropdown-text">Mini intro to data science lessons</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-online-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Online Tutorials</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-online-tutorials">    
+        <li>
+    <a class="dropdown-item" href="../tutorials/salmon_tutorial.html">
+ <span class="dropdown-text">Salmon Crossing Data Tutorial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/climate_change_tutorial.html">
+ <span class="dropdown-text">Climate Change Data Tutorial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/biodiversity_tutorial.html">
+ <span class="dropdown-text">Biodiversity tutorial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/AQI_tutorial.html">
+ <span class="dropdown-text">AQI Part 1 - Introduction to Data Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/AQI_tutorial_advanced.html">
+ <span class="dropdown-text">AQI Part 2 - Custom Graphs</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tutorials/sealevel_tutorial.html">
+ <span class="dropdown-text">Sea Level tutorial</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="../resources/resources.html">
+ <span class="dropdown-text">Other Resources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../resources/cheatsheet.html">
+ <span class="dropdown-text">Cheatsheet for Data in the Wild Tutorials</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lesson_plans/climate_lesson.html">Climate Change Lessons</a></li><li class="breadcrumb-item"><a href="../lesson_plans/climate_lesson_plan.html">Climate Change Unit Plan</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Climate Change Lessons</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lesson_plans/climate_lesson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Climate Change Unit Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lesson_plans/climate_lesson_plan.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Climate Change Unit Plan</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#unit-lesson-plans" id="toc-unit-lesson-plans" class="nav-link active" data-scroll-target="#unit-lesson-plans">Unit Lesson Plans</a>
+  <ul class="collapse">
+  <li><a href="#sec-lesson1" id="toc-sec-lesson1" class="nav-link" data-scroll-target="#sec-lesson1">Lesson 1: Climate Change Evidence 1</a></li>
+  <li><a href="#sec-lesson2" id="toc-sec-lesson2" class="nav-link" data-scroll-target="#sec-lesson2">Lesson 2: Using coding to learn about climate change</a></li>
+  <li><a href="#sec-lesson3" id="toc-sec-lesson3" class="nav-link" data-scroll-target="#sec-lesson3">Lesson 3: Greenhouse Effect</a></li>
+  <li><a href="#sec-lesson4" id="toc-sec-lesson4" class="nav-link" data-scroll-target="#sec-lesson4">Lesson 4: Communicating Climate Evidence</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/lesson_plans/climate_lesson_plan.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lesson_plans/climate_lesson.html">Climate Change Lessons</a></li><li class="breadcrumb-item"><a href="../lesson_plans/climate_lesson_plan.html">Climate Change Unit Plan</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Climate Change Unit Plan</h1>
+<p class="subtitle lead">Unit lesson plan (4 lessons) for teaching about climate change and data science</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<section id="grade-level-class-type" class="level3">
+<h3 class="anchored" data-anchor-id="grade-level-class-type">Grade Level &amp; Class type</h3>
+<ul>
+<li>Appropriate for: 9th-12th grade</li>
+<li>Subject: NGSS Physics</li>
+<li>Number of students: 22 per class</li>
+<li>Time: 4 lessons</li>
+</ul>
+</section>
+<section id="lesson-plan-and-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="lesson-plan-and-tutorial">Lesson Plan and Tutorial</h3>
+<ul>
+<li><p><a href="../lesson_plans/climate_lesson_plan.html">Lesson Plan</a></p></li>
+<li><p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html">Interactive Code Tutorial</a></p></li>
+</ul>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png" class="quarto-figure quarto-figure-left figure-img" style="height:2.5in" alt="planets and sun"></p>
+</figure>
+</div>
+</section>
+</div></div><section id="unit-lesson-plans" class="level2">
+<h2 class="anchored" data-anchor-id="unit-lesson-plans">Unit Lesson Plans</h2>
+<section id="sec-lesson1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lesson1">Lesson 1: Climate Change Evidence 1</h3>
+<div class="border-box">
+<p><strong>Lesson Plan:</strong></p>
+<p>Students choose between a series of infographics showing different types of climate change effects (temperature, sea level, wildfire, ecosystem, etc), which model quality data visualizations, give them practice identifying patterns and analyzing trends, and present evidence of climate change effects currently taking place.</p>
+<p><strong>Data Science in the lesson:</strong></p>
+<p>In this lesson, students are working with a curated set of professionally produced graphics found from online sources. The focus is on reading patterns and analyzing trends. Students are assessed on their ability to turn a visual data representation into a paragraph explanation (aka they write a caption for the graph explaining the big idea presented).</p>
+<p><strong>Lesson Materials:</strong></p>
+<ul>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201_%20Analyzing%20Climate%20Change%20Infographics.pptx">Lesson 1 Slides: Analyzing Climate Change Infographics</a></li>
+<li><a href="https://www.youtube.com/watch?v=jPJPucmyUP4">Analyzing Evidence of Climate Change - Video</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Handout_%20Climate%20Change%20Infographics.docx">Lesson 1 Handout: Climate Change Infographics</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Student%20Resource_%20Climate%20Change%20Graphs.docx">Lesson 1 Student Resource: Climate Change Graphs</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Assessment_%20Evidence%20of%20Climate%20Change.docx">Lesson 1 Assessment: Evidence of Climate Change</a></li>
+</ul>
+</div>
+</section>
+<section id="sec-lesson2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lesson2">Lesson 2: Using coding to learn about climate change</h3>
+<div class="border-box">
+<p><strong>Lesson Plan:</strong></p>
+<p>Students work through this <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html">interactive data science tutorial</a>, in which they are shown how graphs are created from large data sets. Individually or in pairs, students explore a data set that includes multiple variables of CO2 and greenhouse gas data. They choose two variables they want to compare from that data set. By manipulating existing code, students create a graph of their chosen data that will help answer the question, “How are human activities contributing toward changing greenhouse gas composition in the atmosphere?”</p>
+<p><strong>Data Science in the Lesson:</strong></p>
+<p>Students gain exposure to the coding process, including how scientists take large data sets and make them comprehensible through visualizations. Students manipulate code to create their own graphs of climate data.</p>
+<p><strong>Lesson Materials</strong></p>
+<section id="student-facing-materials" class="level5">
+<h5 class="anchored" data-anchor-id="student-facing-materials"><strong>Student-Facing Materials</strong></h5>
+<ul>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%202%20Presentation_%20Coding%20and%20Data%20Science.pptx">Lesson Slides: Data Science Presentation</a>
+<ul>
+<li>Description: Presentation given to students during the lesson. Walks through data science definition + basics, gives some examples in pop culture and IRL science, then moves into a coding demonstration, using <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html">the interactive tutorial</a>.</li>
+</ul></li>
+<li><a href="https://docs.google.com/forms/d/1uBRBNRd_n2oYiDAzwA6BFtxSHRlyUDv07pzNcTfAquE/edit">Check for Understanding Template</a>
+<ul>
+<li>Description: 4 question quiz that hits the main points addressed in the lesson slides. Hopefully pretty low stakes!</li>
+</ul></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%202_%20Graph%20Collection%20Template.docx">Graph collection template</a>
+<ul>
+<li>Description: A place for students to put their own graphs all in one place.</li>
+</ul></li>
+</ul>
+</section>
+<section id="teacher-facing-materials" class="level5">
+<h5 class="anchored" data-anchor-id="teacher-facing-materials"><strong>Teacher-Facing Materials</strong></h5>
+<ul>
+<li>Optional: <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip">Climate Change Lesson Code .zip file</a>
+<ul>
+<li>Description: Code to generate graphs in an RMD file. Walks through the use of posit to load large data sets. Filters data, and provides a sandbox for students to play around with new variables. Folder also contains saved pngs of graphs generated by the data and a folder of our two data sets.</li>
+<li><strong>Note:</strong> Requires a basic understanding of R coding to use this file and demonstrate coding to students. If you do not know R, use <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html">the interactive tutorial</a> instead which provides an easy-to-use walk through of coding.</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</section>
+<section id="sec-lesson3" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lesson3">Lesson 3: Greenhouse Effect</h3>
+<div class="border-box">
+<p><strong>Lesson Plan</strong></p>
+<p>Following the lesson on coding and development of graphs about greenhouse gasses, students learn about how greenhouse gasses contribute to a warming climate through either an interactive lecture or a video series (teacher choice).</p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><strong>Option 1: Desmos Interactive Lecture</strong></p>
+<p>In this lesson, students use their own computer device to follow along on a teacher-paced Desmos lesson. They manipulate arrows to increase/decrease light from the sun or heat escaping in different scenarios.</p>
+<p>This lesson connects with conservation of energy principles to teach students that earth temperatures are based on a balance/imbalance of energy inputs and outputs. The gasses in the atmosphere act like the window of a car to let light in and restrict thermal energy from escaping into space.</p>
+<p><strong>WARNING:</strong> This is somewhat complex to teach so I recommend teachers review the slides and learn how to do the pacing feature of Desmos before leading it with students. Also, you can make your own copy and delete scenarios that are superfluous to your objectives.</p>
+<p>When I taught it, I had a student preview slide up on the board that students could follow along with me and I had the teacher slides on another tab, where I could watch student work and restrict their access to certain slides.</p>
+</div><div class="column" style="width:6%;">
+<p><br></p>
+</div><div class="column" style="width:42%;">
+<p><strong>Option 2: PBS Video Series with guided notes</strong></p>
+<p>In this lesson, students watch a series of five short PBS videos to learn chemically how carbon causes the earth to heat up. There are guided notes to follow along with each video.</p>
+<p>It is a simple alternative or supplement to the Desmos lesson.</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><strong>Data Science in the Lesson</strong></p>
+<p>Exploring conceptual models through data visualization of energy inputs and outputs</p>
+<p>Students interact with a computer-based data visualization simulation (tracking packets of energy over time and manipulating arrows to show how light/heat is affecting in different situations)</p>
+</div><div class="column" style="width:6%;">
+<p><br></p>
+</div><div class="column" style="width:42%;">
+<p><strong>Data Science in the lesson</strong></p>
+<p>N/A</p>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><strong>Lesson Materials</strong></p>
+<ul>
+<li><p><a href="https://teacher.desmos.com/activitybuilder/custom/64bee1502d1627ab7b4918e1">Desmos Interactive Presentation</a></p></li>
+<li><p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%203%20Assessment_%20Greenhouse%20Effect%20Desmos.docx">Lesson 3 Assessment: Greenhouse Effect (Desmos)</a></p></li>
+</ul>
+</div><div class="column" style="width:6%;">
+<p><br></p>
+</div><div class="column" style="width:42%;">
+<p><strong>Lesson Materials</strong></p>
+<ul>
+<li><p><a href="https://www.youtube.com/playlist?list=PLh8hTeM7YJGQ_qlzwOeZf_AEQo6UbVYAE">It’s All About Carbon Video Series Playlist</a></p></li>
+<li><p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%203%20Handout_%20Greenhouse%20Effect%20Video%20Notes.docx">Lesson 3 Handout: Greenhouse Effect Video Notes</a></p></li>
+<li><p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%203%20Assessment_%20Greenhouse%20Effect%20Videos.docx">Lesson 3 Assessment: Greenhouse Effect (Video)</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-lesson4" class="level3">
+<h3 class="anchored" data-anchor-id="sec-lesson4">Lesson 4: Communicating Climate Evidence</h3>
+<div class="border-box">
+<p><strong>Lesson Plan</strong></p>
+<p>Finally, students connect the graph they created and/or a graph from an online resource with one of the graphs they saw in lesson 1 to make an evidenced-based argument that the climate is changing due to human activity. Students prepare for a socratic seminar so that they will be able to use evidence to answer the following questions:</p>
+<ul>
+<li>How do we know that the climate is changing?</li>
+<li>How do we know the changes we see are due to human activity?</li>
+</ul>
+<p><strong>Step 1:</strong> Card sorting activity</p>
+<ul>
+<li>Sort the following graphs into two categories: causes of climate change (How do we know the changes we see are due to human activity?) and effects of climate change (How do we know the climate is changing?)</li>
+<li>Pick one or two graphs from each category that you think, when put together, make the most compelling argument that the climate is changing due to human activity.</li>
+</ul>
+<p><strong>Step 2:</strong> Prepare for the socratic seminar by preparing talking points</p>
+<ul>
+<li>Which graph did you choose to make the case that the climate is changing? Why?</li>
+<li>Which graph did you choose to make the case that human activities are changing the climate? Why?</li>
+<li>How do these two graphs connect together? How do we know graph 2 leads to graph 1?</li>
+</ul>
+<p><strong>Step 3:</strong> Whole class or small group discussion</p>
+<ul>
+<li>Group works together to identify and justify the best evidence to answer the following questions:
+<ul>
+<li>How do we know that the climate is changing?</li>
+<li>How do we know the changes we see are due to human activity?</li>
+</ul></li>
+</ul>
+<p><strong>Step 4:</strong> Students individually write a CER essay in response to the question: How do we know that the climate is changing due to human activities?</p>
+<p><br></p>
+<p><strong>Data Science in the Lesson:</strong></p>
+<p>In this lesson, students are working with a curated set of professionally produced graphics found from online sources and possibly their own graph that they coded in lesson 2. The focus is on reading patterns and analyzing trends. Students use data to answer questions and make evidence-based arguments. Students also communicate ideas using data evidence verbally and in writing.</p>
+<p><strong>Lesson Materials:</strong></p>
+<ul>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Card%20Sort_%20Climate%20Change%20Evidence%20Mini%20Infographics.pptx">Lesson 4 Card Sort: Climate Change Evidence Mini Infographics</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Handout_%20Connecting%20Human%20Activities%20to%20Climate%20Change%20Effects.docx">Lesson 4 Handout: Connecting Human Activities to Climate Change Effects</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Handout_%20Peer%20Review%20Socratic%20Seminar%20Participation.docx">Lesson 4 Handout: Peer Review Socratic Seminar Participation</a></li>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Assessment_%20Human%20Influence%20on%20Climate%20Change.docx">Lesson 4 Assessment: Human Influence on Climate Change</a></li>
+</ul>
+</div>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/lewis-and-clark-data-science\.github\.io\/6-12-Data-Science-Resources\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/lesson_plans/climate_lesson_plan.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

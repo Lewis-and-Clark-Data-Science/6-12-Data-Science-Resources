@@ -30,7 +30,8 @@ website:
         - text: "Air Quality Lessons" 
           href: lesson_plans/AQI_lessons/AQI_lesson.qmd
         - lesson_plans/Biodiversity_lesson.qmd
-        - lesson_plans/climate_lesson.qmd
+        - text: "Climate Change Unit"
+          href: lesson_plans/climate_lesson.qmd
         - lesson_plans/sea_levels_lesson.qmd
         - lesson_plans/COR_lesson.qmd
         - text: "Mini intro to data science lessons"
@@ -83,8 +84,16 @@ website:
           - section: "High School"
             contents: 
               - lesson_plans/AQI_lessons/AQI_high_overview.qmd
-              - lesson_plans/AQI_lessons/AQI_high_lesson_plan.qmd
-  
+    - id: lesson_plans/climate_lesson.qmd
+      title: "Climate Change Unit"
+      style: "docked"
+      collapse-level: 2
+      contents: 
+        - section: "Climate Change Lessons"
+          contents: 
+            - lesson_plans/climate_lesson.qmd
+            - lesson_plans/climate_lesson_plan.qmd
+
   #sidebar: 
   #    style: "docked"
   #    - id: tutorials/AQI_tutorial.qmd

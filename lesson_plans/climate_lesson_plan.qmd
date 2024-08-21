@@ -1,0 +1,201 @@
+---
+title: "Climate Change Unit Plan"
+subtitle: "Unit lesson plan (4 lessons) for teaching about climate change and data science"
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: 9th-12th grade
+-   Subject: NGSS Physics
+-   Number of students: 22 per class
+-   Time: 4 lessons
+
+### Lesson Plan and Tutorial
+
+-   [Lesson Plan](climate_lesson_plan.qmd)
+
+-   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html)
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png){fig-align="left" fig-alt="planets and sun" height="2.5in"}
+:::
+
+
+## Unit Lesson Plans
+
+### Lesson 1: Climate Change Evidence 1 {#sec-lesson1}
+
+::: border-box
+**Lesson Plan:**
+
+Students choose between a series of infographics showing different types of climate change effects (temperature, sea level, wildfire, ecosystem, etc), which model quality data visualizations, give them practice identifying patterns and analyzing trends, and present evidence of climate change effects currently taking place.
+
+**Data Science in the lesson:**
+
+In this lesson, students are working with a curated set of professionally produced graphics found from online sources. The focus is on reading patterns and analyzing trends. Students are assessed on their ability to turn a visual data representation into a paragraph explanation (aka they write a caption for the graph explaining the big idea presented).
+
+**Lesson Materials:**
+
+-   [Lesson 1 Slides: Analyzing Climate Change Infographics](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201_%20Analyzing%20Climate%20Change%20Infographics.pptx)
+-   [Analyzing Evidence of Climate Change - Video](https://www.youtube.com/watch?v=jPJPucmyUP4)
+-   [Lesson 1 Handout: Climate Change Infographics](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Handout_%20Climate%20Change%20Infographics.docx)
+-   [Lesson 1 Student Resource: Climate Change Graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Student%20Resource_%20Climate%20Change%20Graphs.docx)
+-   [Lesson 1 Assessment: Evidence of Climate Change](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%201%20Assessment_%20Evidence%20of%20Climate%20Change.docx)
+:::
+
+### Lesson 2: Using coding to learn about climate change {#sec-lesson2}
+
+::: border-box
+**Lesson Plan:**
+
+Students work through this [interactive data science tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html), in which they are shown how graphs are created from large data sets. Individually or in pairs, students explore a data set that includes multiple variables of CO2 and greenhouse gas data. They choose two variables they want to compare from that data set. By manipulating existing code, students create a graph of their chosen data that will help answer the question, "How are human activities contributing toward changing greenhouse gas composition in the atmosphere?"
+
+**Data Science in the Lesson:**
+
+Students gain exposure to the coding process, including how scientists take large data sets and make them comprehensible through visualizations. Students manipulate code to create their own graphs of climate data.
+
+**Lesson Materials**
+
+##### **Student-Facing Materials**
+
+-   [Lesson Slides: Data Science Presentation](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%202%20Presentation_%20Coding%20and%20Data%20Science.pptx)
+    -   Description: Presentation given to students during the lesson. Walks through data science definition + basics, gives some examples in pop culture and IRL science, then moves into a coding demonstration, using [the interactive tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html).
+-   [Check for Understanding Template](https://docs.google.com/forms/d/1uBRBNRd_n2oYiDAzwA6BFtxSHRlyUDv07pzNcTfAquE/edit)
+    -   Description: 4 question quiz that hits the main points addressed in the lesson slides. Hopefully pretty low stakes!
+-   [Graph collection template](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%202_%20Graph%20Collection%20Template.docx)
+    -   Description: A place for students to put their own graphs all in one place.
+
+##### **Teacher-Facing Materials**
+
+-   Optional: [Climate Change Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
+    -   Description: Code to generate graphs in an RMD file. Walks through the use of posit to load large data sets. Filters data, and provides a sandbox for students to play around with new variables. Folder also contains saved pngs of graphs generated by the data and a folder of our two data sets.
+    -   **Note:** Requires a basic understanding of R coding to use this file and demonstrate coding to students. If you do not know R, use [the interactive tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html) instead which provides an easy-to-use walk through of coding.
+:::
+
+
+
+
+### Lesson 3: Greenhouse Effect {#sec-lesson3}
+
+::: border-box
+**Lesson Plan**
+
+Following the lesson on coding and development of graphs about greenhouse gasses, students learn about how greenhouse gasses contribute to a warming climate through either an interactive lecture or a video series (teacher choice).
+
+::: columns
+::: {.column width="52%"}
+**Option 1: Desmos Interactive Lecture**
+
+In this lesson, students use their own computer device to follow along on a teacher-paced Desmos lesson. They manipulate arrows to increase/decrease light from the sun or heat escaping in different scenarios.
+
+This lesson connects with conservation of energy principles to teach students that earth temperatures are based on a balance/imbalance of energy inputs and outputs. The gasses in the atmosphere act like the window of a car to let light in and restrict thermal energy from escaping into space.
+
+**WARNING:** This is somewhat complex to teach so I recommend teachers review the slides and learn how to do the pacing feature of Desmos before leading it with students. Also, you can make your own copy and delete scenarios that are superfluous to your objectives.
+
+When I taught it, I had a student preview slide up on the board that students could follow along with me and I had the teacher slides on another tab, where I could watch student work and restrict their access to certain slides.
+:::
+
+::: {.column width="6%"}
+<br>
+:::
+
+::: {.column width="42%"}
+**Option 2: PBS Video Series with guided notes**
+
+In this lesson, students watch a series of five short PBS videos to learn chemically how carbon causes the earth to heat up. There are guided notes to follow along with each video.
+
+It is a simple alternative or supplement to the Desmos lesson.
+:::
+:::
+
+::: columns
+::: {.column width="52%"}
+**Data Science in the Lesson**
+
+Exploring conceptual models through data visualization of energy inputs and outputs
+
+Students interact with a computer-based data visualization simulation (tracking packets of energy over time and manipulating arrows to show how light/heat is affecting in different situations)
+:::
+
+::: {.column width="6%"}
+<br>
+:::
+
+::: {.column width="42%"}
+**Data Science in the lesson**
+
+N/A
+:::
+:::
+
+::: columns
+::: {.column width="52%"}
+
+**Lesson Materials**
+
+-   [Desmos Interactive Presentation](https://teacher.desmos.com/activitybuilder/custom/64bee1502d1627ab7b4918e1)
+
+-   [Lesson 3 Assessment: Greenhouse Effect (Desmos)](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson 3 Assessment_ Greenhouse Effect Desmos.docx)
+
+:::
+
+::: {.column width="6%"}
+<br>
+:::
+
+::: {.column width="42%"}
+
+**Lesson Materials**
+
+-   [It's All About Carbon Video Series Playlist](https://www.youtube.com/playlist?list=PLh8hTeM7YJGQ_qlzwOeZf_AEQo6UbVYAE)
+
+-   [Lesson 3 Handout: Greenhouse Effect Video Notes](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%203%20Handout_%20Greenhouse%20Effect%20Video%20Notes.docx)
+
+-   [Lesson 3 Assessment: Greenhouse Effect (Video)](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%203%20Assessment_%20Greenhouse%20Effect%20Videos.docx)
+:::
+:::
+
+:::
+
+### Lesson 4: Communicating Climate Evidence {#sec-lesson4}
+
+::: border-box
+**Lesson Plan**
+
+Finally, students connect the graph they created and/or a graph from an online resource with one of the graphs they saw in lesson 1 to make an evidenced-based argument that the climate is changing due to human activity. Students prepare for a socratic seminar so that they will be able to use evidence to answer the following questions:
+
+-   How do we know that the climate is changing?
+-   How do we know the changes we see are due to human activity?
+
+**Step 1:** Card sorting activity
+
+-   Sort the following graphs into two categories: causes of climate change (How do we know the changes we see are due to human activity?) and effects of climate change (How do we know the climate is changing?)
+-   Pick one or two graphs from each category that you think, when put together, make the most compelling argument that the climate is changing due to human activity.
+
+**Step 2:** Prepare for the socratic seminar by preparing talking points
+
+-   Which graph did you choose to make the case that the climate is changing? Why?
+-   Which graph did you choose to make the case that human activities are changing the climate? Why?
+-   How do these two graphs connect together? How do we know graph 2 leads to graph 1?
+
+**Step 3:** Whole class or small group discussion
+
+-   Group works together to identify and justify the best evidence to answer the following questions:
+    -   How do we know that the climate is changing?
+    -   How do we know the changes we see are due to human activity?
+
+**Step 4:** Students individually write a CER essay in response to the question: How do we know that the climate is changing due to human activities?
+
+<br>
+
+**Data Science in the Lesson:**
+
+In this lesson, students are working with a curated set of professionally produced graphics found from online sources and possibly their own graph that they coded in lesson 2. The focus is on reading patterns and analyzing trends. Students use data to answer questions and make evidence-based arguments. Students also communicate ideas using data evidence verbally and in writing.
+
+**Lesson Materials:**
+
+-   [Lesson 4 Card Sort: Climate Change Evidence Mini Infographics](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Card%20Sort_%20Climate%20Change%20Evidence%20Mini%20Infographics.pptx)
+-   [Lesson 4 Handout: Connecting Human Activities to Climate Change Effects](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Handout_%20Connecting%20Human%20Activities%20to%20Climate%20Change%20Effects.docx)
+-   [Lesson 4 Handout: Peer Review Socratic Seminar Participation](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Handout_%20Peer%20Review%20Socratic%20Seminar%20Participation.docx)
+-   [Lesson 4 Assessment: Human Influence on Climate Change](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/Lesson%204%20Assessment_%20Human%20Influence%20on%20Climate%20Change.docx)
+:::

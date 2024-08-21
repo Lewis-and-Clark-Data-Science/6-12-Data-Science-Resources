@@ -1,18 +1,79 @@
 ---
-title: Climate Change Lesson
+title: "Climate Change Unit Overview"
+subtitle: "Overview of unit (4 lessons) for teaching about climate change and data science"
 ---
+
 ::: column-margin
 ### Grade Level & Class type
 
--   Appropriate for: Middle to high school students
--   Previously taught in: 8th grade
--   Unit title: Astronomy Unit
--   Number of students: 30 per class
+-   Appropriate for: 9th-12th grade
+-   Subject: NGSS Physics
+-   Number of students: 22 per class
+-   Time: 4 lessons
+
+### Lesson Plan and Tutorial
+
+-   [Lesson Plan](climate_lesson_plan.qmd)
+
+-   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html)
+ 
 
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png){fig-align="left" fig-alt="planets and sun" height="2.5in"}
 :::
 
+## Unit Overview
 
+**Unit Title**: Climate Change Evidence
 
+**Unit Description:**
 
-[Climate Change Lesson Code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/ClimateChangeLessonCode.zip)
+In this four lesson series, students interpret and analyze infographics (graphs, maps, etc) of climate change evidence and then discover how data visualizations are made using Posit coding software. Students manipulate code to create their own two variable graphs. After learning about the greenhouse effect by participating in an interactive Desmos (online program) lecture or watching a series of videos with guided notes students have the background to do a second data review of evidence graphs to make a multi-evidence based argument that the climate is changing due to human activity.
+
+-   [Lesson 1:](climate_lesson_plan.qmd#sec-lesson1) Climate Change Evidence 1
+
+-   [Lesson 2:](climate_lesson_plan.qmd#sec-lesson2) Using Coding to Learn About Climate Change
+
+-   [Lesson 3:](climate_lesson_plan.qmd#sec-lesson3) Greenhouse Effect
+
+-   [Lesson 4:](climate_lesson_plan.qmd#sec-lesson4) Communicating Climate Evidence
+
+**Lesson Plan and Materials:**
+
+Use this [link](climate_lesson_plan.qmd) to view the lesson plan and lesson materials for this unit. 
+
+**Data Science in the lessons:**
+
+-   Lesson 1: In this lesson, students are working with a curated set of professionally produced graphics found from online sources. The focus is on reading patterns and analyzing trends. Students are assessed on their ability to turn a visual data representation into a paragraph explanation (aka they write a caption for the graph explaining the big idea presented).
+
+-   Lesson 2: Students gain exposure to the coding process, including how scientists take large data sets and make them comprehensible through visualizations. Students manipulate code to create their own graphs of climate data.
+
+-   Lesson 3: Exploring conceptual models through data visualization of energy inputs and outputs. Students interact with a computer-based data visualization simulation (tracking packets of energy over time and manipulating arrows to show how light/heat is affecting in different situations)
+
+-   Lesson 4: In this lesson, students are working with a curated set of professionally produced graphics found from online sources and possibly their own graph that they coded in lesson 2. The focus is on reading patterns and analyzing trends. Students use data to answer questions and make evidence-based arguments. Students also communicate ideas using data evidence verbally and in writing.
+
+## Reflection from teachers who have taught this lesson
+
+**What worked well? Why?**
+
+-   Students were excited about the brainstorming and graph development sections of the lesson. The timing and sequencing seemed to work well in their present form, despite some changes we would like to make.
+
+**What do you feel was missing?**
+
+-   It was a big ask of students to go from nothing to enough understanding to engage in asking questions and generating novel ideas. Students shared that the explanation of coding was enough to be confusing and not enough to clarify those confusions. We concluded that, at least for the first classes that we taught the lesson to, we gave too many demos of coding. The final resources shared have been narrowed down. The coding lecture should either be shortened or should include more interactive components to capture student interest and increase engagement.
+    -   Note: Since recieving this feedback, we've updated the online tutorial to make it easier for students to use and more interactive
+
+**What changes would you make to future iterations? Why?**
+
+-   Update the sequencing to focus on a broader, less confusing set of variables, allowing students a little more hands on ownership. Focus on: Sea level, Ecosystem, Human impact, Water/precipitation, Natural hazards
+
+    -   If keeping the same set of variables, reduce the number of variable choices and provide a descriptive key.
+
+-   Really emphasize the question of "How do scientists make the data visualizations we use?" Students should also be able to actually play with the code and make their own graphs.
+
+-   Add in a mini lesson to better prime students for the "What do you know, notice, wonder?" sort of questions.
+
+-   Finally providing a post survey to gauge student learning such as the quiz we created would have been majorly helpful in understanding what they actually got out of the lesson.
+
+**What do you believe are some of your students' major takeaways from this lesson?**
+
+-   Scientists use software to narrow down large data sets and make visualizations.

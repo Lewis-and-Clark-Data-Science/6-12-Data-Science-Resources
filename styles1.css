@@ -18,6 +18,17 @@
   font-weight: bold; /* Optional: make it bold */
 }
 
+.border-box {
+  border: 1px solid lightgray;
+  margin-left: 20px;
+  padding-left: 10px;
+  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
 .column-screen-inset {
   position: relative; /* Ensure the element is positioned for z-index to take effect */
   z-index: 1; /* Lower z-index to send it to the back */
