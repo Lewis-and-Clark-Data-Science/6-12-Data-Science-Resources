@@ -48,7 +48,7 @@ Coding involved:
 
 -   [Factors of Air Quality Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Factors.pptx)
     -   Description: Slides to introduce the factors that go into the AQI measurement. Includes blank slides with links to resources for students to research factors and instructions for gallery walk.
--   [AQI Factors Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Factors Graph Organizer.docx)
+-   [AQI Factors Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Factors Graphic Organizer.docx)
     -   Description: Graphic organizer for students to collect notes during gallery walk.
 -   [Using Data Science to Explore AQI Data Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Using Data Science to Explore AQI Data.pptx)
     -   Description: Slides to introduce regional AQI data, places to collect notes for notice and wonder questions, and student-generated questions. Slides to introduce and demonstrate the ideas of Data Science and how we use coding to narrow down a large data set to answer a specific scientific question. Wrap-up discussion questions about Data Science. Extension activity with link to EPA data.
