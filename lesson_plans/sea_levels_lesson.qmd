@@ -1,6 +1,63 @@
 ---
-title: Sea Levels Lesson
+title: "Sea Levels Lesson Overview"
 ---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Current lesson level: High school
+-   Adaptable for: 6th-12th grade
+-   Subject: Chemistry
+-   Number of students: 30 per class
+-   Time: Two or three 95 minute lessons
+
+### Lesson Plan and Tutorial
+
+-   [Lesson Plan](sea_levels_lesson_plan.qmd)
+
+-   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/sealevel_tutorial.html)
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_rise_image.png){fig-align="left" fig-alt="planets and sun" width=90%}
+:::
+
+**Lesson Title:** Sea Level Change
+
+**Lesson Description:**
+
+Students will apply what they have learned about kinetic molecular theory and apply their knowledge to the phenomenon of sea level rise as a result of thermal expansion of ocean water. This lesson takes place over ~2.5 class periods (block schedule of 95 minutes each) as a capstone in a basic unit in a Kinetic Molecular Theory Chemistry Unit. This lesson introduces data science to students, coding using R to produce data visualizations from large data sets, and asks students to interpret visualizations and ask questions. Following instruction on thermal expansion of ocean water, students will select a site of interest and work individually or with a partner to develop an informative project that demonstrates an understanding of KMT, thermal expansion, sea level change, climate change, and impacts to their chosen community. 
+
+**Data Science in the lesson:**
+
+Although students do not directly work with raw data, they see a large data set and are exposed to the code to specifically choose one section from the larger data set. They are then guided through what code might look like to create specific types of graphs, such as scatter plots and bar charts. This exposure was planned with the intention for students to understand the ‘behind the scenes’ actions that go into creating visualizations, and to acknowledge which types of graphs are better to represent different types of data.
+
+### Lesson Materials 
+
+#### **Student-Facing Materials**
+
+-   [Sea Level Change Student Project Handout](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Sea Level Rise Project Student Handout.docx)
+    -   Description: Document has student project choices, task requirements, word bank, and a link to separate reference resource document
+    
+-   [Sea Level Change Student Resource Document](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Sea Level Student Project Resource Sheet.docx)
+    -   Description: Document is linked within the Project Handout; contains hyperlinks to useful resources students might use, listed by category
+
+-   [Sea Level Change Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Sea Level Rise Slides.pptx)
+    -   Description: The slides provide information for direct instruction and guide students through the lesson. Contains a warm-up, review, discussion questions, videos, and data visualizations to help understand how sea level rise and thermal expansion are related. 
+    
+-   Coding lesson: [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/sealevel_tutorial.html) OR [R code .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SeaLevelsLessonCode.zip)
+    -   Description: Coding lesson to introduce students to working with large datasets and creating visualizations. 
+        -   The interactive tutorial is designed for anyone who has never coded or used R before, and walks you through basic coding. 
+        -   The R code .zip file requires some basic knowledge of R and can be opened in Rstudio desktop or posit.cloud.
+        
+-   [Student Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Graph Organizer.pptx)
+    -   Description: A graphic organizer for any student, but specifically for ELL students and students needing additional support.
+
+-   [Student Extension Opportunity](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/Extension Student handout.pptx)
+    -   Description: For students who finish early or who desire additional research opportunities, adding a component for students to construct a comparison of two locations of similar latitudes in an original visualization.
+
+
+
+
+
 
 Here are resources for teaching a lesson on sea level change!
 

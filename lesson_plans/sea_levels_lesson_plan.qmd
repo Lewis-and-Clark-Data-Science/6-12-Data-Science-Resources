@@ -1,0 +1,21 @@
+---
+title: "Sea Levels Lesson Overview"
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Current lesson level: High school
+-   Adaptable for: 6th-12th grade
+-   Subject: Chemistry
+-   Number of students: 30 per class
+-   Time: Two or three 95 minute lessons
+
+### Lesson Plan and Tutorial
+
+-   [Lesson Plan](sea_levels_lesson_plan.qmd)
+
+-   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/sealevel_tutorial.html)
+
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_rise_image.png){fig-align="left" fig-alt="planets and sun" width=90%}
+:::
