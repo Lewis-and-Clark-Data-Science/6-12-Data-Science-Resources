@@ -17,7 +17,10 @@ title: "Sea Levels Lesson Overview"
 
 -   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/sealevel_tutorial.html)
 
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/sea_level_folder.zip)
+
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/sea_rise_image.png){fig-align="left" fig-alt="planets and sun" width="90%"}
+
 :::
 
 **Lesson Title:** Sea Level Change
@@ -31,6 +34,10 @@ Students will apply what they have learned about kinetic molecular theory and ap
 Although students do not directly work with raw data, they see a large data set and are exposed to the code to specifically choose one section from the larger data set. They are then guided through what code might look like to create specific types of graphs, such as scatter plots and bar charts. This exposure was planned with the intention for students to understand the ‘behind the scenes’ actions that go into creating visualizations, and to acknowledge which types of graphs are better to represent different types of data.
 
 ### Lesson Materials
+
+[Lesson plan](sea_levels_lesson_plan.qmd)
+
+Download individual files below or use this [folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/sea_level/sea_level_folder.zip)
 
 #### **Student-Facing Materials**
 

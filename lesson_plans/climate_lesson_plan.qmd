@@ -17,6 +17,9 @@ subtitle: "Unit lesson plans (4 lessons) for teaching about climate change and d
 
 -   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html)
 
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/climate_change_folder.zip)
+ 
+
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png){fig-align="left" fig-alt="planets and sun" width=90%}
 :::
 

@@ -18,6 +18,8 @@ title: Lesson Plan - Analyzing and Interpreting Salmon Return at Bonneville Dam
 
 -   [Salmon Lesson Coding Tutorial - webpage](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html)
 
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/salmon_lesson_folder.zip)
+
 <br> <br>
 
 ![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" height="2.5in"}
@@ -151,4 +153,4 @@ Consider using these resources to support variations in teaching this lesson.
 
 -   Pre lesson on salmon life cycle and impacts to salmon population: [Salmon Life Cycle and Impacts](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Extension_ Salmon Life Cycle and Impacts .pptx), Created by Emily Bosanquet
 
--   Impacts of dams on our community [resource folder](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Impacts of Dams on Community), created by Jenna Mobley
+-   Impacts of dams on our community [resource folder](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Impacts of Dams on Community.zip), created by Jenna Mobley

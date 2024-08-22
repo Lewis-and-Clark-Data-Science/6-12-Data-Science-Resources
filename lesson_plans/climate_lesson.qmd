@@ -16,6 +16,8 @@ subtitle: "Overview of unit (4 lessons) for teaching about climate change and da
 -   [Lesson Plan](climate_lesson_plan.qmd)
 
 -   [Interactive Code Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/climate_change_tutorial.html)
+
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/climate_change_folder.zip)
  
 
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/climate_image.png){fig-align="left" fig-alt="planets and sun" width=90%}
@@ -40,6 +42,8 @@ In this four lesson series, students interpret and analyze infographics (graphs,
 **Lesson Plan and Materials:**
 
 Use this [link](climate_lesson_plan.qmd) to view the lesson plan and lesson materials for this unit. 
+
+Optional: Download this [folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Climate_Change/climate_change_folder.zip)
 
 **Data Science in the lessons:**
 

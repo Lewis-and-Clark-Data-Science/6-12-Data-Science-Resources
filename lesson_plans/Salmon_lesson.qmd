@@ -18,6 +18,8 @@ title: Lesson Overview - Analyzing and Interpreting Salmon Return at Bonneville 
 
 -   [Salmon Lesson Coding Tutorial -  webpage](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html)
 
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/salmon_lesson_folder.zip)
+
 <br>
 <br>
 
@@ -39,6 +41,8 @@ Students are guided in understanding how the collection of raw data points are t
 Students analyzed and interpreted the output graph data to describe and explain the patterns of salmon return rates at the Bonneville Dam. Students researched impacts to salmon to explain the patterns in the graph.
 
 ### Lesson Materials
+
+Download individual files below or use this [folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/salmon_lesson_folder.zip)
 
 **Note:** All these materials including lesson slides, pre-assessment and final assessment are embedded in the [Lesson Plan.](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
 

@@ -14,9 +14,11 @@ title: AQI Lesson Overview - Middle School
 
 -   [AQI Lesson Plan - google doc](https://docs.google.com/document/d/1kCziI6JU0PTtkSJ0dqp8drIYHx0FHaQy/edit?pli=1){target="_blank"}
 
--   [AQI Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Middle School Lesson Slides.pptx)
+-   [AQI Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Middle School Lesson Slides.pptx)
 
 -   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
+
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip)
 
 <br> <br>
 
@@ -46,40 +48,42 @@ Coding involved:
 
 ### Lesson Materials
 
+See the [lesson plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_middle_lesson_plan.html). Download individual materials below or use this [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip). 
+
 #### **Student-Facing Materials**
 
--   [AQI Middle School Lesson Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Middle School Lesson Slides.pptx)
+-   [AQI Middle School Lesson Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Middle School Lesson Slides.pptx)
     -   Description: Slides used to teach the AQI lesson over 4 days to middle school students.
 
--   [AQI Atmotube Instructions Slide](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI AtmoTube Instructions.pptx)
+-   [AQI Atmotube Instructions Slide](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI AtmoTube Instructions.pptx)
     -   Description: This slide can be printed out for each group of students to follow the directions for connecting to and using the Atmotubes.
 
--   [AQI Atmotube Lab Doc](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Atmotube Lab.docx)
+-   [AQI Atmotube Lab Doc](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Atmotube Lab.docx)
     -   Description: Document meant to print out and cut into sections so that each student can write down the data while they are testing the Atmotubes with different factors.
 
--   [AQI Atmotube Exit Ticket](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Atmotube Exit Ticket.docx)
+-   [AQI Atmotube Exit Ticket](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Atmotube Exit Ticket.docx)
     -   Description: Document meant to print out and cut into sections so that each student can write down their reflection about the Atmotube lab.
 
--   [EPA AQI Graph for Portland and Los Angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI EPA Graphs for Portland and Los Angeles.docx)
+-   [EPA AQI Graph for Portland and Los Angeles](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI EPA Graphs for Portland and Los Angeles.docx)
     -   Description: Image of the EPA AQI scatterplot showing the air quality in Portland, OR and Los Angeles, CA from January 2000 to July 2023 coded with colors for different categories.
 
 -   [Online AQI Graphs Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
     -   Description: Online tutorial which provides a walk-through on how to deal with large amounts of data and create air quality graphs. 
     -   In [Part 2 AQI Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial_advanced.html), there is an option for students to create custom air quality graphs of any location. 
 
--   [AQI Graphs Exit Ticket](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Graphs Exit Ticket.docx)
+-   [AQI Graphs Exit Ticket](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Graphs Exit Ticket.docx)
     -   Description: Document meant to print out and cut into sections so that each student can write down their reflection about AQI.
 
--   [AQI Amazon\'s Warehouse Article](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI - Amazon's warehouse.docx)
+-   [AQI Amazon\'s Warehouse Article](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI - Amazon's warehouse.docx)
     -   Description: Article students can read to understand the context for the impact that a truck warehouse has on a local community. Students can use evidence from this article to support their claim for the argumentative letter.
 
--   [ AQI - Portland\'s Air Quality is Off the Charts Article](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI - Portland’s air quality.docx)
+-   [ AQI - Portland\'s Air Quality is Off the Charts Article](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI - Portland’s air quality.docx)
     -   Description: Article students can read to understand how smoke impacts the air quality in a local community. Students can use evidence from this article to support their claim for the argumentative letter.
 
--   [Air Quality CER Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI CER Graphic Organizer.docx)
+-   [Air Quality CER Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI CER Graphic Organizer.docx)
     -   Description: A graphic organizer to print out for students to use to make a claim about a local issue, support the claim with evidence, and include reasoning to explain how the evidence supports the claim. There is a rubric for how the CER will be scored on a 1- 4 scale.
 
--   [Air Quality CER Digital Version](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI CER Digital Version.docx)
+-   [Air Quality CER Digital Version](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI CER Digital Version.docx)
     -   Description: A digital version of the graphic organizer for students to use to make a claim about a local issue, support the claim with evidence, and include reasoning to explain how the evidence supports the claim. There is a rubric for how the CER will be scored on a 1- 4 scale.
     
 #### **Teacher-Facing Materials**
@@ -91,7 +95,7 @@ Coding involved:
 
 ### Examples of Student Work 
 
-[AQI Student Example CER](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Student Example Letter.jpeg)
+[AQI Student Example CER](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Student Example Letter.jpeg)
     
 -   Description: Student example of a finished argumentative letter to a local politician using the information from their CER graphic organizer.
 

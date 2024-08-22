@@ -16,6 +16,8 @@ title: AQI Lesson Overview - High School
 
 -   [AQI Lesson Coding Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html){target="_blank"}
 
+-   [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip)
+
 <br> <br>
 
 ![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
@@ -44,28 +46,30 @@ Coding involved:
 
 ### Lesson Materials
 
+See the [lesson plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_middle_lesson_plan.html). Download individual materials below or use this [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip). 
+
 #### **Student-Facing Materials**
 
--   [Factors of Air Quality Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Factors.pptx)
+-   [Factors of Air Quality Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Factors.pptx)
     -   Description: Slides to introduce the factors that go into the AQI measurement. Includes blank slides with links to resources for students to research factors and instructions for gallery walk.
--   [AQI Factors Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Factors Graphic Organizer.docx)
+-   [AQI Factors Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Factors Graphic Organizer.docx)
     -   Description: Graphic organizer for students to collect notes during gallery walk.
--   [Using Data Science to Explore AQI Data Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Using Data Science to Explore AQI Data.pptx)
+-   [Using Data Science to Explore AQI Data Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Using Data Science to Explore AQI Data.pptx)
     -   Description: Slides to introduce regional AQI data, places to collect notes for notice and wonder questions, and student-generated questions. Slides to introduce and demonstrate the ideas of Data Science and how we use coding to narrow down a large data set to answer a specific scientific question. Wrap-up discussion questions about Data Science. Extension activity with link to EPA data.
 -   [Using Data Science to Explore AQI Data Interactive Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/AQI_tutorial.html)
     -   Description: Online tutorial which provides a walk-through on how to deal with large amounts of data and create air quality graphs.
     -   In Part 2 AQI Tutorial, there is an option for students to create custom air quality graphs of any location.
--   [AQI Tile Plots](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI EPA Graphs for Portland and Los Angeles.docx)
+-   [AQI Tile Plots](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI EPA Graphs for Portland and Los Angeles.docx)
     -   Description: Plots of EPA data for Portland, OR and Los Angeles, CA for 2000-2023. Should be printed in color fo students to examine in groups or posted online so they can see the colors.
--   [Air Quality Index Exploration Lab Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Exploration Lab.pptx)
+-   [Air Quality Index Exploration Lab Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Exploration Lab.pptx)
     -   Description: Slides with information about Atmotube exploration and basic instructions to prepare students to formulate their own testable science question, write a procedure, perform the experiment, and write a report (CER).
--   [Atmotube Exploration Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Atmotube graphic organizer.docx)
+-   [Atmotube Exploration Graphic Organizer](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Atmotube graphic organizer.docx)
     -   Description: Graphic organizer to direct students in exploration of Atmotubes. Meant to help familiarize them with the equipment before they perform a lab.
--   [CER Writing Sentence Frames](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI CER writing Sentence Frames.docx)
+-   [CER Writing Sentence Frames](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI CER writing Sentence Frames.docx)
     -   Description: Sentence starters for CER (Claim, Evidence, and Reasoning) writing.
 -   [\[Template\] Air Quality Lab(Formative Link)](https://app.formative.com/clone/C4QSZD?_rid=0x9mp1)
     -   Description: This link will ask you to make a copy in Formative for the Air Quality Exploration Lab
--   [\[Template\] Air Quality Lab](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI Exploration Lab Doc.docx)
+-   [\[Template\] Air Quality Lab](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI Exploration Lab Doc.docx)
     -   Description: Template for Air Quality Exploration Lab report
 
 #### **Teacher-Facing Materials**
