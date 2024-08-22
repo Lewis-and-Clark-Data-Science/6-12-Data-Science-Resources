@@ -14,7 +14,7 @@ title: Lesson Overview - Analyzing and Interpreting Salmon Return at Bonneville 
 
 -   [Salmon Crossing Lesson Plan - google doc](https://docs.google.com/document/d/1v1EpGV_OeItRtsk9EicylVI8n5pL5b2i5kLqU8XxJKQ/edit){target="_blank"}
 
--   [Salmon Crossing Powerpoint Slides - .pptx file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Salmon Data Analysis Slides.pptx)
+-   [Salmon Crossing Powerpoint Slides - .pptx file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Salmon Data Analysis Slides.pptx)
 
 -   [Salmon Lesson Coding Tutorial -  webpage](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html)
 
@@ -44,19 +44,19 @@ Students analyzed and interpreted the output graph data to describe and explain 
 
 #### **Student-Facing Materials**
 
--   [Data Analysis Pre-Assesment](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Pre Assessment_ Analysis and Interpretation .docx)
+-   [Data Analysis Pre-Assesment](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Pre Assessment_ Analysis and Interpretation .docx)
     -   Description: Practice identifying patterns and how to describe patterns in data, identifying phenomena and variables. Practice analyzing and interpreting data using Monthly Average Price for a Dozen Eggs.
 
--   [Data Analysis Final Assessment](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Assessment_ Data Analysis and Interpretation_ Salmon population patterns .docx)
+-   [Data Analysis Final Assessment](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Assessment_ Data Analysis and Interpretation_ Salmon population patterns .docx)
     -   Description: After the lesson examining how the data was collected and coded for data visualization, students complete a final assessment to show proficiency in analyzing and interpreting data.
 
--   [Coding Activity Worksheet](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Coding Worksheet.docx)
+-   [Coding Activity Worksheet](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Coding Worksheet.docx)
     -   Description: This half page is for each student to practice giving their partner “code” to navigate them to a different place in the room
 
--   [WIS/WIM Graphs for Notebook](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/WIS_WIM Graphs for Notebooks.docx)
+-   [WIS/WIM Graphs for Notebook](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/WIS_WIM Graphs for Notebooks.docx)
     -   Description: This half page is for each student to write their interpretation of what they see and what it means on the graph
     
--   [Coding Demonstration video](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Coding Intro Chinook Salmon.webm){target="_blank"} OR [Coding Interactive Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html){target="_blank"}
+-   [Coding Demonstration video](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Coding Intro Chinook Salmon.webm){target="_blank"} OR [Coding Interactive Tutorial](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/tutorials/salmon_tutorial.html){target="_blank"}
     -   Description of video: The video provides an overview of how we can use code to synthesize large amounts of data from the Bonneville Dam and create the graphs used in this lesson. 
     -   Description of tutorial: The tutorial also provides an overview of creating data visualizations in an interactive format where students can attempt some basic coding. 
 
@@ -65,7 +65,7 @@ Students analyzed and interpreted the output graph data to describe and explain 
 -   [Salmon School Lesson Plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/Salmon_lesson_plan.html){target="_blank"}
     -   A three day lesson sequence that could be used to support 
 
--   [Salmon School Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Salmon Data Analysis Slides.pptx)
+-   [Salmon School Powerpoint Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Salmon Data Analysis Slides.pptx)
 
 -   [Optional: R code .zip file used to create the graphs](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/SalmonLessonCode.zip)
 
@@ -93,4 +93,4 @@ Students analyzed and interpreted the output graph data to describe and explain 
 
 **Student data science takeaways**
 
--   Students watched a [video](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/Coding Intro Chinook Salmon.webm){target="_blank"} which demonstrated how coding can be used to synthesize large amounts of data into a graph. Students were able to recognize how real humans are behind the compilation and creation of data and data visualizations. Students observed videos of salmon crossing the fish ladder at Bonneville and humans counting the species as they crossed to record the data points of return rates. The video showed students the source of this raw data and demonstrated how it was coded into a graphical visualization, emphasizing how huge and hard to understand it was. Students worked in groups on the classroom white boards to describe how the graph was created. Students identified how code was used to organize the data and create a visualization, which could be more easily interpreted to describe and explain patterns and predict future trends. Students were provided with the graphical output to analyze and interpret patterns as an assessment in order to demonstrate proficiency in analyzing and interpreting data to describe/explain a phenomena.
+-   Students watched a [video](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/salmon/Coding Intro Chinook Salmon.webm){target="_blank"} which demonstrated how coding can be used to synthesize large amounts of data into a graph. Students were able to recognize how real humans are behind the compilation and creation of data and data visualizations. Students observed videos of salmon crossing the fish ladder at Bonneville and humans counting the species as they crossed to record the data points of return rates. The video showed students the source of this raw data and demonstrated how it was coded into a graphical visualization, emphasizing how huge and hard to understand it was. Students worked in groups on the classroom white boards to describe how the graph was created. Students identified how code was used to organize the data and create a visualization, which could be more easily interpreted to describe and explain patterns and predict future trends. Students were provided with the graphical output to analyze and interpret patterns as an assessment in order to demonstrate proficiency in analyzing and interpreting data to describe/explain a phenomena.

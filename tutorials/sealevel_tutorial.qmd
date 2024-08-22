@@ -1,6 +1,6 @@
 ---
 title: "Sea Level tutorial"
-author: "Bel Kuhl, edited for web version by Olivia Spagnuolo"
+author: "Bel Kuhl and Olivia Spagnuolo"
 filters: 
   - webr
   - naquiz
@@ -565,6 +565,8 @@ Although the data varies per year, there appears to be an upwards trend within t
 How does this compare to other locations within the United States? Let's take a look at the 6 different locations across the US.
 
 Let's look at a linear trend of these locations.
+
+**Press** run code
 
 ```{webr-r}
 

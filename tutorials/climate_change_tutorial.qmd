@@ -4,7 +4,7 @@ format: html
 filters:
   - webr
 editor: visual
-author: Written by Finn, edited for web version by Olivia 
+author: Written by Finn Watson, edited for web version by Olivia Spagnuolo
 ---
 
 # Climate Change Data Visualization
