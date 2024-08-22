@@ -85,6 +85,7 @@ website:
           - section: "High School"
             contents: 
               - lesson_plans/AQI_lessons/AQI_high_overview.qmd
+              - lesson_plans/AQI_lessons/AQI_high_lesson_plan.qmd
     - id: lesson_plans/climate_lesson.qmd
       title: "Climate Change Unit"
       style: "docked"

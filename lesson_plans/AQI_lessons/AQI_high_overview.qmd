@@ -46,7 +46,9 @@ Coding involved:
 
 ### Lesson Materials
 
-See the [lesson plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_middle_lesson_plan.html). Download individual materials below or use this [Folder with all materials for this lesson - .zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip). 
+Below you can download individual materials below or download this folder with all materials for this lesson - [.zip file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/AQI/AQI_lesson_folder.zip). 
+
+Also check out the [lesson plan](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/AQI_lessons/AQI_high_lesson_plan.html). 
 
 #### **Student-Facing Materials**
 
