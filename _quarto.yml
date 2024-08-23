@@ -25,7 +25,7 @@ website:
     - text: Lesson Plans 
       menu: 
         - lesson_plans/lesson_links.qmd
-        - text: "Salmon Return at Bonneville Dam"
+        - text: "Salmon Return at Bonneville Dam Lesson"
           href: lesson_plans/Salmon_lesson.qmd
         - text: "Air Quality Lessons" 
           href: lesson_plans/AQI_lessons/AQI_lesson.qmd
@@ -34,7 +34,8 @@ website:
           href: lesson_plans/climate_lesson.qmd
         - text: "Sea Levels Lesson"
           href: lesson_plans/sea_levels_lesson.qmd
-        - lesson_plans/COR_lesson.qmd
+        - text: "Analyzing Planetary Data with R"
+          href: lesson_plans/COR_lesson.qmd
         - text: "Mini intro to data science lessons"
           href: lesson_plans/mini_lessons.qmd
     - text: Online Tutorials
@@ -104,6 +105,15 @@ website:
           contents: 
             - lesson_plans/sea_levels_lesson.qmd
             - lesson_plans/sea_levels_lesson_plan.qmd
+    - id: lesson_plans/COR_lesson.qmd
+      title: "Gravity and Mass on Different Planets Lesson"
+      style: "docked"
+      collapse-level: 2
+      contents: 
+        - section: "Analyzing Planetary Data with R"
+          contents: 
+            - lesson_plans/COR_lesson.qmd
+            - lesson_plans/COR_lesson_plan.qmd 
 
 
   #sidebar: 

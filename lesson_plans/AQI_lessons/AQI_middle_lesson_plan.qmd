@@ -22,7 +22,7 @@ title: AQI Lesson Plan - Middle School
 
 <br> <br>
 
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" width=60%}
 :::
 
 **Central Focus**: Understanding air quality data and what factors affect air quality.

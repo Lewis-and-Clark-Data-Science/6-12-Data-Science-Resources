@@ -23,7 +23,7 @@ title: Lesson Overview - Analyzing and Interpreting Salmon Return at Bonneville 
 <br>
 <br>
 
-![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" height="2.5in"}
+![From https://thegorgeguide.com/bonneville-dam-visitor-center/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/dam_image.jpg){fig-align="left" fig-alt="Bonneville Dam arial view" width=95%}
 :::
 
 **Lesson Title**: Analyzing and Interpreting Salmon Return at Bonneville Dam
@@ -34,11 +34,9 @@ Students will explore how data on salmon return rates are collected and coded to
 
 **Data Science in the Lesson:**
 
-Students identify how Chinook salmon are counted and recorded crossing the Bonneville Dam from 1937-2023. Students gain an understanding in how coding works using a game, in which they took the role of "computer" or "coder" and guided each other across the room; this modeled code commands that a computer understands.
-
-Students are guided in understanding how the collection of raw data points are translated using code into a data visualization. They saw the raw data and noticed how hard it is to understand without a visualization, and from there were shown code being used to create a data visualization.
-
-Students analyzed and interpreted the output graph data to describe and explain the patterns of salmon return rates at the Bonneville Dam. Students researched impacts to salmon to explain the patterns in the graph.
+-   Students identify how Chinook salmon are counted and recorded crossing the Bonneville Dam from 1937-2023. Students gain an understanding in how coding works using a game, in which they took the role of "computer" or "coder" and guided each other across the room; this modeled code commands that a computer understands.
+-   Students are guided in understanding how the collection of raw data points are translated using code into a data visualization. They saw the raw data and noticed how hard it is to understand without a visualization, and from there were shown code being used to create a data visualization.
+-   Students analyzed and interpreted the output graph data to describe and explain the patterns of salmon return rates at the Bonneville Dam. Students researched impacts to salmon to explain the patterns in the graph.
 
 ### Lesson Materials
 

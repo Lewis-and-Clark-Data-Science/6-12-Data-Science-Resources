@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6-12 Data Science Resources - Gravity and Mass on Different Planets</title>
+<title>6-12 Data Science Resources - Lesson Overview: Analyzing Planetary Data with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles1.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/Salmon_lesson.html">
- <span class="dropdown-text">Salmon Return at Bonneville Dam</span></a>
+ <span class="dropdown-text">Salmon Return at Bonneville Dam Lesson</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/AQI_lessons/AQI_lesson.html">
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/COR_lesson.html">
- <span class="dropdown-text">Gravity and Mass on Different Planets</span></a>
+ <span class="dropdown-text">Analyzing Planetary Data with R</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../lesson_plans/mini_lessons.html">
@@ -180,19 +180,58 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lesson_plans/COR_lesson.html">Analyzing Planetary Data with R</a></li><li class="breadcrumb-item"><a href="../lesson_plans/COR_lesson.html">Lesson Overview: Analyzing Planetary Data with R</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Analyzing Planetary Data with R</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lesson_plans/COR_lesson.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lesson Overview: Analyzing Planetary Data with R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lesson_plans/COR_lesson_plan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lesson Plan: Analyzing Planetary Data with R</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#grade-level-class-type" id="toc-grade-level-class-type" class="nav-link active" data-scroll-target="#grade-level-class-type">Grade Level &amp; Class type</a></li>
-  <li><a href="#data-science-in-the-lesson" id="toc-data-science-in-the-lesson" class="nav-link" data-scroll-target="#data-science-in-the-lesson">Data Science in the Lesson</a></li>
-  <li><a href="#lesson-materials" id="toc-lesson-materials" class="nav-link" data-scroll-target="#lesson-materials">Lesson materials</a></li>
+  <li><a href="#data-science-in-the-lesson" id="toc-data-science-in-the-lesson" class="nav-link active" data-scroll-target="#data-science-in-the-lesson">Data Science in the Lesson</a></li>
+  <li><a href="#sec-materials" id="toc-sec-materials" class="nav-link" data-scroll-target="#sec-materials">Lesson materials</a></li>
   <li><a href="#reflection-from-teachers-who-have-done-this-lesson" id="toc-reflection-from-teachers-who-have-done-this-lesson" class="nav-link" data-scroll-target="#reflection-from-teachers-who-have-done-this-lesson">Reflection from teachers who have done this lesson</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Lewis-and-Clark-Data-Science/6-12-Data-Science-Resources/blob/main/lesson_plans/COR_lesson.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
@@ -200,9 +239,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lesson_plans/COR_lesson.html">Analyzing Planetary Data with R</a></li><li class="breadcrumb-item"><a href="../lesson_plans/COR_lesson.html">Lesson Overview: Analyzing Planetary Data with R</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Gravity and Mass on Different Planets</h1>
+<h1 class="title">Lesson Overview: Analyzing Planetary Data with R</h1>
 </div>
 
 
@@ -220,21 +259,30 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="no-row-height column-margin column-container"><section id="grade-level-class-type" class="level3">
+<div class="no-row-height column-margin column-container"><div class="">
+<section id="grade-level-class-type" class="level3">
 <h3 class="anchored" data-anchor-id="grade-level-class-type">Grade Level &amp; Class type</h3>
 <ul>
 <li>Appropriate for: Middle to high school students</li>
-<li>Previously taught in: 8th grade</li>
 <li>Unit title: Astronomy Unit</li>
 <li>Number of students: 30 per class</li>
+<li>Time: 50 minutes</li>
 </ul>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/solar_system.png" style="height:2.5in" alt="planets and sun" class="figure-img"></p>
+<p><img src="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/solar_system.png" class="img-fluid figure-img" style="width:95.0%" alt="planets and sun"></p>
 <figcaption>from https://science.nasa.gov/solar-system/</figcaption>
 </figure>
 </div>
-</section></div><section id="data-science-in-the-lesson" class="level3">
+</section>
+<section id="lesson-plan-and-materials" class="level3">
+<h3 class="anchored" data-anchor-id="lesson-plan-and-materials">Lesson Plan and Materials</h3>
+<ul>
+<li><p><a href="../lesson_plans/COR_lesson_plan.html">Lesson Plan</a></p></li>
+<li><p><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR_folder.zip">Folder with all lesson materials</a></p></li>
+</ul>
+</section>
+</div></div><section id="data-science-in-the-lesson" class="level3">
 <h3 class="anchored" data-anchor-id="data-science-in-the-lesson">Data Science in the Lesson</h3>
 <p>Working with raw data set:&nbsp;</p>
 <ul>
@@ -249,20 +297,20 @@ ul.task-list li input[type="checkbox"] {
 <li>Students were presented with computer code during the undergraduate student presentation.</li>
 </ul>
 </section>
-<section id="lesson-materials" class="level3">
-<h3 class="anchored" data-anchor-id="lesson-materials">Lesson materials</h3>
+<section id="sec-materials" class="level3">
+<h3 class="anchored" data-anchor-id="sec-materials">Lesson materials</h3>
 <section id="student-facing-materials" class="level4">
 <h4 class="anchored" data-anchor-id="student-facing-materials">Student-Facing Materials</h4>
 <ul>
-<li>Classroom presentation: <a href="https://docs.google.com/presentation/d/1aQmF7ADHeU932y5Oqt0jAgjYDaE-_0bd80ZPqSfFy8A/edit?usp=sharing">Data for beginning of class - google presentation</a> or download <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR%20Data%20beginning%20class.pptx">Data for beginning of class - .pptx presentation</a>
+<li>Classroom presentation: <a href="https://docs.google.com/presentation/d/1aQmF7ADHeU932y5Oqt0jAgjYDaE-_0bd80ZPqSfFy8A/edit?usp=sharing">Data for beginning of class - google presentation</a> or download <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20Data%20beginning%20class.pptx">Data for beginning of class - .pptx presentation</a>
 <ul>
 <li>Description: these were used as warm ups for class (this is still a work in progress)</li>
 </ul></li>
-<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR%20LC%20presentation.pptx">Data Science Presentation by Lewis &amp; Clark undergraduate</a>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20LC%20presentation.pptx">Data Science Presentation by Lewis &amp; Clark undergraduate</a>
 <ul>
 <li>Description: A presentation give by an undergraduate student to introduce data science and coding to students.</li>
 </ul></li>
-<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR%20gravity%20surface%20area.docx">Comparing Surface Gravity to Mass over Surface Area of Planets</a>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20gravity%20surface%20area.docx">Comparing Surface Gravity to Mass over Surface Area of Planets - Worksheet</a>
 <ul>
 <li>Description: Students prove that the mass of the planet and its surface area determines the gravitational force of the planet</li>
 </ul></li>
@@ -271,11 +319,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="teacher-facing-materials" class="level4">
 <h4 class="anchored" data-anchor-id="teacher-facing-materials">Teacher-Facing Materials</h4>
 <ul>
-<li>Scope and Scale presentation: <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR%20slides.pptx">Classroom presentation Day 31-37 solar system exploration scale and structure</a>
+<li>Scope and Scale presentation: <a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20slides.pptx">Classroom presentation Day 31-37 solar system exploration scale and structure</a>
 <ul>
 <li>Description: This is where the students researched and created their scale drawing models prior to the gravity vs.&nbsp;mass of planet lesson</li>
 </ul></li>
-<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR%20Part%202%20scale%20investigation.docx">Example Part 2-Solar System Scale investigation including gravity extension</a>
+<li><a href="https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20Part%202%20scale%20investigation.docx">Example Part 2-Solar System Scale investigation including gravity extension</a>
 <ul>
 <li>Description: This is the example of the project the students created for the scale comparisons</li>
 </ul></li>

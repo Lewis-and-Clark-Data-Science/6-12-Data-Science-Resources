@@ -20,7 +20,7 @@ title: AQI Lesson Overview - High School
 
 <br> <br>
 
-![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" height="2.5in"}
+![](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/aqiimage.jpg){fig-align="left" fig-alt="AQI levels" width=60%}
 :::
 
 **Lesson Title**: Air Quality Index

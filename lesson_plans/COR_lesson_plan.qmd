@@ -1,0 +1,75 @@
+---
+title: "Lesson Plan: Analyzing Planetary Data with R"
+---
+
+::: column-margin
+### Grade Level & Class type
+
+-   Appropriate for: Middle to high school students
+-   Unit title: Astronomy Unit
+-   Number of students: 30 per class
+-   Time: 50 minutes
+
+![from https://science.nasa.gov/solar-system/](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/figures/solar_system.png){fig-align="left" fig-alt="planets and sun" width=95%}
+
+### Lesson Plan and Materials
+
+-   [Lesson Plan](COR_lesson_plan.qmd)
+
+-   [Folder with all lesson materials](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR_folder.zip)
+
+:::
+
+
+**Objectives**:
+
+-   Understand the importance and applications of data analysis in various fields.
+-   Learn how to use R for basic data analysis
+-   Analyze planetary data (mass, radius, surface gravity) using R.
+
+**Materials Needed:**
+
+-   The [dataset](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip) for planetary data (in .csv format).
+-   Projector or smartboard for demonstrating R operations.
+-   [Printed worksheets](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20gravity%20surface%20area.docx) from the previous discussion for each student.
+-   [Lesson Slides](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR LC presentation.pptx)
+-   Also check out the other [materials](COR_lesson.qmd#sec-materials) on our overview page for broader unit materials you can include in your lessons. 
+
+**Lesson Outline:**
+
+1.  Introduction to Data Analysis (10 minutes)
+
+    -   Briefly discuss what data analysis is and its importance in different fields (science, business, etc.).
+    -   Highlight how data analysis helps in making informed decisions by understanding trends and patterns.
+
+2.  Applications of Data Analysis (5 minutes)
+
+    -   Provide examples of data analysis in astronomy, such as analyzing planetary data to understand celestial bodies.
+    -   Mention real-life applications, like weather forecasting, understanding climate change, or space missions.
+
+3.  Introduction to R (5 minutes)
+
+    -   Introduce R as a powerful tool for data analysis.
+    -   Pull up RStudio on [posit.cloud using this link](https://posit.cloud/content/6224821) or on Rstudio desktop and upload [this file](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_code_zips/CORLessonCode.zip)
+        -   We recommend using posit.cloud because students can access R and the files directly on their computer. 
+    -   Show the Studio interface and explain the different panels (console, script, environment, and files).
+
+4.  Loading and Viewing Data in R (5 minutes)
+
+    -   Demonstrate how to load the planetary data using `read.csv()`.
+    -   Use commands like `head()`, `summary()`, and `str()` to view and understand the data structure
+
+5.  Working on the Worksheet (10 minutes)
+
+    -   Hand out the [printed worksheets](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/files/lesson_links/COR/COR%20gravity%20surface%20area.docx) (from the previous discussion).
+    -   Students will use R to calculate the surface gravity and mass over surface area ratio for each planet, filling in the worksheet.
+
+6.  Worksheet Discussion and Q&A (5 minutes)
+      
+    -   Discuss the findings from the worksheet.
+    -   Encourage students to ask questions about the analysis process or any difficulties they encountered.
+
+
+**Reflection:**
+
+Conclude by asking students to reflect on how understanding data analysis can contribute to various scientific discoveries.
