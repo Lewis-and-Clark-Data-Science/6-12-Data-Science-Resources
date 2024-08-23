@@ -40,7 +40,7 @@ If you'd like to learn more about R coding and data science, here are some more 
 
 ### Tutorials that can be downloaded 
 
-[Intro to R Tutorial downloads and more information, Data in the Wild](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/lesson_links.html#sec-DITW) - This will take you to the "R files" page where you can download Intro to R tutorials called "Data in the Wild", developed for an introductory data science course at Lewis & Clark College.
+[Intro to R Tutorial downloads: Data in the Wild](https://lewis-and-clark-data-science.github.io/6-12-Data-Science-Resources/lesson_plans/lesson_links.html#sec-DITW) - This will take you to the "R files" page where you can download Intro to R tutorials called "Data in the Wild", developed for an introductory data science course at Lewis & Clark College.
 
 ### Other websites to learn more about R coding
 
