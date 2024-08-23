@@ -36,7 +36,7 @@ website:
           href: lesson_plans/sea_levels_lesson.qmd
         - text: "Analyzing Planetary Data with R"
           href: lesson_plans/COR_lesson.qmd
-        - text: "Mini intro to data science lessons"
+        - text: "Intro to Data Science: Mini Lessons"
           href: lesson_plans/mini_lessons.qmd
     - text: Online Tutorials
       menu:
